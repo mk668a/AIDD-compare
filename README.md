@@ -1,4 +1,4 @@
-![AI-Driven Development Tools Comparison](docs/assets/readme-banner.svg)
+![AI-Driven Development Tools Comparison](docs/assets/readme-banner.png)
 
 # AI-Driven Development Tools Comparison
 

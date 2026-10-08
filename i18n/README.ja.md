@@ -1,4 +1,4 @@
-![AI駆動開発ツールの比較](../docs/assets/readme-banner.svg)
+![AI駆動開発ツールの比較](../docs/assets/readme-banner-ja.png)
 
 # AI駆動開発ツール比較
 
