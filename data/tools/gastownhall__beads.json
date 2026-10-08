@@ -1,0 +1,225 @@
+{
+ "slug": "gastownhall/beads",
+ "n": "Beads",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "a ticket database the coding agent reads and writes as working memory; the CLI renders it for a person but the store is the agent's",
+  "format_detail": [
+   {
+    "id": "sqlite",
+    "ev": "go.mod (go-sqlite3)"
+   },
+   {
+    "id": "chroma",
+    "ev": "go.mod (chroma)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 27705,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Issue tracker for agents. Puts memory in structured data rather than conversation.",
+ "art": "ticket database (persistent)",
+ "tok": "frugal",
+ "p": [
+  2,
+  0,
+  1,
+  0,
+  1,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 4,
+  "restructure": 5,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "na",
+  "sf.stop": "impl",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "fs.example": "examples/README.md",
+   "rl.tests": "integrations/beads-mcp/tests/__init__.py",
+   "rl.ci": ".github/workflows/ci-measurements.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "examples/library-usage/go.mod",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.threats": "cites th and ctrl: T1 introduced, controls log part, memval none",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "pe.budget": "a ceiling the operator sets on the command line: docs/CLI_REFERENCE.md (--timeout )",
+   "co.coexist": "states the hosts it sits beside: Codex CLI, Claude Code, Gemini CLI, Cursor (README.md)",
+   "ic.surface": "Surface: cli (cmd/bd/main.go)",
+   "ic.help": "a command-line parser that prints its own usage: go.mod (cobra)",
+   "ic.error": "a documented flag that gates or previews the action: docs/CLI_REFERENCE.md (--dry-run)",
+   "rl.resume": "a resume the operator can ask for: docs/CLI_REFERENCE.md (--continue)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/main.yml (sha256sum)",
+   "fx.install": "only a global install is documented: README.md (curl -fsSL https://raw.githubusercontent.com/gastownhall/bea)",
+   "fx.byo": "the provider is the operator's choice: BASEURL (internal/config/config.go)",
+   "sf.stop": "a stop path, and the state it leaves behind is described: cmd/bd/main.go (SIGTERM); docs/CLI_REFERENCE.md (Ctrl+C)",
+   "sf.warn": "the irreversible step is both warned about and gated: docs/CLI_REFERENCE.md (destructive)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 5,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "work that can be decomposed into units"
+ ],
+ "anti": [
+  "small one-off tasks"
+ ],
+ "th": [
+  "T1"
+ ],
+ "ctrl": {
+  "log": "part",
+  "memval": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Persistent memory is a target for T1; write paths need validation",
+ "sources": [
+  {
+   "url": "https://github.com/gastownhall/beads",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Beads",
+   "sum": "エージェント向けのissueトラッカー。記憶を会話ではなく構造化データに置く。",
+   "art": "チケットDB（永続）",
+   "pre": [
+    "作業を粒度に分解できること"
+   ],
+   "anti": [
+    "単発の小さな作業"
+   ],
+   "gnote": "永続メモリはT1の標的。書き込み経路の検証が要る",
+   "flow": {
+    "steps": [
+     "bd create",
+     "依存グラフ",
+     "bd ready",
+     "エージェントが取得",
+     "bd close"
+    ],
+    "back": [
+     "ブロッカー解放"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "internal/templates/skills/beads/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "task",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "bd create",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Dependency graph",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "bd ready",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Agent claims it",
+    "l": "L7",
+    "who": "model"
+   },
+   {
+    "s": "bd close",
+    "l": "L3",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 2,
+    "s": "blockers released"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

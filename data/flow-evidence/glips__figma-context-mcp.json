@@ -1,0 +1,50 @@
+{
+ "entry": "Framelink Figma MCP",
+ "slug": "GLips/Figma-Context-MCP",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 0
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Agent asks for a frame",
+   "l": "L2",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Fetch the Figma API",
+   "l": "L1",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Simplify the response",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Return layout data",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "c083d65c7e002923e7cb98f4e3bdafb105e90f6d"
+ },
+ "evidence": []
+}

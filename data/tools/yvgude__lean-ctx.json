@@ -1,0 +1,256 @@
+{
+ "slug": "yvgude/lean-ctx",
+ "n": "LeanCTX",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1",
+  "L3"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "Apache-2.0",
+ "stars": 3866,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Sits between an existing agent and the model: caches and compresses file reads, command output and each request before they arrive, and carries session memory and a cost ledger across chats.",
+ "art": "Session memory, a BM25-indexed artifact registry, and a savings ledger with receipts, held in the tool local store (persistent). The compressed request and the shaped command output are a path, not an artifact.",
+ "tok": "frugal",
+ "p": [
+  1,
+  2,
+  3,
+  2,
+  2,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 2,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "part",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "impl",
+  "se.attest": "part",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": "README.md",
+   "fs.example": "cookbook/README.md",
+   "pe.budget": "a dashboard and a measured USD spend, not a ceiling that stops a run: README.md (budget control, measured USD spend)",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "co.coexist": "names the slot it occupies and tells the operator not to stack another in it: README.md (Same layer as a standalone request-compression proxy (e.g. Headroom) - you do not need one on top); skills/lean-ctx/SKILL.md (Prefer the current shell configured compression over nested wrappers)",
+   "ic.surface": "Surface: cli and MCP server (rust/Cargo.toml; rust/src/server/registry.rs)",
+   "ic.help": "a subcommand CLI the operator drives from the tool itself: README.md (lean-ctx setup, lean-ctx provider list, lean-ctx proxy enable)",
+   "rl.tests": "packages/pi-lean-ctx/test/mcp-bridge.test.ts",
+   "rl.ci": ".github/workflows/ci.yml",
+   "rl.resume": "rust/src/core/recovery.rs; rust/src/cli/checkpoint_cmd.rs",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.attest": "local receipts and offline-verification primitives are Available, but attribution and verified savings sit in the proprietary plane: docs/adrs/ADR-010-oss-and-proprietary-contribution-boundary.md",
+   "se.threats": "cites th and ctrl: T1/T2/T6/T11 introduced, controls log impl, limits part, egress part, prov part",
+   "mt.units": "separately published crates: rust/crates/lean-ctx-protocol/Cargo.toml",
+   "mt.process": "CONTRIBUTING.md; CLA.md; docs/adrs/",
+   "mt.code": "out of reach for this method: the rubric does not judge a project internal code structure from the tree",
+   "fx.install": "crates.io, npm lean-ctx-bin and AUR, plus a script install: skills/lean-ctx/scripts/install.sh",
+   "fx.byo": "the provider is the operator choice: README.md (lean-ctx provider list; swap OpenAI, Anthropic or Gemini)",
+   "fx.exit": "what persists is a local store and a .ctxpkg in the tool own format; the receipts are JSON, the session store is not portable on its own",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by egress part",
+   "ic.error": "a documented flag that previews the action: README.md (lean-ctx uninstall --dry-run, preview every change, write nothing)",
+   "sf.warn": "the irreversible step is previewable and scoped: README.md (--dry-run, --keep-config, surgical uninstall that only removes its own blocks)",
+   "sf.stop": "it can be switched off, but what an in-flight run leaves behind is not described: README.md (lean-ctx-off, disable for the current shell)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "an agent that speaks MCP, or a shell whose commands it can hook",
+  "shell access for the hybrid mode; IDE-extension agents fall back to MCP-only and lose the command-output half",
+  "a machine that can run the Rust binary, installed from crates.io, npm or AUR",
+  "a codebase large enough that the index and the extra hop cost less context than they remove"
+ ],
+ "anti": [
+  "work that must see exact bytes: the model is handed a representation, and recovery to source is a separate step",
+  "teams needing policy authoring, cross-task learning or verified savings, which ADR-010 places in the proprietary plane; the open runtime enforces a received policy but does not author one",
+  "agents with no reliable shell hook, which run MCP-only and lose half the design",
+  "small repositories, where indexing and the proxy hop cost more than the context they save",
+  "anyone looking for a harness: it does not replace the agent, its task logic, model choice, tools or retry policy"
+ ],
+ "th": [
+  "T1",
+  "T2",
+  "T6",
+  "T11"
+ ],
+ "ctrl": {
+  "log": "impl",
+  "limits": "part",
+  "egress": "part",
+  "prov": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "A proxy that rewrites every request before it reaches the model, 78 MCP tools, and shell hooks that wrap command execution are together a high-privilege position. Session memory that survives a chat extends the reach of anything injected once. These control values are read from the published documentation and the generated tool registry, not from the Rust source.",
+ "sources": [
+  {
+   "url": "https://github.com/yvgude/lean-ctx",
+   "accessed": "2026-09-17"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/yvgude/lean-ctx/main/docs/adrs/ADR-010-oss-and-proprietary-contribution-boundary.md",
+   "accessed": "2026-09-17"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/yvgude/lean-ctx/main/docs/adrs/ADR-014-open-runtime-invariant.md",
+   "accessed": "2026-09-17"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/yvgude/lean-ctx/main/docs/reference/generated/mcp-tools.md",
+   "accessed": "2026-09-17"
+  },
+  {
+   "url": "https://crates.io/api/v1/crates/lean-ctx",
+   "accessed": "2026-09-17"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "LeanCTX",
+   "sum": "既存のエージェントとモデルの間に入り、ファイル読み取り・コマンド出力・各リクエストを到達前にキャッシュして圧縮する。セッション記憶とコスト台帳をチャットをまたいで持ち越す。",
+   "art": "セッション記憶、BM25で索引した成果物レジストリ、レシート付きの節約台帳を、ツールのローカルストアに永続化する(永続)。圧縮後のリクエストと整形後のコマンド出力は通り道であって成果物ではない。",
+   "pre": [
+    "MCPを話せるエージェント、またはコマンドをフックできるシェル",
+    "ハイブリッド動作にはシェルアクセスが要る。IDE拡張型のエージェントはMCPのみに落ち、コマンド出力側の半分を失う",
+    "crates.io・npm・AURから入れるRustバイナリを動かせる環境",
+    "索引と1ホップ分の増加より、削れる文脈のほうが大きいだけの規模のコードベース"
+   ],
+   "anti": [
+    "バイト列をそのまま見る必要がある作業。モデルに渡るのは表現であり、元のソースへの復元は別手順になる",
+    "ポリシーの策定、タスクをまたぐ学習、検証済みの節約額を必要とするチーム。ADR-010がこれらを商用側に置いており、OSSランタイムは受け取ったポリシーを強制するだけで策定はしない",
+    "確実なシェルフックを持たないエージェント。MCPのみで動き、設計の半分を使えない",
+    "小規模なリポジトリ。索引とプロキシの往復が、削れる文脈より高くつく",
+    "ハーネスを探している場合。エージェント本体・タスク制御・モデル選択・ツール・リトライ方針のいずれも置き換えない"
+   ],
+   "gnote": "モデルに届く前に全リクエストを書き換えるプロキシ、78個のMCPツール、コマンド実行を包むシェルフック。この3つが揃う位置は権限が高い。チャットをまたいで残るセッション記憶は、一度入り込んだものの影響範囲を広げる。ここの対策値は公開文書と生成されたツールレジストリの読解によるもので、Rustのソースを読んだ判定ではない。",
+   "flow": {
+    "steps": [
+     "エージェントが読み取りか実行",
+     "MCPかシェルフックが横取り",
+     "ctx_analyzeが表現を選ぶ",
+     "キャッシュか圧縮した形を返す",
+     "プロキシがリクエストを圧縮",
+     "費用をローカル台帳に記録",
+     "求めがあれば元ソースへ復元"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": ".github/copilot/mcp.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/manifest.json",
+   "agent_skills": "rust/src/templates/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Agent reads a file or runs a cmd",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "MCP tool or shell hook intercepts",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "ctx_analyze picks a mode",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Return cached or compressed form",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Proxy compresses the request",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Record cost to the local ledger",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Recover exact source on request",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07",
+ "open_core": true
+}

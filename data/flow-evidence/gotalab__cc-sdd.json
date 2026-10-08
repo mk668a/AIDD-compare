@@ -1,0 +1,181 @@
+{
+ "entry": "cc-sdd",
+ "slug": "gotalab/cc-sdd",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Requirements",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/requirements-review-gate.md",
+     "matched": [
+      "requirements"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/templates/specs/requirements-init.md",
+     "matched": [
+      "requirements"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/templates/specs/requirements.md",
+     "matched": [
+      "requirements"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Human approves",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Design",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/design-discovery-full.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/design-discovery-light.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/design-principles.md",
+     "matched": [
+      "design"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Human approves",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Tasks",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/tasks-generation.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/tasks-parallel-analysis.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/templates/specs/tasks.md",
+     "matched": [
+      "tasks"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Implement",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "tools/cc-sdd/templates/agents/antigravity-skills/skills/kiro-impl/templates/implementer-prompt.md",
+     "matched": [
+      "implement"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "29aee950f4addc36f9aeecb9881c46540e71ecc9"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".kiro/settings/rules/design-discovery-full.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/rules/design-discovery-light.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/rules/design-principles.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/rules/requirements-review-gate.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/rules/tasks-generation.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/rules/tasks-parallel-analysis.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/templates/specs/requirements-init.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/templates/specs/requirements.md"
+  },
+  {
+   "kind": "path",
+   "value": ".kiro/settings/templates/specs/tasks.md"
+  },
+  {
+   "kind": "path",
+   "value": "tools/cc-sdd/templates/agents/antigravity-skills/skills/kiro-impl/templates/implementer-prompt.md"
+  }
+ ]
+}

@@ -1,0 +1,211 @@
+{
+ "slug": "crewAIInc/crewAI",
+ "n": "CrewAI",
+ "entry_kind": "implementation",
+ "l": "L7",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "code",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "agent and task definitions in source: authored and reviewed as code, executed by the framework",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 59420,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Forms teams of role-bearing agents and divides tasks among them.",
+ "art": "agent and task definitions",
+ "tok": "heavy",
+ "p": [
+  1,
+  1,
+  3,
+  1,
+  0,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "docs/edge/ar/examples/cookbooks.mdx",
+   "rl.tests": "lib/cli/tests/__init__.py",
+   "rl.ci": ".github/workflows/tests.yml",
+   "mt.process": ".github/CONTRIBUTING.md",
+   "mt.units": "lib/cli/src/crewai_cli/templates/crew/pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T12/T13/T14/T16 introduced, controls agentauth none, limits part",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by no recorded control",
+   "fx.exit": "artifact.format code: source files in the repository's own language, readable without the tool",
+   "pe.budget": "a ceiling the operator sets on the command line: pyproject.toml (--timeout=)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Windsurf (README.md)",
+   "ic.surface": "Surface: library (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: lib/cli/pyproject.toml (click)",
+   "ic.error": "a dry run the operator can ask for before the real one: lib/cli/src/crewai_cli/cli.py (--dry-run)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (checkpointing)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA, LMSTUDIO, BEDROCK (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: lib/devtools/src/crewai_devtools/cli.py (KeyboardInterrupt)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "a problem where division of labour genuinely helps"
+ ],
+ "anti": [
+  "work a single agent can finish, which is most work"
+ ],
+ "th": [
+  "T12",
+  "T13",
+  "T14",
+  "T16"
+ ],
+ "ctrl": {
+  "agentauth": "none",
+  "limits": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Inherits the full set of multi-agent threats",
+ "sources": [
+  {
+   "url": "https://github.com/crewAIInc/crewAI",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "CrewAI",
+   "sum": "役割を持つエージェントのチームを組んでタスクを分担させる。",
+   "art": "エージェント・タスク定義",
+   "pre": [
+    "分業が実際に意味を持つ課題であること"
+   ],
+   "anti": [
+    "単一エージェントで足りる作業（大半はこれ）"
+   ],
+   "gnote": "多エージェント特有の脅威群がそのまま乗る",
+   "flow": {
+    "steps": [
+     "agents.yamlを定義",
+     "tasks.yamlを定義",
+     "クルーを起動",
+     "エージェントがタスク実行",
+     "次のタスクへ引き継ぐ"
+    ],
+    "back": [
+     "次のタスク"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "not-assessed"
+ ],
+ "spec_unit": "not-assessed",
+ "flow": {
+  "basis": "repo",
+  "path": "lib/cli/src/crewai_cli/templates/crew/config/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Define agents.yaml",
+    "l": "L7",
+    "who": "human"
+   },
+   {
+    "s": "Define tasks.yaml",
+    "l": "L7",
+    "who": "human"
+   },
+   {
+    "s": "Kick off the crew",
+    "l": "L7",
+    "who": "tool"
+   },
+   {
+    "s": "Agent executes a task",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Pass to the next task",
+    "l": "L7",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 3,
+    "s": "next task"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

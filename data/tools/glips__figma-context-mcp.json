@@ -1,0 +1,211 @@
+{
+ "slug": "GLips/Figma-Context-MCP",
+ "n": "Framelink Figma MCP",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code",
+  "ui"
+ ],
+ "artifact": {
+  "format": "ephemeral-path",
+  "lifecycle": "ephemeral",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 15962,
+ "push": "2026-10-03",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Serves Figma layout data to a coding agent over MCP, simplifying the API response first so the design arrives as context rather than as a screenshot.",
+ "art": "simplified layout data passed into context (ephemeral)",
+ "tok": "moderate",
+ "p": [
+  0,
+  2,
+  3,
+  1,
+  0,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 5,
+  "extend": 3,
+  "restructure": 2,
+  "rebuild": 4,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "none",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "none",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "none",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "none",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude/commands/release.md",
+   "rl.tests": "src/tests/benchmark.test.ts",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (MCP)",
+   "fx.exit": "artifact.format ephemeral-path: a path that exists for the run; nothing durable survives it",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but service-required means its state reaches a service, and no egress control is recorded",
+   "ic.surface": "Surface: cli (package.json)",
+   "fx.byo": "the provider is the operator's choice: BASEURL (tsconfig.json)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: src/server.ts (SIGINT)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "designs that actually live in Figma",
+  "a Figma access token, which is a data-egress decision"
+ ],
+ "anti": [
+  "projects whose design is not in Figma",
+  "work where the design file is out of date with what was agreed"
+ ],
+ "th": [
+  "T2",
+  "T6"
+ ],
+ "ctrl": {
+  "egress": "none",
+  "approval": "na",
+  "sandbox": "na",
+  "log": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "One of the few paths by which a design decision reaches an agent as structured data rather than as an image. Simplifying the response before it enters context is the same compression move the L2 output tools make, applied to a design API.",
+ "sources": [
+  {
+   "url": "https://github.com/GLips/Figma-Context-MCP",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/GLips/Figma-Context-MCP/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Framelink Figma MCP",
+   "sum": "Figmaのレイアウト情報をMCPでコーディングエージェントに渡す。APIの応答を簡約してから渡すので、デザインはスクリーンショットではなく文脈として届く。",
+   "art": "文脈へ渡される簡約済みレイアウト情報（使い捨て）",
+   "pre": [
+    "実際にFigmaにあるデザイン",
+    "Figmaのアクセストークン。データ持ち出しの判断でもある"
+   ],
+   "anti": [
+    "デザインがFigmaにないプロジェクト",
+    "デザインファイルが合意内容と乖離している状況"
+   ],
+   "gnote": "デザイン上の決定が画像ではなく構造化データとしてエージェントに届く数少ない経路。文脈に入れる前に応答を簡約する動きは、L2の出力圧縮器と同じ手をデザインAPIに当てたものである。",
+   "ui_ux_note": "デザインを実装へ運ぶが、実装を一度も観測しない。評価側でサイクルは開いたまま。",
+   "flow": {
+    "steps": [
+     "エージェントがフレームを要求",
+     "Figma APIを取得",
+     "レスポンスを簡約",
+     "レイアウトデータを返す"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "src/mcp-server.ts"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "service-required",
+  "byok": true
+ },
+ "design_concerns": [
+  "screen-flow",
+  "visual-identity"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Agent asks for a frame",
+    "l": "L2",
+    "who": "model"
+   },
+   {
+    "s": "Fetch the Figma API",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Simplify the response",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Return layout data",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07",
+ "ui_ux": {
+  "hcd_activities": [
+   "design"
+  ],
+  "artifact": "Figma layout data as simplified structured context",
+  "feedback_channel": "none",
+  "handoff": [
+   "the coding agent that writes the interface"
+  ],
+  "a11y_standard": "none",
+  "note": "Carries a design into implementation without ever observing the implementation, so the cycle stays open on the evaluation side."
+ }
+}

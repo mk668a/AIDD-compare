@@ -1,0 +1,436 @@
+{
+ "standard": {
+  "designation": "ISO/IEC 25010:2023",
+  "edition": "Second edition",
+  "published": "2023-11",
+  "title": "Systems and software engineering-Systems and software Quality Requirements and Evaluation (SQuaRE)-Product quality model",
+  "prepared_by": "ISO/IEC JTC 1/SC 7, Software and systems engineering",
+  "scope": "Defines a product quality model applicable to ICT products and software products. The model is, in the words of clause 1, \"composed of nine characteristics (which are further subdivided into subcharacteristics)\" that relate to quality properties of the product. It is a reference model for specifying, measuring and evaluating product quality, usable across the lifecycle by developers, acquirers, quality assurance staff and independent evaluators. A product here includes software, data, hardware, firmware and communication infrastructure.",
+  "cancels_and_replaces": "The second edition of ISO/IEC 25010, together with the first edition of ISO/IEC 25002 and the first edition of ISO/IEC 25019, cancels and replaces ISO/IEC 25010:2011, which has been technically revised. Confirmed from the foreword of the standard itself.",
+  "changes_from_2011": [
+   "Safety was added as a quality characteristic, with the subcharacteristics operational constraint, risk identification, fail safe, hazard warning and safe integration.",
+   "Usability and portability were replaced with interaction capability and flexibility respectively.",
+   "Inclusivity and self-descriptiveness, resistance, and scalability were added as subcharacteristics of interaction capability, security, and flexibility respectively.",
+   "User interface aesthetics and maturity were replaced with user engagement and faultlessness respectively.",
+   "Accessibility was split into inclusivity and user assistance.",
+   "The target of the product quality model was extended to include various types of ICT product and information system.",
+   "Several characteristics and subcharacteristics were given more accurate names and definitions."
+  ],
+  "quality_in_use_moved": {
+   "confirmed": true,
+   "statement": "The foreword of ISO/IEC 25010:2023 states that the parts of ISO/IEC 25010:2011 other than the product quality model are moved to ISO/IEC 25002 on quality models overview and usage, and to ISO/IEC 25019 on quality-in-use model. Note 1 to entry under clause 3.4 restates it: usability is now defined in the quality-in-use model, ISO/IEC 25019, and interaction capability is a prerequisite for usability.",
+   "quality_in_use_standard": "ISO/IEC 25019:2023, Quality-in-use model",
+   "overview_standard": "ISO/IEC 25002:2024, Quality model overview and usage",
+   "evidence": "Foreword and clause 3.4 Note 1 of the ISO/IEC 25010:2023 preview PDF, which is primary text."
+  },
+  "usability_is_not_interaction_capability": "Clause 3.4 Note 1 draws the line explicitly. Interaction capability is a set of product attributes that enable users to complete tasks. Usability, in ISO/IEC 25019, is an outcome of use judged by effectiveness, efficiency and satisfaction in a context of use. Note 2 adds that interaction capability is a prerequisite for usability. The two are therefore not synonyms and do not live in the same standard.",
+  "japanese_edition": {
+   "designation": "JIS X 25010:2025",
+   "correspondence": "IDT, identical to ISO/IEC 25010:2023",
+   "revised": "2025-12-22",
+   "replaces": "JIS X 25010:2013, which corresponded to ISO/IEC 25010:2011",
+   "note": "This is why established Japanese renderings exist for the 2023 names at all. Several Japanese-language articles written before this edition state that the 2023 model had no official Japanese rendering, and that was true when they were written."
+  },
+  "japanese_evidence_tiers": {
+   "tier_a": "Read directly from the JIS X 25010:2025 preview PDF published by the Japanese Standards Association. This covers every name the 2023 edition changed or added, because the JIS foreword enumerates them.",
+   "tier_b": "Not present in the JIS X 25010:2025 preview, because the preview stops before clause 3. These renderings are carried over unchanged from JIS X 25010:2013 and are corroborated by a Japanese article written against the 2023 model. Each such entry carries a ja_note saying so."
+  },
+  "sources": [
+   {
+    "url": "https://cdn.standards.iteh.ai/samples/78176/13ff8ea97048443f99318920757df124/ISO-IEC-25010-2023.pdf",
+    "accessed": "2026-09-06",
+    "what": "Official ISO/IEC preview of ISO/IEC 25010:2023. Cover, contents, foreword, introduction, clause 1 Scope and terms 3.1 through 3.4.4. Primary text for the designation, edition, scope, replacement statement, change list and the first four characteristics."
+   },
+   {
+    "url": "https://www.iso.org/standard/78176.html",
+    "accessed": "2026-09-06",
+    "what": "ISO catalogue entry for ISO/IEC 25010:2023. Canonical identifier only; the page contents were not reviewed or used as evidence."
+   },
+   {
+    "url": "https://www.iso.org/standard/78177.html",
+    "accessed": "2026-09-06",
+    "what": "ISO catalogue entry for ISO/IEC 25019:2023, Quality-in-use model. Title confirmed from search result metadata. The substantive claim that quality-in-use moved there is taken from the ISO/IEC 25010:2023 foreword, not from this page. Only search-result metadata was checked; the page contents were not reviewed."
+   },
+   {
+    "url": "https://iso25000.com/index.php/en/iso-25000-standards/iso-25010",
+    "accessed": "2026-09-06",
+    "what": "Characteristic and subcharacteristic names and definitions for reliability, security, maintainability, flexibility and safety, which are past the end of the ISO preview PDF. Both pages of the paginated list were read."
+   },
+   {
+    "url": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+    "accessed": "2026-09-06",
+    "what": "JIS X 25010:2025 preview published by the Japanese Standards Association. Contains the Japanese foreword, which names every characteristic and subcharacteristic that the 2023 edition renamed or added. This is the authority for every tier A Japanese rendering in this file."
+   },
+   {
+    "url": "https://webdesk.jsa.or.jp/books/W11M0090/?bunsyo_id=JIS+X+25010:2025",
+    "accessed": "2026-09-06",
+    "what": "JSA catalogue entry for JIS X 25010:2025. Confirms the designation, the IDT correspondence to ISO/IEC 25010:2023 and the revision date. Only search-result metadata was checked; the page contents were not reviewed."
+   },
+   {
+    "url": "https://www.qbook.jp/column/1790.html",
+    "accessed": "2026-09-06",
+    "what": "Japanese-language article enumerating the nine characteristics and forty subcharacteristics of the 2023 model in Japanese. Used to corroborate the tier B renderings and to confirm that the subcharacteristic count is forty."
+   },
+   {
+    "url": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+    "accessed": "2026-09-06",
+    "what": "Text of JIS X 25010:2013. Source for the Japanese renderings that the 2023 revision did not change."
+   },
+   {
+    "url": "https://quality.arc42.org/articles/iso-25010-update-2023",
+    "accessed": "2026-09-06",
+    "what": "Independent corroboration of the 2023 change list. Nothing unique to this page is relied on."
+   },
+   {
+    "url": "https://www.iso.org/standard/78175.html",
+    "accessed": "2026-09-06",
+    "what": "ISO catalogue entry for ISO/IEC 25002:2024, Quality model overview and usage. Used only for the year of the companion standard named in the 25010 foreword. Only search-result metadata was checked; the page contents were not reviewed."
+   }
+  ]
+ },
+ "characteristics": [
+  {
+   "id": "functional-suitability",
+   "en": "Functional suitability",
+   "ja": "機能適合性",
+   "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+   "ja_note": "Tier B. Unchanged from JIS X 25010:2013 and used with the 2023 model by the Qbook article.",
+   "asks": "Does this tool actually perform the job it is adopted for, completely and correctly, rather than only naming it?",
+   "sub": [
+    {
+     "en": "Functional completeness",
+     "ja": "機能完全性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    },
+    {
+     "en": "Functional correctness",
+     "ja": "機能正確性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    },
+    {
+     "en": "Functional appropriateness",
+     "ja": "機能適切性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    }
+   ],
+   "asks_ja": "そのツールは、名前を掲げているだけでなく、実際にその仕事を漏れなく正しくこなすか。"
+  },
+  {
+   "id": "performance-efficiency",
+   "en": "Performance efficiency",
+   "ja": "性能効率性",
+   "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+   "ja_note": "Tier B. Unchanged from JIS X 25010:2013.",
+   "asks": "What does one unit of work cost in time, tokens and machine resources, and does that cost have a ceiling?",
+   "sub": [
+    {
+     "en": "Time behaviour",
+     "ja": "時間効率性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    },
+    {
+     "en": "Resource utilization",
+     "ja": "資源効率性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    },
+    {
+     "en": "Capacity",
+     "ja": "容量満足性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    }
+   ],
+   "asks_ja": "1単位の作業に時間・トークン・計算資源をどれだけ使うか。その費用に上限はあるか。"
+  },
+  {
+   "id": "compatibility",
+   "en": "Compatibility",
+   "ja": "互換性",
+   "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+   "ja_note": "Tier B. Unchanged from JIS X 25010:2013.",
+   "asks": "Will it sit beside the tools already in the stack and exchange work with them without a bespoke adapter?",
+   "sub": [
+    {
+     "en": "Co-existence",
+     "ja": "共存性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    },
+    {
+     "en": "Interoperability",
+     "ja": "相互運用性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm"
+    }
+   ],
+   "asks_ja": "今あるツール群の隣に置いて、専用のつなぎ込み無しに仕事を受け渡せるか。"
+  },
+  {
+   "id": "interaction-capability",
+   "en": "Interaction capability",
+   "ja": "インタラクション容易性",
+   "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+   "ja_variant": "対話性",
+   "ja_note": "Tier A. The JIS X 25010:2025 foreword prints the primary name with the variant in parentheses immediately after it, so both are official. The former name, replaced by this one, was the JIS X 25010:2013 rendering of usability.",
+   "asks": "Can the people who must operate it recognise what it is for, learn it, drive it, and be protected from their own mistakes while doing so?",
+   "sub": [
+    {
+     "en": "Appropriateness recognizability",
+     "ja": "適切度認識性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Learnability",
+     "ja": "習得性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Operability",
+     "ja": "運用操作性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "User error protection",
+     "ja": "ユーザエラー防止性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_variant": "ユーザーエラー防止性",
+     "ja_note": "Tier B. The JIS house style omits the long vowel mark, and the JIS X 25010:2025 foreword follows it in the adjacent terms it does print. The variant with the mark is what the Qbook article uses."
+    },
+    {
+     "en": "User engagement",
+     "ja": "ユーザエンゲージメント",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_variant": "利用者関与性",
+     "ja_note": "Tier A. New in 2023, replacing user interface aesthetics. The foreword prints both forms."
+    },
+    {
+     "en": "Inclusivity",
+     "ja": "インクルーシビティ",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_variant": "包摂性",
+     "ja_note": "Tier A. New in 2023, one of the two halves accessibility was split into. The foreword prints both forms."
+    },
+    {
+     "en": "User assistance",
+     "ja": "ユーザ支援性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023, the other half accessibility was split into."
+    },
+    {
+     "en": "Self-descriptiveness",
+     "ja": "自己記述性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023."
+    }
+   ],
+   "asks_ja": "動かす人が、それが何のためのものか分かり、覚え、操作でき、自分の誤りから守られるか。"
+  },
+  {
+   "id": "reliability",
+   "en": "Reliability",
+   "ja": "信頼性",
+   "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+   "ja_note": "Tier B. Unchanged from JIS X 25010:2013.",
+   "asks": "Will it keep working across a long or unattended run, and can it be brought back to a known state when it does not?",
+   "sub": [
+    {
+     "en": "Faultlessness",
+     "ja": "無障害性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023, replacing maturity."
+    },
+    {
+     "en": "Availability",
+     "ja": "可用性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Fault tolerance",
+     "ja": "障害許容性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_variant": "耐故障性",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Recoverability",
+     "ja": "回復性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    }
+   ],
+   "asks_ja": "長時間や無人の実行を通じて動き続けるか。落ちたとき既知の状態へ戻せるか。"
+  },
+  {
+   "id": "security",
+   "en": "Security",
+   "ja": "セキュリティ",
+   "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+   "ja_note": "Tier A for the characteristic name, which the JIS X 25010:2025 foreword prints when naming resistance as a new subcharacteristic of it. Unchanged from JIS X 25010:2013.",
+   "asks": "What does adopting it expose, and which of its defences are enforced rather than merely recommended in a README?",
+   "sub": [
+    {
+     "en": "Confidentiality",
+     "ja": "機密性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Integrity",
+     "ja": "インテグリティ",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B. JIS X 25010:2013 transliterates rather than translating this one."
+    },
+    {
+     "en": "Non-repudiation",
+     "ja": "否認防止性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Accountability",
+     "ja": "責任追跡性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Authenticity",
+     "ja": "真正性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Resistance",
+     "ja": "耐攻撃性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_variant": "対攻撃性",
+     "ja_note": "Tier A. New in 2023. The Qbook article prints the variant, which uses a different first character; the JIS foreword is authoritative and this file follows it."
+    }
+   ],
+   "asks_ja": "導入すると何が露出するか。その防御はREADMEの推奨ではなく、実装として強制されているか。"
+  },
+  {
+   "id": "maintainability",
+   "en": "Maintainability",
+   "ja": "保守性",
+   "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+   "ja_note": "Tier B. Unchanged from JIS X 25010:2013.",
+   "asks": "When it has to be changed, extended or diagnosed, can that be done by someone who did not write it?",
+   "sub": [
+    {
+     "en": "Modularity",
+     "ja": "モジュール性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Reusability",
+     "ja": "再利用性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Analysability",
+     "ja": "解析性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Modifiability",
+     "ja": "修正性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Testability",
+     "ja": "試験性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_variant": "テスト可用性",
+     "ja_note": "Tier B."
+    }
+   ],
+   "asks_ja": "書いた本人でない誰かが、変更・拡張・原因究明をやれるか。"
+  },
+  {
+   "id": "flexibility",
+   "en": "Flexibility",
+   "ja": "柔軟性",
+   "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+   "ja_note": "Tier A. The JIS X 25010:2025 foreword states that portability was replaced by this name. The same Japanese word was already in the SQuaRE family as the JIS X 25010:2013 rendering of flexibility under context coverage in the quality-in-use model, which is a different position in a different standard, so the word is established but its referent changed.",
+   "asks": "Will it survive a change of codebase, team size, environment or scale without being torn out and replaced?",
+   "sub": [
+    {
+     "en": "Adaptability",
+     "ja": "適応性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Scalability",
+     "ja": "拡張性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023."
+    },
+    {
+     "en": "Installability",
+     "ja": "設置性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_variant": "インストール性",
+     "ja_note": "Tier B."
+    },
+    {
+     "en": "Replaceability",
+     "ja": "置換性",
+     "ja_src": "https://www.ny.ics.keio.ac.jp/ipsjts1/3rd-ver/htm/jxjaq0hi.htm",
+     "ja_note": "Tier B."
+    }
+   ],
+   "asks_ja": "コードベース・チーム規模・環境・規模が変わったとき、入れ替えずに使い続けられるか。"
+  },
+  {
+   "id": "safety",
+   "en": "Safety",
+   "ja": "安全性",
+   "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+   "ja_note": "Tier A. New in 2023.",
+   "asks": "If it goes wrong while nobody is watching, can it endanger life, health, property or the environment, and does it warn or stop before it does?",
+   "sub": [
+    {
+     "en": "Operational constraint",
+     "ja": "運用制約性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023."
+    },
+    {
+     "en": "Risk identification",
+     "ja": "リスク識別性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023."
+    },
+    {
+     "en": "Fail safe",
+     "ja": "フェールセーフ",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023."
+    },
+    {
+     "en": "Hazard warning",
+     "ja": "危険警告性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023."
+    },
+    {
+     "en": "Safe integration",
+     "ja": "統合時安全性",
+     "ja_src": "https://webdesk.jsa.or.jp/preview/pre_jis_x_25010_000_000_2025_j_ed10_ch.pdf",
+     "ja_note": "Tier A. New in 2023."
+    }
+   ],
+   "asks_ja": "誰も見ていないときに誤動作したら、生命・健康・財産・環境を危険にさらしうるか。その前に警告し、止まるか。"
+  }
+ ],
+ "source_limitations": [
+  "The body text of JIS X 25010:2025, clause 3, was not read. The JSA preview stops after the foreword, so the tier B Japanese renderings in this file are the JIS X 25010:2013 wording corroborated against a Japanese article written for the 2023 model, and it is possible that the 2025 edition adjusted some of them, since its own foreword says several characteristics and subcharacteristics were given more accurate names.",
+  "The ISO/IEC 25010:2023 definitions for reliability, security, maintainability, flexibility and safety were taken from iso25000.com, not from the standard's own clause 3, because the official preview PDF ends at clause 3.4.4. The names are corroborated by the standard's own foreword; the definition wording is not."
+ ]
+}

@@ -1,0 +1,209 @@
+{
+ "slug": "ghuntley.com/ralph",
+ "n": "Ralph Loop (pattern)",
+ "entry_kind": "implementation",
+ "l": "L6",
+ "s2": [
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "code",
+  "lifecycle": "persistent",
+  "addressee": "human",
+  "addressee_basis": "inferred",
+  "addressee_note": "a loop script the operator writes by hand: it is the operator's own artefact, and the agent never reads it",
+  "format_detail": []
+ },
+ "lic": "n/a (pattern)",
+ "stars": null,
+ "push": null,
+ "conf": "ok",
+ "exec": true,
+ "sum": "Stateless repetition pattern: retry the same task until an external check passes.",
+ "art": "loop script (hand-written)",
+ "tok": "unbounded",
+ "p": [
+  0,
+  0,
+  3,
+  2,
+  0,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 3,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "na",
+  "fs.example": "na",
+  "pe.budget": "none",
+  "co.standards": "na",
+  "co.coexist": "na",
+  "ic.surface": "na",
+  "ic.help": "na",
+  "ic.error": "na",
+  "rl.tests": "na",
+  "rl.ci": "na",
+  "rl.resume": "na",
+  "se.residency": "impl",
+  "se.attest": "na",
+  "se.threats": "none",
+  "mt.units": "na",
+  "mt.process": "na",
+  "mt.code": "not-assessed",
+  "fx.install": "na",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "none",
+  "sf.stop": "na",
+  "sf.warn": "na",
+  "evidence": {
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format code: source files in the repository's own language, readable without the tool",
+   "co.coexist": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "ic.surface": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "ic.help": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "ic.error": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "rl.resume": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "se.attest": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "fx.install": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "fx.byo": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "sf.stop": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "sf.warn": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "co.standards": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to conform to an interface standard",
+   "fs.scope": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "fs.example": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "rl.tests": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "rl.ci": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "mt.units": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for",
+   "mt.process": "na: the entry is a pattern published as a blog post, not a distributed artefact. There is no repository to hold the evidence this indicator asks for"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 3,
+  "complex": 1,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "a test that decides pass or fail from outside, which is mandatory",
+  "an execution environment where iteration is cheap"
+ ],
+ "anti": [
+  "areas with no tests",
+  "UI work where success is judged subjectively",
+  "running it unattended with no cap"
+ ],
+ "th": [
+  "T4",
+  "T7",
+  "T8"
+ ],
+ "ctrl": {
+  "limits": "none",
+  "log": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "External verification is the de facto gate. The cap has to be added by hand",
+ "sources": [
+  {
+   "url": "https://ghuntley.com/ralph",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Ralph Loop（パターン）",
+   "sum": "外部検証が通るまで同じ課題を繰り返させる、状態を持たない反復パターン。",
+   "art": "ループスクリプト（自作）",
+   "pre": [
+    "外部から成否を判定できるテストの存在（必須）",
+    "反復コストが低い実行環境"
+   ],
+   "anti": [
+    "テストがない領域",
+    "成否が主観で決まるUI作業",
+    "上限管理をしないまま無人で回すこと"
+   ],
+   "gnote": "外部検証が事実上のゲート。上限は自分で入れる必要がある",
+   "cost_warning": "反復の上限が設計に組み込まれていない。外部検証が通るか人が止めるまで、無人実行は際限なく消費しうる。",
+   "flow": {
+    "steps": [
+     "1枚のプロンプトファイル",
+     "エージェントを実行",
+     "次のタスクを自分で選ぶ",
+     "再びループ"
+    ],
+    "back": [
+     "完了まで"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "mcp": "not-assessed",
+  "agents_md": "not-assessed",
+  "agent_plugins": "not-assessed",
+  "agent_skills": "not-assessed",
+  "a2a": "not-assessed",
+  "evidence": {}
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "One prompt file",
+    "l": "L2",
+    "who": "human"
+   },
+   {
+    "s": "Run the agent",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Agent picks the next task",
+    "l": "L6",
+    "who": "model"
+   },
+   {
+    "s": "Loop again",
+    "l": "L6",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 0,
+    "s": "until done"
+   }
+  ]
+ },
+ "cost_warning": "No iteration cap is built in. An unattended run consumes without bound until the external check passes or an operator intervenes."
+}

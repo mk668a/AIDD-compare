@@ -1,0 +1,151 @@
+{
+ "entry": "GSD Core",
+ "slug": "open-gsd/gsd-core",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/ARCHITECTURE.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Discuss",
+   "l": "L4",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Plan",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/ARCHITECTURE.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agents/gsd-eval-planner.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agents/gsd-plan-checker.md",
+     "matched": [
+      "plan"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Execute",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/ARCHITECTURE.md",
+     "matched": [
+      "execute"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agents/gsd-executor.md",
+     "matched": [
+      "execute"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/ARCHITECTURE.md",
+     "matched": [
+      "execute"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Verify",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/ARCHITECTURE.md",
+     "matched": [
+      "verify"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agents/gsd-doc-verifier.md",
+     "matched": [
+      "verify"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agents/gsd-dom-verifier.md",
+     "matched": [
+      "verify"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Ship",
+   "l": null,
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "next",
+  "tree_sha": "03738824dec9b46077752e6f8f628c096a5faa1e"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "docs/ARCHITECTURE.md",
+   "value": "1. **Context engineering** — Structured artifacts that give the AI everything it needs per task (see [Context engineering](explanation/context-engineering.md))\n2. **Multi-agent orchestration** — Thin orchestrators that spawn specialized agents with fresh context windows (see [Multi-agent orchestration](explanation/multi-agent-orchestration.md))\n3. **Spec-driven development** — Requirements → research → plans → execution → verification pipeline"
+  },
+  {
+   "kind": "path",
+   "value": "agents/gsd-doc-verifier.md"
+  },
+  {
+   "kind": "path",
+   "value": "agents/gsd-dom-verifier.md"
+  },
+  {
+   "kind": "path",
+   "value": "agents/gsd-eval-planner.md"
+  },
+  {
+   "kind": "path",
+   "value": "agents/gsd-executor.md"
+  },
+  {
+   "kind": "path",
+   "value": "agents/gsd-plan-checker.md"
+  }
+ ]
+}

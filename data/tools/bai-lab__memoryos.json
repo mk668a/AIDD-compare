@@ -1,0 +1,214 @@
+{
+ "slug": "BAI-LAB/MemoryOS",
+ "n": "MemoryOS",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "chroma",
+    "ev": "README.md (Chromadb)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 1593,
+ "push": "2026-07-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Memory for agents arranged the way an operating system arranges storage: a hierarchy with separate storage, updating, retrieval and generation stages. Reachable over MCP.",
+ "art": "hierarchical memory store (persistent)",
+ "tok": "moderate",
+ "p": [
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 2,
+  "rebuild": 2,
+  "replace": 1,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "doc",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "none",
+  "rl.resume": "none",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "none",
+  "mt.process": "none",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.example": "memoryos-playground/memdemo/templates/index.html",
+   "rl.tests": "memoryos-chromadb/comprehensive_test.py",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (MCP)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "co.coexist": "states the hosts it sits beside: Cline, Cursor (README.md)",
+   "ic.surface": "Surface: library (memoryos-pypi/requirements.txt (pip install memoryos-pro; from memoryos import Memoryos))",
+   "fx.install": "an install that does not change the machine globally: README.md (docker pull)",
+   "fx.byo": "the provider is the operator's choice: OPENAI, ANTHROPIC, DEEPSEEK, VLLM, BASEURL (README.md)",
+   "fs.scope": "README.md states the job, and the repository carries no manifest at all, only requirements.txt"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 3,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "a place to run it continuously",
+  "a harness that speaks MCP, or willingness to call the SDK directly"
+ ],
+ "anti": [
+  "work that fits in one session, where a memory layer is overhead",
+  "teams that need to review what was remembered, since the store is not a diffable file"
+ ],
+ "th": [
+  "T1",
+  "T6"
+ ],
+ "ctrl": {
+  "memval": "none",
+  "log": "none",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "A hierarchical store that updates itself is a memory-poisoning target with no validation step recorded. The benchmark numbers quoted in the README are for recall quality, which is a different question from whether what was recalled is true.",
+ "sources": [
+  {
+   "url": "https://github.com/BAI-LAB/MemoryOS",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/BAI-LAB/MemoryOS/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "MemoryOS",
+   "sum": "エージェントの記憶を、OSの記憶階層と同じ形で持つ実装。保存・更新・検索・生成を分けた階層構造をとる。MCPから到達できる。",
+   "art": "階層型の記憶ストア（永続）",
+   "pre": [
+    "継続的に動かす場所",
+    "MCPを話すハーネス、またはSDKを直接呼ぶ意思"
+   ],
+   "anti": [
+    "1セッションで終わる作業。記憶層はoverheadになる",
+    "何を憶えたかをレビューしたいチーム。ストアは差分の取れるファイルではない"
+   ],
+   "gnote": "自分で更新する階層ストアは記憶汚染の標的であり、検証手順は記録されていない。READMEが引く評価値は想起の質であって、想起した内容が正しいかは別の問いである。",
+   "flow": {
+    "steps": [
+     "add_memory",
+     "短期ストア",
+     "中期・長期へ統合",
+     "retrieve_memory",
+     "プロファイルを添えて生成"
+    ],
+    "back": [
+     "次のターン"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "memoryos-mcp/mcp.json"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "add_memory",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Short-term store",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Consolidate to mid and long term",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "retrieve_memory",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Generate with the profile",
+    "l": null,
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "next turn"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

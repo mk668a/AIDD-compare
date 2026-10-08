@@ -1,0 +1,244 @@
+{
+ "slug": "modu-ai/moai-adk",
+ "n": "MoAI-ADK",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L5",
+  "L6"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "test-code",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "a SPEC with its tests: the spec is agreed by a person and the tests are executed by a runner",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/modu-ai/moai-adk/blob/main/.claude/agents/harness/hns-oss-docs-content-author-specialist.md"
+   },
+   {
+    "id": "flowchart",
+    "ev": "https://github.com/modu-ai/moai-adk/blob/main/.claude/agents/harness/hns-oss-docs-content-author-specialist.md"
+   },
+   {
+    "id": "go-test",
+    "ev": "README.md (go test)"
+   },
+   {
+    "id": "playwright",
+    "ev": "README.md (playwright)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 1230,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "CLI wrapping a coding agent. Spec-first Plan, Run, Sync with a TDD gate between.",
+ "art": "SPEC plus tests (persistent)",
+ "tok": "heavy",
+ "p": [
+  3,
+  2,
+  3,
+  3,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 3,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "none",
+  "sf.stop": "part",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".claude/commands/harness/github.md",
+   "fs.example": ".claude/skills/moai-domain-html-report/references/templates/explainer.html.mustache",
+   "rl.tests": ".claude/workflows/tests/sync-audit-4dim.test.js",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "internal/core/integration/.gitkeep",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format test-code: test sources in the project's own test framework",
+   "pe.budget": "a ceiling the operator sets on the command line: README.md (--max-turns)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, JetBrains (README.md)",
+   "ic.surface": "Surface: cli (cmd/moai/main.go)",
+   "ic.help": "a command-line parser that prints its own usage: go.mod (cobra)",
+   "ic.error": "a dry run the operator can ask for before the real one: scripts/convert-nextra-to-hextra/main.go (dryRun)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (rollback)",
+   "fx.install": "only a global install is documented: README.md (curl -fsSL https://adk.mo.ai.kr/install.sh | bash)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: internal/web/app.go (signal.Notify)",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (danger)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a target where tests can be written",
+  "a supported harness"
+ ],
+ "anti": [
+  "legacy that cannot be tested",
+  "cases where another harness is required"
+ ],
+ "th": [
+  "T6",
+  "T17"
+ ],
+ "ctrl": {
+  "prov": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The TDD gate is the real blocking condition. Strongly coupled to a single harness",
+ "sources": [
+  {
+   "url": "https://github.com/modu-ai/moai-adk",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "MoAI-ADK",
+   "sum": "コーディングエージェントをラップするCLI。SPEC先行のPlan→Run→SyncにTDDゲートを挟む。",
+   "art": "SPEC + テスト（永続）",
+   "pre": [
+    "テストを書ける対象",
+    "対応ハーネス"
+   ],
+   "anti": [
+    "テスト不能なレガシー",
+    "他のハーネスを使いたい場合"
+   ],
+   "gnote": "TDDゲートが実質のブロッキング条件。単一ハーネスに強く結合している",
+   "flow": {
+    "steps": [
+     "plan: SPEC作成",
+     "plan-auditor（独立監査）",
+     "run: TDD実装",
+     "sync-auditor（品質採点）",
+     "sync: ドキュメントとPR"
+    ],
+    "back": [
+     "DEBT",
+     "DEBT"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": ".mcp.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": "mods/moai-board/.claude-plugin/plugin.json",
+   "agent_skills": ".moai/archive/skills/v2.16/moai-framework-electron/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "behaviour",
+  "process"
+ ],
+ "spec_unit": "phase-document",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "plan, write the SPEC",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "plan-auditor",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   },
+   {
+    "s": "run, TDD",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "sync-auditor",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   },
+   {
+    "s": "sync, docs and PR",
+    "l": null,
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 1,
+    "to": 0,
+    "s": "DEBT"
+   },
+   {
+    "from": 3,
+    "to": 2,
+    "s": "DEBT"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

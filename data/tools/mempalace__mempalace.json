@@ -1,0 +1,244 @@
+{
+ "slug": "MemPalace/mempalace",
+ "n": "MemPalace",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "postgres",
+    "ev": "pyproject.toml (pgvector)"
+   },
+   {
+    "id": "qdrant",
+    "ev": "pyproject.toml (qdrant)"
+   },
+   {
+    "id": "chroma",
+    "ev": "pyproject.toml (chromadb)"
+   },
+   {
+    "id": "milvus",
+    "ev": "pyproject.toml (milvus)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 59448,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Keeps conversation history verbatim rather than summarised, retrieves against it locally, and makes no API calls of its own.",
+ "art": "verbatim conversation store (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  3
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 2,
+  "rebuild": 2,
+  "replace": 1,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "na",
+  "sf.stop": "part",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "fs.example": "examples/HOOKS_TUTORIAL.md",
+   "rl.tests": "tests/_backend_conformance.py",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "website/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T1/T17 introduced, controls memval none, log part, prov none",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "pe.budget": "a ceiling the operator sets on the command line: mempalace/cli.py (--timeout)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Gemini CLI, Codex CLI, Cursor (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: mempalace/cli.py (argparse)",
+   "ic.error": "a confirmation step in the code path: mempalace/cli.py (--yes)",
+   "rl.resume": "recovering is described in prose, not implemented: docs/recovery/index-metadata-recovery.md (rollback)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA, LMSTUDIO, LLAMA.CPP, VLLM, BASEURL, ANTHROPIC (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: mempalace/cli.py (KeyboardInterrupt)",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (> [!CAUTION])"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 3,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a local Python environment",
+  "hooks wired into the harness, or history is lost when a session expires"
+ ],
+ "anti": [
+  "work where storing conversations verbatim is itself the problem",
+  "teams needing the store to be shared and access-controlled"
+ ],
+ "th": [
+  "T1",
+  "T17"
+ ],
+ "ctrl": {
+  "memval": "none",
+  "log": "part",
+  "prov": "none",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Verbatim storage avoids the failure mode where a summariser quietly discards the thing that mattered, and pays for it in size. The README opens with a warning about impostor domains distributing malware, which is a supply-chain fact worth carrying into any adoption decision.",
+ "sources": [
+  {
+   "url": "https://github.com/MemPalace/mempalace",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/MemPalace/mempalace/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "MemPalace",
+   "sum": "会話履歴を要約せず逐語で保持し、ローカルで検索する。自分からAPIを呼ばない。",
+   "art": "逐語の会話ストア（永続）",
+   "pre": [
+    "ローカルのPython環境",
+    "ハーネスへのフック配線。ないとセッション失効で履歴が消える"
+   ],
+   "anti": [
+    "会話の逐語保存自体が問題になる業務",
+    "ストアを共有しアクセス制御したいチーム"
+   ],
+   "gnote": "逐語保存は「要約器が大事なところを黙って捨てる」失敗を避け、その代償を容量で払う。READMEが偽ドメインによるマルウェア配布の警告から始まっている点は、採用判断に持ち込むべきサプライチェーン上の事実である。",
+   "flow": {
+    "steps": [
+     "initでpalaceを作る",
+     "履歴を逐語でmine",
+     "drawerへ分割",
+     "ローカルでsearch",
+     "コンテキストへ想起"
+    ],
+    "back": [
+     "次のクエリ"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": ".claude-plugin/.mcp.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".antigravity-plugin/plugin.json",
+   "agent_skills": ".antigravity-plugin/skills/mempalace-recall/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": false
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": ".claude-plugin/commands/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "init the palace",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "mine the history verbatim",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Chunk into drawers",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "search locally",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Recall into context",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 3,
+    "s": "next query"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

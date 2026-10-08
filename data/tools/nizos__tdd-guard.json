@@ -1,0 +1,208 @@
+{
+ "slug": "nizos/tdd-guard",
+ "n": "TDD Guard",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L6"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "config",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "hook configuration read by the harness at run time",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 2358,
+ "push": "2026-10-05",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Blocks implementation written before a test, via hooks. Turns TDD from discipline into enforcement.",
+ "art": "hook configuration (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  1,
+  3,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 5,
+  "restructure": 5,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "na",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "fs.example": "reporters/junit5/src/test/java/io/github/nizos/tddguard/junit5/fixtures/AbortedContainerFixture.java",
+   "rl.tests": "reporters/junit5/src/test/java/io/github/nizos/tddguard/junit5/CompilationErrorHandlerTest.java",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "reporters/go/go.mod",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th: no OWASP Agentic AI threat is introduced by adopting this entry, so there is nothing here to control against",
+   "fx.exit": "artifact.format config: a configuration file in an open text format",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Claude Code, GitHub Copilot (README.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "a command-line parser that prints its own usage: reporters/rust/src/main.rs (clap)",
+   "fx.install": "only a global install is documented: docs/installation.md (npm install -g)",
+   "fx.byo": "the provider is the operator's choice: BASEURL (tsconfig.json)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "a supported test framework",
+  "a supported harness"
+ ],
+ "anti": [
+  "areas where tests cannot be written",
+  "exploratory prototyping"
+ ],
+ "th": [],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "One of the few gates that actually blocks the implementation. Not a security check on output",
+ "sources": [
+  {
+   "url": "https://github.com/nizos/tdd-guard",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "TDD Guard",
+   "sum": "テストを書く前の実装をフックで阻止する。TDDを規律ではなく強制にする。",
+   "art": "フック設定（永続）",
+   "pre": [
+    "テストフレームワークの対応",
+    "対応ハーネス"
+   ],
+   "anti": [
+    "テストが書けない領域",
+    "探索的なプロトタイピング"
+   ],
+   "gnote": "実装そのものをブロックする数少ない強制ゲート。生成物のセキュリティ検査ではない",
+   "flow": {
+    "steps": [
+     "エージェントが編集を試みる",
+     "フックが横取り",
+     "テスト状態と照合",
+     "遮断または許可",
+     "先にテストを書く"
+    ],
+    "back": [
+     "編集を再試行"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "plugin/skills/setup/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "not-assessed"
+ ],
+ "spec_unit": "test",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Agent tries to edit",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "Hook intercepts",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Validate against the test state",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Block or allow",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Write the test first",
+    "l": "L5",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "retry the edit"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

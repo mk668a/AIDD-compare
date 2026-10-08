@@ -1,0 +1,254 @@
+{
+ "slug": "bytedance/deer-flow",
+ "n": "DeerFlow",
+ "entry_kind": "implementation",
+ "l": "L6",
+ "s2": [
+  "L7",
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "sqlite",
+    "ev": "backend/packages/harness/pyproject.toml (aiosqlite)"
+   },
+   {
+    "id": "postgres",
+    "ev": "backend/packages/harness/pyproject.toml (asyncpg)"
+   },
+   {
+    "id": "duckdb",
+    "ev": "backend/packages/harness/pyproject.toml (duckdb)"
+   },
+   {
+    "id": "redis",
+    "ev": "README.md (redis)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 83467,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "A harness built for tasks measured in hours rather than turns: subagents, sandboxes, memory and skills coordinated behind one long-horizon loop.",
+ "art": "session memory, sandbox state and skill definitions (persistent)",
+ "tok": "unbounded",
+ "p": [
+  1,
+  1,
+  3,
+  2,
+  1,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "part",
+  "se.attest": "impl",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "impl",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".agent/skills/blocking-io-guard/SKILL.md",
+   "fs.example": ".agent/skills/blocking-io-guard/templates/anchor.template.py",
+   "rl.tests": "backend/tests/_agent_e2e_helpers.py",
+   "rl.ci": ".github/workflows/backend-unit-tests.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "backend/packages/harness/pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T4/T7/T12/T13/T2 introduced, controls sandbox impl, limits part, log part, agentauth none, approval part, kill part",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval part, sandbox impl",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "pe.budget": "a ceiling named in the documentation only: README.md (max_tokens:)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Windsurf, Codex CLI (README.md)",
+   "ic.surface": "Surface: web (README.md (uv run langgraph dev plus a web console; make docker-start))",
+   "ic.help": "a command-line parser that prints its own usage: backend/packages/harness/pyproject.toml (click)",
+   "ic.error": "a documented flag that gates or previews the action: README.md (--dry-run)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (checkpoint)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/container.yaml (attest-build-provenance)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: OPENROUTER, OPENAI, BASEURL, VLLM, OLLAMA (README.md)",
+   "sf.stop": "a stop path, and the state it leaves behind is described: frontend/src/core/auth/server.ts (AbortController); README.md (Ctrl+C)",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (irreversible)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "a sandbox runtime and somewhere to keep session state",
+  "a task that genuinely takes hours, since the machinery costs more than it saves on short ones"
+ ],
+ "anti": [
+  "short tasks, where orchestration overhead dominates",
+  "budgets that must be predictable in advance"
+ ],
+ "th": [
+  "T4",
+  "T7",
+  "T12",
+  "T13",
+  "T2"
+ ],
+ "ctrl": {
+  "sandbox": "impl",
+  "limits": "part",
+  "log": "part",
+  "agentauth": "none",
+  "approval": "part",
+  "kill": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "One of the few entries that treats sandboxing as part of the loop rather than as an operator's responsibility. Version 2 shares no code with version 1, so anything written about the earlier release describes a different system.",
+ "sources": [
+  {
+   "url": "https://github.com/bytedance/deer-flow",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/bytedance/deer-flow/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "DeerFlow",
+   "sum": "ターンではなく時間の単位で測る作業のためのハーネス。サブエージェント・サンドボックス・記憶・スキルを、1つの長期ループの背後で束ねる。",
+   "art": "セッション記憶、サンドボックス状態、スキル定義（永続）",
+   "pre": [
+    "サンドボックス実行環境とセッション状態の置き場所",
+    "実際に数時間かかる課題。短い作業では機構のほうが高くつく"
+   ],
+   "anti": [
+    "短い作業。オーケストレーションのoverheadが支配する",
+    "事前に予測可能でなければならない予算"
+   ],
+   "gnote": "サンドボックスを運用者の責任ではなくループの一部として扱う数少ないツール。v2はv1とコードを共有しないため、旧版について書かれたものは別のシステムの記述である。",
+   "cost_warning": "設計上、長期実行を前提とする。READMEは数分から数時間かかる作業を挙げる。総量を縛る仕組みは設計側になく、上限は運用者の設定次第である。",
+   "flow": {
+    "steps": [
+     "長時間タスクを計画",
+     "サブエージェントに委譲",
+     "サンドボックスで実行",
+     "スモークテスト",
+     "メモリへ書き込み"
+    ],
+    "back": [
+     "次の区間"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": ".agent/skills/blocking-io-guard/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "process"
+ ],
+ "spec_unit": "task",
+ "flow": {
+  "basis": "repo",
+  "path": "backend/packages/harness/deerflow/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Plan the long task",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Dispatch a subagent",
+    "l": "L7",
+    "who": "tool",
+    "par": [
+     "subagent 1",
+     "subagent 2",
+     "subagent n"
+    ]
+   },
+   {
+    "s": "Run in a sandbox",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Smoke test",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Write to memory",
+    "l": "L3",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "next horizon"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "cost_warning": "Long-horizon by design: the README describes tasks that run for minutes to hours. Nothing in the design bounds the total, so the ceiling is whatever the operator configures."
+}

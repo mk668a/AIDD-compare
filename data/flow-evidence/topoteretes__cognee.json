@@ -1,0 +1,97 @@
+{
+ "entry": "Cognee",
+ "slug": "topoteretes/cognee",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Ingest the documents",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Extract the entities",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/spec_extras_sync.yml",
+     "matched": [
+      "extract"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Build the knowledge graph",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/backend_docker_build_test.yml",
+     "matched": [
+      "build"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/frontend_docker_build_test.yml",
+     "matched": [
+      "build"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/graph_db_tests.yml",
+     "matched": [
+      "graph"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Traverse it on query",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "78ff576559a7f75f65884c5bd90b22cdc790016e"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/workflows/backend_docker_build_test.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/frontend_docker_build_test.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/graph_db_tests.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/spec_extras_sync.yml"
+  }
+ ]
+}

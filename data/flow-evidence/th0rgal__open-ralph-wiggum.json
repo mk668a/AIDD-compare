@@ -1,0 +1,78 @@
+{
+ "entry": "Open Ralph Wiggum",
+ "slug": "Th0rgal/open-ralph-wiggum",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/open-ralph-wiggum/SKILL.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Pick the harness with a flag",
+   "l": "L1",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Read the prompt file",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/open-ralph-wiggum/SKILL.md",
+     "matched": [
+      "prompt"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Run one iteration",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/open-ralph-wiggum/SKILL.md",
+     "matched": [
+      "iteration"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Check the exit condition",
+   "l": "L6",
+   "who": "tool",
+   "gate": true,
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "master",
+  "tree_sha": "7559f267b227d74d82776048697615536c2a6b2a"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "skills/open-ralph-wiggum/SKILL.md",
+   "value": "  \"ralph --agent\", \"ralph --tasks\", \"ralph --status\", \"--max-iterations\", \"--rotation\",\n**Open Ralph Wiggum** (`ralph`) wraps any supported AI coding agent in an autonomous loop: it sends the same prompt on every iteration, and the agent self-corrects by observing the state of the repo. The loop ends when the agent outputs a configurable completion promise (e.g. `<promise>COMPLETE</promise>`)."
+  },
+  {
+   "kind": "path",
+   "value": "skills/open-ralph-wiggum/SKILL.md"
+  }
+ ]
+}

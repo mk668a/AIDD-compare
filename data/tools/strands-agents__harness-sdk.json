@@ -1,0 +1,235 @@
+{
+ "slug": "strands-agents/harness-sdk",
+ "n": "Strands Agents",
+ "entry_kind": "implementation",
+ "l": "L1",
+ "s2": [
+  "L6",
+  "L7"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "code",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/strands-agents/harness-sdk/blob/main/.agents/skills/docs-reviewer/SKILL.md"
+   },
+   {
+    "id": "flowchart",
+    "ev": "https://github.com/strands-agents/harness-sdk/blob/main/.agents/skills/docs-writer/SKILL.md"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 8720,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "An SDK for the loop you would otherwise write yourself: turn limits, token budgets, cancellation and stop reasons as first-class controls, running in your own process with no hosted control plane.",
+ "art": "agent definitions in Python or TypeScript (persistent)",
+ "tok": "moderate",
+ "p": [
+  0,
+  1,
+  3,
+  2,
+  1,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/references/code-verification.md",
+   "fs.example": "site/docs/examples/cdk/deploy_to_apprunner/.gitignore",
+   "rl.tests": "site/test/api-counterparts.test.ts",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (MCP, AGENTS.md)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T2/T4/T12 introduced, controls limits impl, kill impl, log impl, approval part, agentauth none, sandbox none",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval part, sandbox none",
+   "fx.exit": "artifact.format code: source files in the repository's own language, readable without the tool",
+   "pe.budget": "a ceiling the operator sets on the command line: strands-mcp/pyproject.toml (--timeout=)",
+   "ic.surface": "Surface: library (pyproject.toml)",
+   "ic.help": "built-in usage text: strands-mcp/src/strands_mcp_server/__main__.py (Usage:\n)",
+   "ic.error": "documented only, nothing in the code checks: site/src/content/docs/integrations/integrations/welt.mdx (human-in-the-loop)",
+   "rl.resume": "a checkpoint or restore path in the code: strands-ts/src/index.ts (Checkpoint)",
+   "fx.install": "only a global install is documented: README.md (pip install s)",
+   "fx.byo": "the provider is the operator's choice: BEDROCK, OLLAMA, LITELLM (README.md)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "the engineering capacity to build the agent yourself",
+  "Python or TypeScript"
+ ],
+ "anti": [
+  "wanting a finished product rather than a library",
+  "teams with no appetite to own the loop they run"
+ ],
+ "th": [
+  "T2",
+  "T4",
+  "T12"
+ ],
+ "ctrl": {
+  "limits": "impl",
+  "kill": "impl",
+  "log": "impl",
+  "approval": "part",
+  "agentauth": "none",
+  "sandbox": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Turn limits, token budgets and cancellation are implemented as SDK surface rather than left to the caller, which is rare: most of this layer treats the cap as somebody else's problem. No hosted control plane means nothing leaves the process unless the operator sends it.",
+ "sources": [
+  {
+   "url": "https://github.com/strands-agents/harness-sdk",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/strands-agents/harness-sdk/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Strands Agents",
+   "sum": "自分で書くことになるループを、SDKとして持つもの。ターン上限・トークン予算・キャンセル・停止理由を一級の制御として備え、ホストされた管理面を持たず自分のプロセス内で動く。",
+   "art": "PythonまたはTypeScriptによるエージェント定義（永続）",
+   "pre": [
+    "エージェントを自分で組む工数",
+    "PythonかTypeScript"
+   ],
+   "anti": [
+    "ライブラリではなく完成品が欲しい場合",
+    "走らせるループを自分で持つ気のないチーム"
+   ],
+   "gnote": "ターン上限・トークン予算・キャンセルが呼び出し側任せではなくSDKの面として実装されている。この層の多くが上限を他人の問題として扱う中では珍しい。ホストされた管理面がないので、運用者が送らない限り何もプロセス外へ出ない。",
+   "flow": {
+    "steps": [
+     "ターンとトークンの予算を設定",
+     "モデルのターン",
+     "ツール呼び出し",
+     "停止理由を判定",
+     "中止または継続"
+    ],
+    "back": [
+     "継続"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "strands-mcp/src/strands_mcp_server/__init__.py",
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "architecture",
+  "process"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Set the turn and token budget",
+    "l": "L1",
+    "who": "human"
+   },
+   {
+    "s": "Model turn",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "Tool call",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Check the stop reason",
+    "l": "L6",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Cancel or continue",
+    "l": "L6",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 1,
+    "s": "continue"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

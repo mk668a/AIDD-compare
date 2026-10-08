@@ -1,0 +1,248 @@
+{
+ "slug": "mem0ai/mem0",
+ "n": "mem0",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "postgres",
+    "ev": "pyproject.toml (psycopg)"
+   },
+   {
+    "id": "redis",
+    "ev": "pyproject.toml (redis)"
+   },
+   {
+    "id": "qdrant",
+    "ev": "pyproject.toml (qdrant)"
+   },
+   {
+    "id": "chroma",
+    "ev": "pyproject.toml (chromadb)"
+   },
+   {
+    "id": "milvus",
+    "ev": "pyproject.toml (milvus)"
+   },
+   {
+    "id": "weaviate",
+    "ev": "pyproject.toml (weaviate)"
+   },
+   {
+    "id": "faiss",
+    "ev": "pyproject.toml (faiss)"
+   },
+   {
+    "id": "elasticsearch",
+    "ev": "pyproject.toml (elasticsearch)"
+   },
+   {
+    "id": "mongodb",
+    "ev": "pyproject.toml (pymongo)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 66766,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Long-term memory layer for agents. Handles extraction, storage and recall.",
+ "art": "memory store (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  0,
+  1,
+  0,
+  0,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 1,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "fs.example": "docs/templates/api_reference_template.mdx",
+   "rl.tests": "cli/node/tests/agent-mode.test.ts",
+   "rl.ci": ".github/workflows/claude-code-plugin-checks.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "cli/python/pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "pe.budget": "a ceiling the operator sets in configuration: mem0/proxy/main.py (max_tokens:)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Windsurf, OpenCode (README.md)",
+   "ic.surface": "Surface: library (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: cli/node/package.json (commander)",
+   "ic.error": "a documented flag that gates or previews the action: cli/CLI_SPECIFICATION.md (--dry-run)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA, BEDROCK, LITELLM, VERTEX (mem0-ts/package.json)",
+   "sf.warn": "the irreversible step is both warned about and gated: cli/CLI_SPECIFICATION.md (Overwrite existing)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a policy for what is worth remembering"
+ ],
+ "anti": [
+  "short-lived tasks",
+  "environments with no way to detect memory contamination"
+ ],
+ "th": [
+  "T1"
+ ],
+ "ctrl": {
+  "memval": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The direct target of memory poisoning (T1). Provenance records are required",
+ "sources": [
+  {
+   "url": "https://github.com/mem0ai/mem0",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "mem0",
+   "sum": "エージェントに長期記憶を持たせるレイヤ。抽出・保存・想起を担う。",
+   "art": "記憶ストア（永続）",
+   "pre": [
+    "何を覚えるべきかの方針"
+   ],
+   "anti": [
+    "短命なタスク",
+    "記憶の汚染を検知する手段がない環境"
+   ],
+   "gnote": "T1メモリポイズニングの直接の対象。出所記録が要る",
+   "flow": {
+    "steps": [
+     "会話を観測",
+     "事実を抽出",
+     "矛盾を解消",
+     "保存",
+     "次のターンで検索"
+    ],
+    "back": [
+     "次のターン"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "integrations/agent-plugin-core/python/mcp_server.py",
+   "agents_md": ".github/AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "integrations/antigravity-plugin/skills/forget/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "integrations/claude-code-plugin/skills/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Observe the conversation",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Extract the facts",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Resolve conflicts",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Store",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Search on the next turn",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "next turn"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

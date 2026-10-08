@@ -1,0 +1,210 @@
+{
+ "entry": "Loop Engineering",
+ "slug": "cobusgreyling/loop-engineering",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Triage the work",
+   "l": "L6",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/audit.yml",
+     "matched": [
+      "work"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/changelog-drafter.yml",
+     "matched": [
+      "work"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/daily-triage.yml",
+     "matched": [
+      "triage",
+      "work"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Check the budget",
+   "l": null,
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/budget-negotiator/SKILL.md",
+     "matched": [
+      "budget"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/loop-budget/SKILL.md",
+     "matched": [
+      "budget"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/QUICKSTART.md",
+     "matched": [
+      "check"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Minimal fix",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/minimal-fix/SKILL.md",
+     "matched": [
+      "minimal"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "starters/minimal-loop-claude/.claude/agents/loop-verifier.md",
+     "matched": [
+      "minimal"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "starters/minimal-loop-claude/.claude/skills/loop-triage/SKILL.md",
+     "matched": [
+      "minimal"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Verify separately",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/loop-verifier/SKILL.md",
+     "matched": [
+      "verify"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "starters/changelog-drafter/.claude/agents/verifier.md",
+     "matched": [
+      "verify"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "starters/changelog-drafter/.codex/agents/verifier.toml",
+     "matched": [
+      "verify"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Commit the state",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "docs/QUICKSTART.md",
+     "matched": [
+      "commit",
+      "state"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/anti-patterns.md",
+     "matched": [
+      "state"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e1c9d5f5e23655b65d04c5617aff77ab3ad58c16"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/workflows/audit.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/changelog-drafter.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/daily-triage.yml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/budget-negotiator/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/loop-budget/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/loop-verifier/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/minimal-fix/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "starters/changelog-drafter/.claude/agents/verifier.md"
+  },
+  {
+   "kind": "path",
+   "value": "starters/changelog-drafter/.codex/agents/verifier.toml"
+  },
+  {
+   "kind": "path",
+   "value": "starters/minimal-loop-claude/.claude/agents/loop-verifier.md"
+  },
+  {
+   "kind": "path",
+   "value": "starters/minimal-loop-claude/.claude/skills/loop-triage/SKILL.md"
+  }
+ ]
+}

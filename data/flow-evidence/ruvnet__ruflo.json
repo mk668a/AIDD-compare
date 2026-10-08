@@ -1,0 +1,232 @@
+{
+ "entry": "Ruflo",
+ "slug": "ruvnet/ruflo",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/USERGUIDE.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 6
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Submit the task",
+   "l": null,
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-orchestrator-task/SKILL.md",
+     "matched": [
+      "task"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "docs/USERGUIDE.md",
+     "matched": [
+      "submit",
+      "task"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Intelligent router",
+   "l": "L7",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/USERGUIDE.md",
+     "matched": [
+      "intelligent",
+      "router"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-collective-intelligence-coordinator/SKILL.md",
+     "matched": [
+      "intelligent"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "docs/USERGUIDE.md",
+     "matched": [
+      "intelligent",
+      "router"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Spawn the swarm",
+   "l": "L7",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-code-review-swarm/SKILL.md",
+     "matched": [
+      "swarm"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-coordinator-swarm-init/SKILL.md",
+     "matched": [
+      "swarm"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-multi-repo-swarm/SKILL.md",
+     "matched": [
+      "swarm"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Agents work",
+   "l": "L1",
+   "who": "model",
+   "par": [
+    "agent 1",
+    "agent 2",
+    "agent n"
+   ],
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-adaptive-coordinator/SKILL.md",
+     "matched": [
+      "agents"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-agent/SKILL.md",
+     "matched": [
+      "agents"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-agentic-payments/SKILL.md",
+     "matched": [
+      "agents"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Consensus",
+   "l": "L7",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-consensus-coordinator/SKILL.md",
+     "matched": [
+      "consensus"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Persist to memory",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/USERGUIDE.md",
+     "matched": [
+      "persist",
+      "memory"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-memory-coordinator/SKILL.md",
+     "matched": [
+      "memory"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "docs/USERGUIDE.md",
+     "matched": [
+      "memory"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "277c7bc03ad192eef6d6f57e59ab7bab69a5728d"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "docs/USERGUIDE.md",
+   "value": "A new sibling package that handles **memory commands only** (no SQLite, no HNSW, no ONNX). Cold-cache `npx` wall-time drops from ~35s to ~1.5s — a measured **22.9× speedup** for plugin authors.\n### Thompson sampling model router (alpha.5)\n1. **Persistenc"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-adaptive-coordinator/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-agent/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-agentic-payments/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-code-review-swarm/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-collective-intelligence-coordinator/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-consensus-coordinator/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-coordinator-swarm-init/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-memory-coordinator/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-multi-repo-swarm/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-orchestrator-task/SKILL.md"
+  }
+ ]
+}

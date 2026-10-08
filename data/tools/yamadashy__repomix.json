@@ -1,0 +1,207 @@
+{
+ "slug": "yamadashy/repomix",
+ "n": "Repomix",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "packed-text",
+  "lifecycle": "ephemeral",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "xml",
+    "ev": "package.json (xml)"
+   },
+   {
+    "id": "markdown",
+    "ev": "README.md (markdown)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 28738,
+ "push": "2026-10-03",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Packs an entire repository into one file shaped for a model.",
+ "art": "packed context (ephemeral)",
+ "tok": "heavy",
+ "p": [
+  1,
+  2,
+  2,
+  0,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "na",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "part",
+  "sf.reach": "na",
+  "sf.stop": "doc",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".agents/agents/reviewer-code-quality.md",
+   "fs.example": "tests/fixtures/config-js/repomix-dynamic.config.js",
+   "rl.tests": "browser/tests/repomix-integration.test.ts",
+   "rl.ci": ".github/workflows/autofix.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.threats": "cites th: no OWASP Agentic AI threat is introduced by adopting this entry, so there is nothing here to control against",
+   "fx.exit": "artifact.format packed-text: one packed text file: readable, but the packing is the tool's own",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Cline, Cursor, Claude Code, GitHub Copilot, Gemini CLI (README.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "a command-line parser that prints its own usage: package.json (commander)",
+   "ic.error": "a documented flag that gates or previews the action: README.md (confirmation prompt)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx r)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.stop": "stopping is described in prose only: README.md (Ctrl+C)",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (> [!WARNING])",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a codebase that fits the context window"
+ ],
+ "anti": [
+  "large monorepos",
+  "partial changes"
+ ],
+ "th": [],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "non"
+ },
+ "gnote": "Watch for secrets. Exclusion settings are the defensive line",
+ "sources": [
+  {
+   "url": "https://github.com/yamadashy/repomix",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Repomix",
+   "sum": "リポジトリ全体を1ファイルに整形し、モデルに渡せる形にする。",
+   "art": "パックされた文脈（使い捨て）",
+   "pre": [
+    "コンテキスト長に収まる規模"
+   ],
+   "anti": [
+    "大規模モノレポ",
+    "部分的な変更"
+   ],
+   "gnote": "秘匿情報の混入に注意。除外設定が防御線になる",
+   "flow": {
+    "steps": [
+     "リポジトリを選ぶ",
+     "フィルタと除外",
+     "1ファイルへ梱包",
+     "トークン数を数える",
+     "モデルに渡す"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "package.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "skills/repomix-explorer/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Select the repository",
+    "l": null,
+    "who": "human"
+   },
+   {
+    "s": "Filter and ignore",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Pack into one file",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Count the tokens",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Hand it to the model",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

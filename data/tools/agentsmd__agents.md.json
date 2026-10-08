@@ -1,0 +1,175 @@
+{
+ "slug": "agentsmd/agents.md",
+ "n": "AGENTS.md",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "stated",
+  "addressee_quote": "README.md files are for humans: quick starts, project descriptions, and contribution guidelines. AGENTS.md complements this by containing the extra, sometimes detailed context coding agents need.",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 24805,
+ "push": "2026-09-10",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A shared file convention for placing agent-facing instructions in a repository. A convention, not a tool.",
+ "art": "convention file (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  1,
+  2,
+  1,
+  1,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 5,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "none",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "none",
+  "rl.ci": "none",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "none",
+  "mt.process": "none",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "ic.surface": "Surface: web (next.config.ts)",
+   "fx.install": "an install that does not change the machine globally: README.md (pnpm dlx )",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated",
+  "safety-critical"
+ ],
+ "pre": [
+  "agreement on what to write, which is effectively the whole problem"
+ ],
+ "anti": [
+  "adopting it without verifying the convention is followed"
+ ],
+ "th": [
+  "T6"
+ ],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Anyone with write access to the repository can rewrite the instructions",
+ "sources": [
+  {
+   "url": "https://github.com/agentsmd/agents.md",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "AGENTS.md",
+   "sum": "リポジトリにエージェント向けの指示を置く共通ファイル規約。ツールではなく取り決め。",
+   "art": "規約ファイル（永続）",
+   "pre": [
+    "書く内容の合意（実質これが全て）"
+   ],
+   "anti": [
+    "規約が守られているか検証しないまま置くこと"
+   ],
+   "gnote": "リポジトリへの書き込み権があれば指示を書き換えられる",
+   "flow": {
+    "steps": [
+     "AGENTS.mdを置く",
+     "ハーネスが発見",
+     "指示がコンテキストに入る"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "convention"
+ ],
+ "spec_unit": "convention-file",
+ "flow": {
+  "basis": "derived",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Place AGENTS.md",
+    "l": "L2",
+    "who": "human"
+   },
+   {
+    "s": "Harness discovers it",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Instructions enter context",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

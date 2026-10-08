@@ -1,0 +1,220 @@
+{
+ "slug": "NVIDIA/SkillSpector",
+ "n": "SkillSpector",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "human",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "Apache-2.0",
+ "stars": 19623,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Scans an agent skill before it is installed, looking for prompt injection, exfiltration paths, malicious patterns and supply-chain risk, and reports whether it is safe to install.",
+ "art": "scan reports (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  0,
+  2,
+  3,
+  1,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "doc",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "skills/skill-inspector/SKILL.md",
+   "fs.example": "tests/fixtures/malicious_skill/SKILL.md",
+   "rl.tests": "contrib/batch_scan/tests/conftest.py",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (MCP, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T17 introduced, controls prov impl, approval part, log part",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and approval is part",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "pe.budget": "a ceiling the operator sets in configuration: src/skillspector/cli.py (max_depth:)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Codex CLI, Gemini CLI (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (click)",
+   "ic.error": "documented only, nothing in the code checks: README.md (human-in-the-loop)",
+   "se.attest": "asks the operator to verify, without producing an attestation: README.md (verify the signature)",
+   "fx.install": "an install that does not change the machine globally: README.md (uv tool install)",
+   "fx.byo": "the provider is the operator's choice: ANTHROPIC, OLLAMA, VLLM, LLAMA.CPP, OPENAI, BEDROCK (README.md)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "skills arriving from somewhere you do not control",
+  "a place in the install path where a gate can stand"
+ ],
+ "anti": [
+  "judging whether a skill is any good, which a security scan does not decide",
+  "environments where every skill is written in-house and reviewed already"
+ ],
+ "th": [
+  "T17"
+ ],
+ "ctrl": {
+  "prov": "impl",
+  "approval": "part",
+  "log": "part",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "blocking",
+  "dep": "none",
+  "secret": "non"
+ },
+ "gnote": "The only entry here whose subject is the supply chain of skills rather than of code, which matters because a skill is executed instructions. Its own README states the figures behind it: 26.1% of scanned skills carried vulnerabilities and 5.2% showed likely malicious intent.",
+ "sources": [
+  {
+   "url": "https://github.com/NVIDIA/SkillSpector",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/NVIDIA/SkillSpector/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "SkillSpector",
+   "sum": "エージェントスキルを導入前に走査し、プロンプトインジェクション・情報持ち出し経路・悪意あるパターン・サプライチェーン上の危険を検出して、入れて安全かを報告する。",
+   "art": "走査レポート（永続）",
+   "pre": [
+    "自分の管理外から来るスキル",
+    "導入経路上にゲートを置ける場所"
+   ],
+   "anti": [
+    "スキルの出来の良し悪しの判定。セキュリティ走査はそれを決めない",
+    "全スキルを内製しレビュー済みの環境"
+   ],
+   "gnote": "対象がコードではなくスキルのサプライチェーンである唯一のツール。スキルは実行される指示なので、これは重要な差である。README自身が根拠の数字を出している。走査したスキルの26.1%に脆弱性、5.2%に悪意の疑いがあった。",
+   "flow": {
+    "steps": [
+     "resolve_input",
+     "build_context",
+     "アナライザを並列実行",
+     "meta_analyzer",
+     "SAFE / CAUTION / DO_NOT_INSTALL"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "src/skillspector/mcp_server.py",
+   "agent_skills": "skills/skill-inspector/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": false
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/DEVELOPMENT.md",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "resolve_input",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "build_context",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Analyzers in parallel",
+    "l": "L5",
+    "who": "tool",
+    "par": [
+     "static",
+     "behavioural",
+     "mcp",
+     "semantic"
+    ]
+   },
+   {
+    "s": "meta_analyzer",
+    "l": "L5",
+    "who": "model"
+   },
+   {
+    "s": "SAFE / CAUTION / DO_NOT_INSTALL",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

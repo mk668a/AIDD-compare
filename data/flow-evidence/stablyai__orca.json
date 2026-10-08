@@ -1,0 +1,120 @@
+{
+ "entry": "Orca",
+ "slug": "stablyai/orca",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/orchestration/SKILL.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "One task, several agents",
+   "l": "L7",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/orchestration/SKILL.md",
+     "matched": [
+      "task",
+      "agents"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/agent-skill-sharing-implementation-checklist.md",
+     "matched": [
+      "agents"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/agent-skill-sharing-implementation-checklist.md",
+     "matched": [
+      "agents"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Each in its own worktree",
+   "l": "L1",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/orchestration/SKILL.md",
+     "matched": [
+      "worktree"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Run them in parallel",
+   "l": "L7",
+   "who": "model",
+   "par": [
+    "agent 1",
+    "agent 2",
+    "agent n"
+   ],
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Compare the results",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/orchestration/SKILL.md",
+     "matched": [
+      "results"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/node-next-compat.yml",
+     "matched": [
+      "compare"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Human picks one to merge",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "6933fd70d767f8980a187834fb8b037c6a518e30"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "skills/orchestration/SKILL.md",
+   "value": "  messages, blocking ask/reply flows, task dispatch, worker_done/escalation\n  waits, task DAGs, decision gates, or coordinator loops. Use `orca-cli`\n  worktree\" when the user did not explicitly ask to supervise, monitor, wait\n  for results, or coordinate a DAG. Use `orca-cli` for terminal control,\n  lightweight terminal prompts, shell commands, Orca worktree management,\n  outside Orca's embedded browser only when the task requires OS/window-level\nmessages, blocking ask/reply flows, task dispatch, worker_done/escalation waits, task DAGs,\ndecision gates, coordinator loops, or decomposing work across agents. Use the orca-cli skill\nanother agent\", \"another worktree\") when the user did not ask to supervise, monitor, wait\nfor results, or coordinate a DAG — and for ordinary terminal control, shell commands,\nworktree management, and the built-in browser. Coordination requires real Orca runtime"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/node-next-compat.yml"
+  }
+ ]
+}

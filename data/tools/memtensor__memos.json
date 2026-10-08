@@ -1,0 +1,243 @@
+{
+ "slug": "MemTensor/MemOS",
+ "n": "MemOS",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "sqlite",
+    "ev": "apps/memos-local-openclaw/package.json (better-sqlite3)"
+   },
+   {
+    "id": "redis",
+    "ev": "pyproject.toml (redis)"
+   },
+   {
+    "id": "neo4j",
+    "ev": "pyproject.toml (neo4j)"
+   },
+   {
+    "id": "qdrant",
+    "ev": "pyproject.toml (qdrant)"
+   },
+   {
+    "id": "milvus",
+    "ev": "pyproject.toml (milvus)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 11744,
+ "push": "2026-09-29",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A memory layer with one API to add, retrieve, edit and delete, structured as a graph that a person can inspect and edit rather than an opaque embedding store.",
+ "art": "inspectable memory graph (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  3
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 2,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "part",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "apps/memos-local-openclaw/www/demo/index.html",
+   "rl.tests": "apps/MemOS-Cloud-OpenClaw-Plugin/test/add-dedup.test.mjs",
+   "rl.ci": ".github/workflows/python-tests.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "apps/memos-local-openclaw/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T1/T6 introduced, controls memval part, log part",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "pe.budget": "a ceiling the operator sets on the command line: apps/memos-local-plugin/docs/DEMO_TaskCLI_OpenClaw_test.md (--timeout )",
+   "co.coexist": "states the hosts it sits beside: Claude Code, OpenCode (apps/openwork-memos-integration/CLAUDE.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: src/memos/cli.py (argparse)",
+   "rl.resume": "recovering is described in prose, not implemented: apps/memos-local-plugin/docs/DEMO_TaskCLI_OpenClaw_test.md (checkpoint)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/memos-local-plugin-publish.yml (sha256sum)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx @)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA (pyproject.toml)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: apps/MemOS-Cloud-OpenClaw-Plugin/index.js (AbortController)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a place to run the store",
+  "a harness with a memory hook, or the SDK called directly"
+ ],
+ "anti": [
+  "work that fits in one session",
+  "cases where a plain file in the repository is enough"
+ ],
+ "th": [
+  "T1",
+  "T6"
+ ],
+ "ctrl": {
+  "memval": "part",
+  "log": "part",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Inspectable and editable by design is a claim almost nothing else at this layer makes, and it is the difference between memory a reviewer can correct and memory that can only be deleted. Deletion being a first-class operation matters for the same reason.",
+ "sources": [
+  {
+   "url": "https://github.com/MemTensor/MemOS",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/MemTensor/MemOS/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "MemOS",
+   "sum": "追加・取得・編集・削除を単一APIで扱う記憶層。不透明な埋め込みストアではなく、人が確認して直せるグラフとして構造化されている。",
+   "art": "点検可能な記憶グラフ（永続）",
+   "pre": [
+    "ストアを動かす場所",
+    "記憶フックを持つハーネス、またはSDKの直接呼び出し"
+   ],
+   "anti": [
+    "1セッションで終わる作業",
+    "リポジトリ内の素のファイルで足りる場合"
+   ],
+   "gnote": "「設計として点検・編集できる」という主張は、この層で他にほとんど例がない。レビュアが直せる記憶と、消すことしかできない記憶の差である。削除が一級の操作である点も同じ理由で重要。",
+   "flow": {
+    "steps": [
+     "add",
+     "グラフを構築",
+     "retrieve",
+     "edit / delete",
+     "人が点検"
+    ],
+    "back": [
+     "グラフを修正"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": "apps/memos-local-openclaw/skill/browserwing-admin/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "data-model"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "add",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Build the graph",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "retrieve",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "edit or delete",
+    "l": "L3",
+    "who": "human"
+   },
+   {
+    "s": "Human inspects",
+    "l": null,
+    "who": "human"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 1,
+    "s": "correct the graph"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

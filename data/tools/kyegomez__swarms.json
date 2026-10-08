@@ -1,0 +1,219 @@
+{
+ "slug": "kyegomez/swarms",
+ "n": "Swarms",
+ "entry_kind": "implementation",
+ "l": "L7",
+ "s2": [
+  "L6"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "code",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "graphviz",
+    "ev": "https://github.com/kyegomez/swarms/blob/master/examples/guides/graphworkflow_guide/GETTING_STARTED.md"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 7233,
+ "push": "2026-10-06",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Prebuilt multi-agent architectures, sequential, concurrent and hierarchical, offered as ready shapes rather than as primitives to assemble.",
+ "art": "swarm and agent definitions (persistent)",
+ "tok": "heavy",
+ "p": [
+  0,
+  1,
+  3,
+  1,
+  1,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "SKILL.md",
+   "fs.example": "examples/README.md",
+   "rl.tests": "examples/tools/stagehand/tests/test_stagehand_integration.py",
+   "rl.ci": ".github/workflows/python-package.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "examples/single_agent/integrations/external_agents/README.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T4/T12/T13/T16 introduced, controls limits part, log part, agentauth none, approval none, sandbox none",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval none, sandbox none",
+   "fx.exit": "artifact.format code: source files in the repository's own language, readable without the tool",
+   "pe.budget": "a ceiling named in the documentation only: README.md (max_tokens=)",
+   "co.coexist": "states the hosts it sits beside: Cursor, Claude Code, Windsurf (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: swarms/cli/main.py (argparse)",
+   "fx.install": "an install that does not change the machine globally: README.md (docker pull)",
+   "fx.byo": "the provider is the operator's choice: OPENAI, ANTHROPIC, GROQ, LITELLM, GOOGLE, MISTRAL (pyproject.toml)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: swarms/cli/main.py (KeyboardInterrupt)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "Python",
+  "a problem that genuinely divides across agents"
+ ],
+ "anti": [
+  "work a single agent finishes, which is most work",
+  "tight token budgets, since several agents run per task"
+ ],
+ "th": [
+  "T4",
+  "T12",
+  "T13",
+  "T16"
+ ],
+ "ctrl": {
+  "limits": "part",
+  "log": "part",
+  "agentauth": "none",
+  "approval": "none",
+  "sandbox": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Prebuilt topologies are the distinguishing choice: where the other frameworks at this layer hand over primitives, this hands over finished shapes. Inter-agent authentication is absent, which is the T16 surface every multi-agent design here shares.",
+ "sources": [
+  {
+   "url": "https://github.com/kyegomez/swarms",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/kyegomez/swarms/master/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Swarms",
+   "sum": "逐次・並行・階層といったマルチエージェント構成を、組み立てる部品ではなく出来合いの形として提供する。",
+   "art": "スウォームとエージェントの定義（永続）",
+   "pre": [
+    "Python",
+    "エージェント間で実際に分割できる問題"
+   ],
+   "anti": [
+    "単一エージェントで終わる作業。ほとんどがそれである",
+    "トークン予算が厳しい場合。1タスクで複数体が動く"
+   ],
+   "gnote": "出来合いのトポロジを渡す点が差別化である。この層の他の基盤が部品を渡すのに対し、こちらは完成した形を渡す。エージェント間認証は無く、ここに収録したマルチエージェント設計すべてが共有するT16の面である。",
+   "flow": {
+    "steps": [
+     "アーキテクチャを選ぶ",
+     "エージェントを割り当て",
+     "逐次 / 並行で実行",
+     "出力を集約"
+    ],
+    "back": [
+     "反復的な改善"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_skills": "SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "architecture"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Pick an architecture",
+    "l": "L7",
+    "who": "human"
+   },
+   {
+    "s": "Assign the agents",
+    "l": "L7",
+    "who": "human"
+   },
+   {
+    "s": "Run sequential or concurrent",
+    "l": "L7",
+    "who": "model"
+   },
+   {
+    "s": "Aggregate the output",
+    "l": null,
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 2,
+    "s": "iterative refinement"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

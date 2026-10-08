@@ -1,0 +1,246 @@
+{
+ "entry": "OpenSpec",
+ "slug": "Fission-AI/OpenSpec",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/concepts.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 6
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Proposal",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/concepts.md",
+     "matched": [
+      "proposal"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "schemas/spec-driven/templates/proposal.md",
+     "matched": [
+      "proposal"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/openspec-propose/SKILL.md",
+     "matched": [
+      "proposal"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Spec deltas",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/concepts.md",
+     "matched": [
+      "spec",
+      "deltas"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/draft-openspec-docs/SKILL.md",
+     "matched": [
+      "spec"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/release-openspec/SKILL.md",
+     "matched": [
+      "spec"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Design",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "schemas/spec-driven/templates/design.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/concepts.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/concepts.md",
+     "matched": [
+      "design"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Tasks",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "schemas/spec-driven/templates/tasks.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/concepts.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/concepts.md",
+     "matched": [
+      "tasks"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Implement",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/concepts.md",
+     "matched": [
+      "implement"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/concepts.md",
+     "matched": [
+      "implement"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Archive into the spec",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/concepts.md",
+     "matched": [
+      "spec"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/draft-openspec-docs/SKILL.md",
+     "matched": [
+      "spec"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/release-openspec/SKILL.md",
+     "matched": [
+      "spec"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e062b9572be933564ba3899d059377dfa1393e32"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "docs/concepts.md",
+   "value": "This guide explains the core ideas behind OpenSpec and how they fit together. For practical usage, see [Getting Started](getting-started.md) and [Workflows](workflows.md).\nOpenSpec is built around four principles:\n**Fluid not rigid.** Traditional spec systems lock you into phases: first you plan, then you implement, then you're done. OpenSpec is more flexible — you can create artifacts in any order that makes sense for your work.\n**Iterative not waterfall.** Requirements change. Understanding deepens. What seemed like a good approach at the start might not hold up after you see the codebase. OpenSpec embraces this reality.\n**Easy not complex.** Some spec frameworks require extensive setup, rigid formats, or heavyweight processes. OpenSpec stays out of your way. Initialize in seconds, start working immediately, customize only if you need to.\n**Brownfield-first.** Most software work isn't building from scratch — it's modifying existing systems. OpenSpec's delta-based approach makes it easy to specify changes to existing behavior, not just describe new systems.\nOpenSpec organizes your work into two main areas:\n│                        openspec/                                   │\n│   │       specs/        │      │         changes/              │   │\n│   │  currently works    │      │  Contains artifacts + deltas  │   │"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/draft-openspec-docs/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/release-openspec/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "schemas/spec-driven/templates/design.md"
+  },
+  {
+   "kind": "path",
+   "value": "schemas/spec-driven/templates/proposal.md"
+  },
+  {
+   "kind": "path",
+   "value": "schemas/spec-driven/templates/tasks.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/openspec-propose/SKILL.md"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/concepts.md",
+   "value": "1. Theme Infrastructure"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/concepts.md",
+   "value": "2. UI Components"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/concepts.md",
+   "value": "3. Styling"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/concepts.md",
+   "value": "proposal → specs → design → tasks → implement"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/concepts.md",
+   "value": "│   │     ARTIFACTS  │  Creates proposal → specs → design → tasks              │"
+  }
+ ]
+}

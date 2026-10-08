@@ -1,0 +1,216 @@
+{
+ "slug": "JudgmentLabs/judgeval",
+ "n": "judgeval",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L3"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "trace-log",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "opentelemetry",
+    "ev": "pyproject.toml (opentelemetry)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 1063,
+ "push": "2026-10-05",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Traces an agent with OpenTelemetry and scores its behaviour with prompt-defined judges, so a failure can be traced to a cause and a fix validated against the case that produced it.",
+ "art": "traces and scored behaviours (persistent)",
+ "tok": "moderate",
+ "p": [
+  0,
+  0,
+  0,
+  3,
+  2,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "part",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "none",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "na",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.example": "examples/basic-distributed-tracing/client.py",
+   "rl.tests": "src/tests/__init__.py",
+   "rl.ci": ".github/workflows/ci.yaml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "examples/basic-evaluation/pyproject.toml",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T6/T8 introduced, controls log impl",
+   "fx.exit": "artifact.format trace-log: a run log the tool writes; readable as text, structured for the tool",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (typer)",
+   "fx.install": "only a global install is documented: README.md (pip install j)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "fs.scope": "pyproject.toml declares the installable surface for a package manager, and nothing declares an agent-facing one"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "agreement on what counts as good behaviour",
+  "a Python application you can instrument"
+ ],
+ "anti": [
+  "judging whether generated code is correct, which a behavioural judge does not decide",
+  "exploratory work where the criteria are not settled"
+ ],
+ "th": [
+  "T6",
+  "T8"
+ ],
+ "ctrl": {
+  "log": "impl",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Judges are prompts, so the scorer is itself a model output and inherits the failure modes it is meant to catch. Building on OpenTelemetry means the trace is portable, which is rare enough here to be worth recording.",
+ "sources": [
+  {
+   "url": "https://github.com/JudgmentLabs/judgeval",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/JudgmentLabs/judgeval/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "judgeval",
+   "sum": "OpenTelemetryでエージェントを追跡し、プロンプトで定義した判定器が振る舞いを採点する。失敗を原因まで辿り、直したことを、その失敗を生んだ実データで確かめられる。",
+   "art": "トレースと採点済みの振る舞い（永続）",
+   "pre": [
+    "何を良しとするかの合意",
+    "計測を仕込めるPythonアプリケーション"
+   ],
+   "anti": [
+    "生成コードの正しさの判定。振る舞いの判定器はそれを決めない",
+    "基準が定まっていない探索段階"
+   ],
+   "gnote": "判定器はプロンプトであり、採点する側自身がモデル出力なので、捕まえたい失敗様式をそのまま抱えている。OpenTelemetryの上に建てているためトレースが可搬で、この分野では珍しいので記録しておく。",
+   "flow": {
+    "steps": [
+     "OpenTelemetryで計装",
+     "トレースを取得",
+     "プロンプトjudgeで採点",
+     "失敗を原因まで追跡",
+     "回帰ケースとして保持"
+    ],
+    "back": [
+     "修正を検証"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {},
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "behaviour"
+ ],
+ "spec_unit": "test",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Instrument with OpenTelemetry",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Capture the trace",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Score with prompt judges",
+    "l": "L5",
+    "who": "model"
+   },
+   {
+    "s": "Trace a failure to its cause",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Keep it as a regression case",
+    "l": "L5",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "validate the fix"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

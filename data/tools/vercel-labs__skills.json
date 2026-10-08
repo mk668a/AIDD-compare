@@ -1,0 +1,203 @@
+{
+ "slug": "vercel-labs/skills",
+ "n": "skills CLI",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 33334,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A command line for the open skills ecosystem: install a skill into a project, or generate its prompt and run an agent with it without installing anything.",
+ "art": "skill files written into the project, or a temporary prompt (persistent or ephemeral)",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  2,
+  1,
+  1,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 3,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "none",
+  "mt.units": "none",
+  "mt.process": "none",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "tests/fixtures/zip.ts",
+   "rl.tests": "tests/archive.test.ts",
+   "rl.ci": ".github/workflows/agents.yml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: OpenCode, Claude Code, Cursor, Cline, Zed, Gemini CLI, GitHub Copilot, Kilo Code, Roo Code, Windsurf (README.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "built-in usage text: src/cli.ts (--help)",
+   "ic.error": "a confirmation step in the code path: src/cli.ts (-y, --yes)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/publish.yml (npm publish --provenance)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 3,
+  "complex": 2,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "one of the supported agents",
+  "a source for the skill, which may be a private repository"
+ ],
+ "anti": [
+  "environments where installing instructions from a remote source is not acceptable",
+  "harnesses outside the supported set"
+ ],
+ "th": [
+  "T6",
+  "T17"
+ ],
+ "ctrl": {
+  "prov": "none",
+  "approval": "none",
+  "sandbox": "na",
+  "allowlist": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Installing a skill is fetching instructions an agent will follow, from wherever the source points, using whatever git credentials are already configured. The use-without-installing path is the smallest supply-chain surface anything here offers, because nothing is written to the project.",
+ "sources": [
+  {
+   "url": "https://github.com/vercel-labs/skills",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/vercel-labs/skills/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "skills CLI",
+   "sum": "オープンなスキル生態系のためのコマンドライン。スキルをプロジェクトに導入するか、導入せずにプロンプトを生成してエージェントを起動する。",
+   "art": "プロジェクトに書き込まれるスキルファイル、または一時的なプロンプト（永続または使い捨て）",
+   "pre": [
+    "対応エージェントのいずれか",
+    "スキルの取得元。プライベートリポジトリでもよい"
+   ],
+   "anti": [
+    "遠隔ソースからの指示導入が許されない環境",
+    "対応外のハーネス"
+   ],
+   "gnote": "スキルの導入とは、エージェントが従う指示を、ソースが指す先から、既に設定済みのgit資格情報で取ってくることである。導入せずに使う経路は、ここにあるどれよりも小さいサプライチェーン面を持つ。プロジェクトに何も書かないからである。",
+   "flow": {
+    "steps": [
+     "スキルを探す",
+     "プロジェクトへ導入",
+     "エージェントが読み込む",
+     "エージェントを実行"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": ".factory/workflows/pr-labeling/skills/pr-labeling/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": false
+ },
+ "design_concerns": [
+  "convention"
+ ],
+ "spec_unit": "convention-file",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/find-skills/SKILL.md",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Find a skill",
+    "l": "L2",
+    "who": "human"
+   },
+   {
+    "s": "Install it into the project",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Agent loads it",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Run the agent",
+    "l": "L1",
+    "who": "model"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

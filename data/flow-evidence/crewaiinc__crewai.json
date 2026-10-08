@@ -1,0 +1,199 @@
+{
+ "entry": "CrewAI",
+ "slug": "crewAIInc/crewAI",
+ "flow": {
+  "basis": "repo",
+  "path": "lib/cli/src/crewai_cli/templates/crew/config/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Define agents.yaml",
+   "l": "L7",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/AGENTS.md",
+     "matched": [
+      "agents"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/agents.yaml",
+     "matched": [
+      "agents",
+      "yaml"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/tasks.yaml",
+     "matched": [
+      "yaml"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Define tasks.yaml",
+   "l": "L7",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/agents.yaml",
+     "matched": [
+      "yaml"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/tasks.yaml",
+     "matched": [
+      "tasks",
+      "yaml"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/declarative_flow/flow.yaml",
+     "matched": [
+      "yaml"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Kick off the crew",
+   "l": "L7",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/AGENTS.md",
+     "matched": [
+      "crew"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/README.md",
+     "matched": [
+      "crew"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/agents.yaml",
+     "matched": [
+      "crew"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Agent executes a task",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/AGENTS.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/agents.yaml",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/tasks.yaml",
+     "matched": [
+      "task"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Pass to the next task",
+   "l": "L7",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/crew/config/tasks.yaml",
+     "matched": [
+      "task"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/cli/src/crewai_cli/templates/flow/crews/content_crew/config/tasks.yaml",
+     "matched": [
+      "task"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "lib/crewai/tests/cassettes/agents/TestAgentExecutorPlanning.test_planning_creates_minimal_steps_for_multi_step_task.yaml",
+     "matched": [
+      "task"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "143e902178a07d0f13f9db2308f983aaacaaf0f8"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "lib/cli/src/crewai_cli/templates/AGENTS.md"
+  },
+  {
+   "kind": "path",
+   "value": "lib/cli/src/crewai_cli/templates/crew/README.md"
+  },
+  {
+   "kind": "path",
+   "value": "lib/cli/src/crewai_cli/templates/crew/config/agents.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "lib/cli/src/crewai_cli/templates/crew/config/tasks.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "lib/cli/src/crewai_cli/templates/declarative_flow/flow.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "lib/cli/src/crewai_cli/templates/flow/crews/content_crew/config/tasks.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "lib/crewai/tests/cassettes/agents/TestAgentExecutorPlanning.test_planning_creates_minimal_steps_for_multi_step_task.yaml"
+  }
+ ]
+}

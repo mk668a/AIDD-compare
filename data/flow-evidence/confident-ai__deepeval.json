@@ -1,0 +1,161 @@
+{
+ "entry": "DeepEval",
+ "slug": "confident-ai/deepeval",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Write a test case",
+   "l": "L5",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/full_test_core_for_pr.yml",
+     "matched": [
+      "test"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/test_confident.yml",
+     "matched": [
+      "test"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/test_core.yml",
+     "matched": [
+      "test"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Pick the metrics",
+   "l": "L5",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/test_metrics.yml",
+     "matched": [
+      "metrics"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "deepeval/metrics/answer_relevancy/templates/class.txt",
+     "matched": [
+      "metrics"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "deepeval/metrics/answer_relevancy/templates/generate_reason.txt",
+     "matched": [
+      "metrics"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Run under pytest",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Judge with an LLM",
+   "l": "L5",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "deepeval/metrics/conversational_dag/templates/ConversationalBinaryJudgement/generate_binary_verdict.txt",
+     "matched": [
+      "judge"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "deepeval/metrics/conversational_dag/templates/ConversationalNonBinaryJudgement/generate_non_binary_verdict.txt",
+     "matched": [
+      "judge"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "deepeval/metrics/dag/templates/BinaryJudgement/generate_binary_verdict.txt",
+     "matched": [
+      "judge"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Fail the build",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "077c81b1bffc7eabc3733f950f21b87c09d695ad"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/workflows/full_test_core_for_pr.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/test_confident.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/test_core.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/test_metrics.yml"
+  },
+  {
+   "kind": "path",
+   "value": "deepeval/metrics/answer_relevancy/templates/class.txt"
+  },
+  {
+   "kind": "path",
+   "value": "deepeval/metrics/answer_relevancy/templates/generate_reason.txt"
+  },
+  {
+   "kind": "path",
+   "value": "deepeval/metrics/conversational_dag/templates/ConversationalBinaryJudgement/generate_binary_verdict.txt"
+  },
+  {
+   "kind": "path",
+   "value": "deepeval/metrics/conversational_dag/templates/ConversationalNonBinaryJudgement/generate_non_binary_verdict.txt"
+  },
+  {
+   "kind": "path",
+   "value": "deepeval/metrics/dag/templates/BinaryJudgement/generate_binary_verdict.txt"
+  }
+ ]
+}

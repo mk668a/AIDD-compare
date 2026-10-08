@@ -1,0 +1,227 @@
+{
+ "slug": "wshobson/agents",
+ "n": "Agentic Plugin Marketplace",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L7",
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/wshobson/agents/blob/main/plugins/api-scaffolding/agents/backend-architect.md"
+   },
+   {
+    "id": "openapi",
+    "ev": "https://github.com/wshobson/agents/blob/main/plugins/api-scaffolding/agents/backend-architect.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 40271,
+ "push": "2026-10-05",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A marketplace of agent definitions, skills and commands maintained as one Markdown source and rendered natively onto five harnesses.",
+ "art": "plugin, agent and skill definitions in Markdown (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  1,
+  3,
+  2,
+  2,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "doc",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "fs.example": "plugins/conductor/templates/code_styleguides/csharp.md",
+   "rl.tests": "plugins/plugin-eval/tests/__init__.py",
+   "rl.ci": ".github/workflows/claude.yml",
+   "mt.process": ".github/CONTRIBUTING.md",
+   "mt.units": "tools/yt-design-extractor/pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "pe.budget": "a ceiling named in the documentation only: plugins/agent-orchestration/commands/multi-agent-optimize.md (max_tokens=)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, OpenAI Codex, Cursor, OpenCode, GitHub Copilot, Codex CLI (README.md)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (README.md (/plugin marketplace add wshobson/agents, then install individual plugins))",
+   "ic.help": "a command-line parser that prints its own usage: plugins/plugin-eval/src/plugin_eval/cli.py (typer)",
+   "ic.error": "a documented flag that gates or previews the action: ARCHITECTURE.md (--dry-run)",
+   "rl.resume": "recovering is described in prose, not implemented: docs/usage.md (checkpoint)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx c)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.stop": "stopping is described in prose only: plugins/agent-teams/commands/team-shutdown.md (Gracefully shut down)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "one of the supported harnesses",
+  "willingness to let generated instruction files land in the project"
+ ],
+ "anti": [
+  "harnesses outside the supported five",
+  "teams that need to review every instruction before it is loaded, since the catalogue is large"
+ ],
+ "th": [
+  "T6",
+  "T17"
+ ],
+ "ctrl": {
+  "prov": "none",
+  "approval": "na",
+  "sandbox": "na",
+  "allowlist": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Installing a plugin from a marketplace is a supply chain step: what lands is instructions the agent will execute, from a repository the operator does not control. The one-source-many-harnesses shape is the same portability claim AI-DLC makes, applied to a catalogue rather than a method.",
+ "sources": [
+  {
+   "url": "https://github.com/wshobson/agents",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/wshobson/agents/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Agentic Plugin Marketplace",
+   "sum": "エージェント定義・スキル・コマンドの配布所。単一のMarkdownソースを保守し、5つのハーネス向けにそれぞれの流儀で生成する。",
+   "art": "Markdownによるプラグイン・エージェント・スキル定義（永続）",
+   "pre": [
+    "対応ハーネスのいずれか",
+    "生成された指示ファイルがプロジェクトに置かれることを許容できること"
+   ],
+   "anti": [
+    "対応5ハーネス以外の環境",
+    "読み込む指示をすべて事前にレビューしたいチーム。カタログが大きすぎる"
+   ],
+   "gnote": "マーケットプレイスからのインストールはサプライチェーンの一手である。降りてくるのは利用者が管理していないリポジトリ由来の、エージェントが実行する指示である。単一ソースから多ハーネスという形は、AI-DLCが方法論について主張した可搬性を、カタログに適用したものと同型。",
+   "flow": {
+    "steps": [
+     "プラグインを導入",
+     "計画フェーズ",
+     "実行フェーズ",
+     "レビューフェーズ"
+    ],
+    "back": [
+     "レビューで差し戻し"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "plugins/accessibility-compliance/skills/screen-reader-testing/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "api-contract"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/architecture.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Install a plugin",
+    "l": "L2",
+    "who": "human"
+   },
+   {
+    "s": "Planning phase",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Execution phase",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Review phase",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 1,
+    "s": "review rejects"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

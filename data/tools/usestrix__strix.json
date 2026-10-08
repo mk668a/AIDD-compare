@@ -1,0 +1,229 @@
+{
+ "slug": "usestrix/strix",
+ "n": "Strix",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L1",
+  "L6"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred"
+ },
+ "lic": "Apache-2.0",
+ "stars": 67033,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "A penetration testing agent for an application you own. It reads the source, runs the application in a Docker sandbox, and reports only the weaknesses it could reproduce with a working proof-of-concept exploit. Nine skills let Claude Code, Cursor or Codex start a scan, fix the findings and set up scanning on pull requests.",
+ "art": "one Markdown file per finding plus vulnerabilities.json, under strix_runs/<run-name>/ (persistent)",
+ "tok": "heavy",
+ "p": [
+  0,
+  0,
+  2,
+  3,
+  2,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 2,
+  "extend": 5,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "none",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "impl",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "rl.tests": "tests/__init__.py",
+   "rl.ci": ".github/workflows/ci-python.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "strix/interface/tui/go.mod",
+   "pe.budget": "a ceiling the operator sets on the command line: docs/integrations/coding-agents.mdx (--max-budget)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Gemini CLI, OpenCode (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: strix/interface/main.py (argparse)",
+   "ic.error": "a documented flag that gates or previews the action: README.md (--yes)",
+   "rl.resume": "a resume the operator can ask for: strix/interface/main.py (--resume)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: OPENROUTER, OLLAMA, LMSTUDIO, VERTEX, BEDROCK, LITELLM (README.md)",
+   "sf.stop": "a stop path, and the state it leaves behind is described: strix/interface/cli.py (SIGINT); strix/interface/main.py (--resume)",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (> [!WARNING])",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T2/T4/T11/T13/T17 introduced, controls sandbox impl, limits impl, approval none, log part, allowlist none",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval none, sandbox impl",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 5,
+  "complex": 4,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "Docker running on the machine, and an API key for a model provider",
+  "an application that can be built and started, or a URL you are permitted to test",
+  "written permission for every target that is not your own",
+  "a spending limit set per run, since several agents work at once"
+ ],
+ "anti": [
+  "systems you do not own and have no written permission to test: the README restricts use to authorized targets",
+  "production systems that cannot tolerate active testing: the scan sends real requests to the target",
+  "a replacement for a formal audit where a named assessor must sign: the report is produced by a model",
+  "repositories with nothing to run: the dynamic part of the scan needs a working application"
+ ],
+ "th": [
+  "T2",
+  "T4",
+  "T11",
+  "T13",
+  "T17"
+ ],
+ "ctrl": {
+  "sandbox": "impl",
+  "limits": "impl",
+  "approval": "none",
+  "log": "part",
+  "allowlist": "none"
+ },
+ "gate": {
+  "sast": "blocking",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The tool is itself the check. In non-interactive mode the command exits with a non-zero code when a weakness is found, so a pull request workflow that runs it fails and the change does not merge. The scan runs inside a Docker sandbox the tool pulls on first use. The agents have a shell and a browser inside that sandbox, and the README limits use to targets the operator owns or has written permission to test.",
+ "sources": [
+  {
+   "url": "https://github.com/usestrix/strix",
+   "accessed": "2026-10-07"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/usestrix/strix/main/README.md",
+   "accessed": "2026-10-07"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Strix",
+   "sum": "自分のアプリケーションを対象にしたペネトレーションテスト用のエージェント。ソースを読み、Dockerのサンドボックスでアプリケーションを動かし、動く概念実証のエクスプロイトで再現できた弱点だけを報告する。9つのスキルにより、Claude Code、Cursor、Codexからスキャンの開始、指摘の修正、プルリクエストでのスキャン設定ができる。",
+   "art": "指摘1件ごとのMarkdownファイルとvulnerabilities.json。strix_runs/<run-name>/に保存される（永続）",
+   "pre": [
+    "手元でDockerが動いていること、モデルプロバイダのAPIキー",
+    "ビルドして起動できるアプリケーション、またはテストの許可を得ているURL",
+    "自分のものではない対象については、書面による許可",
+    "複数のエージェントが同時に動くので、実行ごとの費用の上限設定"
+   ],
+   "anti": [
+    "自分のものではなく、書面の許可も無いシステム。READMEは許可された対象に利用を限定している",
+    "能動的なテストに耐えられない本番システム。スキャンは対象に実際のリクエストを送る",
+    "指名された審査人の署名が要る正式な監査の代わり。報告書を作るのはモデルである",
+    "動かすものが無いリポジトリ。スキャンの動的な部分には、動くアプリケーションが要る"
+   ],
+   "gnote": "このツール自体が検査である。非対話モードでは、弱点が見つかるとコマンドが0以外の終了コードを返すので、これを走らせるプルリクエストのワークフローは失敗し、変更はマージされない。スキャンは、初回に取得するDockerのサンドボックスの中で走る。エージェントはそのサンドボックスの中でシェルとブラウザを使う。READMEは、利用者が所有する対象か、書面でテストの許可を得た対象に利用を限定している。",
+   "flow": {
+    "steps": [
+     "指摘を重大度順に並べる",
+     "原因を修正する",
+     "Strixを再実行して確かめる",
+     "結果を報告する"
+    ],
+    "back": [
+     "指摘がまだ再現する"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": "skills/api-security-testing/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Triage",
+    "l": "L5",
+    "who": "model"
+   },
+   {
+    "s": "Fix",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Verify by re-running Strix",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Report",
+    "l": "L5",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 2,
+    "to": 1,
+    "s": "finding still reproduces"
+   }
+  ]
+ }
+}

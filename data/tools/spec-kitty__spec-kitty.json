@@ -1,0 +1,221 @@
+{
+ "slug": "spec-kitty/spec-kitty",
+ "n": "Spec Kitty",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L1",
+  "L7"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "a spec agreed by a person, plus the worktree an agent works in against it"
+ },
+ "lic": "MIT",
+ "stars": 1673,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Spec-driven development with per-feature isolation via git worktrees.",
+ "art": "spec plus worktree",
+ "tok": "heavy",
+ "p": [
+  3,
+  2,
+  2,
+  1,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".augment/commands/spec-kitty-standalone.md",
+   "fs.example": ".kittify/memory/templates/POWERSHELL_SYNTAX.md",
+   "rl.tests": "kitty-specs/010-workspace-per-work-package-for-parallel-development/tests/integration/test_planning_workflow.py",
+   "rl.ci": ".github/workflows/ci-windows.yml",
+   "mt.process": ".github/CONTRIBUTING.md",
+   "mt.units": "pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T4/T6/T13 introduced, controls sandbox doc",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by sandbox doc",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "pe.budget": "a ceiling the operator sets on the command line: pyproject.toml (--timeout )",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, GitHub Copilot, Windsurf, OpenCode (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (typer)",
+   "rl.resume": "a checkpoint or restore path in the code: src/specify_cli/orchestrator_api/commands.py (checkpoint)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/release.yml (sha256sum)",
+   "fx.install": "an install that does not change the machine globally: README.md (pipx install)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a layout where git worktrees work",
+  "genuine need for parallel work"
+ ],
+ "anti": [
+  "small projects where sequential work suffices"
+ ],
+ "th": [
+  "T4",
+  "T6",
+  "T13"
+ ],
+ "ctrl": {
+  "sandbox": "doc"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "A worktree is work isolation, not a security boundary",
+ "sources": [
+  {
+   "url": "https://github.com/spec-kitty/spec-kitty",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Spec Kitty",
+   "sum": "SDDにgit worktreeによる機能ごとの隔離を組み込んだ実装。",
+   "art": "仕様 + worktree",
+   "pre": [
+    "git worktreeが使える構成",
+    "並列作業が実際に必要なこと"
+   ],
+   "anti": [
+    "逐次で足りる小規模開発"
+   ],
+   "gnote": "worktreeは作業隔離であってセキュリティ境界ではない",
+   "flow": {
+    "steps": [
+     "spec",
+     "plan",
+     "tasks",
+     "next（worktree内）",
+     "review",
+     "acceptしてマージ"
+    ],
+    "back": [
+     "修正要求"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": ".kittify/overrides/AGENTS.md",
+   "agent_skills": "src/charter/offering/skills/ad-hoc-profile-load/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "behaviour",
+  "data-model"
+ ],
+ "spec_unit": "phase-document",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "spec",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "plan",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "tasks",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "next, in a worktree",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "review",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "accept and merge",
+    "l": null,
+    "who": "human"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 3,
+    "s": "changes requested"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

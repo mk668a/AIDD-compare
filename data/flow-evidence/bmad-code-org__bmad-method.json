@@ -1,0 +1,182 @@
+{
+ "entry": "BMAD-METHOD",
+ "slug": "bmad-code-org/BMAD-METHOD",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Analyst brief",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/bmad-agent-analyst/SKILL.md",
+     "matched": [
+      "analyst"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/bmad-agent-analyst/customize.toml",
+     "matched": [
+      "analyst"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/bmad-agent-analyst/module-manifest.toml",
+     "matched": [
+      "analyst"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "PM writes the PRD",
+   "l": "L4",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Architect designs",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/bmad-agent-architect/SKILL.md",
+     "matched": [
+      "architect"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/bmad-agent-architect/customize.toml",
+     "matched": [
+      "architect"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/bmad-agent-architect/module-manifest.toml",
+     "matched": [
+      "architect"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Epics and stories",
+   "l": "L4",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Dev implements",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/bmad-build-auto/step-03-implement.md",
+     "matched": [
+      "implements"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Code review",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/coderabbit-review.yaml",
+     "matched": [
+      "code",
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/bmad-architecture/references/reviewer-gate.md",
+     "matched": [
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/bmad-build-auto/review-prompts/edge-case-hunter.md",
+     "matched": [
+      "review"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "abe4eb1bce919c9d22cd18b3519353d5824c4b75"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/workflows/coderabbit-review.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-agent-analyst/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-agent-analyst/customize.toml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-agent-analyst/module-manifest.toml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-agent-architect/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-agent-architect/customize.toml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-agent-architect/module-manifest.toml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-architecture/references/reviewer-gate.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-build-auto/review-prompts/edge-case-hunter.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/bmad-build-auto/step-03-implement.md"
+  }
+ ]
+}

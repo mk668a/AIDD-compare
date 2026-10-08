@@ -1,0 +1,215 @@
+{
+ "slug": "basicmachines-co/basic-memory",
+ "n": "Basic Memory",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "plain Markdown notes in the operator's own directory: readable as notes by a person and read back as memory by the agent",
+  "format_detail": [
+   {
+    "id": "flowchart",
+    "ev": "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/infographics/references/prompt-blueprint.md"
+   }
+  ]
+ },
+ "lic": "AGPL-3.0",
+ "stars": 4114,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Keeps memory as Markdown files: human-readable, and diffable in git.",
+ "art": "Markdown notes (persistent)",
+ "tok": "frugal",
+ "p": [
+  1,
+  0,
+  1,
+  0,
+  1,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 1,
+  "wrap": 3
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "part",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "fs.example": "src/basic_memory/templates/prompts/continue_conversation.hbs",
+   "rl.tests": "benchmarks/tests/agent_tasks/__init__.py",
+   "rl.ci": ".github/workflows/claude.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "benchmarks/pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T1 introduced, controls memval part, log part",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Cursor, Claude Code, Codex CLI (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (typer)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (checkpoints)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/release.yml (npm publish --access public --provenance)",
+   "fx.install": "an install that does not change the machine globally: README.md (uv tool install)",
+   "fx.byo": "the provider is the operator's choice: LITELLM (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: src/basic_memory/api/app.py (SIGTERM)",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (destructive)",
+   "ic.error": "a documented flag that gates or previews the action: docs/cloud-cli.md (--dry-run)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "accepting a file-based workflow"
+ ],
+ "anti": [
+  "large volumes of structured data",
+  "distribution that must avoid AGPL"
+ ],
+ "th": [
+  "T1"
+ ],
+ "ctrl": {
+  "memval": "part",
+  "log": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Memory under git means change history is traceable, which mitigates T1",
+ "sources": [
+  {
+   "url": "https://github.com/basicmachines-co/basic-memory",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Basic Memory",
+   "sum": "Markdownファイルとして記憶を持つ。人間が読めてgitで差分が追える形式。",
+   "art": "Markdownノート（永続）",
+   "pre": [
+    "ファイルベースの運用を許容できること"
+   ],
+   "anti": [
+    "大量の構造化データ",
+    "AGPLを避けたい配布形態"
+   ],
+   "gnote": "記憶がgit管理下に入るため変更履歴が追える。T1の緩和方向に効く",
+   "flow": {
+    "steps": [
+     "Markdownでノートを書く",
+     "リンクを索引化",
+     "エージェントが検索",
+     "コンテキストへ読み戻す"
+    ],
+    "back": [
+     "次のセッション"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "plugins/codex/.mcp.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "integrations/hermes/skill/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "process"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Write a note as Markdown",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Index the links",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Agent searches",
+    "l": "L2",
+    "who": "model"
+   },
+   {
+    "s": "Read back into context",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 0,
+    "s": "next session"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

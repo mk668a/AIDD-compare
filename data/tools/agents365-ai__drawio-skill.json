@@ -1,0 +1,273 @@
+{
+ "slug": "Agents365-ai/drawio-skill",
+ "n": "drawio-skill",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L5",
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "diagram",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md"
+   },
+   {
+    "id": "flowchart",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md"
+   },
+   {
+    "id": "openapi",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/toolbox.md"
+   },
+   {
+    "id": "erd",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/diagram-types.md"
+   },
+   {
+    "id": "wireframe",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/shapes.md"
+   },
+   {
+    "id": "sequence",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/diagram-types.md"
+   },
+   {
+    "id": "graphviz",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md"
+   },
+   {
+    "id": "class-diagram",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/cookbook.md"
+   },
+   {
+    "id": "bpmn",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md"
+   },
+   {
+    "id": "c4",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/cookbook.md"
+   },
+   {
+    "id": "plantuml",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md"
+   },
+   {
+    "id": "state",
+    "ev": "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/mermaid-authoring.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 9978,
+ "push": "2026-10-02",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Turns text and real system sources into maintainable .drawio architecture models, syncs them incrementally without discarding manual layout, and enforces architecture contracts as a test in CI.",
+ "art": "a .drawio model with a separate diagram intermediate representation (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  3,
+  1,
+  2,
+  2,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 3,
+  "restructure": 5,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "fs.example": "examples/architecture-studio/README.md",
+   "rl.tests": "tests/README.md",
+   "rl.ci": ".github/workflows/tests.yml",
+   "mt.process": "CHANGELOG.md",
+   "mt.units": ".agents/plugins/marketplace.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T6 introduced, controls approval none, log part",
+   "fx.exit": "artifact.format diagram: a diagram source in an open text format",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor (README.md)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (README.md (npx skills add Agents365-ai/365-skills: a skill an agent loads, nothing a person operates))",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA (README.md)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 5,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "a system whose structure is worth modelling",
+  "an agent that supports the Agent Skills format"
+ ],
+ "anti": [
+  "projects too small to carry an architecture model",
+  "teams that will not maintain the model once it exists"
+ ],
+ "th": [
+  "T6"
+ ],
+ "ctrl": {
+  "approval": "none",
+  "log": "part",
+  "sandbox": "na",
+  "allowlist": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The one entry that emits a formal visual notation as its artifact, and it emits several: C4, UML, BPMN, ERD and flowcharts, from one intermediate representation. Architecture-as-test in CI makes the model a gate rather than a picture, which is the difference between a diagram that rots and one that fails a build.",
+ "sources": [
+  {
+   "url": "https://github.com/Agents365-ai/drawio-skill",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "drawio-skill",
+   "sum": "自然言語と実システムの情報から、保守できる .drawioのアーキテクチャモデルを作る。手で調整したレイアウトを壊さずに差分同期し、アーキテクチャの契約をCIのテストとして強制する。",
+   "art": "意味と配置を分けた中間表現を持つ .drawioモデル（永続）",
+   "pre": [
+    "構造をモデル化する価値のあるシステム",
+    "Agent Skills形式に対応したエージェント"
+   ],
+   "anti": [
+    "アーキテクチャモデルを抱えるには小さすぎるプロジェクト",
+    "作った後にモデルを保守しないチーム"
+   ],
+   "gnote": "形式的な視覚記法を成果物として出力する唯一のツールであり、しかも複数出す。1つの中間表現からC4・UML・BPMN・ER図・フローチャートを投影する。CIでのアーキテクチャ・アズ・テストは、モデルを絵ではなくゲートにする。腐る図と、ビルドを落とす図の差である。",
+   "flow": {
+    "steps": [
+     "ソースから抽出",
+     "自動レイアウト",
+     "厳格モードで検証",
+     "レンダリング",
+     ".drawioをコミット"
+    ],
+    "back": [
+     "契約違反"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_plugins": ".codex-plugin/plugin.json",
+   "agent_skills": "skills/drawio-skill/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": false
+ },
+ "design_concerns": [
+  "api-contract",
+  "architecture",
+  "behaviour",
+  "data-model",
+  "process",
+  "screen-flow"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/CI.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Extract from source",
+    "l": "L4",
+    "who": "tool"
+   },
+   {
+    "s": "Auto-layout",
+    "l": "L4",
+    "who": "tool"
+   },
+   {
+    "s": "Validate, strict",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Render",
+    "l": null,
+    "who": "tool"
+   },
+   {
+    "s": "Commit .drawio",
+    "l": null,
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 2,
+    "to": 0,
+    "s": "contract violation"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

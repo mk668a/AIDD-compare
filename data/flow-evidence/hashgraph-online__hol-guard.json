@@ -1,0 +1,183 @@
+{
+ "entry": "hol-guard",
+ "slug": "hashgraph-online/hol-guard",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "hol-guard init",
+   "l": "L1",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "guard"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".factory/skills/hol-guard/SKILL.md",
+     "matched": [
+      "guard"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/guard-gvisor-reference.yml",
+     "matched": [
+      "guard"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Guard installs harness hook",
+   "l": "L1",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "guard",
+      "installs"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".factory/skills/hol-guard/SKILL.md",
+     "matched": [
+      "guard"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/extension-builder-installed.yml",
+     "matched": [
+      "installs"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Agent issues tool call",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "agent",
+      "tool"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/rust-posttool-authority-acceptance.yml",
+     "matched": [
+      "tool"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/rust-pretool-adversarial.yml",
+     "matched": [
+      "tool"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Guard evaluates policy",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "guard"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".factory/skills/hol-guard/SKILL.md",
+     "matched": [
+      "guard"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/guard-gvisor-reference.yml",
+     "matched": [
+      "guard"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Human approves or denies",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": []
+  },
+  {
+   "i": 5,
+   "s": "Receipt recorded",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "d6885685023710648c25bbce3bd9a37974d202c6"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "# HOL Guard: Open-Source Antivirus for AI Agents\n<!-- mcp-name: io.github.hashgraph-online/hol-guard -->\n[![HOL Guard Version](https://img.shields.io/pypi/v/hol-guard.svg?logo=pypi&logoColor=white&cacheSeconds=300)](https://pypi.org/project/hol-guard/)\n[![HOL Guard Downloads](https://img.shields.io/pypi/dm/hol-guard?logo=pypi&logoColor=white)](https://pypi.org/project/hol-guard/)\n[![CI](https://img.shields.io/github/actions/workflow/status/hashgraph-online/hol-guard/ci.yml?branch=main&label=CI&logo=githubactions&logoColor=white)](https://github.com/hashgraph-online/hol-guard/actions/workflows/ci.yml)\n[![Publish](https://img.shields.io/github/actions/workflow/status/hashgraph-online/hol-guard/publish.yml?branch=main&label=Publish&logo=githubactions&logoColor=white)](https://github.com/hashgraph-online/hol-guard/actions/workflows/publish.yml)\n[![Container Image](https://img.shields.io/badge/ghcr-hol--guard-2496ED?logo=docker&logoColor=white)](https://github.com/hashgraph-online/hol-guard/pkgs/container/hol-guard)\n[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/hashgraph-online/hol-guard/badge)](https://scorecard.dev/viewer/?uri=github.com/hashgraph-online/hol-guard)\n[![GitHub Stars](https://img.shields.io/github/stars/hashgraph-online/hol-guard?style=social)](https://github.com/hashgraph-online/hol-guard/stargazers)\n| ![HOL whole dark logo](https://hol.org/brand/Logo_Whole_Dark.png) | **Stop risky AI actions before they compromise your machine.** HOL Guard is a local-first security layer for AI agents, tools, plugins, skills, MCP servers, and package installs.<br><br>[Install HOL Guard](https://hol.org/guard/activate)<br>[Read the documentation](https://github.com/hashgraph-online/hol-guard/blob/main/docs/guard/get-started.md)<br>"
+  },
+  {
+   "kind": "path",
+   "value": ".factory/skills/hol-guard/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/extension-builder-installed.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/guard-gvisor-reference.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/rust-posttool-authority-acceptance.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/rust-pretool-adversarial.yml"
+  }
+ ]
+}

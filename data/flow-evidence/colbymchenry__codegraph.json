@@ -1,0 +1,198 @@
+{
+ "entry": "CodeGraph",
+ "slug": "colbymchenry/codegraph",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Index the repository",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "docs/SEARCH_QUALITY_LOOP.md",
+     "matched": [
+      "index"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "index"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Resolve the references",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "docs/SEARCH_QUALITY_LOOP.md",
+     "matched": [
+      "references"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "resolve",
+      "references"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Agent queries the graph",
+   "l": "L2",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude/skills/agent-eval/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Watch and re-index",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "docs/SEARCH_QUALITY_LOOP.md",
+     "matched": [
+      "index"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "index"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "b9ca4b7981116909900368cc1686a1074cd4d4c1"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".claude/skills/agent-eval/SKILL.md"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. Install the CLI"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. Wire up your agent(s)"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "3. Initialize each project"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "4. No more syncing!"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "5. See what your agent sees"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. Run the Installer"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. Restart Your Agent"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "3. Initialize Projects"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/SEARCH_QUALITY_LOOP.md",
+   "value": "1. Build and index"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/SEARCH_QUALITY_LOOP.md",
+   "value": "2. Quick sanity check"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/SEARCH_QUALITY_LOOP.md",
+   "value": "1. Add the hook to the language extractor"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/SEARCH_QUALITY_LOOP.md",
+   "value": "2. Reference: Go implementation"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/SEARCH_QUALITY_LOOP.md",
+   "value": "3. Where it's consumed"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "→ Full deep-dive in [Guides → Indexing a Project](https://colbymchenry.github.io/codegraph/guides/indexing/#stay-fresh-automatically)."
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "3. **Resolution** — After extraction, references are resolved: function calls → definitions, imports → source files, class inheritance, and framework-specific patterns."
+  }
+ ]
+}

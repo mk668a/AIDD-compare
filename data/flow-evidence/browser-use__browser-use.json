@@ -1,0 +1,118 @@
+{
+ "entry": "Browser Use",
+ "slug": "browser-use/browser-use",
+ "flow": {
+  "basis": "repo",
+  "path": "browser_use/agent/system_prompts/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Read the task",
+   "l": null,
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "browser_use/skills/README.md",
+     "matched": [
+      "read"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "read",
+      "task"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Observe the page state",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Choose an action",
+   "l": null,
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Act in the browser",
+   "l": "L1",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "browser_use/agent/system_prompts/system_prompt.md",
+     "matched": [
+      "browser"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "browser_use/agent/system_prompts/system_prompt_anthropic_flash.md",
+     "matched": [
+      "browser"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "browser_use/agent/system_prompts/system_prompt_browser_use.md",
+     "matched": [
+      "browser"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Extract the result",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e25ab65e699af3031a1f2d348526de2844be0e89"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "browser_use/agent/system_prompts/system_prompt.md"
+  },
+  {
+   "kind": "path",
+   "value": "browser_use/agent/system_prompts/system_prompt_anthropic_flash.md"
+  },
+  {
+   "kind": "path",
+   "value": "browser_use/agent/system_prompts/system_prompt_browser_use.md"
+  },
+  {
+   "kind": "path",
+   "value": "browser_use/skills/README.md"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "Rule of thumb: one-off tasks through an agent → CLI. Repeatable automation in code → Python library."
+  }
+ ]
+}

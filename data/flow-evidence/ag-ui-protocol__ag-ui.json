@@ -1,0 +1,138 @@
+{
+ "entry": "AG-UI",
+ "slug": "ag-ui-protocol/ag-ui",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Agent runs",
+   "l": "L7",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/skills/agui-dotnet-agents-sync/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/unit-claude-managed-agents-dotnet.yml",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Emit typed events",
+   "l": "L7",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": ".github/skills/agui-dotnet-feature-workflow/SKILL.md",
+     "matched": [
+      "events"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Client renders",
+   "l": null,
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "sdks/dotnet/plugins/ag-ui-dotnet/skills/agui-dotnet-client-tools/SKILL.md",
+     "matched": [
+      "client"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/ag-ui-a2ui-integration/references/a2ui-runtime-and-renderer.md",
+     "matched": [
+      "renders"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": ".github/skills/agui-dotnet-feature-workflow/SKILL.md",
+     "matched": [
+      "client"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Human replies",
+   "l": null,
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "sdks/dotnet/plugins/ag-ui-dotnet/skills/agui-dotnet-human-in-the-loop/SKILL.md",
+     "matched": [
+      "human"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "54c155826620892610d6f9cc0d697d0c6f70ae7c"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/skills/agui-dotnet-agents-sync/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".github/skills/agui-dotnet-feature-workflow/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/unit-claude-managed-agents-dotnet.yml"
+  },
+  {
+   "kind": "path",
+   "value": "sdks/dotnet/plugins/ag-ui-dotnet/skills/agui-dotnet-client-tools/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "sdks/dotnet/plugins/ag-ui-dotnet/skills/agui-dotnet-human-in-the-loop/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/ag-ui-a2ui-integration/references/a2ui-runtime-and-renderer.md"
+  },
+  {
+   "kind": "arrow",
+   "source": ".github/skills/agui-dotnet-feature-workflow/SKILL.md",
+   "value": "[ ] Client/server mapping updated (`AGUI.Client` event→update and/or `AGUI.Server` update→event)"
+  },
+  {
+   "kind": "arrow",
+   "source": ".github/skills/agui-dotnet-feature-workflow/SKILL.md",
+   "value": "checks → **`agui-playwright-validate`**; review the change → **`agui-dotnet-code-review`**."
+  }
+ ]
+}

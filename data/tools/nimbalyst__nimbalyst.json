@@ -1,0 +1,256 @@
+{
+ "slug": "nimbalyst/nimbalyst",
+ "n": "Nimbalyst",
+ "entry_kind": "implementation",
+ "l": "L7",
+ "s2": [
+  "L1",
+  "L5"
+ ],
+ "dom": [
+  "code",
+  "ui"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "README Session Management and Task Tracking sections describe trackers that both the human and the agents read and update",
+  "format_detail": [
+   {
+    "id": "wireframe",
+    "ev": "https://github.com/nimbalyst/nimbalyst/blob/main/.claude/commands/design.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 1848,
+ "push": "2026-10-05",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Open-source visual desktop workspace for running Codex, Claude Code, OpenCode and Copilot in parallel git worktrees, editing their work in WYSIWYG markdown/mockup/diagram editors, and reviewing diffs before they land. Formerly Stravu Crystal, renamed 2026.",
+ "art": "on-disk markdown, mockup, diagram and data-model files plus a local session/task database (persistent)",
+ "tok": "unbounded",
+ "p": [
+  2,
+  3,
+  3,
+  1,
+  3,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 5,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "na",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "none",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "impl",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude/commands/analyze-code.md",
+   "fs.example": "UserDocs/examples/character.yaml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "ic.surface": "Surface: cli (packages/cli/package.json)",
+   "ic.help": "built-in usage text: packages/cli/src/index.ts (Usage:\n)",
+   "rl.tests": "packages/android/app/src/test/java/com/nimbalyst/app/MainActivityDeepLinkTest.kt",
+   "rl.ci": ".github/workflows/ci.yml",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (resume session)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "mt.units": "packages/android/package.json",
+   "mt.process": "CONTRIBUTING.md",
+   "fx.byo": "the provider is the operator's choice: BASEURL, ANTHROPIC (packages/android/tsconfig.json)",
+   "fx.exit": "README.md",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval impl, worktree_isolation impl",
+   "se.threats": "cites th: no OWASP Agentic AI threat is introduced by adopting this entry, so there is nothing here to control against",
+   "pe.budget": "a ceiling the operator sets on the command line: scripts/manual-tests/claude-context-overhead/run.ts (--max-budget)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, OpenCode, GitHub Copilot (README.md)",
+   "ic.error": "a dry run the operator can ask for before the real one: scripts/manual-tests/claude-context-overhead/run.ts (dryRun)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/publish-cli.yml (npm publish --access public --provenance)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "an existing git repository, since parallel sessions are isolated by worktree",
+  "at least one supported coding-agent CLI already installed and authenticated (Codex, Claude Code, OpenCode alpha, or Copilot alpha)",
+  "willingness to run a desktop Electron app that sends anonymous PostHog telemetry by default"
+ ],
+ "anti": [
+  "headless CI/CD pipelines with no desktop UI to drive it; there is no non-interactive mode",
+  "teams that must avoid any call-home telemetry before explicitly opting out in Settings",
+  "workflows that need a browser-based or remote-accessible surface rather than a native per-machine install"
+ ],
+ "th": [],
+ "ctrl": {
+  "approval": "impl",
+  "worktree_isolation": "impl",
+  "egress": "not-assessed"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "No code-output gate is implemented; the review mechanism is the red/green diff surface, which is a human approval step (ctrl.approval) rather than a static/dependency/secret scanner. The MCP client accepts arbitrary MCP servers and renders their output as UI widgets, and the extension SDK loads third-party editor code; neither attack surface was checked against OWASP v1.1 T-numbers in this pass, hence th is empty rather than asserted none.",
+ "sources": [
+  {
+   "url": "https://github.com/nimbalyst/nimbalyst",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/nimbalyst/nimbalyst/main/README.md",
+   "accessed": "2026-09-06"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Nimbalyst",
+   "sum": "Codex、Claude Code、OpenCode、Copilotを並列のgit worktreeで実行し、WYSIWYGのmarkdown/モックアップ/ダイアグラムエディタでエージェントの成果物を編集し、差分をマージする前にレビューできる、オープンソースのビジュアルデスクトップワークスペース。旧称Stravu Crystal、2026年に改名。",
+   "art": "ディスク上のmarkdown・モックアップ・ダイアグラム・データモデルファイルと、ローカルのセッション/タスクデータベース(永続)",
+   "pre": [
+    "並列セッションはworktreeで隔離されるため、既存のgitリポジトリが必要",
+    "対応するコーディングエージェントCLI(Codex、Claude Code、OpenCode alpha、Copilot alpha)が少なくとも1つインストール・認証済みであること",
+    "既定で匿名のPostHogテレメトリを送信するデスクトップElectronアプリを実行する意思があること"
+   ],
+   "anti": [
+    "ヘッドレスCI/CDパイプライン。デスクトップUIを操作する非対話モードが無い",
+    "設定でオプトアウトする前にコールホーム型テレメトリを一切避けたいチーム",
+    "マシンごとのネイティブインストールではなく、ブラウザベース/リモートアクセス可能な画面を必要とするワークフロー"
+   ],
+   "gnote": "コード出力に対する静的解析・依存関係・シークレットのゲートは実装されていない。レビュー機構は赤緑の差分表示による人間の承認ステップ(ctrl.approval)であり、スキャナではない。MCPクライアントは任意のMCPサーバを受け付けてその出力をUIウィジェットとして描画し、拡張機能SDKはサードパーティ製のエディタコードを読み込むが、いずれもこの調査ではOWASP v1.1のT番号と突き合わせていないため、thは「none」と断定せず空にしている。",
+   "flow": {
+    "steps": [
+     "ドキュメントを作成/オープン",
+     "markdownで記述",
+     "AIアシスタントを使う",
+     "AIの変更を承認/却下",
+     "Agent Managerで並列実行",
+     "セッションを検索/再開"
+    ],
+    "back": [
+     "変更が却下された"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "packages/extensions/animation/claude-plugin/skills/animation/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true,
+  "note": "Session state, worktrees and SQLite databases live on the operator's machine by default. A separate hosted collaboration-sync server (wss://sync.nimbalyst.com) is used for the iOS companion app and cross-device sync; the desktop app's core editing and session features do not require it. Anonymous PostHog telemetry is sent by default and can be disabled."
+ },
+ "design_concerns": [
+  "architecture",
+  "data-model",
+  "screen-flow"
+ ],
+ "spec_unit": "task",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Create or open a document",
+    "l": "L4",
+    "who": "human"
+   },
+   {
+    "s": "Write in markdown",
+    "l": null,
+    "who": "human"
+   },
+   {
+    "s": "Use the AI assistant",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Accept/reject AI changes",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Work in Agent Manager",
+    "l": "L7",
+    "who": "human",
+    "par": [
+     "session A",
+     "session B"
+    ]
+   },
+   {
+    "s": "Search/resume sessions",
+    "l": "L7",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 2,
+    "s": "changes rejected"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "cost_warning": "No built-in per-session token or turn budget was found; the core feature is running an unbounded number of parallel agent sessions, each delegating to whatever underlying CLI agent (Claude Code, Codex, etc.) the operator configures.",
+ "ui_ux": {
+  "hcd_activities": [
+   "design",
+   "evaluation"
+  ],
+  "artifact": "markdown, annotated mockups, Mermaid/Excalidraw diagrams and data models, rendered in the same WYSIWYG surface the agent edits",
+  "feedback_channel": "the rendered document itself, via red/green diff review on desktop and swipe-to-approve on the iOS companion app",
+  "handoff": [],
+  "a11y_standard": "none",
+  "note": "For the mockup/diagram/data-model editors specifically, this is one of the rare entries that both specifies a design artifact and observes the agent's rendered result in the same loop, rather than leaving the ISO 9241-210 cycle open on one side. It does not evaluate the built product's UI, only the visual documents the agent produced about it."
+ }
+}

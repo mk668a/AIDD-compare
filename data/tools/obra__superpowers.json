@@ -1,0 +1,231 @@
+{
+ "slug": "obra/superpowers",
+ "n": "Superpowers",
+ "entry_kind": "implementation",
+ "l": "L6",
+ "s2": [
+  "L5",
+  "L7"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "skill definitions loaded by the agent",
+  "format_detail": [
+   {
+    "id": "erd",
+    "ev": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/visual-companion.md"
+   },
+   {
+    "id": "wireframe",
+    "ev": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md"
+   },
+   {
+    "id": "graphviz",
+    "ev": "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 296290,
+ "push": "2026-10-06",
+ "conf": "ok",
+ "exec": true,
+ "sum": "A set of skills paired with a methodology: design, plan, then TDD through subagents.",
+ "art": "skill definitions (persistent)",
+ "tok": "heavy",
+ "p": [
+  2,
+  2,
+  3,
+  3,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 5,
+  "restructure": 4,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "none",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "none",
+  "mt.code": "not-assessed",
+  "fx.install": "none",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "none",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "fs.example": "skills/writing-skills/examples/CLAUDE_MD_TESTING.md",
+   "rl.tests": "tests/antigravity/run-tests.sh",
+   "mt.units": "tests/brainstorm-server/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T4/T13/T17 introduced, controls prov doc",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Codex CLI, Cursor, Gemini CLI, GitHub Copilot, OpenCode, Windsurf (README.md)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (README.md (/plugin install superpowers@superpowers-marketplace))",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (checkpoints)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a target where tests can be written",
+  "a harness that can run subagents"
+ ],
+ "anti": [
+  "legacy that cannot be tested",
+  "environments with a tight token budget"
+ ],
+ "th": [
+  "T4",
+  "T13",
+  "T17"
+ ],
+ "ctrl": {
+  "prov": "doc"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Tests are the effective gate. Skills are executed instructions, so provenance must be verified",
+ "sources": [
+  {
+   "url": "https://github.com/obra/superpowers",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Superpowers",
+   "sum": "スキル群と方法論の組。設計→計画→サブエージェントによるTDDを型として持つ。",
+   "art": "スキル定義（永続）",
+   "pre": [
+    "テストを書ける対象であること",
+    "サブエージェントを扱えるハーネス"
+   ],
+   "anti": [
+    "テスト不能なレガシー",
+    "消費トークン予算が厳しい環境"
+   ],
+   "gnote": "テストが実質のゲート。スキルは実行される指示なので出所検証が要る",
+   "flow": {
+    "steps": [
+     "ブレインストーム",
+     "計画を書く",
+     "サブエージェントTDD",
+     "コードレビュー",
+     "ブランチを仕上げる"
+    ],
+    "back": [
+     "ブロッキング指摘"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "skills/brainstorming/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "architecture",
+  "data-model",
+  "screen-flow"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Brainstorm",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Write the plan",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Subagent TDD",
+    "l": "L5",
+    "who": "model",
+    "par": [
+     "implementer",
+     "task reviewer"
+    ]
+   },
+   {
+    "s": "Code review",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   },
+   {
+    "s": "Finish the branch",
+    "l": null,
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 2,
+    "s": "blocking issue"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

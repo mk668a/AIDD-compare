@@ -1,0 +1,212 @@
+{
+ "slug": "confident-ai/deepeval",
+ "n": "DeepEval",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "test-code",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "test code: written and read by a person, executed by a runner",
+  "format_detail": [
+   {
+    "id": "pytest",
+    "ev": "pyproject.toml (pytest)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 18680,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Writes LLM output evaluation as unit tests, in pytest-compatible form.",
+ "art": "test code (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  0,
+  3,
+  2,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "fs.example": "deepeval/inspect/fixtures/test_run_sample.json",
+   "rl.tests": "deepeval/cli/test/__init__.py",
+   "rl.ci": ".github/workflows/full_test_core_for_pr.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format test-code: test sources in the project's own test framework",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "pe.budget": "a ceiling named in the documentation only: README.md (max_tokens=)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (typer)",
+   "ic.error": "a confirmation step in the code path: deepeval/cli/auth/command.py (.confirm()",
+   "fx.install": "an install that does not change the machine globally: docs/content/docs/(use-cases)/getting-started-agents.mdx (npx d)",
+   "fx.byo": "the provider is the operator's choice: OPENAI, OLLAMA, BEDROCK, BASEURL (pyproject.toml)",
+   "sf.warn": "the irreversible step is both warned about and gated: deepeval/voice/connectors/providers/elevenlabs/README.md (overwrite the)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 3,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a Python environment",
+  "chosen evaluation metrics"
+ ],
+ "anti": [
+  "verifying the correctness of generated code itself, which is out of scope"
+ ],
+ "th": [
+  "T6"
+ ],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Passing external output to a judge is a possible injection path",
+ "sources": [
+  {
+   "url": "https://github.com/confident-ai/deepeval",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "DeepEval",
+   "sum": "LLM出力の評価をユニットテストの形で書く。pytest互換の作法。",
+   "art": "テストコード（永続）",
+   "pre": [
+    "Python環境",
+    "評価指標の選定"
+   ],
+   "anti": [
+    "コード生成そのものの正しさ検証（本来の対象外）"
+   ],
+   "gnote": "judgeに外部出力を渡す構造はインジェクション経路になりうる",
+   "flow": {
+    "steps": [
+     "テストケースを書く",
+     "メトリクスを選ぶ",
+     "pytestで実行",
+     "LLMが判定",
+     "ビルドを落とす"
+    ],
+    "back": [
+     "修正して再実行"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "skills/deepeval-otel/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "not-assessed"
+ ],
+ "spec_unit": "test",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Write a test case",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Pick the metrics",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Run under pytest",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Judge with an LLM",
+    "l": "L5",
+    "who": "model"
+   },
+   {
+    "s": "Fail the build",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "fix and re-run"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

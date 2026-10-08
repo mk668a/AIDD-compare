@@ -1,0 +1,218 @@
+{
+ "slug": "Th0rgal/open-ralph-wiggum",
+ "n": "Open Ralph Wiggum",
+ "entry_kind": "implementation",
+ "l": "L6",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "config",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "jsonl",
+    "ev": "README.md (.ralph/codex-goal-ledger.jsonl)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 1897,
+ "push": "2026-06-02",
+ "conf": "ok",
+ "exec": true,
+ "sum": "One command puts any of six coding agents into a Ralph loop, switching harness with a flag. The loop is the product; the agent underneath is interchangeable.",
+ "art": "prompt file and loop state (persistent)",
+ "tok": "unbounded",
+ "p": [
+  0,
+  0,
+  3,
+  2,
+  0,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 3,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "doc",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "none",
+  "mt.process": "none",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "skills/open-ralph-wiggum/SKILL.md",
+   "fs.example": "tests/fixtures/fake-opencode.ts",
+   "rl.tests": "tests/fixtures/fake-opencode.ts",
+   "rl.ci": ".github/workflows/ci.yml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T4/T7/T8 introduced, controls limits part, sandbox none, approval none, kill part",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval none, sandbox none",
+   "fx.exit": "artifact.format config: a configuration file in an open text format",
+   "pe.budget": "a ceiling the operator sets on the command line: README.md (--max-iterations)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, OpenCode, OpenAI Codex, Codex CLI, GitHub Copilot (README.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "usage is documented, not carried by the surface: README.md (--help)",
+   "fx.install": "only a global install is documented: README.md (npm install -g)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 3,
+  "complex": 1,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "one of the six supported agent CLIs, installed and authenticated",
+  "a check that decides pass or fail without the loop's help"
+ ],
+ "anti": [
+  "environments where an agent must not run unattended",
+  "work whose completion cannot be tested"
+ ],
+ "th": [
+  "T4",
+  "T7",
+  "T8"
+ ],
+ "ctrl": {
+  "limits": "part",
+  "sandbox": "none",
+  "approval": "none",
+  "kill": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Harness-agnostic where the rest of this layer is not: the same loop drives Claude Code, Codex, Copilot CLI, Cursor Agent, Qwen Code and OpenCode. The README points at a separate sandbox product for isolation, which is an admission that the loop itself provides none.",
+ "sources": [
+  {
+   "url": "https://github.com/Th0rgal/open-ralph-wiggum",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/Th0rgal/open-ralph-wiggum/master/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Open Ralph Wiggum",
+   "sum": "1つのコマンドで、6種のコーディングエージェントのいずれかをRalphループに入れる。フラグでハーネスを切り替える。商品はループのほうで、下のエージェントは差し替え可能な部品として扱われている。",
+   "art": "プロンプトファイルとループ状態（永続）",
+   "pre": [
+    "対応6種のエージェントCLIのいずれかの導入と認証",
+    "ループの外側で合否を決められる検査"
+   ],
+   "anti": [
+    "エージェントを無人で走らせてはいけない環境",
+    "完了をテストで判定できない作業"
+   ],
+   "gnote": "この層では珍しくハーネス非依存で、同じループがClaude Code・Codex・Copilot CLI・Cursor Agent・Qwen Code・OpenCodeを駆動する。READMEが隔離のために別のサンドボックス製品を案内しているのは、ループ自身が隔離を持たないことの表明でもある。",
+   "cost_warning": "ループは自分で終わったと判断するまで回る。6つのハーネスは6通りの燃やし方をするので、上限を課すのは利用者の仕事である。",
+   "flow": {
+    "steps": [
+     "フラグでハーネスを選ぶ",
+     "プロンプトファイルを読む",
+     "1反復を実行",
+     "終了条件を判定"
+    ],
+    "back": [
+     "未完了"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_skills": "skills/open-ralph-wiggum/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/open-ralph-wiggum/SKILL.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Pick the harness with a flag",
+    "l": "L1",
+    "who": "human"
+   },
+   {
+    "s": "Read the prompt file",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Run one iteration",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Check the exit condition",
+    "l": "L6",
+    "who": "tool",
+    "gate": true
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 2,
+    "s": "not done"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "cost_warning": "The loop runs until it decides it is finished. Six harnesses can burn a budget in six different ways and the cap is the operator's to impose."
+}

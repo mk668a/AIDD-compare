@@ -1,0 +1,248 @@
+{
+ "slug": "hashgraph-online/hol-guard",
+ "n": "hol-guard",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "infra"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "human",
+  "addressee_basis": "gated",
+  "addressee_note": "an approval and receipt history: the approval step in ctrl forces a person to read a request before it proceeds, and the receipts exist to be audited afterwards",
+  "format_detail": [
+   {
+    "id": "sqlite",
+    "ev": "src/codex_plugin_scanner/guard/sqlite_profile.py"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 806,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Local-first runtime security layer that intercepts AI-agent tool calls, package/plugin installs and MCP traffic across 13+ CLI harnesses, blocking or requiring human approval before risky actions execute.",
+ "art": "local approval/receipt history and policy state (persistent, ~/.hol-guard-style local store); plugin-scanner separately emits SARIF/verification payloads for CI",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  0,
+  0,
+  2,
+  2,
+  3
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 4,
+  "restructure": 1,
+  "rebuild": 0,
+  "replace": 1,
+  "wrap": 5
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".factory/skills/hol-guard/SKILL.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, GitHub Copilot, Cursor, Gemini CLI, OpenCode, OpenAI Codex, Cline, JetBrains (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (click)",
+   "ic.error": "a documented flag that gates or previews the action: README.md (--dry-run)",
+   "rl.tests": "rust/crates/guard-command/tests/pretool_generic.rs",
+   "rl.ci": ".github/workflows/ci.yml",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (checkpoint)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T3/T17 introduced, controls approval impl, log impl, allowlist part, egress part, secrets impl, prov part, sandbox none",
+   "mt.units": "dashboard/package.json",
+   "mt.process": "CONTRIBUTING.md",
+   "fx.install": "an install that does not change the machine globally: README.md (pipx install)",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval impl, allowlist part",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (destructive)",
+   "fs.example": "dashboard/src/protection-center/fixtures/protection-fixtures.ts",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "pe.budget": "a ceiling named in the documentation only: src/codex_plugin_scanner/guard/daemon/server.py (timeout_seconds=)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/desktop-core-alpha-feed.yml (attest-build-provenance)",
+   "fx.byo": "the provider is the operator's choice: LITELLM (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: dashboard/src/app.tsx (onCancel)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "a supported agent CLI already installed (Codex, Claude Code, Copilot CLI, Cursor, Gemini CLI, Hermes, OpenClaw, OpenCode, Antigravity, Kimi Code, Grok, Pi, or ZCode)",
+  "willingness to grant one local tool elevated hook/config-writing trust across every agent it protects",
+  "pipx or an equivalent isolated Python package manager available locally"
+ ],
+ "anti": [
+  "agent harnesses outside the supported list, where enforcement depth is unverified or absent",
+  "teams unwilling to grant one local tool broad hook and config access across every agent it wraps",
+  "unattended CI pipelines needing zero interactive friction: Watch mode only records what would have been blocked, it does not enforce"
+ ],
+ "th": [
+  "T3",
+  "T17"
+ ],
+ "ctrl": {
+  "approval": "impl",
+  "log": "impl",
+  "allowlist": "part",
+  "egress": "part",
+  "secrets": "impl",
+  "prov": "part",
+  "sandbox": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "gate.* here means gating code the agent emits; HOL Guard instead gates the agent's runtime tool calls and plugin/skill/package installs (harness attack surface), so gate.* stays none even though it blocks secret access and malicious packages at the interception layer.",
+ "sources": [
+  {
+   "url": "https://github.com/hashgraph-online/hol-guard",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard/main/README.md",
+   "accessed": "2026-09-06"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "hol-guard",
+   "sum": "13以上のCLIハーネス(Codex、Claude Code、MCPトラフィックなど)を横断して、AIエージェントのツール呼び出しやパッケージ/プラグインのインストールをランタイムでインターセプトし、危険な操作を実行前にブロックまたは人間の承認待ちにするローカルファーストのセキュリティ層。",
+   "art": "ローカルの承認・受領履歴とポリシー状態(永続、~/.hol-guard相当のローカルストア)。plugin-scannerは別途CI向けにSARIF/検証ペイロードを出力する。",
+   "pre": [
+    "対応済みエージェントCLI(Codex、Claude Code、Copilot CLI、Cursor、Gemini CLI、Hermes、OpenClaw、OpenCode、Antigravity、Kimi Code、Grok、Pi、ZCodeのいずれか)が既にインストールされていること",
+    "保護対象の全エージェントに対して、1つのローカルツールにフック/設定書き込みの強い権限を与える意思があること",
+    "pipxまたは同等の隔離されたPythonパッケージマネージャがローカルで使えること"
+   ],
+   "anti": [
+    "対応リストに含まれないエージェントハーネス(実効性が未検証または存在しない)",
+    "保護対象の全エージェントに対し1つのローカルツールへ広いフック/設定アクセスを許可したくないチーム",
+    "対話的な承認を一切挟めない無人CIパイプライン: Watchモードはブロックされたはずの内容を記録するだけで強制はしない"
+   ],
+   "gnote": "gate.*はエージェントが生成するコードをゲートすることを意味するが、HOL Guardはエージェントのランタイムツール呼び出しとプラグイン/スキル/パッケージのインストール(ハーネスの攻撃対象面)をゲートする。そのためシークレットアクセスや悪意あるパッケージをインターセプト層でブロックしていてもgate.* はnoneのままとなる。",
+   "flow": {
+    "steps": [
+     "hol-guard init",
+     "Guardがハーネスにフック導入",
+     "エージェントがツール呼び出し",
+     "Guardがポリシーを評価",
+     "人間が承認または拒否",
+     "受領記録を保存"
+    ],
+    "back": [
+     "次のツール呼び出しへ"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "contracts/mcp-servers/contribution.v1.schema.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": "integrations/claude-code-plugin/.claude-plugin/plugin.json",
+   "agent_skills": ".factory/skills/hol-guard/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "process"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "hol-guard init",
+    "l": "L1",
+    "who": "human"
+   },
+   {
+    "s": "Guard installs harness hook",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Agent issues tool call",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Guard evaluates policy",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Human approves or denies",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Receipt recorded",
+    "l": "L5",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 5,
+    "to": 2,
+    "s": "next tool call"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

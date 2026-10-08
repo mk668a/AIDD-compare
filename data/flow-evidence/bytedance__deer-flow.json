@@ -1,0 +1,170 @@
+{
+ "entry": "DeerFlow",
+ "slug": "bytedance/deer-flow",
+ "flow": {
+  "basis": "repo",
+  "path": "backend/packages/harness/deerflow/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Plan the long task",
+   "l": "L4",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Dispatch a subagent",
+   "l": "L7",
+   "who": "tool",
+   "par": [
+    "subagent 1",
+    "subagent 2",
+    "subagent n"
+   ],
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Run in a sandbox",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/sandbox-image-smoke.yml",
+     "matched": [
+      "sandbox"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/sandbox-network-proxy-image.yaml",
+     "matched": [
+      "sandbox"
+     ]
+    },
+    {
+     "kind": "yaml-step",
+     "source": ".github/workflows/chart.yaml",
+     "matched": [
+      "sandbox"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Smoke test",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agent/skills/smoke-test/SKILL.md",
+     "matched": [
+      "smoke",
+      "test"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agent/skills/smoke-test/references/SOP.md",
+     "matched": [
+      "smoke",
+      "test"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agent/skills/smoke-test/references/troubleshooting.md",
+     "matched": [
+      "smoke",
+      "test"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Write to memory",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "backend/packages/harness/deerflow/agents/memory/AGENTS.md",
+     "matched": [
+      "memory"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "backend/packages/harness/deerflow/agents/memory/backends/README.md",
+     "matched": [
+      "memory"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/message_patterns/correction.yaml",
+     "matched": [
+      "memory"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e3df6ea4a81137520b4eb04d42d56cc5749e375a"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".agent/skills/smoke-test/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agent/skills/smoke-test/references/SOP.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agent/skills/smoke-test/references/troubleshooting.md"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/chart.yaml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/sandbox-image-smoke.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/sandbox-network-proxy-image.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "backend/packages/harness/deerflow/agents/memory/AGENTS.md"
+  },
+  {
+   "kind": "path",
+   "value": "backend/packages/harness/deerflow/agents/memory/backends/README.md"
+  },
+  {
+   "kind": "path",
+   "value": "backend/packages/harness/deerflow/agents/memory/backends/deermem/deermem/core/message_patterns/correction.yaml"
+  }
+ ]
+}

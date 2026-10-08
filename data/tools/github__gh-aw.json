@@ -1,0 +1,240 @@
+{
+ "slug": "github/gh-aw",
+ "n": "gh-aw",
+ "entry_kind": "implementation",
+ "l": "L1",
+ "s2": [
+  "L6",
+  "L7"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "config",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "a compiled .lock.yml committed to the repository: executed by Actions and reviewed by a person in the diff, which is why it is committed rather than generated at run time",
+  "format_detail": [
+   {
+    "id": "json-schema",
+    "ev": "go.mod (jsonschema)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 5355,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "GitHub's official CLI extension compiling Markdown+YAML agentic workflows into sandboxed, permission-scoped GitHub Actions runs across five built-in AI engines.",
+ "art": "compiled .lock.yml GitHub Actions workflow committed to the repo (persistent)",
+ "tok": "unbounded",
+ "p": [
+  0,
+  0,
+  1,
+  1,
+  3,
+  1,
+  3
+ ],
+ "fit": {
+  "greenfield": 1,
+  "extend": 5,
+  "restructure": 0,
+  "rebuild": 0,
+  "replace": 0,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "none",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "none",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".claude/skills/playwright-cli/SKILL.md",
+   "fs.example": ".squad/templates/after-agent-reference.md",
+   "rl.tests": ".github/skills/operational-value-designer/tests/test.sh",
+   "rl.ci": ".github/workflows/CWI.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": ".github/workflows/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Skills)",
+   "se.threats": "cites th and ctrl: T2/T3/T11/T17 introduced, controls sandbox impl, permission_scoping impl, network_allowlist impl, safe_outputs impl, audit_trail part",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by sandbox impl",
+   "fx.exit": "artifact.format config: a configuration file in an open text format",
+   "co.coexist": "states the hosts it sits beside: GitHub Copilot, Claude Code, OpenAI Codex (README.md)",
+   "ic.surface": "Surface: cli (cmd/gh-aw-wasm/main.go)",
+   "ic.help": "a command-line parser that prints its own usage: go.mod (cobra)",
+   "ic.error": "a dry run the operator can ask for before the real one: cmd/gh-aw/main.go (--dry-run)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: cmd/gh-aw/main.go (SIGINT)",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (at your own risk)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a repository already on GitHub Actions, with permission to install a CLI extension and configure workflow secrets/engine credentials",
+  "clear, bounded automation tasks (triage, review comments, scheduled digests) rather than open-ended code changes",
+  "someone willing to read and tune the permissions, network allowlist and safe-outputs scoping per workflow"
+ ],
+ "anti": [
+  "deterministic, reproducible CI: builds, tests, linting, deployments — the README says use conventional GitHub Actions for that, not an agentic workflow",
+  "repos where nobody will review or tune per-workflow permissions, network allowlists and safe-outputs scope; the security model depends on that human diligence",
+  "non-GitHub-hosted git (GitLab, Bitbucket, self-hosted forges) — the compile target is GitHub Actions specifically"
+ ],
+ "th": [
+  "T2",
+  "T3",
+  "T11",
+  "T17"
+ ],
+ "ctrl": {
+  "sandbox": "impl",
+  "permission_scoping": "impl",
+  "network_allowlist": "impl",
+  "safe_outputs": "impl",
+  "audit_trail": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "gh-aw is a workflow-definition and compilation layer, not a fixed output gate. SAST/dependency/secret scanning are whatever a given workflow's author configures (e.g. a Legal/Compliance persona reviewing dependency manifests); none are automatic defaults of the tool itself.",
+ "sources": [
+  {
+   "url": "https://github.com/github/gh-aw",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/github/gh-aw/main/README.md",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/github-agentic-workflows.md",
+   "accessed": "2026-09-06"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "gh-aw",
+   "sum": "GitHubの公式CLI拡張。Markdown+YAMLで書いたagentic workflowをコンパイルし、5種の組み込みAIエンジンを、権限を絞りサンドボックス化したGitHub Actions実行として動かす。",
+   "art": "コミットされた.lock.yml形式のコンパイル済みGitHub Actionsワークフロー(永続)",
+   "pre": [
+    "GitHub Actionsを既に使っているリポジトリで、CLI拡張のインストール権限とワークフローのシークレット/エンジン認証情報を設定できること",
+    "issue triage、レビューコメント、定期ダイジェストなど、明確で範囲の定まった自動化タスクであること(オープンエンドなコード変更ではない)",
+    "ワークフローごとの権限・ネットワーク許可リスト・safe-outputsの範囲を読んで調整する担当者がいること"
+   ],
+   "anti": [
+    "決定的で再現可能なCI(ビルド・テスト・lint・デプロイ)には向かない。README自身が通常のGitHub Actionsを使うよう明言している",
+    "ワークフローごとの権限・ネットワーク許可リスト・safe-outputsの範囲を誰もレビュー/調整しないリポジトリ。セキュリティモデルはその人的な注意深さに依存する",
+    "GitHubでホストされていないgit(GitLab、Bitbucket、セルフホストforge)。コンパイル先はGitHub Actionsに限定される"
+   ],
+   "gnote": "gh-awはワークフロー定義とコンパイルの層であり、固定の出力ゲートではない。SAST/依存関係/シークレットのスキャンはワークフロー作者が設定した内容次第で、ツール自体の既定動作ではない。",
+   "flow": {
+    "steps": [
+     "Markdown+frontmatterで記述",
+     "gh aw compileで.lock.ymlに変換",
+     "GitHubイベントでトリガー",
+     "読み取り専用サンドボックスでエージェント実行",
+     "safe-outputsが別ジョブで検証適用",
+     "人がコメント/issue/PRをレビュー"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": ".github/aw/github-mcp-server-pagination.md",
+   "agents_md": "AGENTS.md",
+   "agent_skills": ".squad/templates/skills/agent-collaboration/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "service-required",
+  "byok": true
+ },
+ "design_concerns": [
+  "convention",
+  "process"
+ ],
+ "spec_unit": "not-assessed",
+ "flow": {
+  "basis": "repo",
+  "path": ".github/aw/github-agentic-workflows.md",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Author Markdown + frontmatter",
+    "l": "L4",
+    "who": "human"
+   },
+   {
+    "s": "gh aw compile to .lock.yml",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "GitHub event triggers workflow",
+    "l": "L6",
+    "who": "tool"
+   },
+   {
+    "s": "Read-only sandboxed agent job runs",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Safe-outputs job validates writes",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Human reviews comment/issue/PR",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07",
+ "cost_warning": "No spend cap is built in. Schedule- or high-frequency event-triggered workflows invoke an AI engine per run with no ceiling unless the operator adds trigger scoping or a workflow-level budget themselves."
+}

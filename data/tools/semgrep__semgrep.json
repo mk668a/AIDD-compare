@@ -1,0 +1,201 @@
+{
+ "slug": "semgrep/semgrep",
+ "n": "Semgrep OSS",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "config",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "rules written and reviewed by people, and executed by the engine",
+  "format_detail": [
+   {
+    "id": "json-schema",
+    "ev": "cli/pyproject.toml (jsonschema)"
+   }
+  ]
+ },
+ "lic": "LGPL-2.1",
+ "stars": 16919,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Rule-based static analysis. Functions as a deterministic gate on generated code.",
+ "art": "rules (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  0,
+  2,
+  3,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 5,
+  "extend": 5,
+  "restructure": 5,
+  "rebuild": 5,
+  "replace": 4,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "na",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "cli/tests/default/e2e/targets/dependency_aware/gradle_multi_project_no_lockfile/app/src/main/java/org/example/App.java",
+   "rl.tests": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-misspelled.fail.yaml",
+   "rl.ci": ".github/workflows/tests.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "cli/setup.py",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th: no OWASP Agentic AI threat is introduced by adopting this entry, so there is nothing here to control against",
+   "fx.exit": "artifact.format config: a configuration file in an open text format",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Cursor, Windsurf, Claude Code (README.md)",
+   "ic.surface": "Surface: cli (cli/pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: cli/pyproject.toml (click)",
+   "fx.install": "an install that does not change the machine globally: README.md (docker run)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated",
+  "safety-critical"
+ ],
+ "pre": [
+  "language support",
+  "maintained rules"
+ ],
+ "anti": [
+  "judging design soundness, since it only sees form"
+ ],
+ "th": [],
+ "ctrl": {},
+ "gate": {
+  "sast": "blocking",
+  "dep": "none",
+  "secret": "non"
+ },
+ "gnote": "Only a defence once it blocks. Zero token cost",
+ "sources": [
+  {
+   "url": "https://github.com/semgrep/semgrep",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Semgrep OSS",
+   "sum": "ルールベースの静的解析。生成コードへの決定論的ゲートとして機能する。",
+   "art": "ルール（永続）",
+   "pre": [
+    "対象言語の対応",
+    "ルールの整備"
+   ],
+   "anti": [
+    "設計の妥当性の判断（形式しか見られない）"
+   ],
+   "gnote": "ブロッキングにして初めて防御になる。消費トークン消費ゼロ",
+   "flow": {
+    "steps": [
+     "ルールを書く / 取得する",
+     "差分をスキャン",
+     "パターンに照合",
+     "検出結果を報告",
+     "ゲートを落とす"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "not-assessed"
+ ],
+ "spec_unit": "not-assessed",
+ "flow": {
+  "basis": "derived",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Write or pull the rules",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Scan the diff",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Match the patterns",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Report the findings",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Fail the gate",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

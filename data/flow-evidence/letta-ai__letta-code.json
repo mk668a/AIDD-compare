@@ -1,0 +1,161 @@
+{
+ "entry": "Letta Code",
+ "slug": "letta-ai/letta-code",
+ "flow": {
+  "basis": "repo",
+  "path": "src/agent/prompts/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Load the agent state",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/builtin-skills-agent-watch.yml",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/claude-agent-watch.yml",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/codex-agent-watch.yml",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Model turn",
+   "l": null,
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Rewrite its own memory",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "src/agent/subagents/builtin/memory-v2.md",
+     "matched": [
+      "memory"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "src/agent/subagents/builtin/memory.md",
+     "matched": [
+      "memory"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "src/skills/builtin/context-doctor/ROOT_MEMORY.md",
+     "matched": [
+      "memory"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Commit MemFS to git",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "src/agent/prompts/letta_local_memfs.md",
+     "matched": [
+      "memfs"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "src/agent/prompts/letta_no_memfs.md",
+     "matched": [
+      "memfs"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "src/agent/prompts/letta_root_memfs.md",
+     "matched": [
+      "memfs"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Resume anywhere",
+   "l": null,
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "701f2a5367828847313876c735ade27b9df97689"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/workflows/builtin-skills-agent-watch.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/claude-agent-watch.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/codex-agent-watch.yml"
+  },
+  {
+   "kind": "path",
+   "value": "src/agent/prompts/letta_local_memfs.md"
+  },
+  {
+   "kind": "path",
+   "value": "src/agent/prompts/letta_no_memfs.md"
+  },
+  {
+   "kind": "path",
+   "value": "src/agent/prompts/letta_root_memfs.md"
+  },
+  {
+   "kind": "path",
+   "value": "src/agent/subagents/builtin/memory-v2.md"
+  },
+  {
+   "kind": "path",
+   "value": "src/agent/subagents/builtin/memory.md"
+  },
+  {
+   "kind": "path",
+   "value": "src/skills/builtin/context-doctor/ROOT_MEMORY.md"
+  }
+ ]
+}

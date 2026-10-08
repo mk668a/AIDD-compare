@@ -1,0 +1,233 @@
+{
+ "slug": "browser-use/browser-use",
+ "n": "Browser Use",
+ "entry_kind": "implementation",
+ "l": "L1",
+ "s2": [
+  "L5"
+ ],
+ "dom": [
+  "code",
+  "ui"
+ ],
+ "artifact": {
+  "format": "ephemeral-path",
+  "lifecycle": "ephemeral",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 117360,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Gives an agent a browser it can actually use: pages, clicks, forms and extraction, driven from a task written in words.",
+ "art": "browser sessions and extracted data (ephemeral)",
+ "tok": "heavy",
+ "p": [
+  0,
+  0,
+  2,
+  3,
+  1,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 2,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "examples/__init__.py",
+   "rl.tests": "browser_use/llm/tests/test_anthropic_cache.py",
+   "rl.ci": ".github/workflows/claude.yml",
+   "mt.process": ".github/CONTRIBUTING.md",
+   "mt.units": "browser_use/integrations/gmail/__init__.py",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T2/T3/T11 introduced, controls sandbox part, allowlist none, egress none, approval none, log part",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval none, sandbox part",
+   "fx.exit": "artifact.format ephemeral-path: a path that exists for the run; nothing durable survives it",
+   "pe.budget": "a ceiling the operator sets in configuration: browser_use/config.py (max_tokens:)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (click)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (resume a)",
+   "fx.install": "only a global install is documented: README.md (pip install b)",
+   "fx.byo": "the provider is the operator's choice: GOOGLE, ANTHROPIC, OLLAMA, BEDROCK, OPENAI, DEEPSEEK (README.md)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "a browser runtime and somewhere to run it",
+  "targets that tolerate automated interaction"
+ ],
+ "anti": [
+  "anything where a wrong click has consequences, since the agent decides where to click",
+  "sites whose terms forbid automation"
+ ],
+ "th": [
+  "T2",
+  "T3",
+  "T11"
+ ],
+ "ctrl": {
+  "sandbox": "part",
+  "allowlist": "none",
+  "egress": "none",
+  "approval": "none",
+  "log": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "A browser is the widest tool surface a harness can be given: it reaches every service the operator is logged into. This is also one of the few entries that can observe a rendered interface, which is why the UI domain applies to it and to almost nothing else here.",
+ "sources": [
+  {
+   "url": "https://github.com/browser-use/browser-use",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/browser-use/browser-use/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Browser Use",
+   "sum": "エージェントに実際に使えるブラウザを与える。ページを開き、クリックし、フォームを埋め、情報を取り出す。指示は言葉で書く。",
+   "art": "ブラウザセッションと抽出データ（使い捨て）",
+   "pre": [
+    "ブラウザ実行環境とその置き場所",
+    "自動操作を許容する対象"
+   ],
+   "anti": [
+    "誤クリックが実害になる対象。どこを押すかはエージェントが決める",
+    "自動化を禁じている利用規約のサイト"
+   ],
+   "gnote": "ブラウザはハーネスに与えうる最も広いツール表面で、利用者がログイン済みのあらゆるサービスに届く。描画された画面を観測できる数少ないツールでもあり、UIドメインがここと他のごく一部にしか付かない理由でもある。",
+   "ui_ux_note": "規定はせず、描画された画面を評価する。仕様を書いて結果を見ないツールの、ちょうど反対側の半分。",
+   "flow": {
+    "steps": [
+     "タスクを読む",
+     "ページ状態を観測",
+     "行動を選ぶ",
+     "ブラウザを操作",
+     "結果を抽出"
+    ],
+    "back": [
+     "次のステップ"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": "browser_use/skills/browser-use/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "browser_use/agent/system_prompts/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Read the task",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "Observe the page state",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Choose an action",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "Act in the browser",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Extract the result",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 1,
+    "s": "next step"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "ui_ux": {
+  "hcd_activities": [
+   "evaluation"
+  ],
+  "artifact": "screenshots and extracted page state",
+  "feedback_channel": "the rendered page itself",
+  "handoff": [],
+  "a11y_standard": "none",
+  "note": "It evaluates a rendered interface without specifying one, which is the opposite half of the open cycle from the tools that specify without evaluating."
+ }
+}

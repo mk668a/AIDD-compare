@@ -1,0 +1,154 @@
+{
+ "entry": "Semgrep OSS",
+ "slug": "semgrep/semgrep",
+ "flow": {
+  "basis": "derived",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Write or pull the rules",
+   "l": "L5",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-misspelled.fail.yaml",
+     "matched": [
+      "rules"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-mode.fail.yaml",
+     "matched": [
+      "rules"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-short.ok.yaml",
+     "matched": [
+      "rules"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Scan the diff",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "cli/tests/default/e2e/rules/deduplication/duplication-different-message.yaml",
+     "matched": [
+      "diff"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Match the patterns",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "cli/tests/default/e2e/rules/aliengrep/long-match.yaml",
+     "matched": [
+      "match"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "cli/tests/default/e2e/rules/aliengrep/metavariable-pattern.yaml",
+     "matched": [
+      "patterns"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Report the findings",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Fail the gate",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-misspelled.fail.yaml",
+     "matched": [
+      "fail"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-mode.fail.yaml",
+     "matched": [
+      "fail"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy_v2-invalid-mode.fail.yaml",
+     "matched": [
+      "fail"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "develop",
+  "tree_sha": "ad20f09ece0b652f4e532803ce3bcf0e1586c618"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-misspelled.fail.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-mode.fail.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy-short.ok.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "cli/src/semgrep/semgrep_interfaces/tests/jsonschema/rules/entropy_v2-invalid-mode.fail.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "cli/tests/default/e2e/rules/aliengrep/long-match.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "cli/tests/default/e2e/rules/aliengrep/metavariable-pattern.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "cli/tests/default/e2e/rules/deduplication/duplication-different-message.yaml"
+  }
+ ]
+}

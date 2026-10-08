@@ -1,0 +1,194 @@
+{
+ "entry": "GitHub Spec-Kit",
+ "slug": "github/spec-kit",
+ "flow": {
+  "basis": "repo",
+  "path": "presets/lean/commands/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Constitution",
+   "l": "L4",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "presets/constitution-sync/commands/speckit.constitution.md",
+     "matched": [
+      "constitution"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "presets/lean/commands/speckit.constitution.md",
+     "matched": [
+      "constitution"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Specify",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "presets/lean/commands/speckit.specify.md",
+     "matched": [
+      "specify"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "presets/scaffold/commands/speckit.specify.md",
+     "matched": [
+      "specify"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "presets/self-test/commands/speckit.specify.md",
+     "matched": [
+      "specify"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Plan",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "presets/lean/commands/speckit.plan.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/history.md",
+     "matched": [
+      "plan"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Tasks",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "presets/lean/commands/speckit.tasks.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/history.md",
+     "matched": [
+      "tasks"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Implement",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "presets/lean/commands/speckit.implement.md",
+     "matched": [
+      "implement"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "implement"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "implement"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "4a7341a93d944d6efe153b71da4a1adb9c2b578c"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "presets/constitution-sync/commands/speckit.constitution.md"
+  },
+  {
+   "kind": "path",
+   "value": "presets/lean/commands/speckit.constitution.md"
+  },
+  {
+   "kind": "path",
+   "value": "presets/lean/commands/speckit.implement.md"
+  },
+  {
+   "kind": "path",
+   "value": "presets/lean/commands/speckit.plan.md"
+  },
+  {
+   "kind": "path",
+   "value": "presets/lean/commands/speckit.specify.md"
+  },
+  {
+   "kind": "path",
+   "value": "presets/lean/commands/speckit.tasks.md"
+  },
+  {
+   "kind": "path",
+   "value": "presets/scaffold/commands/speckit.specify.md"
+  },
+  {
+   "kind": "path",
+   "value": "presets/self-test/commands/speckit.specify.md"
+  }
+ ]
+}

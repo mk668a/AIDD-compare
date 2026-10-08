@@ -1,0 +1,249 @@
+{
+ "slug": "ruvnet/ruflo",
+ "n": "Ruflo",
+ "entry_kind": "implementation",
+ "l": "L7",
+ "s2": [
+  "L3",
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "swarm topology and agent memory: state the runtime reads back, not a document",
+  "format_detail": [
+   {
+    "id": "sqlite",
+    "ev": "package.json (better-sqlite3)"
+   },
+   {
+    "id": "mongodb",
+    "ev": "README.md (MongoDB)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 74050,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Orchestration harness that coordinates many agents in hierarchical, mesh or adaptive swarms, with consensus and a persistent vector memory.",
+ "art": "swarm topology and agent memory (persistent)",
+ "tok": "unbounded",
+ "p": [
+  1,
+  2,
+  3,
+  2,
+  1,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 3,
+  "restructure": 4,
+  "rebuild": 4,
+  "replace": 2,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "doc",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/README.md",
+   "fs.example": ".claude/agents/templates/automation-smart-agent.md",
+   "rl.tests": "plugins/ruflo-adr/scripts/__tests__/adr-create-schema-2651.test.mjs",
+   "rl.ci": ".github/workflows/business-pods-smoke.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T4/T12/T13/T16/T1 introduced, controls sandbox part, limits none, agentauth none, memval none, kill part",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and sandbox is part",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "pe.budget": "a ceiling named in the documentation only: ruflo/src/mcp-bridge/index.js (timeoutMs =)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "a command-line parser that prints its own usage: package.json (commander)",
+   "ic.error": "documented only, nothing in the code checks: README.md (human in the loop)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx r)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA, OPENROUTER, VLLM, LMSTUDIO, BASEURL, ANTHROPIC (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: ruflo/src/mcp-bridge/index.js (SIGTERM)",
+   "se.attest": "asks the operator to verify, without producing an attestation: .agents/skills/agent-security-manager/SKILL.md (Signature Verification)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "work that genuinely divides across agents",
+  "a harness that speaks MCP"
+ ],
+ "anti": [
+  "work a single agent can finish, which is most work",
+  "tight token budgets",
+  "situations needing a predictable cost ceiling"
+ ],
+ "th": [
+  "T4",
+  "T12",
+  "T13",
+  "T16",
+  "T1"
+ ],
+ "ctrl": {
+  "sandbox": "part",
+  "limits": "none",
+  "agentauth": "none",
+  "memval": "none",
+  "kill": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Multi-agent coordination brings the inter-agent threat class with it. Persistent vector memory adds memory poisoning on top.",
+ "sources": [
+  {
+   "url": "https://github.com/ruvnet/ruflo",
+   "accessed": "2026-09-01"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Ruflo",
+   "sum": "多数のエージェントを階層・メッシュ・適応型のスウォームとして協調させるオーケストレーション・ハーネス。合意形成と永続的なベクタ記憶を持つ。",
+   "art": "スウォーム構成とエージェント記憶（永続）",
+   "pre": [
+    "実際に分業が意味を持つ作業",
+    "MCPを話せるハーネス"
+   ],
+   "anti": [
+    "単一エージェントで足りる作業。大半はこれ",
+    "消費トークン予算が厳しい環境",
+    "コストの上限が読める必要がある場面"
+   ],
+   "gnote": "多エージェント協調はエージェント間の脅威群をそのまま持ち込む。永続的なベクタ記憶がメモリポイズニングを上乗せする。",
+   "cost_warning": "大規模なスウォームでの協調は呼び出しを増幅し、構成に上限が組み込まれていない。コストはエージェント数と合意ラウンド数に比例する。",
+   "flow": {
+    "steps": [
+     "タスクを投入",
+     "インテリジェント・ルータ",
+     "スウォームを起動",
+     "エージェントが作業",
+     "合意形成",
+     "メモリへ永続化"
+    ],
+    "back": [
+     "合意に至らず"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "plugins/ruflo-ai-team/.mcp.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/README.md",
+   "agent_skills": "SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/USERGUIDE.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Submit the task",
+    "l": null,
+    "who": "human"
+   },
+   {
+    "s": "Intelligent router",
+    "l": "L7",
+    "who": "tool"
+   },
+   {
+    "s": "Spawn the swarm",
+    "l": "L7",
+    "who": "tool"
+   },
+   {
+    "s": "Agents work",
+    "l": "L1",
+    "who": "model",
+    "par": [
+     "agent 1",
+     "agent 2",
+     "agent n"
+    ]
+   },
+   {
+    "s": "Consensus",
+    "l": "L7",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Persist to memory",
+    "l": "L3",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 3,
+    "s": "no consensus"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "cost_warning": "Coordination across a large swarm multiplies calls, and no ceiling is built into the topology. Cost scales with the number of agents and the number of consensus rounds."
+}

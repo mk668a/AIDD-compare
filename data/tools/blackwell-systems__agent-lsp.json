@@ -1,0 +1,234 @@
+{
+ "slug": "blackwell-systems/agent-lsp",
+ "n": "agent-lsp",
+ "entry_kind": "implementation",
+ "l": "L1",
+ "s2": [
+  "L5",
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "none",
+  "lifecycle": "ephemeral",
+  "addressee": "na",
+  "addressee_basis": "na",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 157,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "MCP server that orchestrates existing LSP servers (gopls, rust-analyzer, and 29 more) into batched, speculative and phase-enforced workflows for AI coding agents.",
+ "art": "warm MCP/LSP daemon process (ephemeral); auto-exits after 30 minutes idle, no artifact survives removal",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  3,
+  2,
+  2,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 2,
+  "extend": 5,
+  "restructure": 4,
+  "rebuild": 1,
+  "replace": 1,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "skills/install.sh",
+   "fs.example": "examples/mcp-assert/go/activate_skill.yaml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (Agent Skills)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Gemini CLI, Windsurf, Cline, GitHub Copilot, OpenAI Codex, JetBrains, Continue.dev, Codex CLI (README.md)",
+   "ic.surface": "Surface: cli (cmd/agent-lsp/main.go)",
+   "ic.help": "built-in usage text: cmd/agent-lsp/main.go (--help)",
+   "ic.error": "documented only, nothing in the code checks: docs/architecture/FEATURES.md (dry_run)",
+   "rl.tests": "test/binary_test.go",
+   "rl.ci": ".github/workflows/ci.yml",
+   "rl.resume": "recovering is described in prose, not implemented: docs/architecture/FEATURES.md (rollback)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T2/T11/T17 introduced, controls sandbox none, allowlist impl, egress none, kill part, prov none",
+   "mt.units": "npm/agent-lsp-darwin-arm64/package.json",
+   "fx.install": "an install that does not change the machine globally: README.md (docker run)",
+   "fx.exit": "GCF-encoded tool responses are ephemeral per call; JSON fallback (AGENT_LSP_OUTPUT_FORMAT=json) keeps output in an open, portable format, but there is no durable exported artifact once the daemon exits",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by allowlist impl",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: cmd/agent-lsp/main.go (graceful shutdown)",
+   "mt.process": "CHANGELOG.md",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 5,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a language with a maintained LSP server among the 31 verified in CI (Go, Python, TypeScript, Rust, Java, C/C++, C#, Ruby, PHP, Kotlin, Swift, Scala, Zig, Lua, Elixir, Gleam, Clojure, Dart, Terraform, Nix, Prisma, SQL, MongoDB, and more)",
+  "an MCP-capable agent client (Claude Code, Cursor, Windsurf, Gemini CLI, Continue, Cline, or any MCP client)",
+  "a codebase large or interconnected enough that batch impact analysis beats sequential grep/read calls"
+ ],
+ "anti": [
+  "tiny scripts or single files with no cross-file relationships; grep is simpler and the daemon warm-up is not worth it",
+  "languages with no maintained LSP server, since agent-lsp orchestrates existing servers rather than implementing one",
+  "sandboxes that cannot spawn subprocesses or pull a curl|sh script/Docker image, since installation and every language server invocation depend on that"
+ ],
+ "th": [
+  "T2",
+  "T11",
+  "T17"
+ ],
+ "ctrl": {
+  "sandbox": "none",
+  "allowlist": "impl",
+  "egress": "none",
+  "kill": "part",
+  "prov": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "No SAST, dependency or secret-scanning gate. /lsp-verify runs LSP diagnostics plus build and tests before an edit counts as done, but that is correctness verification (L5), not a security gate on the emitted code.",
+ "sources": [
+  {
+   "url": "https://github.com/blackwell-systems/agent-lsp",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/blackwell-systems/agent-lsp/main/README.md",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/docs/guide/phase-enforcement.md",
+   "accessed": "2026-09-06"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "agent-lsp",
+   "sum": "既存のLSPサーバー(gopls、rust-analyzerなど31言語分)をバッチ化・投機的編集・フェーズ強制付きのワークフローとしてAIコーディングエージェントに提供するMCPサーバー。",
+   "art": "常駐するMCP/LSPデーモンプロセス(一時的)。30分アイドルで自動終了し、削除後に残る成果物はない",
+   "pre": [
+    "CIで検証済みの31言語のいずれか(Go、Python、TypeScript、Rust、Java、C/C++、C#、Ruby、PHP、Kotlin、Swift、Scala、Zig、Lua、Elixir、Gleam、Clojure、Dart、Terraform、Nix、Prisma、SQL、MongoDBなど)で、保守されているLSPサーバーがあること",
+    "MCP対応のエージェントクライアント(Claude Code、Cursor、Windsurf、Gemini CLI、Continue、Cline、または任意のMCPクライアント)",
+    "逐次的なgrep/read呼び出しよりバッチ影響分析が有利になる規模・相互依存度のコードベース"
+   ],
+   "anti": [
+    "ファイル間の依存関係がない小さなスクリプトや単一ファイル。grepの方が単純で、デーモンのウォームアップに見合わない",
+    "保守されているLSPサーバーが存在しない言語。agent-lspは既存サーバーをorchestrateするだけで自前実装はしない",
+    "サブプロセスを起動できない、またはcurl|shスクリプトやDockerイメージを取得できないサンドボックス。インストールと各言語サーバー呼び出しの両方がこれに依存する"
+   ],
+   "gnote": "SAST・依存関係・シークレットスキャンのゲートはなし。/lsp-verifyはLSP診断・ビルド・テストを実行してから編集完了と見なすが、これは正当性検証(L5)であり、生成コードに対するセキュリティゲートではない。",
+   "flow": {
+    "steps": [
+     "blast_radiusで影響範囲分析",
+     "preview_edit/simulate_editでプレビュー",
+     "ディスクへ編集を適用",
+     "ビルドを検証",
+     "関連テストを実行"
+    ],
+    "back": [
+     "ビルドまたはテスト失敗"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_skills": "skills/lsp-architecture/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "blast_radius impact analysis",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "preview_edit / simulate_edit",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Apply edit to disk",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Verify build",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Run correlated tests",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 1,
+    "s": "build or tests fail"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

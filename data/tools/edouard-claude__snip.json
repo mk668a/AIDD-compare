@@ -1,0 +1,186 @@
+{
+ "slug": "edouard-claude/snip",
+ "n": "snip",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "config",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "filter definitions consumed by the tool; nothing about their shape asks a person to read them again",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 464,
+ "push": "2026-09-30",
+ "conf": "ok",
+ "exec": true,
+ "sum": "CLI proxy whose filters are written declaratively in YAML. Prioritises explicit configuration over defaults.",
+ "art": "filter definitions (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  3,
+  2,
+  1,
+  1,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 3,
+  "restructure": 4,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "none",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "none",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "SKILL.md",
+   "fs.example": "tests/fixtures/bundle_install_raw.txt",
+   "rl.tests": "tests/fixtures/bundle_install_raw.txt",
+   "rl.ci": ".github/workflows/ci.yaml",
+   "mt.process": "CONTRIBUTING.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format config: a configuration file in an open text format",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Gemini CLI, Windsurf, Cline, Kilo Code, OpenCode, Aider, GitHub Copilot, Roo Code (README.md)",
+   "ic.surface": "Surface: cli (cmd/snip/main.go)",
+   "ic.help": "built-in usage text: internal/cli/cli.go (Usage: )",
+   "fx.install": "only a global install is documented: README.md (curl -fsSL https://raw.githubusercontent.com/edouard-claude/)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA (README.md)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 3
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "willingness to write filters"
+ ],
+ "anti": [
+  "cases where it must work with no configuration"
+ ],
+ "th": [
+  "T2"
+ ],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Explicit filters make it easier to audit what is being dropped",
+ "sources": [
+  {
+   "url": "https://github.com/edouard-claude/snip",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "snip",
+   "sum": "YAMLで宣言的にフィルタを書くCLIプロキシ。同種のなかでは設定の明示性を重視する。",
+   "art": "フィルタ定義（永続）",
+   "pre": [
+    "フィルタを書く手間を許容できること"
+   ],
+   "anti": [
+    "設定なしですぐ効かせたい場合"
+   ],
+   "gnote": "フィルタが明示的な分、何を落としているかを監査しやすい",
+   "flow": {
+    "steps": [
+     "呼び出しを横取り",
+     "ルールに照合",
+     "パイプライン処理を適用",
+     "結果を転送"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_skills": "SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "not-assessed"
+ ],
+ "spec_unit": "not-assessed",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Intercept the call",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Match a rule",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Apply a pipeline action",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Forward the result",
+    "l": null,
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

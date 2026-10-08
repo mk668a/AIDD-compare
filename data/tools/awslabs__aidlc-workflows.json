@@ -1,0 +1,250 @@
+{
+ "slug": "awslabs/aidlc-workflows",
+ "n": "AI-DLC Workflows",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L6",
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "gated",
+  "addressee_note": "the aidlc/ workspace and AGENTS.md are written for an agent to follow, and the approval step in ctrl forces a person through the same documents before work proceeds",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/awslabs/aidlc-workflows/blob/main/core/aidlc-common/protocols/stage-protocol.md"
+   },
+   {
+    "id": "erd",
+    "ev": "https://github.com/awslabs/aidlc-workflows/blob/main/core/aidlc-common/stages/construction/functional-design.md"
+   },
+   {
+    "id": "wireframe",
+    "ev": "https://github.com/awslabs/aidlc-workflows/blob/main/core/agents/aidlc-composer-agent.md"
+   }
+  ]
+ },
+ "lic": "MIT-0",
+ "stars": 5044,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Adaptive workflow steering rules implementing the AI-Driven Life Cycle. 5 phases and 33 stages driven by a 14-agent roster, rendered onto seven harnesses from one harness-neutral core.",
+ "art": "aidlc/ workspace, harness-specific config and AGENTS.md (persistent)",
+ "tok": "heavy",
+ "p": [
+  3,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2
+ ],
+ "fit": {
+  "greenfield": 5,
+  "extend": 2,
+  "restructure": 4,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "none",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "part",
+  "fx.exit": "impl",
+  "sf.reach": "impl",
+  "sf.stop": "none",
+  "sf.warn": "doc",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "core/memory/templates/.gitkeep",
+   "rl.tests": "plugins/test-pro/tests/plugin.test.ts",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T6/T10 introduced, controls approval impl, sandbox none, log part",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and approval is impl",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "pe.budget": "a ceiling named in the documentation only: core/agents/aidlc-architecture-reviewer-agent.md (maxTurns:)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Codex CLI, Cursor, GitHub Copilot (README.md)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (README.md (the workflows are installed into Claude Code or Cursor; the harness is what a person operates))",
+   "ic.error": "documented only, nothing in the code checks: README.md (approval gate)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (checkpoint)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/security-scanners.yml (sha256sum)",
+   "fx.install": "only a global install is documented: README.md (curl -fsSL https://bun.sh/install | bash)",
+   "fx.byo": "one provider is named and nothing else is offered: BEDROCK (README.md)",
+   "sf.warn": "the documentation warns, and nothing stops the operator: README.md (overwrites your)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 5,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "standard"
+ ],
+ "pre": [
+  "one of the seven supported harnesses",
+  "a human available to approve at the gates"
+ ],
+ "anti": [
+  "single-constant changes, where the lifecycle overhead dominates",
+  "teams unwilling to review at approval gates",
+  "harnesses outside the seven supported"
+ ],
+ "th": [
+  "T6",
+  "T10"
+ ],
+ "ctrl": {
+  "approval": "impl",
+  "allowlist": "na",
+  "sandbox": "none",
+  "log": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Seven harnesses from one rule source, the clearest instance of portability here, and it writes an AGENTS.md. Approval gates are stated as being at every stage: \"Approval gates at every stage - you stay in control of all decisions.\" Human corrections persist as behavioural rules. The five phases are Initialization, Ideation, Inception, Construction and Operation. There is no phase named release: deployment pipeline and deployment execution are stages inside Operation, alongside environment provisioning, observability setup, incident response, performance validation and feedback optimization. Code generation carries a wired-in reviewer agent with a two-iteration cap.",
+ "sources": [
+  {
+   "url": "https://github.com/awslabs/aidlc-workflows",
+   "accessed": "2026-09-01"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/awslabs/aidlc-workflows/main/README.md",
+   "accessed": "2026-09-01"
+  },
+  {
+   "url": "https://github.com/awslabs/aidlc-workflows/tree/main/core/aidlc-common/stages/operation",
+   "accessed": "2026-09-01"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/awslabs/aidlc-workflows/main/core/aidlc-common/stages/construction/code-generation.md",
+   "accessed": "2026-09-01"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "AI-DLC Workflows",
+   "sum": "AI-Driven Life Cycleを実装する適応型ワークフロー規則。5フェーズ33ステージを14のエージェントで回す。ハーネス非依存の単一コアから7つのハーネス向けに生成される。",
+   "art": "aidlc/ ワークスペース、ハーネス別の設定、AGENTS.md（永続）",
+   "pre": [
+    "対応7ハーネスのいずれか",
+    "ゲートで承認する人間がいること"
+   ],
+   "anti": [
+    "定数1つの変更。ライフサイクルの重さが上回る",
+    "承認ゲートでレビューする意思がないチーム",
+    "対応7ハーネス以外の環境"
+   ],
+   "gnote": "単一の規則ソースで7ハーネスに対応する可搬性の最も明確な実例で、AGENTS.mdも書き出す。承認ゲートは全ステージにあると明記されている（\"Approval gates at every stage - you stay in control of all decisions.\"）。人間の修正は振る舞い規則として永続化される。5フェーズはInitialization / Ideation / Inception / Construction / Operation。リリースという名の工程はなく、デプロイパイプラインとデプロイ実行はOperation内のステージとして、環境構築・可観測性設定・インシデント対応・性能検証・フィードバック最適化と並ぶ。コード生成にはレビュー担当エージェントが2回上限で組み込まれている。",
+   "flow": {
+    "steps": [
+     "初期化",
+     "構想",
+     "立ち上げ",
+     "構築",
+     "運用"
+    ],
+    "back": [
+     "フィードバック最適化"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "harness/claude/.mcp.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": "plugins/test-pro/.aidlc-plugin/plugin.json",
+   "agent_skills": "core/skills/aidlc-knowledge/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "behaviour",
+  "data-model",
+  "screen-flow"
+ ],
+ "spec_unit": "phase-document",
+ "flow": {
+  "basis": "repo",
+  "path": "core/aidlc-common/stages/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Initialization",
+    "l": null,
+    "who": "tool"
+   },
+   {
+    "s": "Ideation",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Inception",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Construction",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Operation",
+    "l": "L1",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 1,
+    "s": "feedback optimization"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

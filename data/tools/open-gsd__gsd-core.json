@@ -1,0 +1,229 @@
+{
+ "slug": "open-gsd/gsd-core",
+ "n": "GSD Core",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L2",
+  "L6"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "phase definitions and prompts: the prompt is the agent's input",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/open-gsd/gsd-core/blob/next/agents/gsd-doc-writer.md"
+   },
+   {
+    "id": "openapi",
+    "ev": "https://github.com/open-gsd/gsd-core/blob/next/agents/gsd-doc-writer.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 10269,
+ "push": "2026-10-07",
+ "conf": "check",
+ "exec": false,
+ "sum": "Meta-prompt driven SDD run as a five-step phase loop: discuss, plan, execute, verify, ship. Heavy work runs in fresh-context subagents to keep the main session lean.",
+ "art": "phase definitions and prompts (persistent)",
+ "tok": "moderate",
+ "p": [
+  3,
+  2,
+  3,
+  1,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 3,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "doc",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "fs.example": "examples/dynamic-context-management/CONTEXT-INDEX.json",
+   "rl.tests": "tests/4213-progress-helpers.property.test.cjs",
+   "rl.ci": ".github/workflows/close-draft-prs-sweep.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "tests/fixtures/check-env/bad-node-version/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (MCP, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Claude Code, OpenCode, Cursor, Windsurf, Codex CLI (README.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "usage is documented, not carried by the surface: .changeset/archived/3577-config-ensure-section-parity.md (Usage: )",
+   "fx.install": "an install that does not change the machine globally: README.md (npx @)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "solo development, or decision-making at a similar speed"
+ ],
+ "anti": [
+  "situations needing multi-person agreement on a spec"
+ ],
+ "th": [
+  "T6",
+  "T17"
+ ],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Cutting context between waves avoids simple linear growth by design. The predecessor repository gsd-build/get-shit-done is archived by its owner and its README says only \"GSD Has Moved\"; development continues here as GSD Core under the open-gsd organisation, distributed as @opengsd/gsd-core on npm.",
+ "sources": [
+  {
+   "url": "https://github.com/open-gsd/gsd-core",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/open-gsd/gsd-core/next/README.md",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://github.com/gsd-build/get-shit-done",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "GSD Core",
+   "sum": "メタプロンプト駆動のSDD。討議・計画・実行・検証・出荷の5段階ループで回し、重い作業は新しいコンテキストのサブエージェントに逃がして本体セッションを軽く保つ。",
+   "art": "フェーズ定義とプロンプト（永続）",
+   "pre": [
+    "個人開発またはそれに近い意思決定速度"
+   ],
+   "anti": [
+    "複数人での仕様合意が要る場面"
+   ],
+   "gnote": "波の間でコンテキストを切ることで、線形な増加を設計上避けている。前身のgsd-build/get-shit-doneは所有者によりアーカイブされ、READMEは「GSD Has Moved」とだけ述べている。開発はopen-gsd組織のGSD Coreとして継続し、npmでは @opengsd/gsd-coreとして配布されている。",
+   "flow": {
+    "steps": [
+     "議論",
+     "計画",
+     "実行",
+     "検証",
+     "出荷"
+    ],
+    "back": [
+     "検証不合格"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "bin/gsd-mcp-server.js",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "skills/gsd-add-tests/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "api-contract",
+  "behaviour"
+ ],
+ "spec_unit": "phase-document",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/ARCHITECTURE.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Discuss",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Plan",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Execute",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Verify",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   },
+   {
+    "s": "Ship",
+    "l": null,
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 2,
+    "s": "verification fails"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "unresolved": [
+  "Assessments carried over from the predecessor have not been verified against the current codebase."
+ ]
+}

@@ -1,0 +1,222 @@
+{
+ "slug": "google-labs-code/design.md",
+ "n": "DESIGN.md",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code",
+  "ui"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "Apache-2.0",
+ "stars": 28270,
+ "push": "2026-10-01",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A file format for describing a visual identity to a coding agent: machine-readable tokens in front matter, and the reasoning behind them in prose. Ships a validator that checks token references and WCAG contrast.",
+ "art": "a DESIGN.md file per project (persistent)",
+ "tok": "frugal",
+ "p": [
+  2,
+  3,
+  2,
+  1,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 5,
+  "extend": 3,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "none",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "doc",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/skills/agent-dx-cli-scale/SKILL.md",
+   "fs.example": "examples/atmospheric-glass/DESIGN.md",
+   "rl.tests": "packages/cli/src/commands/cli-errors.test.ts",
+   "rl.ci": ".github/workflows/test.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "packages/cli/package.json",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "ic.surface": "Surface: cli (packages/cli/package.json)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx @)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "ic.help": "usage is documented, not carried by the surface: .agents/skills/agent-dx-cli-scale/SKILL.md (--help)",
+   "ic.error": "a documented flag that gates or previews the action: .agents/skills/agent-dx-cli-scale/SKILL.md (--dry-run)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a design system that exists, or a decision to invent one",
+  "an agent that reads project files before generating interface code"
+ ],
+ "anti": [
+  "projects with no visual surface",
+  "work where the design is decided in a tool the agent cannot read"
+ ],
+ "th": [
+  "T6"
+ ],
+ "ctrl": {
+  "approval": "none",
+  "sandbox": "na",
+  "allowlist": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none",
+  "a11y": "non"
+ },
+ "gnote": "The only entry here that carries an accessibility check into the artifact itself: the validator reports WCAG contrast ratios as structured findings an agent can act on. It specifies an interface without observing one, so the cycle stays open on the evaluation side.",
+ "sources": [
+  {
+   "url": "https://github.com/google-labs-code/design.md",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/google-labs-code/design.md/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "DESIGN.md",
+   "sum": "視覚的アイデンティティをコーディングエージェントに伝えるためのファイル形式。front matterに機械可読なトークン、本文にその理由を散文で書く。トークン参照の整合とWCAGコントラストを検査する検証器が付く。",
+   "art": "プロジェクトごとのDESIGN.md（永続）",
+   "pre": [
+    "既存のデザインシステム、または作ると決めること",
+    "インタフェースのコードを書く前にプロジェクトのファイルを読むエージェント"
+   ],
+   "anti": [
+    "視覚的な面を持たないプロジェクト",
+    "エージェントが読めないツールの中でデザインが決まる作業"
+   ],
+   "gnote": "アクセシビリティの検査を成果物そのものに持ち込んでいる唯一のツールで、検証器はWCAGのコントラスト比を、エージェントが処理できる構造化された所見として返す。ただし規定するだけで描画結果は見ないので、評価側でサイクルは開いたままである。",
+   "ui_ux_note": "評価のない設計。画面がどう見えるべきかを記述し、描画結果は見ない。",
+   "flow": {
+    "steps": [
+     "DESIGN.mdを書く",
+     "front matterにトークンを宣言",
+     "参照とコントラストを検証",
+     "トークンからUIを実装"
+    ],
+    "back": [
+     "コントラスト不足"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {},
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": false
+ },
+ "design_concerns": [
+  "convention",
+  "visual-identity"
+ ],
+ "spec_unit": "convention-file",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Write DESIGN.md",
+    "l": "L4",
+    "who": "human"
+   },
+   {
+    "s": "Declare tokens in front matter",
+    "l": "L4",
+    "who": "human"
+   },
+   {
+    "s": "Validate references and contrast",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Agent builds the UI from tokens",
+    "l": "L1",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 2,
+    "to": 0,
+    "s": "contrast failure"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "ui_ux": {
+  "hcd_activities": [
+   "requirements",
+   "design"
+  ],
+  "artifact": "DESIGN.md, tokens plus rationale",
+  "feedback_channel": "none",
+  "handoff": [
+   "the coding agent that generates the interface"
+  ],
+  "a11y_standard": "WCAG contrast checked by the validator",
+  "note": "Design without evaluation: the format describes what the interface should look like and never sees what was rendered."
+ }
+}

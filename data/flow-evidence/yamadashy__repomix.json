@@ -1,0 +1,100 @@
+{
+ "entry": "Repomix",
+ "slug": "yamadashy/repomix",
+ "flow": {
+  "basis": "derived",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Select the repository",
+   "l": null,
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/pack-repository.yml",
+     "matched": [
+      "repository"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Filter and ignore",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Pack into one file",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude/plugins/repomix-commands/commands/pack-local.md",
+     "matched": [
+      "pack"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/plugins/repomix-commands/commands/pack-remote.md",
+     "matched": [
+      "pack"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/pack-repository.yml",
+     "matched": [
+      "pack"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Count the tokens",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Hand it to the model",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "85e3969b010c72b905203812d1a3f5beb84a2102"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".claude/plugins/repomix-commands/commands/pack-local.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/plugins/repomix-commands/commands/pack-remote.md"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/pack-repository.yml"
+  }
+ ]
+}

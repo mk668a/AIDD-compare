@@ -1,0 +1,70 @@
+{
+ "entry": "MemOS",
+ "slug": "MemTensor/MemOS",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 1
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "add",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Build the graph",
+   "l": "L3",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "retrieve",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "edit or delete",
+   "l": "L3",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "apps/openwork-memos-integration/apps/desktop/skills/safe-file-deletion/SKILL.md",
+     "matched": [
+      "delete"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Human inspects",
+   "l": null,
+   "who": "human",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "78a372a4fc853a24d2a78efa3b4bbbd27ab9f7ad"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "apps/openwork-memos-integration/apps/desktop/skills/safe-file-deletion/SKILL.md"
+  }
+ ]
+}

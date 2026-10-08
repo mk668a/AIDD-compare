@@ -1,0 +1,227 @@
+{
+ "slug": "phuryn/pm-skills",
+ "n": "PM Skills Marketplace",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "stated",
+  "addressee_quote": "compiling the results into one reviewer-ready packet a human can sign off on [...] the operating instructions the next AI coding agent inherits"
+ },
+ "lic": "MIT",
+ "stars": 26820,
+ "push": "2026-09-14",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Product-management frameworks packaged as skills and slash commands in nine plugins. Eight produce documents such as discovery plans, PRDs, OKRs and roadmaps; the ninth documents and audits an AI-written codebase before it ships.",
+ "art": "discovery plans, PRDs, user stories, roadmaps and a shipping packet, as Markdown files in the workspace (persistent)",
+ "tok": "moderate",
+ "p": [
+  3,
+  1,
+  0,
+  2,
+  2,
+  1,
+  1
+ ],
+ "fit": {
+  "greenfield": 5,
+  "extend": 4,
+  "restructure": 0,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 0
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "none",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "none",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "none",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "none",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "rl.tests": "tests/test_consistency.py",
+   "rl.ci": ".github/workflows/tag-on-merge.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Codex CLI, Gemini CLI, OpenCode, Cursor (README.md)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (.claude-plugin/marketplace.json)",
+   "ic.error": "documented only, nothing in the code checks: pm-ai-shipping/commands/document-app.md (approval gate)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (resume a)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads"
+  }
+ },
+ "cyn": {
+  "clear": 2,
+  "complicated": 4,
+  "complex": 5,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "Claude Code, Claude Cowork or Codex CLI for the commands; other hosts load the skills only",
+  "a person who owns the product decision and answers the checkpoints each command stops at",
+  "for the shipping kit, a repository the agent can read"
+ ],
+ "anti": [
+  "work where the missing piece is code: eight of the nine plugins write documents, and none writes product code",
+  "decisions that need evidence the conversation does not hold: the frameworks structure the reasoning and do not supply customer data",
+  "legal documents that will be relied on: the NDA and privacy-policy skills draft, they do not review"
+ ],
+ "th": [
+  "T6",
+  "T17"
+ ],
+ "ctrl": {
+  "prov": "none",
+  "approval": "na",
+  "sandbox": "na",
+  "allowlist": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Installing a plugin from a marketplace is a supply chain step: what lands is instructions the agent will follow, from a repository the operator does not control. The security and performance audits in the shipping kit are a model reading the code against the documented intent, and they report findings; nothing in them blocks a change.",
+ "sources": [
+  {
+   "url": "https://github.com/phuryn/pm-skills",
+   "accessed": "2026-10-07"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/phuryn/pm-skills/main/README.md",
+   "accessed": "2026-10-07"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "PM Skills Marketplace",
+   "sum": "プロダクトマネジメントのフレームワークを、スキルとスラッシュコマンドとして9つのプラグインにまとめたもの。8つはディスカバリー計画、PRD、OKR、ロードマップなどの文書を作り、残る1つはAIが書いたコードベースを出荷前に文書化して監査する。",
+   "art": "ディスカバリー計画、PRD、ユーザーストーリー、ロードマップ、出荷判断用の資料一式。ワークスペースにMarkdownで保存される（永続）",
+   "pre": [
+    "コマンドを使うにはClaude Code、Claude Cowork、Codex CLIのいずれか。他のホストではスキルのみ読み込める",
+    "プロダクトの判断に責任を持ち、各コマンドの確認ポイントに答える人",
+    "出荷キットを使う場合は、エージェントが読めるリポジトリ"
+   ],
+   "anti": [
+    "足りないものがコードである仕事。9プラグイン中8つは文書を作るもので、プロダクトのコードを書くものは無い",
+    "会話の中に無い証拠が必要な判断。フレームワークは考える順序を与えるが、顧客データは与えない",
+    "実際に効力を持たせる法務文書。NDAとプライバシーポリシーのスキルは下書きを作るだけで、審査はしない"
+   ],
+   "gnote": "マーケットプレイスからのインストールはサプライチェーンの一手である。降りてくるのは利用者が管理していないリポジトリ由来の、エージェントが従う指示である。出荷キットのセキュリティ監査と性能監査は、文書化した意図に照らしてモデルがコードを読むもので、結果を報告するだけであり、変更を止める仕組みは無い。",
+   "flow": {
+    "steps": [
+     "何を探るのかを伝える",
+     "アイデアを出す",
+     "検証するアイデアを選ぶ",
+     "前提を洗い出す",
+     "前提に優先度を付ける",
+     "実験を設計する",
+     "ディスカバリー計画を書く"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "pm-ai-shipping/skills/code-review/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "architecture",
+  "behaviour",
+  "process",
+  "screen-flow"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "repo",
+  "path": "pm-product-discovery/commands/discover.md",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "State the discovery context",
+    "l": "L4",
+    "who": "human"
+   },
+   {
+    "s": "Brainstorm ideas",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Pick ideas to stress-test",
+    "l": "L4",
+    "who": "human"
+   },
+   {
+    "s": "Identify assumptions",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Prioritize assumptions",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Design experiments",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Write the discovery plan",
+    "l": "L4",
+    "who": "model"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

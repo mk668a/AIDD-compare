@@ -1,0 +1,197 @@
+{
+ "slug": "upstash/context7",
+ "n": "Context7",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "ephemeral-path",
+  "lifecycle": "ephemeral",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 62765,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Injects current library documentation over MCP, reducing errors caused by stale knowledge.",
+ "art": "none (retrieval path)",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  3,
+  1,
+  0,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "none",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "none",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "rl.tests": "packages/cli/src/__tests__/agent-command-registry.test.ts",
+   "rl.ci": ".github/workflows/canary-release.yml",
+   "mt.process": "packages/cli/CHANGELOG.md",
+   "mt.units": "packages/cli/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (MCP, Agent Plugins, Agent Skills)",
+   "se.threats": "cites th and ctrl: T2/T17 introduced, controls allowlist part, prov none, sep none",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by allowlist part",
+   "fx.exit": "artifact.format ephemeral-path: a path that exists for the run; nothing durable survives it",
+   "co.coexist": "states the hosts it sits beside: Cursor, Claude Code, Cline, OpenCode, OpenAI Codex, Codex CLI, GitHub Copilot (README.md)",
+   "ic.surface": "Surface: cli (README.md (npx ctx7 setup))",
+   "ic.help": "a command-line parser that prints its own usage: packages/cli/package.json (commander)",
+   "ic.error": "a documented flag that gates or previews the action: docs/clients/cli.mdx (confirmation prompt)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/mcp-registry.yml (sha256sum)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx c)",
+   "fx.byo": "the provider is the operator's choice: BASEURL (packages/cli/src/index.ts)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: packages/sdk/src/http/index.ts (AbortSignal)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 3,
+  "complex": 2,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "the target library being indexed"
+ ],
+ "anti": [
+  "environments dominated by internal libraries"
+ ],
+ "th": [
+  "T2",
+  "T17"
+ ],
+ "ctrl": {
+  "allowlist": "part",
+  "prov": "none",
+  "sep": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Externally fetched documents enter context directly; the supplier must be trusted",
+ "sources": [
+  {
+   "url": "https://github.com/upstash/context7",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Context7",
+   "sum": "ライブラリの最新ドキュメントをMCP経由で注入し、古い知識による誤りを減らす。",
+   "art": "なし（取得経路）",
+   "pre": [
+    "対象ライブラリが収録されていること"
+   ],
+   "anti": [
+    "社内独自ライブラリ中心の環境"
+   ],
+   "gnote": "外部から取得した文書をそのまま文脈に入れる構造。供給元の信頼が前提になる",
+   "flow": {
+    "steps": [
+     "未知のライブラリに当たる",
+     "resolve-library-id",
+     "query-docs",
+     "最新ドキュメントがコンテキストに入る"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "plugins/agent-plugins/context7/mcp.json",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "packages/opencode/skills/context7-mcp/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "service-required",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "plugins/copilot/context7/commands/docs.md",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Agent hits an unfamiliar library",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "resolve-library-id",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "query-docs",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Current docs enter context",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

@@ -1,0 +1,141 @@
+{
+ "entry": "Agentic Plugin Marketplace",
+ "slug": "wshobson/agents",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/architecture.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Install a plugin",
+   "l": "L2",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/architecture.md",
+     "matched": [
+      "install",
+      "plugin"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/accessibility-compliance/agents/ui-visual-validator.md",
+     "matched": [
+      "plugin"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/accessibility-compliance/commands/accessibility-audit.md",
+     "matched": [
+      "plugin"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Planning phase",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "docs/architecture.md",
+     "matched": [
+      "planning",
+      "phase"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Execution phase",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "docs/architecture.md",
+     "matched": [
+      "execution",
+      "phase"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Review phase",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/claude-code-review.yml",
+     "matched": [
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/agent-teams/agents/team-reviewer.md",
+     "matched": [
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/agent-teams/commands/team-review.md",
+     "matched": [
+      "review"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "a30778f8c4e6b0a87567941b7cca4f534bf642b6"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "docs/architecture.md",
+   "value": "- Each plugin does **one thing well** (Unix philosophy)\n- Average plugin size: **5.5 components** (follows Anthropic's 2-8 pattern)\n- **Zero bloated plugins** - all plugins focused and purposeful\n- Mix and match plugins based on needs\n- Workflow orchestrators compose focused plugins\n- Clear boundaries between plugins\n- Install only what you need\n## Granular Plugin Architecture\n### Plugin Distribution\n- **94 marketplace plugins** (92 local + 2 external via git-subdir) optimized for specific use cases\n- **Skills-only distribution** through `gh skill install wshobson/agents` and `npx skills add wshobson/agents`, which read `plugins/*/skills/` directly (see [harnesses.md](./harnesses.md#skills-only-installers))\n- **26 clear categories** with 1-10 plugins each for easy discovery\n  - **Development**: 6 plugins (debugging, backend, frontend, UI, multi-platform, essentials)\n  - **Security**: 7 plugins (scanning, compliance, API, frontend/mobile, reverse engineering, hook policy, HOL Guard)\n  - **Operations**: 4 plugins (incident, diagnostics, distributed, observability)\n  - **Languages**: 10 plugins (Python, JS/TS, systems, JVM, scripting, functional, embedded, and more)\n  - **Infrastructure**: 5 plugins (deployment, validation, K8s, cloud, CI/CD)"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/claude-code-review.yml"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/accessibility-compliance/agents/ui-visual-validator.md"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/accessibility-compliance/commands/accessibility-audit.md"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/agent-teams/agents/team-reviewer.md"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/agent-teams/commands/team-review.md"
+  }
+ ]
+}

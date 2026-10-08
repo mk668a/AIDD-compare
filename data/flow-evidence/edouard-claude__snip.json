@@ -1,0 +1,65 @@
+{
+ "entry": "snip",
+ "slug": "edouard-claude/snip",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 1
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Intercept the call",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Match a rule",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Apply a pipeline action",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "pipeline",
+      "action"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Forward the result",
+   "l": null,
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "master",
+  "tree_sha": "79393418ab2c25ab91e47d19e11157e3e2390c1e"
+ },
+ "evidence": [
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "20. Pipeline Actions"
+  }
+ ]
+}

@@ -1,0 +1,226 @@
+{
+ "slug": "coze-dev/coze-loop",
+ "n": "Coze Loop",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "clickhouse",
+    "ev": "release/deployment/docker-compose/bootstrap/clickhouse-init/init-sql/observability_spans.sql"
+   },
+   {
+    "id": "redis",
+    "ev": "release/deployment/docker-compose/docker-compose.yml (redis)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 5762,
+ "push": "2026-10-05",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A self-hostable platform for developing and operating agents: prompt management, evaluation and monitoring in one deployment. The open edition is the core of a commercial product.",
+ "art": "prompts, evaluation sets and traces held in a deployed service (persistent)",
+ "tok": "moderate",
+ "p": [
+  0,
+  0,
+  1,
+  3,
+  2,
+  0,
+  3
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "doc",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "doc",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "backend/infra/redis/demo/redis.go",
+   "rl.tests": "frontend/infra/eslint-plugin/src/rules/no-pkg-dir-import/test/index.test.ts",
+   "rl.ci": ".github/workflows/backend-ci.yaml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "backend/modules/observability/lib/go.mod",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T6/T8 introduced, controls log impl, approval none, sandbox none",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "co.coexist": "states a relationship to another tool without a mechanism: README.md (override the)",
+   "ic.surface": "Surface: web (release/deployment/docker-compose (Docker Compose deployment, then a web console))",
+   "ic.help": "a command-line parser that prints its own usage: backend/script/cloudwego/loopgen/go.mod (cobra)",
+   "fx.install": "an install that does not change the machine globally: frontend/config/eslint-config/README.md (npx e)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA (backend/go.mod)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: backend/cmd/main.go (signal.Notify)",
+   "sf.warn": "the documentation warns, and nothing stops the operator: README.md (> [!WARNING])"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "somewhere to run a multi-service deployment",
+  "agreement on what an evaluation set contains"
+ ],
+ "anti": [
+  "a single developer who wants a command-line tool",
+  "air-gapped work, unless the whole stack is brought inside"
+ ],
+ "th": [
+  "T6",
+  "T8"
+ ],
+ "ctrl": {
+  "log": "impl",
+  "approval": "none",
+  "sandbox": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "An open edition of a commercial platform: what is missing from the open tree is decided by the vendor and can change. Prompt management makes it an L2 tool as much as an L5 one, which is why the second layer is recorded.",
+ "sources": [
+  {
+   "url": "https://github.com/coze-dev/coze-loop",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/coze-dev/coze-loop/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Coze Loop",
+   "sum": "エージェントの開発と運用を1つのデプロイに収めた自己ホスト可能なプラットフォーム。プロンプト管理・評価・監視を持つ。オープン版は商用製品のコア部分にあたる。",
+   "art": "デプロイしたサービスが保持するプロンプト・評価セット・トレース（永続）",
+   "pre": [
+    "複数サービスのデプロイを置ける場所",
+    "評価セットに何を入れるかの合意"
+   ],
+   "anti": [
+    "コマンドラインのツールが欲しい個人開発者",
+    "スタックごと内側に持ち込めない閉域環境"
+   ],
+   "gnote": "商用プラットフォームのオープン版であり、オープンな木から何が欠けているかはベンダが決め、変わりうる。プロンプト管理を持つ点でL5であると同時にL2のツールでもあるため、副層を記録している。",
+   "flow": {
+    "steps": [
+     "プロンプトを管理",
+     "アプリで実行",
+     "トレースを収集",
+     "評価",
+     "新バージョンを出す"
+    ],
+    "back": [
+     "反復"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "behaviour"
+ ],
+ "spec_unit": "test",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Manage the prompt",
+    "l": "L4",
+    "who": "human"
+   },
+   {
+    "s": "Run in the application",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Collect traces",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Evaluate",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Ship a new version",
+    "l": null,
+    "who": "human"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "iterate"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

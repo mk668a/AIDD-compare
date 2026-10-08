@@ -1,0 +1,89 @@
+{
+ "entry": "Graphiti",
+ "slug": "getzep/graphiti",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Ingest an episode",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Extract entities and edges",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "entities",
+      "edges"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Set the validity window",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "validity",
+      "window"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Invalidate contradicted facts",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "facts"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Query at a point in time",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "547422865cca9fb5a82915c074d899428c145ff4"
+ },
+ "evidence": [
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "Facts / Relationships** (edges) | Triplets (Entity → Relationship → Entity) with temporal validity windows |"
+  }
+ ]
+}

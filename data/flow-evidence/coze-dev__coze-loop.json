@@ -1,0 +1,57 @@
+{
+ "entry": "Coze Loop",
+ "slug": "coze-dev/coze-loop",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 0
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Manage the prompt",
+   "l": "L4",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Run in the application",
+   "l": "L1",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Collect traces",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Evaluate",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Ship a new version",
+   "l": null,
+   "who": "human",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "57c6fb6368b71a839bb564a825331477a2c2562d"
+ },
+ "evidence": []
+}

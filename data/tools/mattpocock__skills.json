@@ -1,0 +1,230 @@
+{
+ "slug": "mattpocock/skills",
+ "n": "Skills for Real Engineers",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L4",
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "skill files an agent loads, alongside CONTEXT.md and ADRs whose shape is a record for the people on the project",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/HTML-REPORT.md"
+   },
+   {
+    "id": "flowchart",
+    "ev": "https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/HTML-REPORT.md"
+   },
+   {
+    "id": "wireframe",
+    "ev": "https://github.com/mattpocock/skills/blob/main/skills/engineering/prototype/UI.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 279155,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A set of engineering and productivity skills installed into a project as editable source files, covering TDD, spec and ticket generation, and architectural review.",
+ "art": "skill files, CONTEXT.md and ADRs written into the project (persistent)",
+ "tok": "moderate",
+ "p": [
+  2,
+  2,
+  3,
+  3,
+  2,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "none",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "none",
+  "ic.surface": "na",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "none",
+  "rl.ci": "part",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "none",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/adr/0001-explicit-setup-pointer-only-for-hard-dependencies.md",
+   "rl.ci": ".github/workflows/release.yml",
+   "mt.process": "CHANGELOG.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T6/T17 introduced, controls approval doc, prov none",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and approval is doc",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (README.md (claude plugins install mattpocock-skills; npx skills add))",
+   "rl.resume": "recovering is described in prose, not implemented: docs/engineering/codebase-design.md (checkpoint)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a harness that loads skills, such as Claude Code or Codex",
+  "willingness to let it write files into the repository"
+ ],
+ "anti": [
+  "one-off edits where the ceremony costs more than the change",
+  "UI or visual work, which none of the skills cover",
+  "harnesses with no skill mechanism"
+ ],
+ "th": [
+  "T6",
+  "T17"
+ ],
+ "ctrl": {
+  "approval": "doc",
+  "sandbox": "na",
+  "allowlist": "na",
+  "prov": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Skills are executed instructions fetched from a repository, so the install step is a supply chain step. Files land as ordinary editable source rather than a managed bundle.",
+ "sources": [
+  {
+   "url": "https://github.com/mattpocock/skills",
+   "accessed": "2026-09-01"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Skills for Real Engineers",
+   "sum": "エンジニアリングと生産性のスキル集。編集可能なソースとしてプロジェクトへ書き込まれ、TDD、仕様・チケット生成、設計レビューを扱う。",
+   "art": "プロジェクトへ書き込まれるスキル・CONTEXT.md・ADR（永続）",
+   "pre": [
+    "スキルを読み込むハーネス（Claude Code、Codexなど）",
+    "リポジトリへのファイル書き込みを許容できること"
+   ],
+   "anti": [
+    "手順の重さが変更量を上回る単発の編集",
+    "UI・視覚的な作業。該当するスキルがない",
+    "スキル機構を持たないハーネス"
+   ],
+   "gnote": "スキルはリポジトリから取得される実行される指示であり、インストールは供給チェーンの一段になる。ファイルは管理されたバンドルではなく通常の編集可能なソースとして置かれる。",
+   "flow": {
+    "steps": [
+     "スキルをソースとして導入",
+     "タスクに応じてスキルが起動",
+     "ドメインモデリング / 設計",
+     "TDD",
+     "コードレビュー"
+    ],
+    "back": [
+     "レビュー指摘"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "skills/deprecated/README.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "process",
+  "screen-flow"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/engineering/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Install the skills as source",
+    "l": "L2",
+    "who": "human"
+   },
+   {
+    "s": "A skill activates on the task",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Domain modeling or design",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "TDD",
+    "l": "L5",
+    "who": "model"
+   },
+   {
+    "s": "Code review",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 3,
+    "s": "review findings"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

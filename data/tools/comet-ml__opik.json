@@ -1,0 +1,224 @@
+{
+ "slug": "comet-ml/opik",
+ "n": "Opik",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "trace-log",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "opentelemetry",
+    "ev": "README.md (OpenTelemetry)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 22429,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Tracing, evaluation and prompt management for LLM applications, self-hostable in full rather than as a cut-down edition.",
+ "art": "traces, evaluation runs and prompt versions (persistent)",
+ "tok": "moderate",
+ "p": [
+  0,
+  0,
+  1,
+  3,
+  2,
+  0,
+  3
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "doc",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "impl",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/agents/architect.md",
+   "fs.example": "apps/opik-backend/src/main/java/com/comet/opik/domain/template/Jinja2Parser.java",
+   "rl.tests": "apps/opik-backend/src/test/java/com/comet/opik/TestConfigUtils.java",
+   "rl.ci": ".github/workflows/backend_tests.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "apps/opik-frontend/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (MCP, AGENTS.md)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T6/T8 introduced, controls log impl, sandbox none",
+   "fx.exit": "artifact.format trace-log: a run log the tool writes; readable as text, structured for the tool",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor (README.md)",
+   "ic.surface": "Surface: library (README.md (pip install opik; from opik import track))",
+   "ic.help": "usage is documented, not carried by the surface: README.md (--help)",
+   "ic.error": "documented only, nothing in the code checks: .agents/commands/comet/address-github-pr-comments.md (Ask for confirmation)",
+   "fx.install": "only a global install is documented: README.md (pip install o)",
+   "fx.byo": "the provider is the operator's choice: BEDROCK, LITELLM, OLLAMA, OPENROUTER, BASEURL, VERTEX (README.md)",
+   "rl.resume": "a resume the operator can ask for: .agents/commands/comet/create-pr.md (--continue)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "somewhere to run the server, or acceptance of the hosted one",
+  "agreement on what an evaluation set contains"
+ ],
+ "anti": [
+  "a single developer wanting a command-line check",
+  "judging generated code, which a judge model does not decide"
+ ],
+ "th": [
+  "T6",
+  "T8"
+ ],
+ "ctrl": {
+  "log": "impl",
+  "approval": "na",
+  "sandbox": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Apache-2.0 with the whole platform self-hostable, where several comparable products keep the useful half behind a hosted edition. Judges are model calls, so the evaluator inherits the failure modes of the thing being evaluated.",
+ "sources": [
+  {
+   "url": "https://github.com/comet-ml/opik",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/comet-ml/opik/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Opik",
+   "sum": "LLMアプリケーションのトレース・評価・プロンプト管理。機能を削った版ではなく、プラットフォーム全体を自己ホストできる。",
+   "art": "トレース・評価実行・プロンプトのバージョン（永続）",
+   "pre": [
+    "サーバを動かす場所、またはホスト版の受け入れ",
+    "評価セットに何を入れるかの合意"
+   ],
+   "anti": [
+    "コマンドライン1つで済ませたい個人開発者",
+    "生成コードの正しさの判定。判定モデルはそれを決めない"
+   ],
+   "gnote": "Apache-2.0でプラットフォーム全体が自己ホスト可能。同種の製品のいくつかが有用な半分をホスト版に置いているのと対照的である。判定器はモデル呼び出しなので、評価する側が評価される側の失敗様式を抱える。",
+   "flow": {
+    "steps": [
+     "アプリを計装",
+     "トレースを収集",
+     "データセットを定義",
+     "評価を実行",
+     "確認して比較"
+    ],
+    "back": [
+     "回帰を検出"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "apps/opik-documentation/documentation/fern/docs-v2/cost_intelligence/mcp-server.mdx",
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "behaviour"
+ ],
+ "spec_unit": "test",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Instrument the application",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Collect traces",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Define a dataset",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Run the evaluation",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Inspect and compare",
+    "l": null,
+    "who": "human"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "regression found"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

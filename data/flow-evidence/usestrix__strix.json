@@ -1,0 +1,119 @@
+{
+ "entry": "Strix",
+ "slug": "usestrix/strix",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Triage",
+   "l": "L5",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+     "matched": [
+      "triage"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+     "matched": [
+      "triage"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Fix",
+   "l": "L1",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Verify by re-running Strix",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+     "matched": [
+      "verify",
+      "strix"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/ci-security-scanning-with-strix/SKILL.md",
+     "matched": [
+      "strix"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+     "matched": [
+      "strix"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Report",
+   "l": "L5",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+     "matched": [
+      "report"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+     "matched": [
+      "report"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "f1386cad37964197a483ff43c25161f9d933f050"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "skills/fix-security-vulnerabilities-with-strix/SKILL.md",
+   "value": "name: fix-security-vulnerabilities-with-strix\ndescription: Fix security vulnerabilities found by a Strix pentest (open-source CLI or app.strix.ai cloud) — triage by severity, patch the root cause rather than the symptom, and re-run Strix to prove each fix actually closes the exploit. Handles injection, XSS, SSRF, broken access control, IDOR, and other validated findings. Use after a Strix scan reports findings, or when the user asks to remediate, patch, or fix security issues from a strix_runs report, vulnerabilities.json, findings.sarif, or a cloud scan.\n  author: usestrix\n  homepage: https://docs.strix.ai\n# Fix Strix findings and verify\nTurn validated Strix findings into minimal, correct fixes — and prove they work by re-scanning.\n## 1. Triage\n- **OSS CLI** — artifacts in `strix_runs/<run-name>/`:\n- **Cloud (app.strix.ai)** — pull findings with the CLI: `strix cloud vulns list --scan-id <scan-id> --json` (or `strix cloud scans get <scan-id> --json | jq '.vulnerabilities'`, or `strix cloud vulns list --severity critical` org-wide). Each finding carries `severity, cwe, endpoint, method, impact, technical_analysis, poc_description, poc_script_code` and, for code findings, `code_file`/`code_diff`/`code_before`/`code_after`. After a fix is verified, mark it with `strix cloud vulns update <id> --status fixed`. See the **managed-pentesting-with-strix** skill for `strix cloud login` and scopes.\nOrder work by severity: critical → high → medium → low. Every Strix finding was validated with a working proof-of-concept, so do not dismiss findings as false positives without re-testing the PoC yourself."
+  },
+  {
+   "kind": "path",
+   "value": "skills/ci-security-scanning-with-strix/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/fix-security-vulnerabilities-with-strix/SKILL.md"
+  }
+ ]
+}

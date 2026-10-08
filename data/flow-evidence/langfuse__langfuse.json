@@ -1,0 +1,92 @@
+{
+ "entry": "Langfuse",
+ "slug": "langfuse/langfuse",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 1
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Wrap the LLM call",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Record the trace and the cost",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/analyze-cloud-costs/SKILL.md",
+     "matched": [
+      "cost"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/analyze-cloud-costs/agents/openai.yaml",
+     "matched": [
+      "cost"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/analyze-cloud-costs/references/cost-marts.md",
+     "matched": [
+      "cost"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Build a dataset from traces",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Run an evaluation",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Compare versions",
+   "l": null,
+   "who": "human",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "7637df1e1aadddbbfd0a45b960ecc97451381ce5"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".agents/skills/analyze-cloud-costs/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/analyze-cloud-costs/agents/openai.yaml"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/analyze-cloud-costs/references/cost-marts.md"
+  }
+ ]
+}

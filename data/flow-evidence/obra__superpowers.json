@@ -1,0 +1,211 @@
+{
+ "entry": "Superpowers",
+ "slug": "obra/superpowers",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Brainstorm",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/brainstorming/SKILL.md",
+     "matched": [
+      "brainstorm"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/brainstorming/spec-document-reviewer-prompt.md",
+     "matched": [
+      "brainstorm"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/brainstorming/visual-companion.md",
+     "matched": [
+      "brainstorm"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Write the plan",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/executing-plans/SKILL.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/writing-plans/SKILL.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/writing-plans/plan-document-reviewer-prompt.md",
+     "matched": [
+      "plan"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Subagent TDD",
+   "l": "L5",
+   "who": "model",
+   "par": [
+    "implementer",
+    "task reviewer"
+   ],
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/subagent-driven-development/SKILL.md",
+     "matched": [
+      "subagent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/subagent-driven-development/implementer-prompt.md",
+     "matched": [
+      "subagent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/subagent-driven-development/re-review-prompt.md",
+     "matched": [
+      "subagent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Code review",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/brainstorming/spec-document-reviewer-prompt.md",
+     "matched": [
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/receiving-code-review/SKILL.md",
+     "matched": [
+      "code",
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/requesting-code-review/SKILL.md",
+     "matched": [
+      "code",
+      "review"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Finish the branch",
+   "l": null,
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/finishing-a-development-branch/SKILL.md",
+     "matched": [
+      "finish",
+      "branch"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "skills/brainstorming/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/brainstorming/spec-document-reviewer-prompt.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/brainstorming/visual-companion.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/executing-plans/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/finishing-a-development-branch/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/receiving-code-review/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/requesting-code-review/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/subagent-driven-development/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/subagent-driven-development/implementer-prompt.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/subagent-driven-development/re-review-prompt.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/writing-plans/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/writing-plans/plan-document-reviewer-prompt.md"
+  }
+ ]
+}

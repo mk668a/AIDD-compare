@@ -1,0 +1,300 @@
+{
+ "entry": "LeanCTX",
+ "slug": "yvgude/lean-ctx",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 7,
+  "with_evidence": 7
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Agent reads a file or runs a cmd",
+   "l": null,
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "rust/src/templates/PI_AGENTS.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "rust/src/templates/PI_AGENTS_REPLACE.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "MCP tool or shell hook intercepts",
+   "l": "L1",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "docs/cognition-interface.md",
+     "matched": [
+      "intercepts"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/cognition-interface.md",
+     "matched": [
+      "intercepts"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/cognition-interface.md",
+     "matched": [
+      "intercepts"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "ctx_analyze picks a mode",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "mode"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Return cached or compressed form",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "compressed"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "compressed"
+     ]
+    },
+    {
+     "kind": "yaml-step",
+     "source": ".github/workflows/ci.yml",
+     "matched": [
+      "form"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Proxy compresses the request",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "compresses"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "proxy",
+      "compresses",
+      "request"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Record cost to the local ledger",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "ledger"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "cost"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": ".github/workflows/ci.yml",
+     "matched": [
+      "local"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "s": "Recover exact source on request",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "source"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "request"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "8b42feaf4771c09cf8151c27ed4ec6a3f32f7f5a"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/workflows/ci.yml"
+  },
+  {
+   "kind": "path",
+   "value": "rust/src/templates/PI_AGENTS.md"
+  },
+  {
+   "kind": "path",
+   "value": "rust/src/templates/PI_AGENTS_REPLACE.md"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. Context Compression — input efficiency"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. Intelligent Triage — task understanding"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "3. Knowledge Routing — cross-source context"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "4. AI Value Gate — cost and outcome tracking"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "5. Shadow Recommendations — savings proof"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/cognition-interface.md",
+   "value": "1. Context I/O (signal in)"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/cognition-interface.md",
+   "value": "2. Orchestration (routing + budgets)"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/cognition-interface.md",
+   "value": "3. Memory (what persists)"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/cognition-interface.md",
+   "value": "4. Verification (what must hold)"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/cognition-interface.md",
+   "value": "5. Delivery (everywhere)"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "read path:   AI tool  →  (MCP tools + shell)  →  lean-ctx  →  your repo + CLI"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "wire path:   AI tool  →  lean-ctx proxy        →  model provider   (every request, compressed)"
+  },
+  {
+   "kind": "arrow",
+   "source": ".github/workflows/ci.yml",
+   "value": "# Discard port → daemon unreachable → exercises deterministic local"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/ci.yml",
+   "value": "Enforce internal product authority"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/ci.yml",
+   "value": "Reject tracked internal artifacts"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/ci.yml",
+   "value": "Enforce the single SDK surface"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/ci.yml",
+   "value": "Verify OCLA manifests are packaged"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/ci.yml",
+   "value": "Run clippy"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/ci.yml",
+   "value": "Format"
+  }
+ ]
+}

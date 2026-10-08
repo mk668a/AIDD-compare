@@ -1,0 +1,200 @@
+{
+ "entry": "Spec Kitty",
+ "slug": "spec-kitty/spec-kitty",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 6
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "spec",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agent/workflows/spec-kitty-standalone.md",
+     "matched": [
+      "spec"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".amazonq/prompts/spec-kitty-standalone.md",
+     "matched": [
+      "spec"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".augment/commands/spec-kitty-standalone.md",
+     "matched": [
+      "spec"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "plan",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "plan"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "tasks",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "kitty-specs/002-lightweight-pypi-release/tasks/WP01-release-validation-tooling.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "kitty-specs/002-lightweight-pypi-release/tasks/WP02-pypi-release-automation.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "kitty-specs/002-lightweight-pypi-release/tasks/WP03-release-readiness-guardrails.md",
+     "matched": [
+      "tasks"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "next, in a worktree",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "docs/api/skills/spk-run-next.md",
+     "matched": [
+      "next"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "next"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "review",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": "docs/api/skills/spk-gate-mission-review.md",
+     "matched": [
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "docs/api/skills/spk-run-implement-review.md",
+     "matched": [
+      "review"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "review"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "accept and merge",
+   "l": null,
+   "who": "human",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "accept",
+      "merge"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e7eb8022e1623bacec3ed50ccad026446bda9f95"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".agent/workflows/spec-kitty-standalone.md"
+  },
+  {
+   "kind": "path",
+   "value": ".amazonq/prompts/spec-kitty-standalone.md"
+  },
+  {
+   "kind": "path",
+   "value": ".augment/commands/spec-kitty-standalone.md"
+  },
+  {
+   "kind": "path",
+   "value": "docs/api/skills/spk-gate-mission-review.md"
+  },
+  {
+   "kind": "path",
+   "value": "docs/api/skills/spk-run-implement-review.md"
+  },
+  {
+   "kind": "path",
+   "value": "docs/api/skills/spk-run-next.md"
+  },
+  {
+   "kind": "path",
+   "value": "kitty-specs/002-lightweight-pypi-release/tasks/WP01-release-validation-tooling.md"
+  },
+  {
+   "kind": "path",
+   "value": "kitty-specs/002-lightweight-pypi-release/tasks/WP02-pypi-release-automation.md"
+  },
+  {
+   "kind": "path",
+   "value": "kitty-specs/002-lightweight-pypi-release/tasks/WP03-release-readiness-guardrails.md"
+  }
+ ]
+}

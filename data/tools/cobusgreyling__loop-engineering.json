@@ -1,0 +1,228 @@
+{
+ "slug": "cobusgreyling/loop-engineering",
+ "n": "Loop Engineering",
+ "entry_kind": "implementation",
+ "l": "L6",
+ "s2": [
+  "L5",
+  "L7"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 11436,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A pattern library for operating agents around a codebase: loops that discover work, hand it to an agent, verify the result and persist state, with an audit and a cost tool beside them.",
+ "art": "loop definitions and STATE.md (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  1,
+  3,
+  2,
+  2,
+  1,
+  3
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "fs.example": "examples/README.md",
+   "rl.tests": "tools/goal-audit/test/auditor.test.mjs",
+   "rl.ci": ".github/workflows/publish-goal-audit-bootstrap.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "tools/goal-audit/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T4/T7/T8 introduced, controls limits part, log part, approval part, sandbox none",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and limits is part",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "pe.budget": "a ceiling the operator sets on the command line: tools/loop-context/src/cli.ts (--max-iterations)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Windsurf, Cline, Aider (README.md)",
+   "ic.surface": "Surface: cli (README.md (npx @cobusgreyling/loop init, doctor))",
+   "ic.help": "built-in usage text: tools/goal-audit/src/cli.ts (--help)",
+   "ic.error": "a dry run the operator can ask for before the real one: tools/goal-init/src/cli.ts (dryRun)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/release-goal-audit.yml (npm publish --access public --provenance)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx @)",
+   "fx.byo": "the provider is the operator's choice: BASEURL, OPENAI, ANTHROPIC (_config.yml)",
+   "sf.warn": "the irreversible step is both warned about and gated: docs/QUICKSTART.md (**warning**)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a repository with work a loop can discover, such as issues or failing checks",
+  "a verification step the loop can trust"
+ ],
+ "anti": [
+  "a single task somebody could just do",
+  "teams unwilling to run agents on a schedule"
+ ],
+ "th": [
+  "T4",
+  "T7",
+  "T8"
+ ],
+ "ctrl": {
+  "limits": "part",
+  "log": "part",
+  "approval": "part",
+  "sandbox": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The only entry here that ships a cost tool and an audit for the loop itself, and one of the few that starts in report-only mode: the first week produces findings rather than commits. Loops that run in GitHub Actions inherit whatever that environment permits.",
+ "sources": [
+  {
+   "url": "https://github.com/cobusgreyling/loop-engineering",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/cobusgreyling/loop-engineering/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Loop Engineering",
+   "sum": "コードベースの周りでエージェントを運用するためのパターン集。仕事を見つけ、エージェントに渡し、結果を検証し、状態を残すループを設計する。監査ツールと費用ツールが付属する。",
+   "art": "ループ定義とSTATE.md（永続）",
+   "pre": [
+    "issueや失敗した検査など、ループが発見できる仕事があるリポジトリ",
+    "ループが信頼できる検証手順"
+   ],
+   "anti": [
+    "人がやれば済む単発の作業",
+    "エージェントを定期実行させる気のないチーム"
+   ],
+   "gnote": "ループ自体の費用ツールと監査を配る唯一のツールで、最初の1週間を報告のみで始める数少ない例でもある。初週はコミットではなく所見を出す。GitHub Actionsで回すループは、その環境が許すものをそのまま引き継ぐ。",
+   "flow": {
+    "steps": [
+     "作業をトリアージ",
+     "予算を確認",
+     "最小の修正",
+     "別主体で検証",
+     "状態をコミット"
+    ],
+    "back": [
+     "次のループ"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "scripts/issue-bodies/quickstart-mcp-server.md",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "skills/budget-negotiator/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "process"
+ ],
+ "spec_unit": "task",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Triage the work",
+    "l": "L6",
+    "who": "model"
+   },
+   {
+    "s": "Check the budget",
+    "l": null,
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Minimal fix",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Verify separately",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   },
+   {
+    "s": "Commit the state",
+    "l": "L3",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "next loop"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

@@ -1,0 +1,219 @@
+{
+ "slug": "Fission-AI/OpenSpec",
+ "n": "OpenSpec",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L3",
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "stated",
+  "addressee_quote": "One source of truth your whole team and every coding agent can read, across every repo.",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 71250,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Describes changes as ADDED / MODIFIED / REMOVED deltas, so the spec survives and grows.",
+ "art": "delta specs (persistent)",
+ "tok": "moderate",
+ "p": [
+  3,
+  2,
+  1,
+  0,
+  2,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 5,
+  "restructure": 5,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "impl",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".agents/skills/draft-openspec-docs/SKILL.md",
+   "fs.example": "schemas/spec-driven/templates/design.md",
+   "rl.tests": "test/AGENTS.md",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CHANGELOG.md",
+   "mt.units": "website/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Cursor, GitHub Copilot, Amazon Q, Claude Code, Gemini CLI, Zed, Codex CLI, JetBrains (README.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "a command-line parser that prints its own usage: package.json (commander)",
+   "ic.error": "a documented flag that gates or previews the action: docs/cli.md (--yes)",
+   "fx.install": "an install that does not change the machine globally: docs-lab/start/installation.md (nix profile)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.stop": "a stop path, and the state it leaves behind is described: src/telemetry/index.ts (AbortSignal); docs/cli.md (Ctrl-C)",
+   "sf.warn": "the irreversible step is both warned about and gated: docs-lab/start/installation.md (> [!WARNING])"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "an understanding of the current code",
+  "the ability to cut work into change units"
+ ],
+ "anti": [
+  "large-scale design from zero",
+  "organisations with no culture of writing specs at all"
+ ],
+ "th": [
+  "T6"
+ ],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Because specs persist, write permission is the real defensive line",
+ "sources": [
+  {
+   "url": "https://github.com/Fission-AI/OpenSpec",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "OpenSpec",
+   "sum": "変更をADDED / MODIFIED / REMOVEDの差分として記述。仕様が残って育つ。",
+   "art": "差分仕様（永続）",
+   "pre": [
+    "既存コードの現状把握",
+    "変更単位を切れること"
+   ],
+   "anti": [
+    "ゼロからの大規模設計",
+    "仕様を書く文化が全くない組織"
+   ],
+   "gnote": "仕様が永続するため書込権限が実質の防御線",
+   "flow": {
+    "steps": [
+     "提案",
+     "仕様の差分",
+     "設計",
+     "タスク",
+     "実装",
+     "仕様へアーカイブ"
+    ],
+    "back": [
+     "タスク未完"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": "skills/openspec-apply-change/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "behaviour"
+ ],
+ "spec_unit": "capability-delta",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/concepts.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Proposal",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Spec deltas",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Design",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Tasks",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Implement",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Archive into the spec",
+    "l": "L3",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 3,
+    "s": "task not done"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

@@ -1,0 +1,216 @@
+{
+ "slug": "zilliztech/claude-context",
+ "n": "Claude Context",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L3"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "milvus",
+    "ev": "README.md (MILVUS)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 12589,
+ "push": "2026-07-14",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Semantic code search served over MCP: the codebase goes into a vector index once, and the agent retrieves the relevant parts instead of being handed directories.",
+ "art": "vector index of the codebase (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  3,
+  1,
+  1,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 2,
+  "extend": 5,
+  "restructure": 4,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "examples/README.md",
+   "rl.tests": "packages/core/src/context.abort.test.ts",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "examples/basic-usage/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T2/T6 introduced, controls egress none, log part",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "co.coexist": "states the hosts it sits beside: Claude Code, OpenAI Codex, Codex CLI, Gemini CLI, Cursor, Windsurf, Cline, Roo Code, JetBrains (README.md)",
+   "ic.surface": "Surface: cli (README.md (npx @zilliz/claude-context-mcp, started as an MCP server))",
+   "ic.help": "a command-line parser that prints its own usage: packages/chrome-extension/src/options.ts (click)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx @)",
+   "fx.byo": "the provider is the operator's choice: OPENAI, OLLAMA, BASEURL, OPENROUTER (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: packages/mcp/src/index.ts (graceful shutdown)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a vector database to index into",
+  "an embedding provider, which is a cost and a data-egress decision"
+ ],
+ "anti": [
+  "repositories small enough to read whole",
+  "work that must not send source to an embedding service"
+ ],
+ "th": [
+  "T2",
+  "T6"
+ ],
+ "ctrl": {
+  "egress": "none",
+  "log": "part",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Indexing a codebase means sending it to an embedding provider, which is the residency question this axis exists to record. A merkle tree keeps the index in sync, so the cost is paid once rather than per request.",
+ "sources": [
+  {
+   "url": "https://github.com/zilliztech/claude-context",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/zilliztech/claude-context/master/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Claude Context",
+   "sum": "MCP越しに提供する意味検索。コードベースを一度ベクトル索引に入れ、ディレクトリを丸ごと渡す代わりに関係する箇所だけをエージェントが引く。",
+   "art": "コードベースのベクトル索引（永続）",
+   "pre": [
+    "索引先のベクトルデータベース",
+    "埋め込みプロバイダ。費用でもありデータ持ち出しの判断でもある"
+   ],
+   "anti": [
+    "丸ごと読める規模のリポジトリ",
+    "ソースを埋め込みサービスへ送れない業務"
+   ],
+   "gnote": "コードベースの索引化とは埋め込みプロバイダへ送ることであり、データ所在の軸が存在する理由そのものである。マークルツリーで索引を同期するため、費用は毎回ではなく一度で済む。",
+   "flow": {
+    "steps": [
+     "index_codebase",
+     "埋め込んで保存",
+     "search_code",
+     "関連部分だけ返す"
+    ],
+    "back": [
+     "次のクエリ"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "index_codebase",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Embed and store",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "search_code",
+    "l": "L2",
+    "who": "model"
+   },
+   {
+    "s": "Return the relevant parts",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 2,
+    "s": "next query"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

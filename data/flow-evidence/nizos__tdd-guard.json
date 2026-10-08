@@ -1,0 +1,72 @@
+{
+ "entry": "TDD Guard",
+ "slug": "nizos/tdd-guard",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 1
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Agent tries to edit",
+   "l": null,
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Hook intercepts",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Validate against the test state",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "docs/config-migration.md",
+     "matched": [
+      "validate"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Block or allow",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Write the test first",
+   "l": "L5",
+   "who": "model",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "ccd71b49b11b5bd350d87d3f4c9a9b6b1e1f3dbd"
+ },
+ "evidence": [
+  {
+   "kind": "arrow",
+   "source": "docs/config-migration.md",
+   "value": "`MODEL_TYPE`        | `VALIDATION_CLIENT` | Map `claude_cli` → `sdk`, `anthropic_api` → `api` |"
+  }
+ ]
+}

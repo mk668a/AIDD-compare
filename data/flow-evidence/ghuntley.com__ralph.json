@@ -1,0 +1,47 @@
+{
+ "entry": "Ralph Loop (pattern)",
+ "slug": "ghuntley.com/ralph",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 0
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "One prompt file",
+   "l": "L2",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Run the agent",
+   "l": "L1",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Agent picks the next task",
+   "l": "L6",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Loop again",
+   "l": "L6",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17"
+ },
+ "evidence": []
+}

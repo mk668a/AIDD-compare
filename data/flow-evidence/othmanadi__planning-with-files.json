@@ -1,0 +1,167 @@
+{
+ "entry": "Planning with Files",
+ "slug": "OthmanAdi/planning-with-files",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Write task_plan.md",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "task",
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/SKILL.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/examples.md",
+     "matched": [
+      "plan"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Agent works",
+   "l": null,
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "agent",
+      "works"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/examples.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Record findings and progress",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "record",
+      "findings",
+      "progress"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/templates/analytics_findings.md",
+     "matched": [
+      "findings"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/templates/findings.md",
+     "matched": [
+      "findings"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Hook re-injects the plan",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "hook",
+      "injects",
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/SKILL.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/planning-with-files/examples.md",
+     "matched": [
+      "plan"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "master",
+  "tree_sha": "d47a61950e784fc4237ba10ddc1e9e198bd0f275"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "<img src=\"media/v3-banner-1400.jpg\" alt=\"planning-with-files: task_plan.md, findings.md, and progress.md as three stone tablets\" width=\"100%\">\n<h1 align=\"center\">Planning with Files</h1>\n  <strong>The planning skill your agent cannot ignore.</strong><br>\n  Not a prompt it might follow. A hook that fires every turn, a plan on disk that survives <code>/clear</code>, and 3 out of 3 blind A/B wins to show it works.\n  <em>Your agent's context window dies. The plan does not.</em>\nPersistent file-based planning for AI coding agents and long-running agent tasks: the skill keeps <code>task_plan.md</code>, <code>findings.md</code>, and <code>progress.md</code> on disk. Activated lifecycle hooks inject selected project planning context, so the plan survives context loss, <code>/clear</code>, crashes, and compaction. Automatic recovery reads project files only. Reading same-project local agent session records for aggregate counts or bounded replay requires an explicit catchup mode. Installs across 60+ agents via the Agent Skills standard, with native plugins for Claude Code, Codex CLI, Pi and Hermes Agent.\n  <a href=\"https://github.com/OthmanAdi/planning-with-files/stargazers\"><img src=\"https://img.shields.io/github/stars/OthmanAdi/planning-with-files?style=flat&color=yellow\" alt=\"Stars\"></a>\n  <a href=\"https://github.com/OthmanAdi/planning-with-files/releases\"><img src=\"https://img.shields.io/github/v/release/OthmanAdi/planning-with-files?style=flat&label=release\" alt=\"Latest release\"></a>\n  <a href=\"https://skillsplayground.com/skills/othmanadi-planning-with-files-planning-with-files/\"><img src=\"https://skillsplayground.com/badges/installs/othmanadi-planning-with-files-planning-with-files.svg\" alt=\"Skills Playground installs\"></a>\n  <a href=\"https://skill-history.com/othmanadi/planning-with-files\"><img src=\"https://skill-history.com/badge/othmanadi/planning-with-files.svg\" alt=\"Downloads\"></a>"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/planning-with-files/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/planning-with-files/examples.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/planning-with-files/templates/analytics_findings.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/planning-with-files/templates/findings.md"
+  }
+ ]
+}

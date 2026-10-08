@@ -1,0 +1,218 @@
+{
+ "slug": "promptfoo/promptfoo",
+ "n": "promptfoo",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "config",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "eval definitions authored and reviewed by a person, and executed by the runner",
+  "format_detail": [
+   {
+    "id": "json-schema",
+    "ev": "package.json (jsonSchema)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 25788,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Codifies prompt and agent evaluation and runs it in CI. Also does red-teaming.",
+ "art": "eval definitions (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  0,
+  3,
+  2,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "na",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/AGENTS.md",
+   "fs.example": "examples/AGENTS.md",
+   "rl.tests": "examples/config-separate-test-configs/tests/tests1.yaml",
+   "rl.ci": ".github/workflows/main.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "examples/claude-agent-sdk/advanced/workspace/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th: no OWASP Agentic AI threat is introduced by adopting this entry, so there is nothing here to control against",
+   "fx.exit": "artifact.format config: a configuration file in an open text format",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "pe.budget": "a ceiling named in the documentation only: site/docs/configuration/expected-outputs/deterministic.md (max_tokens:)",
+   "co.coexist": "states the hosts it sits beside: OpenAI Codex, OpenCode, Claude Code (docs/agents/codex-app-server-provider-notes.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "a command-line parser that prints its own usage: package.json (commander)",
+   "ic.error": "a confirmation step in the code path: src/commands/config.ts (inquirer)",
+   "rl.resume": "recovering is described in prose, not implemented: docs/agents/codex-app-server-provider-notes.md (resume a)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/docker.yml (attest-build-provenance)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx u)",
+   "fx.byo": "the provider is the operator's choice: OPENAI, BEDROCK, OLLAMA, OPENROUTER, ANTHROPIC, GOOGLE (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: src/database/index.ts (graceful shutdown)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 3,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "agreement on what counts as good",
+  "CI infrastructure"
+ ],
+ "anti": [
+  "exploratory stages where the criteria are not settled"
+ ],
+ "th": [],
+ "ctrl": {
+  "log": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The evaluation itself can be made a blocking gate",
+ "sources": [
+  {
+   "url": "https://github.com/promptfoo/promptfoo",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "promptfoo",
+   "sum": "プロンプトとエージェントの評価をコード化しCIで回す。レッドチーミング機能も持つ。",
+   "art": "評価定義（永続）",
+   "pre": [
+    "何を良しとするかの合意",
+    "CI基盤"
+   ],
+   "anti": [
+    "評価基準が定まらない探索段階"
+   ],
+   "gnote": "評価自体をブロッキングゲートにできる",
+   "flow": {
+    "steps": [
+     "promptfooconfigを書く",
+     "アサーションを定義",
+     "評価を実行",
+     "レッドチーム試験",
+     "CIをゲートする"
+    ],
+    "back": [
+     "回帰"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "package.json",
+   "agents_md": ".github/AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "plugins/promptfoo/skills/promptfoo-evals/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "not-assessed"
+ ],
+ "spec_unit": "test",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Write promptfooconfig",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Define the assertions",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Run the eval",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Red-team probes",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Gate the CI",
+    "l": "L5",
+    "who": "tool",
+    "gate": true
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "regression"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

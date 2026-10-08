@@ -1,0 +1,286 @@
+[
+ {
+  "id": "mermaid",
+  "label": "Mermaid source",
+  "src": "Mermaid",
+  "n": 8,
+  "who": [
+   "drawio-skill",
+   "AI-DLC Workflows",
+   "BMAD-METHOD",
+   "cc-sdd",
+   "MoAI-ADK",
+   "Spec Workflow MCP",
+   "Strands Agents",
+   "Agentic Plugin Marketplace"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md",
+   "https://github.com/awslabs/aidlc-workflows/blob/main/core/aidlc-common/protocols/stage-protocol.md",
+   "https://github.com/bmad-code-org/BMAD-METHOD/blob/main/skills/bmad-architecture/SKILL.md",
+   "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/rules/design-principles.md",
+   "https://github.com/modu-ai/moai-adk/blob/main/.claude/agents/harness/hns-oss-docs-content-author-specialist.md",
+   "https://github.com/Pimzino/spec-workflow-mcp/blob/main/src/markdown/templates/design-template.md",
+   "https://github.com/strands-agents/harness-sdk/blob/main/.agents/skills/docs-reviewer/SKILL.md",
+   "https://github.com/wshobson/agents/blob/main/plugins/api-scaffolding/agents/backend-architect.md"
+  ],
+  "self": [
+   ".NET Agent Skills",
+   "OpenSpec",
+   "GitHub Spec-Kit"
+  ],
+  "i18n": {
+   "ja": {
+    "label": "Mermaid記述",
+    "note": "そもそも図を描く場合に、ほとんどが手を伸ばす記法。"
+   }
+  },
+  "note": "The notation almost everything reaches for when it draws at all."
+ },
+ {
+  "id": "flowchart",
+  "label": "Flowchart, activity diagram",
+  "src": "UML 2.5.1 / ISO 5807",
+  "n": 5,
+  "who": [
+   "drawio-skill",
+   "Basic Memory",
+   "cc-sdd",
+   "MoAI-ADK",
+   "Strands Agents"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md",
+   "https://github.com/basicmachines-co/basic-memory/blob/main/.agents/skills/infographics/references/prompt-blueprint.md",
+   "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/templates/specs/design.md",
+   "https://github.com/modu-ai/moai-adk/blob/main/.claude/agents/harness/hns-oss-docs-content-author-specialist.md",
+   "https://github.com/strands-agents/harness-sdk/blob/main/.agents/skills/docs-writer/SKILL.md"
+  ],
+  "self": [
+   ".NET Agent Skills",
+   "OpenSpec",
+   "GitHub Spec-Kit",
+   "Superpowers"
+  ],
+  "i18n": {
+   "ja": {
+    "label": "フローチャート・アクティビティ図"
+   }
+  }
+ },
+ {
+  "id": "openapi",
+  "label": "Interface specification",
+  "src": "OpenAPI 3.x",
+  "n": 5,
+  "who": [
+   "drawio-skill",
+   "cc-sdd",
+   "Inspect AI",
+   "Strix",
+   "Agentic Plugin Marketplace"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/toolbox.md",
+   "https://github.com/gotalab/cc-sdd/blob/main/.kiro/specs/customer-support-rag-backend-en/tasks.md",
+   "https://github.com/UKGovernmentBEIS/inspect_ai/blob/main/.agents/skills/land-ts-mono/SKILL.md",
+   "https://github.com/usestrix/strix/blob/main/skills/api-security-testing/SKILL.md",
+   "https://github.com/wshobson/agents/blob/main/plugins/api-scaffolding/agents/backend-architect.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "インタフェース仕様"
+   }
+  }
+ },
+ {
+  "id": "wireframe",
+  "label": "Wireframe, mockup",
+  "src": "no standard notation",
+  "n": 5,
+  "who": [
+   "drawio-skill",
+   "AI-DLC Workflows",
+   "Nimbalyst",
+   "Superpowers",
+   "PM Skills Marketplace"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/shapes.md",
+   "https://github.com/awslabs/aidlc-workflows/blob/main/core/agents/aidlc-composer-agent.md",
+   "https://github.com/nimbalyst/nimbalyst/blob/main/.claude/commands/design.md",
+   "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md",
+   "https://github.com/phuryn/pm-skills/blob/main/pm-execution/commands/write-stories.md"
+  ],
+  "self": [
+   "Inspect AI",
+   "Agentic Plugin Marketplace"
+  ],
+  "i18n": {
+   "ja": {
+    "label": "ワイヤーフレーム・モックアップ"
+   }
+  }
+ },
+ {
+  "id": "erd",
+  "label": "Entity relationship, table design",
+  "src": "IE / Chen notation",
+  "n": 4,
+  "who": [
+   "drawio-skill",
+   "AI-DLC Workflows",
+   "cc-sdd",
+   "Superpowers"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/diagram-types.md",
+   "https://github.com/awslabs/aidlc-workflows/blob/main/core/aidlc-common/stages/construction/functional-design.md",
+   "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/rules/design-principles.md",
+   "https://github.com/obra/superpowers/blob/main/skills/brainstorming/visual-companion.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "ER図・テーブル設計"
+   }
+  }
+ },
+ {
+  "id": "graphviz",
+  "label": "Graphviz DOT",
+  "src": "DOT",
+  "n": 3,
+  "who": [
+   "drawio-skill",
+   "Swarms",
+   "Superpowers"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md",
+   "https://github.com/kyegomez/swarms/blob/master/examples/guides/graphworkflow_guide/GETTING_STARTED.md",
+   "https://github.com/obra/superpowers/blob/main/skills/brainstorming/SKILL.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "Graphviz DOT"
+   }
+  }
+ },
+ {
+  "id": "class-diagram",
+  "label": "Class diagram",
+  "src": "UML 2.5.1",
+  "n": 2,
+  "who": [
+   "drawio-skill",
+   "cc-sdd"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/cookbook.md",
+   "https://github.com/gotalab/cc-sdd/blob/main/.kiro/specs/customer-support-rag-backend-en/design.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "クラス図"
+   }
+  }
+ },
+ {
+  "id": "sequence",
+  "label": "Sequence diagram",
+  "src": "UML 2.5.1",
+  "n": 2,
+  "who": [
+   "drawio-skill",
+   "cc-sdd"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/diagram-types.md",
+   "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/rules/design-principles.md"
+  ],
+  "self": [
+   "OpenSpec"
+  ],
+  "i18n": {
+   "ja": {
+    "label": "シーケンス図"
+   }
+  }
+ },
+ {
+  "id": "bpmn",
+  "label": "Business process diagram",
+  "src": "BPMN 2.0",
+  "n": 1,
+  "who": [
+   "drawio-skill"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "業務プロセス図"
+   }
+  }
+ },
+ {
+  "id": "c4",
+  "label": "C4 architecture view",
+  "src": "C4 model",
+  "n": 1,
+  "who": [
+   "drawio-skill"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/cookbook.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "C4アーキテクチャ図"
+   }
+  }
+ },
+ {
+  "id": "plantuml",
+  "label": "PlantUML source",
+  "src": "PlantUML",
+  "n": 1,
+  "who": [
+   "drawio-skill"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/SKILL.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "PlantUML記述"
+   }
+  }
+ },
+ {
+  "id": "state",
+  "label": "State machine, screen flow",
+  "src": "UML 2.5.1 state machine",
+  "n": 1,
+  "who": [
+   "drawio-skill"
+  ],
+  "ev": [
+   "https://github.com/Agents365-ai/drawio-skill/blob/main/skills/drawio-skill/references/mermaid-authoring.md"
+  ],
+  "self": [],
+  "i18n": {
+   "ja": {
+    "label": "状態遷移図・画面遷移図"
+   }
+  }
+ }
+]

@@ -1,0 +1,191 @@
+{
+ "entry": "Nimbalyst",
+ "slug": "nimbalyst/nimbalyst",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Create or open a document",
+   "l": "L4",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "open",
+      "document"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/AI_PROVIDER_TYPES.md",
+     "matched": [
+      "create"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Write in markdown",
+   "l": null,
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "markdown"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/commands/write-tests.md",
+     "matched": [
+      "write"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Use the AI assistant",
+   "l": "L1",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Accept/reject AI changes",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "accept",
+      "reject"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/commands/mychanges.md",
+     "matched": [
+      "changes"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Work in Agent Manager",
+   "l": "L7",
+   "who": "human",
+   "par": [
+    "session A",
+    "session B"
+   ],
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "work",
+      "agent",
+      "manager"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/e2e-runner.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/AI_PROVIDER_TYPES.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Search/resume sessions",
+   "l": "L7",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "search",
+      "resume",
+      "sessions"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/commands/analyze-sessions.md",
+     "matched": [
+      "sessions"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/commands/session-cleanup.md",
+     "matched": [
+      "sessions"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "34b14f33e48fd639d32c0f5eb7d77561bdccd2a4"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "<h1>Nimbalyst: Open-source visual workspace for building with Codex, Claude Code, OpenCode, and other coding agents. </h1><p><strong> Work on everything in one place: sessions, worktrees, tasks, docs, diagrams, mockups, commits, and code.</br> Visually editable. Deeply linked. </br>Free and MIT licensed. Desktop app for macOS, Windows, and Linux, with an iOS companion app.</p>\n<a href=\"https://docs.nimbalyst.com/\">Documentation</a> ·\n- **Visual editing of the agent's work.** WYSIWYG editors for markdown, mockups, Mermaid, Excalidraw, CSV, data models, and code in Monaco. You and the coding agent edit the same files.\n- **Red/green diff review.** Step through the agent's proposed edits in the rendered document and accept or reject each one.\n- **Parallel agent sessions.** Run several coding agents at once, each isolated in its own git worktree.\n- **Session kanban.** Track every session on a board. Search, resume, and link sessions to the files they touched.\n- **Task tracking.** Plans, bugs, features, and todos in trackers your agents read and update alongside you.\n- **Heterogeneous agents.** Codex and Claude Code side by side, plus OpenCode and GitHub Copilot in alpha and a Gemini provider.\n- **Git built in.** Branch and worktree management, staging, AI-drafted commits, and an embedded terminal.\n- **Extension SDK.** Every editor, including the built-in ones, goes through the same `EditorHost` contract, so an editor you build is first-class. Ask your agent to build one for a file type we do not ship.\n- **Plain files on disk.** Content and status in markdown, workflows in slash commands, everything in your git repo. No proprietary store to migrate out of.\n- **iOS companion.** See which agents need you, reply by text or voice, swipe through diffs, queue the next task, and get a push when an agent is waiting."
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/e2e-runner.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/analyze-sessions.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/mychanges.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/session-cleanup.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/write-tests.md"
+  }
+ ]
+}

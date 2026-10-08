@@ -1,0 +1,201 @@
+{
+ "slug": "rtk-ai/rtk",
+ "n": "RTK (Rust Token Killer)",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "ephemeral-path",
+  "lifecycle": "ephemeral",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "Apache-2.0",
+ "stars": 82619,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "CLI proxy that compresses shell command output before it reaches the model, intervening transparently through hooks.",
+ "art": "none (output compression path)",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  3,
+  2,
+  2,
+  1,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "none",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "part",
+  "sf.reach": "none",
+  "sf.stop": "part",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".claude/commands/clean-worktree.md",
+   "fs.example": ".claude/skills/issue-triage/templates/issue-comment.md",
+   "rl.tests": "hooks/hermes/tests/__init__.py",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "openclaw/package.json",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T2 introduced, controls log part",
+   "fx.exit": "artifact.format ephemeral-path: a path that exists for the run; nothing durable survives it",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Gemini CLI, Cursor, Windsurf, Cline, Roo Code, Kilo Code, OpenCode, GitHub Copilot, Codex CLI (README.md)",
+   "ic.surface": "Surface: cli (src/main.rs)",
+   "ic.help": "a command-line parser that prints its own usage: Cargo.toml (clap)",
+   "ic.error": "a documented flag that gates or previews the action: docs/guide/getting-started/quick-start.md (--dry-run)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/release.yml (sha256sum)",
+   "fx.install": "an install that does not change the machine globally: README.md (bunx )",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: src/main.rs (SIGINT)",
+   "sf.warn": "the irreversible step is both warned about and gated: docs/usage/AUDIT_GUIDE.md (Permanently delete)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 4
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "a harness with a hook mechanism",
+  "the target command being on the supported list"
+ ],
+ "anti": [
+  "reads through built-in tools that bypass hooks",
+  "audit work that requires complete output"
+ ],
+ "th": [
+  "T2"
+ ],
+ "ctrl": {
+  "log": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Rewriting Bash commands is a high-privilege intervention point. The failure-path tee that writes raw output to disk can contain secrets",
+ "sources": [
+  {
+   "url": "https://github.com/rtk-ai/rtk",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "RTK (Rust Token Killer)",
+   "sum": "シェルコマンドの出力をモデルに渡す前に圧縮するCLIプロキシ。フックで透過的に介入する。",
+   "art": "なし（出力の圧縮経路）",
+   "pre": [
+    "フック機構を持つハーネス",
+    "対象コマンドが対応リストにあること"
+   ],
+   "anti": [
+    "フックを通らない組み込みツール経由の読み取り",
+    "出力の完全性が必要な監査用途"
+   ],
+   "gnote": "Bashコマンドを書き換える介入点なので権限は大きい。失敗時に生出力をディスクへ残すteeは秘匿情報を含みうる",
+   "flow": {
+    "steps": [
+     "エージェントがコマンドを実行",
+     "フックがRTKへ差し替え",
+     "RTKが実コマンドを実行",
+     "出力を圧縮",
+     "モデルへ返す"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {},
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Agent runs a command",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "Hook redirects it to RTK",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "RTK runs the real command",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Compress the output",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Return it to the model",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

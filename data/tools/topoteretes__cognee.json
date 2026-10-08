@@ -1,0 +1,238 @@
+{
+ "slug": "topoteretes/cognee",
+ "n": "Cognee",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "sqlite",
+    "ev": "pyproject.toml (aiosqlite)"
+   },
+   {
+    "id": "postgres",
+    "ev": "pyproject.toml (psycopg)"
+   },
+   {
+    "id": "redis",
+    "ev": "pyproject.toml (redis)"
+   },
+   {
+    "id": "neo4j",
+    "ev": "pyproject.toml (neo4j)"
+   },
+   {
+    "id": "kuzu",
+    "ev": "pyproject.toml (kuzu)"
+   },
+   {
+    "id": "lancedb",
+    "ev": "pyproject.toml (lancedb)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 31541,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Ingests documents of any format and builds a self-hosted knowledge graph from them, so retrieval traverses relations instead of ranking chunks.",
+ "art": "knowledge graph and vector index (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  0,
+  1,
+  0,
+  0,
+  0,
+  3
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "part",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude/skills/cognee-cli/SKILL.md",
+   "fs.example": "cognee/cli/samples/__init__.py",
+   "rl.tests": "catalog/tests/test_loader.py",
+   "rl.ci": ".github/workflows/basic_tests.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "cognee-mcp/pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T1/T6 introduced, controls memval none, log part",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Cline (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: cognee-mcp/src/server.py (argparse)",
+   "rl.resume": "recovering is described in prose, not implemented: SESSION_POSTGRES_CACHE_PLAN.md (checkpoint)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/dev_canary_release.yml (attest-build-provenance)",
+   "fx.install": "an install that does not change the machine globally: docs/docker-colima-setup.md (docker run)",
+   "fx.byo": "the provider is the operator's choice: OPENAI, OLLAMA, LITELLM, BEDROCK, LMSTUDIO, VLLM (README.md)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a graph or vector store to run behind it",
+  "enough material that traversal beats reading the files"
+ ],
+ "anti": [
+  "a repository small enough to read directly, where the index costs more than it saves",
+  "teams that cannot operate another datastore"
+ ],
+ "th": [
+  "T1",
+  "T6"
+ ],
+ "ctrl": {
+  "memval": "none",
+  "log": "part",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Ingesting arbitrary documents into a graph an agent then trusts is the memory-poisoning path in its most direct form: whoever can add a document can add a belief. No validation step on write is recorded.",
+ "sources": [
+  {
+   "url": "https://github.com/topoteretes/cognee",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/topoteretes/cognee/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Cognee",
+   "sum": "任意形式の文書を取り込み、自己ホストの知識グラフを構築する。チャンクを順位付けるのではなく関係を辿って検索する。",
+   "art": "知識グラフとベクトルインデックス（永続）",
+   "pre": [
+    "背後で動かすグラフまたはベクトルストア",
+    "ファイルを直接読むより走査が勝つだけの分量"
+   ],
+   "anti": [
+    "直接読める規模のリポジトリ。索引のほうが高くつく",
+    "データストアをもう1つ運用できないチーム"
+   ],
+   "gnote": "任意の文書をグラフに取り込み、エージェントがそれを信じるという構図は、記憶汚染の最も直接的な経路である。文書を足せる者が信念を足せる。書き込み時の検証手順は記録されていない。",
+   "flow": {
+    "steps": [
+     "ドキュメントを取り込む",
+     "エンティティを抽出",
+     "ナレッジグラフを構築",
+     "問い合わせ時に辿る"
+    ],
+    "back": [
+     "新しいドキュメント"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "data-model"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Ingest the documents",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Extract the entities",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Build the knowledge graph",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Traverse it on query",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 0,
+    "s": "new documents"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

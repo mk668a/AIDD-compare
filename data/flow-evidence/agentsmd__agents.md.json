@@ -1,0 +1,43 @@
+{
+ "entry": "AGENTS.md",
+ "slug": "agentsmd/agents.md",
+ "flow": {
+  "basis": "derived",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 3,
+  "with_evidence": 0
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Place AGENTS.md",
+   "l": "L2",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Harness discovers it",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Instructions enter context",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "6ae22720966e9cca6b2c2dd0780fb7265a87a46c"
+ },
+ "evidence": []
+}

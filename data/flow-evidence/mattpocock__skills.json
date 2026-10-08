@@ -1,0 +1,182 @@
+{
+ "entry": "Skills for Real Engineers",
+ "slug": "mattpocock/skills",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/engineering/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Install the skills as source",
+   "l": "L2",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/deprecated/README.md",
+     "matched": [
+      "skills"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/README.md",
+     "matched": [
+      "skills"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/ask-matt/PHASE-BOUNDARIES.md",
+     "matched": [
+      "skills"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "A skill activates on the task",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/deprecated/README.md",
+     "matched": [
+      "skill"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/README.md",
+     "matched": [
+      "skill"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/ask-matt/PHASE-BOUNDARIES.md",
+     "matched": [
+      "skill"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Domain modeling or design",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/engineering/codebase-design/DEEPENING.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/codebase-design/DESIGN-IT-TWICE.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/codebase-design/SKILL.md",
+     "matched": [
+      "design"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "TDD",
+   "l": "L5",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Code review",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/engineering/code-review/SKILL.md",
+     "matched": [
+      "code",
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/code-review/agents/openai.yaml",
+     "matched": [
+      "code",
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/engineering/codebase-design/DEEPENING.md",
+     "matched": [
+      "code"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "3cca18b368ae95cdbdebbff572ccafa662551015"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "skills/deprecated/README.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/engineering/README.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/engineering/ask-matt/PHASE-BOUNDARIES.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/engineering/code-review/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/engineering/code-review/agents/openai.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/engineering/codebase-design/DEEPENING.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/engineering/codebase-design/DESIGN-IT-TWICE.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/engineering/codebase-design/SKILL.md"
+  }
+ ]
+}

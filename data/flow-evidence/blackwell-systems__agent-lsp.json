@@ -1,0 +1,255 @@
+{
+ "entry": "agent-lsp",
+ "slug": "blackwell-systems/agent-lsp",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "blast_radius impact analysis",
+   "l": "L1",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "analysis"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/lsp-impact/SKILL.md",
+     "matched": [
+      "impact"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/lsp-impact/references/patterns.md",
+     "matched": [
+      "impact"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "preview_edit / simulate_edit",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "preview",
+      "edit"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/lsp-edit-export/SKILL.md",
+     "matched": [
+      "edit"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/lsp-edit-export/references/patterns.md",
+     "matched": [
+      "edit"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Apply edit to disk",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "edit"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/lsp-edit-export/SKILL.md",
+     "matched": [
+      "edit"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/lsp-edit-export/references/patterns.md",
+     "matched": [
+      "edit"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Verify build",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "verify"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/lsp-verify/SKILL.md",
+     "matched": [
+      "verify"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "verify"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Run correlated tests",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/lsp-test-correlation/SKILL.md",
+     "matched": [
+      "correlated"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "tests"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "c7d6a8e72e42a10bbfa8c53a8f407ab78f3b612b"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "  <img src=\"assets/social-preview.png\" alt=\"agent-lsp\" width=\"600\">\n**Not an LSP server** — it's an orchestration layer that manages language servers and exposes batch operations, speculative editing, and multi-step workflows via MCP tools."
+  },
+  {
+   "kind": "path",
+   "value": "skills/lsp-edit-export/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/lsp-edit-export/references/patterns.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/lsp-impact/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/lsp-impact/references/patterns.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/lsp-test-correlation/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/lsp-verify/SKILL.md"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. Install agent-lsp"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. Install language servers"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "3. Verify setup"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "4. Configure your AI tool"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "5. Install skills"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "6. Allow tool permissions (Claude Code)"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "7. Start working"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`/lsp-refactor` → impact analysis → preview → apply → verify build → run tests"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`/lsp-safe-edit` → preview → diagnostic diff → apply if safe"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`/lsp-verify` → LSP diagnostics → build → test suite"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`/lsp-docs` | Three-tier documentation: hover → offline toolchain → source |"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`/lsp-refactor` | End-to-end refactor: blast-radius → preview → apply → verify → test |"
+  }
+ ]
+}

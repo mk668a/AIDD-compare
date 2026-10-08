@@ -1,0 +1,228 @@
+{
+ "entry": "MemPalace",
+ "slug": "MemPalace/mempalace",
+ "flow": {
+  "basis": "repo",
+  "path": ".claude-plugin/commands/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "init the palace",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".antigravity-plugin/rules/mempalace-recall.md",
+     "matched": [
+      "palace"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".antigravity-plugin/skills/mempalace-recall/SKILL.md",
+     "matched": [
+      "palace"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".antigravity-plugin/skills/mempalace/SKILL.md",
+     "matched": [
+      "palace"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "mine the history verbatim",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude-plugin/commands/mine.md",
+     "matched": [
+      "mine"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".codex-plugin/skills/mine/SKILL.md",
+     "matched": [
+      "mine"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "commands/mempalace-mine.md",
+     "matched": [
+      "mine"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Chunk into drawers",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "docs/CLOSETS.md",
+     "matched": [
+      "drawers"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/format-coverage.md",
+     "matched": [
+      "chunk",
+      "drawers"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "search locally",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude-plugin/commands/search.md",
+     "matched": [
+      "search"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".codex-plugin/skills/search/SKILL.md",
+     "matched": [
+      "search"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "commands/mempalace-search.md",
+     "matched": [
+      "search"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Recall into context",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".antigravity-plugin/rules/mempalace-recall.md",
+     "matched": [
+      "recall"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".antigravity-plugin/skills/mempalace-recall/SKILL.md",
+     "matched": [
+      "recall"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude-plugin/skills/mempalace-recall/SKILL.md",
+     "matched": [
+      "recall"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "develop",
+  "tree_sha": "d9f059076c866fa6f29195679d75712436986024"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".antigravity-plugin/rules/mempalace-recall.md"
+  },
+  {
+   "kind": "path",
+   "value": ".antigravity-plugin/skills/mempalace-recall/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".antigravity-plugin/skills/mempalace/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude-plugin/commands/mine.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude-plugin/commands/search.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude-plugin/skills/mempalace-recall/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".codex-plugin/skills/mine/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".codex-plugin/skills/search/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "commands/mempalace-mine.md"
+  },
+  {
+   "kind": "path",
+   "value": "commands/mempalace-search.md"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/CLOSETS.md",
+   "value": "top closet hits → parse `→drawer_id_a,drawer_id_b` pointers"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/format-coverage.md",
+   "value": "Missing MarkItDown (any of pdf/docx/pptx/xlsx/epub) → `SKIP_NO_MARKITDOWN` → log: `pip install markitdown`"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/format-coverage.md",
+   "value": "Missing striprtf (any `.rtf`) → `SKIP_NO_STRIPRTF` → log: `pip install striprtf`"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/format-coverage.md",
+   "value": "PDF on disk → (read bytes into memory) → MarkItDown → Markdown text → existing chunker → drawers in ChromaDB"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/format-coverage.md",
+   "value": "8 | Dirty encoding in extracted text | (recovered) | `decode_robust()` falls back UTF-8 → CP1252 → UTF-8-with-replace; never raises |"
+  }
+ ]
+}

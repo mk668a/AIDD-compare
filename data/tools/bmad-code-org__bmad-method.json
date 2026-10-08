@@ -1,0 +1,242 @@
+{
+ "slug": "bmad-code-org/BMAD-METHOD",
+ "n": "BMAD-METHOD",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L7"
+ ],
+ "dom": [
+  "code",
+  "ui"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "one document per stage, shaped as a brief a person reviews between stages and an agent consumes as the next stage s input",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/bmad-code-org/BMAD-METHOD/blob/main/skills/bmad-architecture/SKILL.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 53893,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Heavyweight framework running planning through implementation across many role-separated agents.",
+ "art": "documents per stage (persistent)",
+ "tok": "heavy",
+ "p": [
+  3,
+  3,
+  2,
+  2,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 5,
+  "extend": 2,
+  "restructure": 4,
+  "rebuild": 5,
+  "replace": 4,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "skills/bmad-create-epics-and-stories/templates/epics-template.md",
+   "rl.tests": "docs-site/test/test-rehype-plugins.mjs",
+   "rl.ci": ".github/workflows/quality.yaml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor (README.md)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (README.md (npx skills add; /plugin marketplace add bmad-code-org/bmad-plugins))",
+   "ic.help": "a command-line parser that prints its own usage: skills/bmad/scripts/setup.py (argparse)",
+   "ic.error": "a documented flag that gates or previews the action: docs/fr/how-to/install-bmad.md (--yes)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 5,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a certain scale and duration",
+  "complexity where role separation earns its cost"
+ ],
+ "anti": [
+  "small solo projects",
+  "trivial changes",
+  "cases where you want a quick trial"
+ ],
+ "th": [
+  "T6",
+  "T13",
+  "T14",
+  "T17"
+ ],
+ "ctrl": {},
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "GitHub does not detect it, but the LICENSE file is MIT",
+ "sources": [
+  {
+   "url": "https://github.com/bmad-code-org/BMAD-METHOD",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "BMAD-METHOD",
+   "sum": "役割を分けた多数のエージェントで企画から実装まで通す重量級フレームワーク。",
+   "art": "工程ごとの文書群（永続）",
+   "pre": [
+    "ある程度の規模と期間",
+    "役割分担が意味を持つ複雑さ"
+   ],
+   "anti": [
+    "個人の小規模プロジェクト",
+    "些細な変更",
+    "短時間で試したい場合"
+   ],
+   "gnote": "GitHubは検出しないがLICENSE実体はMIT",
+   "ui_ux_note": "UX Expertロールとfront-end-spec.mdを持つ。設計はするが評価しない＝サイクルが開いている。",
+   "flow": {
+    "steps": [
+     "アナリストがブリーフ",
+     "PMがPRDを書く",
+     "アーキテクトが設計",
+     "エピックとストーリー",
+     "開発が実装",
+     "コードレビュー"
+    ],
+    "back": [
+     "レビュー指摘"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": "skills/bmad-advanced-elicitation/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "behaviour",
+  "screen-flow"
+ ],
+ "spec_unit": "phase-document",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Analyst brief",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "PM writes the PRD",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Architect designs",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Epics and stories",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Dev implements",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Code review",
+    "l": "L5",
+    "who": "model",
+    "gate": true
+   }
+  ],
+  "back": [
+   {
+    "from": 5,
+    "to": 4,
+    "s": "review findings"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "ui_ux": {
+  "hcd_activities": [
+   "requirements",
+   "design"
+  ],
+  "artifact": "front-end-spec.md and UI generation prompts",
+  "feedback_channel": "none",
+  "handoff": [
+   "external UI generators"
+  ],
+  "a11y_standard": "none",
+  "note": "Designs the UI but never observes the result, so the ISO 9241-210 cycle stays open. Source verification pending."
+ }
+}

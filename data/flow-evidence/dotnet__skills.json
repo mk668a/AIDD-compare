@@ -1,0 +1,186 @@
+{
+ "entry": ".NET Agent Skills",
+ "slug": "dotnet/skills",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "sequence",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Add repo as plugin marketplace",
+   "l": "L1",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "repo",
+      "plugin"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/plugin-versioning-tests.yml",
+     "matched": [
+      "plugin"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/dotnet-advanced/skills/csharp-scripts/SKILL.md",
+     "matched": [
+      "plugin"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Install specific plugin",
+   "l": "L1",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "specific",
+      "plugin"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/plugin-versioning-tests.yml",
+     "matched": [
+      "plugin"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/dotnet-advanced/skills/csharp-scripts/SKILL.md",
+     "matched": [
+      "plugin"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Skill activates on task",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "skill",
+      "activates",
+      "task"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/authoring-github-workflows/SKILL.md",
+     "matched": [
+      "skill"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/create-custom-agent/SKILL.md",
+     "matched": [
+      "skill"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Agent follows skill guidance",
+   "l": "L2",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "agent",
+      "skill"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/authoring-github-workflows/SKILL.md",
+     "matched": [
+      "agent",
+      "skill"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/create-custom-agent/SKILL.md",
+     "matched": [
+      "agent",
+      "skill"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Dashboard tracks pass/token rates",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "dashboard",
+      "pass",
+      "token",
+      "rates"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "ac8f41264bdd557e58924a3110eea8e0917dcf4d"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "# .NET Agent Skills\n[![Dashboard](https://github.com/dotnet/skills/actions/workflows/pages/pages-build-deployment/badge.svg)](https://dotnet.github.io/skills/)\nThis repository contains the .NET team's curated set of core skills and custom agents for coding agents. For information about the Agent Skills standard, see [agentskills.io](https://agentskills.io).\n> **Compare skill value:** [Open the Skill Value dashboard](https://dotnet.github.io/skills/)\n> See token use, elapsed time, activation, and not-passed rates by plugin, skill,\n| Plugin | Description |\n| [dotnet](plugins/dotnet/) | C# language server (LSP) integration for coding agents and high-level .NET development skills. |\n| [dotnet-advanced](plugins/dotnet-advanced/) | Collection of .NET skills for handling specific .NET tasks for special scenarios. |\n| [dotnet-data](plugins/dotnet-data/) | Skills for .NET data access and Entity Framework related tasks. |\n| [dotnet-diag](plugins/dotnet-diag/) | Skills for .NET performance investigations, debugging, and incident analysis. |\n| [dotnet-msbuild](plugins/dotnet-msbuild/) | Comprehensive MSBuild and .NET build skills: failure diagnosis, performance optimization, code quality, and modernization. |\n| [dotnet-nuget](plugins/dotnet-nuget/) | NuGet and .NET package management: dependency management and modernization. |\n| [dotnet-upgrade](plugins/dotnet-upgrade/) | Skills for migrating and upgrading .NET projects across framework versions, language features, and compatibility targets. |\n| [dotnet-maui](plugins/dotnet-maui/) | Skills for .NET MAUI development: environment setup, diagnostics, and troubleshooting. |\n| [dotnet-ai](plugins/dotnet-ai/) | AI and ML skills for .NET: technology selection, LLM integration, agentic workflows, RAG pipelines, MCP, and classic ML with ML.NET. |\n| [dotnet-template-engine](plugins/dotnet-template-engine/) | .NET Template Engine skills: template discovery, project scaffolding, and template authoring. |\n| [dotnet-test](plugins/dotnet-test/) | Skills for running, generating, analyzing, and improving .NET tests: test execution, filtering, platform detection, coverage, testability, and MSTest workflows. |\n| [dotnet-test-migration](plugins/dotnet-test-migration/) | Skills and an orchestrator agent for migrating .NET test frameworks and platforms: M"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/authoring-github-workflows/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/create-custom-agent/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/plugin-versioning-tests.yml"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/dotnet-advanced/skills/csharp-scripts/SKILL.md"
+  }
+ ]
+}

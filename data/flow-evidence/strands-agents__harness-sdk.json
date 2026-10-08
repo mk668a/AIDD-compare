@@ -1,0 +1,110 @@
+{
+ "entry": "Strands Agents",
+ "slug": "strands-agents/harness-sdk",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Set the turn and token budget",
+   "l": "L1",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "site/docs/examples/deploy_to_eks/chart/templates/poddisruptionbudget.yaml",
+     "matched": [
+      "budget"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Model turn",
+   "l": null,
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Tool call",
+   "l": "L1",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Check the stop reason",
+   "l": "L6",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": ".github/workflows/python-check-markdown-links.yml",
+     "matched": [
+      "check"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/typescript-ts-check.yml",
+     "matched": [
+      "check"
+     ]
+    },
+    {
+     "kind": "yaml-step",
+     "source": ".github/workflows/auto-strands-review.yml",
+     "matched": [
+      "check"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Cancel or continue",
+   "l": "L6",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e3f3ee49d4f5e1f94bc489df6f8603ce26442c31"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".github/workflows/auto-strands-review.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/python-check-markdown-links.yml"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/typescript-ts-check.yml"
+  },
+  {
+   "kind": "path",
+   "value": "site/docs/examples/deploy_to_eks/chart/templates/poddisruptionbudget.yaml"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/auto-strands-review.yml",
+   "value": "Check Authori"
+  }
+ ]
+}

@@ -1,0 +1,221 @@
+{
+ "entry": "skills CLI",
+ "slug": "vercel-labs/skills",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/find-skills/SKILL.md",
+  "kind": "sequence",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Find a skill",
+   "l": "L2",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/find-skills/SKILL.md",
+     "matched": [
+      "find",
+      "skill"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/find-skills/SKILL.md",
+     "matched": [
+      "find",
+      "skill"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "skills/find-skills/SKILL.md",
+     "matched": [
+      "find",
+      "skill"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Install it into the project",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/find-skills/SKILL.md",
+     "matched": [
+      "install"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "skills/find-skills/SKILL.md",
+     "matched": [
+      "install"
+     ]
+    },
+    {
+     "kind": "yaml-step",
+     "source": ".github/workflows/agents.yml",
+     "matched": [
+      "install"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Agent loads it",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/find-skills/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/agents.yml",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Run the agent",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "skills/find-skills/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/agents.yml",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "435076e78988e1e6ec40d00b0b1d76bdbbc5419a"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "skills/find-skills/SKILL.md",
+   "value": "name: find-skills\ndescription: Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.\n# Find Skills\nThis skill helps you discover and install skills from the open agent skills ecosystem.\n## When to Use This Skill\nUse this skill when the user:\n- Asks \"how do I do X\" where X might be a common task with an existing skill\n- Says \"find a skill for X\" or \"is there a skill for X\"\n- Expresses interest in extending agent capabilities\n## What is the Skills CLI?\nThe Skills CLI (`npx skills`) is the package manager for the open agent skills ecosystem. Skills are modular packages that extend agent capabilities with specialized knowledge, workflows, and tools.\n- `npx skills find [query] [--owner <owner>]` - Search for skills interactively or by keyword, optionally scoped to a GitHub owner\n- `npx skills add <package>` - Install a skill from GitHub or other sources\n- `npx skills update` - Update all installed skills\n**Browse skills at:** https://skills.sh/\n## How to Help Users Find Skills\n3. Whether this is a common enough task that a skill likely exists\nBefore running a CLI search, check the [skills.sh leaderboard](https://skills.sh/) to see if a well-known skill already exists for the domain. The leaderboard ranks skills by total installs, surfacing the most popular and battle-tested options.\nFor example, top skills for web development include:\n- `vercel-labs/agent-skills` — React, Next.js, web design (100K+ installs each)\n- `anthropics/skills` — Frontend design, document processing (100K+ installs)\n### Step 3: Search for Skills\nIf the leaderboard doesn't cover the user's need, run the find command:\nnpx skills find [query] [--owner "
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/agents.yml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/find-skills/SKILL.md"
+  },
+  {
+   "kind": "heading",
+   "source": "skills/find-skills/SKILL.md",
+   "value": "1. Understand What They Need"
+  },
+  {
+   "kind": "heading",
+   "source": "skills/find-skills/SKILL.md",
+   "value": "2. Check the Leaderboard First"
+  },
+  {
+   "kind": "heading",
+   "source": "skills/find-skills/SKILL.md",
+   "value": "3. Search for Skills"
+  },
+  {
+   "kind": "heading",
+   "source": "skills/find-skills/SKILL.md",
+   "value": "4. Verify Quality Before Recommending"
+  },
+  {
+   "kind": "heading",
+   "source": "skills/find-skills/SKILL.md",
+   "value": "5. Present Options to the User"
+  },
+  {
+   "kind": "heading",
+   "source": "skills/find-skills/SKILL.md",
+   "value": "6. Offer to Install"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`-a, --agent <agents...>` | <!-- agent-names:start -->Target specific agents (e.g., `claude-code`, `codex`). See [Supported Agents](#supported-agents)<!-- agent-names:end --> |"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/agents.yml",
+   "value": "Checkout repository"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/agents.yml",
+   "value": "Setup pnpm"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/agents.yml",
+   "value": "Install dependencies"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/agents.yml",
+   "value": "Checkout repository"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/agents.yml",
+   "value": "Setup pnpm"
+  },
+  {
+   "kind": "yaml-step",
+   "source": ".github/workflows/agents.yml",
+   "value": "Install dependencies"
+  }
+ ]
+}

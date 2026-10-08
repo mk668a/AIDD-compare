@@ -1,0 +1,58 @@
+{
+ "entry": "Supermemory",
+ "slug": "supermemoryai/supermemory",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/supermemory/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 0
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Ingest a conversation",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Extract the facts",
+   "l": "L3",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Update the profile",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Reconcile contradictions",
+   "l": "L3",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Expire what is stale",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "4d8a4ebfddadc3430f7f59a752cd374670833f50"
+ },
+ "evidence": []
+}

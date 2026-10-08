@@ -1,0 +1,271 @@
+{
+ "entry": "SkillSpector",
+ "slug": "NVIDIA/SkillSpector",
+ "flow": {
+  "basis": "repo",
+  "path": "docs/DEVELOPMENT.md",
+  "kind": "sequence",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "resolve_input",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "resolve",
+      "input"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "resolve",
+      "input"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "resolve",
+      "input"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "build_context",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "build",
+      "context"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "build",
+      "context"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "build",
+      "context"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Analyzers in parallel",
+   "l": "L5",
+   "who": "tool",
+   "par": [
+    "static",
+    "behavioural",
+    "mcp",
+    "semantic"
+   ],
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "analyzers",
+      "parallel"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "analyzers",
+      "parallel"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "analyzers"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "meta_analyzer",
+   "l": "L5",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "meta",
+      "analyzer"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "meta",
+      "analyzer"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "analyzer"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "SAFE / CAUTION / DO_NOT_INSTALL",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "docs/DEVELOPMENT.md",
+     "matched": [
+      "install"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "safe",
+      "caution",
+      "install"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "7805bb94843d91cb9937f57264ca52642164499b"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "- **LangGraph dev server** — run `make langgraph-dev` to start the dev server and open **LangGraph Studio** in your browser. In Studio you can view the graph and run it with custom inputs (e.g. `skill_path`, `output_format`, `use_llm`).\n**Data flow (one sentence):** `resolve_input` (input_path or skill_path → `skill_path`, optional `temp_dir_for_cleanup`) → build context → parallel analyzers → meta_analyzer (LLM filter/enrich when `use_llm` is True) → report (SARIF + risk score + `report_body` from `output_format`). Caller cleans up `temp_dir_for_cleanup` after invoke when set.\n**To get started:** create and activate a virtual environment, then install. All Makefile targets assume the venv is already created and activated.\nmake install-dev\n- **Python**: 3.12+ (see [pyproject.toml](../pyproject.toml)). `make install` and `make install-dev` use **uv** if available (`uv sync` / `uv sync --all-extras`), otherwise **pip** (`pip install -e .` / `pip install -e \".[dev]\"`). You must create and activate the virtual environment yourself before running any make target.\n  - **`SKILLSPECTOR_PROVIDER`**: Selects the active LLM provider — `openai`, `anthropic`, or `nv_build`. Defaults to `nv_build` when unset."
+  },
+  {
+   "kind": "mermaid",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "flowchart LR\n  START --> resolve_input\n  resolve_input --> build_context\n  build_context --> analyzers\n  subgraph analyzers [Analyzers — run in parallel]\n    static_all[static_*]\n    behavioral[behavioral_*]\n    mcp[mcp_*]\n    semantic[semantic_*]\n  end\n  analyzers --> meta_analyzer\n  meta_analyzer --> report\n  report --> END"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "1. Overview"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "2. Prerequisites and setup"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "3. Make targets"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "4. Architecture and graph structure"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "5. Package layout"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "6. Running the workflow"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "7. Testing"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "8. Data models"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "9. Adding or modifying analyzer nodes"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "10. Environment and configuration"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "11. Linting and formatting"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "12. Quick reference"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. Static Analysis"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. LLM Semantic Analysis (Optional)"
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/DEVELOPMENT.md",
+   "value": "There are no conditional edges: after `resolve_input` → `build_context`, all analyzer nodes run in parallel (fan-out); they all feed into `meta_analyzer` (fan-in), then `report` → "
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`risk_assessment.recommendation` ∈ `SAFE | CAUTION | DO_NOT_INSTALL`, mapped from severity: `LOW → SAFE`, `MEDIUM → CAUTION`, `HIGH`/`CRITICAL → DO_NOT_INSTALL`."
+  }
+ ]
+}

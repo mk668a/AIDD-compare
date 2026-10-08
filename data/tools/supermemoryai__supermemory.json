@@ -1,0 +1,223 @@
+{
+ "slug": "supermemoryai/supermemory",
+ "n": "Supermemory",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "postgres",
+    "ev": "package.json (\"pg\")"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 31139,
+ "push": "2026-10-06",
+ "conf": "ok",
+ "exec": false,
+ "sum": "A memory engine that extracts facts from conversations, keeps profiles, reconciles contradictions and expires what is stale, rather than storing everything and searching later.",
+ "art": "extracted facts, profiles and context index (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  1,
+  0,
+  0,
+  0,
+  3
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 2,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "none",
+  "pe.budget": "doc",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "part",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "packages/pipecat-sdk-python/Agents.md",
+   "rl.tests": "packages/agent-framework-python/tests/__init__.py",
+   "rl.ci": ".github/workflows/ci-python.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "apps/docs/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (Agent Skills)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T1/T6 introduced, controls memval none, log part",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "pe.budget": "a ceiling named in the documentation only: apps/docs/integrations/claude-memory.mdx (max_tokens:)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, OpenCode, Cursor, Windsurf, OpenAI Codex, Codex CLI (README.md)",
+   "ic.surface": "Surface: library (README.md (npm install supermemory or pip install supermemory; import Supermemory))",
+   "se.attest": "signs or attests what it publishes: .github/workflows/publish-ai-sdk.yml (npm publish --access public --provenance)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA, BASEURL (README.md)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 3,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "somewhere to run it, locally or on the edge platform it targets",
+  "acceptance that an extractor decides what is worth keeping"
+ ],
+ "anti": [
+  "cases where the raw record must be kept, since extraction discards",
+  "work that fits in one session"
+ ],
+ "th": [
+  "T1",
+  "T6"
+ ],
+ "ctrl": {
+  "memval": "none",
+  "log": "part",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Extraction and expiry are the opposite bet from verbatim storage: smaller and faster, at the cost of trusting a model to decide what mattered. Contradiction handling is a real distinction at this layer, where most stores simply accumulate.",
+ "sources": [
+  {
+   "url": "https://github.com/supermemoryai/supermemory",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/supermemoryai/supermemory/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Supermemory",
+   "sum": "会話から事実を抽出し、プロフィールを保ち、矛盾を調停し、古びたものを失効させる記憶エンジン。全部を貯めて後から探す方式ではない。",
+   "art": "抽出された事実・プロフィール・文脈索引（永続）",
+   "pre": [
+    "動かす場所。ローカルか、想定するエッジ基盤",
+    "何を残すかを抽出器が決めることの受け入れ"
+   ],
+   "anti": [
+    "生の記録を保持しなければならない場面。抽出は捨てる",
+    "1セッションで完結する作業"
+   ],
+   "gnote": "抽出と失効は逐語保存の逆の賭けである。小さく速い代わりに、何が重要だったかの判断をモデルに委ねる。矛盾の扱いはこの層では実質的な差別化点で、多くのストアはただ積むだけである。",
+   "flow": {
+    "steps": [
+     "会話を取り込む",
+     "事実を抽出",
+     "プロファイルを更新",
+     "矛盾を突き合わせる",
+     "古いものを失効させる"
+    ],
+    "back": [
+     "次の会話"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agent_skills": "skills/supermemory/README.md"
+  },
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/supermemory/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Ingest a conversation",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Extract the facts",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Update the profile",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Reconcile contradictions",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Expire what is stale",
+    "l": "L3",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "next conversation"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

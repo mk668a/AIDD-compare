@@ -1,0 +1,268 @@
+{
+ "entry": "PM Skills Marketplace",
+ "slug": "phuryn/pm-skills",
+ "flow": {
+  "basis": "repo",
+  "path": "pm-product-discovery/commands/discover.md",
+  "kind": "sequence",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 7,
+  "with_evidence": 7
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "State the discovery context",
+   "l": "L4",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "discovery",
+      "context"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "discovery",
+      "context"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "discovery"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Brainstorm ideas",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "brainstorm",
+      "ideas"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "pm-execution/skills/brainstorm-okrs/SKILL.md",
+     "matched": [
+      "brainstorm"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "brainstorm",
+      "ideas"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Pick ideas to stress-test",
+   "l": "L4",
+   "who": "human",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "pick",
+      "ideas",
+      "stress",
+      "test"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/tests.yml",
+     "matched": [
+      "test"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "pm-ai-shipping/commands/derive-tests.md",
+     "matched": [
+      "test"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Identify assumptions",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "identify",
+      "assumptions"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "identify",
+      "assumptions"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "assumptions"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Prioritize assumptions",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "prioritize",
+      "assumptions"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "pm-execution/skills/prioritization-frameworks/SKILL.md",
+     "matched": [
+      "prioritize"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "assumptions"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Design experiments",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "design",
+      "experiments"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "design",
+      "experiments"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "experiments"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "s": "Write the discovery plan",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "pm-product-discovery/commands/discover.md",
+     "matched": [
+      "discovery"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "pm-data-analytics/commands/write-query.md",
+     "matched": [
+      "write"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "pm-execution/commands/plan-okrs.md",
+     "matched": [
+      "plan"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "8607e3b077817f89bf4a9b623246219734ac3be0"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "pm-product-discovery/commands/discover.md",
+   "value": "description: Run a full product discovery cycle — from ideation through assumption mapping to experiment design\n# /discover -- Full Discovery Cycle\nRun a structured product discovery process that moves from divergent thinking to focused validation. This command chains multiple skills into a single end-to-end workflow.\n### Step 1: Understand the Discovery Context\n- **Existing product** — continuous discovery on a known product with real users\n- **New product** — initial discovery for a concept without validated demand\n- What decisions will this discovery inform? (build/kill, prioritize, pivot)\nAccept context from uploaded files (research, PRDs, transcripts, data), links, or conversation.\n### Step 2: Brainstorm Ideas (Divergent Phase)\nApply the **brainstorm-ideas-existing** or **brainstorm-ideas-new** skill:\n- Generate ideas from PM, Designer, and Engineer perspectives\n- Present the top 10 ideas with brief rationale\n- Ask the user to select 3-5 ideas to carry forward, or accept all\n**Checkpoint**: \"Here are 10 ideas. Which ones should we stress-test? Pick 3-5, or I can carry all forward.\"\n### Step 3: Identify Assumptions (Critical Thinking Phase)\nFor each selected idea, apply the **identify-assumptions-existing** or **identify-assumptions-new** skill:\n- Surface assumptions across risk categories:\n- Compile a master list of all assumptions across all ideas\n### Step 4: Prioritize Assumptions (Focus Phase)\nApply the **prioritize-assumptions** skill:"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/tests.yml"
+  },
+  {
+   "kind": "path",
+   "value": "pm-ai-shipping/commands/derive-tests.md"
+  },
+  {
+   "kind": "path",
+   "value": "pm-data-analytics/commands/write-query.md"
+  },
+  {
+   "kind": "path",
+   "value": "pm-execution/commands/plan-okrs.md"
+  },
+  {
+   "kind": "path",
+   "value": "pm-execution/skills/brainstorm-okrs/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "pm-execution/skills/prioritization-frameworks/SKILL.md"
+  }
+ ]
+}

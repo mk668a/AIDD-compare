@@ -1,0 +1,85 @@
+{
+ "entry": "Swarms",
+ "slug": "kyegomez/swarms",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 1
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Pick an architecture",
+   "l": "L7",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Assign the agents",
+   "l": "L7",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "examples/mcp/agents/FREE_MCP_SERVERS.md",
+     "matched": [
+      "agents"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "examples/mcp/agents/README.md",
+     "matched": [
+      "agents"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "examples/single_agent/capabilities/skills/code-review/SKILL.md",
+     "matched": [
+      "agents"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Run sequential or concurrent",
+   "l": "L7",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Aggregate the output",
+   "l": null,
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "master",
+  "tree_sha": "37c49905f2474181262c70151c00fbfd7041b7ee"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "examples/mcp/agents/FREE_MCP_SERVERS.md"
+  },
+  {
+   "kind": "path",
+   "value": "examples/mcp/agents/README.md"
+  },
+  {
+   "kind": "path",
+   "value": "examples/single_agent/capabilities/skills/code-review/SKILL.md"
+  }
+ ]
+}

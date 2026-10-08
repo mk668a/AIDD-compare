@@ -1,0 +1,93 @@
+{
+ "entry": "Opik",
+ "slug": "comet-ml/opik",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Instrument the application",
+   "l": "L5",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/analytics-instrumentation/SKILL.md",
+     "matched": [
+      "instrument"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/metrics-instrumentation/SKILL.md",
+     "matched": [
+      "instrument"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Collect traces",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": ".agents/skills/opik-integrations/workflow.md",
+     "matched": [
+      "collect"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Define a dataset",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Run the evaluation",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Inspect and compare",
+   "l": null,
+   "who": "human",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "09e6c4e1513531c17a33b40f1fb69896cff5ca1b"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".agents/skills/analytics-instrumentation/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/metrics-instrumentation/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/opik-integrations/workflow.md"
+  }
+ ]
+}

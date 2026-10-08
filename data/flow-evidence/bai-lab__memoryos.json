@@ -1,0 +1,147 @@
+{
+ "entry": "MemoryOS",
+ "slug": "BAI-LAB/MemoryOS",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "add_memory",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "memory"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "memory"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Short-term store",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Consolidate to mid and long term",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "retrieve_memory",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "memory"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "retrieve",
+      "memory"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Generate with the profile",
+   "l": null,
+   "who": "model",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "profile"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "587ed7755c7aed179965792830ff1b5ad9a6fa92"
+ },
+ "evidence": [
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. `add_memory`"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. `retrieve_memory`"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "3. `get_user_profile`"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. Install dependencies"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. configuration"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "3. Start the server"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "4. Test"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "5. Configure it on Cline and other clients"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. Install dependencies"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. Test"
+  }
+ ]
+}

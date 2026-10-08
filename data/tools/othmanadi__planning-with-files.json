@@ -1,0 +1,216 @@
+{
+ "slug": "OthmanAdi/planning-with-files",
+ "n": "Planning with Files",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L2",
+  "L6"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 27320,
+ "push": "2026-10-06",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Keeps the plan on disk rather than in the context window: three markdown files, re-injected every turn by a hook, so the plan survives compaction, /clear and a crash.",
+ "art": "task_plan.md, findings.md and progress.md (persistent)",
+ "tok": "frugal",
+ "p": [
+  2,
+  2,
+  3,
+  1,
+  1,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "none",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "none",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".agents/skills/planning-with-files/SKILL.md",
+   "fs.example": ".agents/skills/planning-with-files/templates/analytics_findings.md",
+   "rl.tests": ".opencode/packages/opencode-planning-with-files/__tests__/core.test.ts",
+   "rl.ci": ".github/workflows/tests.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": ".opencode/packages/opencode-planning-with-files/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T6 introduced, controls approval none, log part",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Codex CLI, OpenCode, Cursor, GitHub Copilot, Gemini CLI, OpenAI Codex, Zed, Continue.dev (README.md)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (README.md (/plugin marketplace add; npx skills add))",
+   "ic.error": "a documented flag that gates or previews the action: README.md (--yes)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (checkpoints)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx s)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.warn": "the irreversible step is both warned about and gated: README.md (overwrites the)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a harness with lifecycle hooks, or one of the sixty agents it supports",
+  "tasks long enough that context loss is a real failure"
+ ],
+ "anti": [
+  "short tasks that finish inside one context window",
+  "harnesses with no hook mechanism, where the plan becomes a prompt the agent may ignore"
+ ],
+ "th": [
+  "T6"
+ ],
+ "ctrl": {
+  "approval": "none",
+  "log": "part",
+  "sandbox": "na",
+  "allowlist": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "A hook that fires every turn is a different mechanism from a prompt the agent is asked to follow, and the difference is the whole claim: the plan is re-injected rather than remembered. The completion gate is deterministic, which is unusual for a planning tool.",
+ "sources": [
+  {
+   "url": "https://github.com/OthmanAdi/planning-with-files",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/OthmanAdi/planning-with-files/master/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Planning with Files",
+   "sum": "計画をコンテキストウィンドウではなくディスクに置く。3つのmarkdownをフックが毎ターン再注入するので、圧縮・/clear・クラッシュを越えて計画が生き残る。",
+   "art": "task_plan.md・findings.md・progress.md（永続）",
+   "pre": [
+    "ライフサイクルフックを持つハーネス、または対応60エージェントのいずれか",
+    "コンテキスト消失が実害になる長さの作業"
+   ],
+   "anti": [
+    "1つのコンテキストウィンドウで終わる短い作業",
+    "フック機構のないハーネス。計画が「従ってくれるかもしれないプロンプト」に落ちる"
+   ],
+   "gnote": "毎ターン発火するフックは、従うよう頼むプロンプトとは別の機構であり、その差が主張の全てである。計画は憶えられるのではなく再注入される。完了判定が決定的である点も、計画系のツールとしては珍しい。",
+   "flow": {
+    "steps": [
+     "task_plan.mdを書く",
+     "エージェントが作業",
+     "findingsとprogressを記録",
+     "フックが計画を再注入"
+    ],
+    "back": [
+     "毎ターン"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": ".codebuddy/skills/planning-with-files/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": false
+ },
+ "design_concerns": [
+  "behaviour",
+  "process"
+ ],
+ "spec_unit": "task",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Write task_plan.md",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Agent works",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "Record findings and progress",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Hook re-injects the plan",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 1,
+    "s": "every turn"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

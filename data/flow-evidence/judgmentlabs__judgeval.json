@@ -1,0 +1,57 @@
+{
+ "entry": "judgeval",
+ "slug": "JudgmentLabs/judgeval",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 0
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Instrument with OpenTelemetry",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Capture the trace",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Score with prompt judges",
+   "l": "L5",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Trace a failure to its cause",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Keep it as a regression case",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e82e47d001c8785b63fb149b961b91305cdfdaf6"
+ },
+ "evidence": []
+}

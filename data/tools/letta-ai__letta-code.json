@@ -1,0 +1,225 @@
+{
+ "slug": "letta-ai/letta-code",
+ "n": "Letta Code",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [
+  "L7",
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "Apache-2.0",
+ "stars": 3537,
+ "push": "2026-10-07",
+ "conf": "check",
+ "exec": true,
+ "sum": "MemGPT lineage. Stateful agent harness whose agents rewrite their own memory, skills and prompts over time. Context is tracked in git through MemFS.",
+ "art": "agent state (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  0,
+  1,
+  0,
+  0,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 2,
+  "rebuild": 2,
+  "replace": 1,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "none",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "impl",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".skills/adding-models/SKILL.md",
+   "fs.example": "docs/examples/mods/README.md",
+   "rl.tests": ".github/scripts/contribution-guard.test.cjs",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T1/T2/T3 introduced, controls memval none, allowlist part, approval impl",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval impl, allowlist part",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "pe.budget": "a ceiling the operator sets on the command line: src/skills/builtin/self-configuration/SKILL.md (--timeout )",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "built-in usage text: src/index.ts (--help)",
+   "ic.error": "a dry run the operator can ask for before the real one: src/index.ts (--dry-run)",
+   "rl.resume": "a resume the operator can ask for: src/index.ts (--resume)",
+   "fx.install": "an install that does not change the machine globally: README.md (nix run)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "sf.stop": "a stop path, and the state it leaves behind is described: src/index.ts (onCancel); src/index.ts (--resume)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 3,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "a substrate to run it continuously"
+ ],
+ "anti": [
+  "light use meant to stay inside a CLI"
+ ],
+ "th": [
+  "T1",
+  "T2",
+  "T3"
+ ],
+ "ctrl": {
+  "memval": "none",
+  "allowlist": "part",
+  "approval": "impl"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Persistent state combined with tool execution is a wide surface. letta-ai/letta is now a landing page: its README says the current source lives in letta-ai/letta-code, with the retired V1 server preserved on an archive branch that receives no fixes or security updates. Permission modes with auto-approve and auto-deny ship in the harness, and secrets are held as environment variables obfuscated from context.",
+ "sources": [
+  {
+   "url": "https://github.com/letta-ai/letta-code",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/letta-ai/letta-code/main/README.md",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/letta-ai/letta/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Letta Code",
+   "sum": "MemGPT系譜。エージェントが自分の記憶・スキル・プロンプトを書き換えていくステートフルなハーネス。コンテキストはMemFSによりgitで追跡される。",
+   "art": "エージェント状態（永続）",
+   "pre": [
+    "常駐させる運用基盤"
+   ],
+   "anti": [
+    "CLIで完結させたい軽い用途"
+   ],
+   "gnote": "永続状態とツール実行の組み合わせは攻撃面が広い。letta-ai/lettaは現在ランディングページで、READMEは現行ソースがletta-ai/letta-codeにあると述べている。引退したV1サーバはarchiveブランチに保存されるが、修正もセキュリティ更新も受けない。自動承認・自動拒否を設定できる権限モードがハーネスに実装され、秘匿情報はコンテキストから値を隠したまま環境変数として渡される。",
+   "flow": {
+    "steps": [
+     "エージェント状態を読み込む",
+     "モデルのターン",
+     "自分の記憶を書き換える",
+     "MemFSをgitにコミット",
+     "どこでも再開"
+    ],
+    "back": [
+     "次のターン"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "src/backend/api/mcp-servers.test.ts",
+   "agents_md": "AGENTS.md",
+   "agent_skills": ".skills/adding-models/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "src/agent/prompts/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Load the agent state",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Model turn",
+    "l": null,
+    "who": "model"
+   },
+   {
+    "s": "Rewrite its own memory",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Commit MemFS to git",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Resume anywhere",
+    "l": null,
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 1,
+    "s": "next turn"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "unresolved": [
+  "Layer, phase, threat and control assessments require verification against the current codebase."
+ ]
+}

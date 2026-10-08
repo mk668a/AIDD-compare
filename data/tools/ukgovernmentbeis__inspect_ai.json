@@ -1,0 +1,211 @@
+{
+ "slug": "UKGovernmentBEIS/inspect_ai",
+ "n": "Inspect AI",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "code",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "addressee_note": "evaluation task definitions in source: authored and reviewed as code, executed by the harness",
+  "format_detail": [
+   {
+    "id": "openapi",
+    "ev": "https://github.com/UKGovernmentBEIS/inspect_ai/blob/main/.agents/skills/land-ts-mono/SKILL.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 2952,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Evaluation framework from the UK AI Safety Institute. Leans on reproducibility and rigorous logging.",
+ "art": "evaluation task definitions (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  0,
+  3,
+  1,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 2,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "na",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "none",
+  "fx.byo": "part",
+  "fx.exit": "impl",
+  "sf.reach": "na",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude/skills/ci-perf/SKILL.md",
+   "fs.example": "examples/approval/README.md",
+   "rl.tests": "src/inspect_sandbox_tools/tests/__init__.py",
+   "rl.ci": ".github/workflows/build.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (MCP, AGENTS.md)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th: no OWASP Agentic AI threat is introduced by adopting this entry, so there is nothing here to control against",
+   "fx.exit": "artifact.format code: source files in the repository's own language, readable without the tool",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself and keeps its state local, so there is no unattended reach for a control to bound",
+   "pe.budget": "a ceiling the operator sets on the command line: design/ctl/config-log-persistence.md (--timeout)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: src/inspect_ai/_cli/main.py (click)",
+   "ic.error": "a documented flag that gates or previews the action: design/ctl/agent-discoverability.md (--dry-run)",
+   "rl.resume": "recovering is described in prose, not implemented: design/acp/agent-acp-tui.md (rollback)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/build.yml (SHA256SUMS)",
+   "fx.byo": "one provider is named and nothing else is offered: VLLM (src/inspect_ai/_eval/run.py)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: src/inspect_ai/_control/server.py (.abort())"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "knowledge of evaluation design"
+ ],
+ "anti": [
+  "a quick trial, since it is heavy"
+ ],
+ "th": [],
+ "ctrl": {
+  "log": "impl"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The auditable log format maps directly onto traceability requirements",
+ "sources": [
+  {
+   "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Inspect AI",
+   "sum": "英国AI安全研究所による評価フレームワーク。再現性とログの厳密さに寄る。",
+   "art": "評価タスク定義（永続）",
+   "pre": [
+    "評価設計の知識"
+   ],
+   "anti": [
+    "軽く試したいだけの場面（重い）"
+   ],
+   "gnote": "監査可能なログ形式はトレーサビリティ要件にそのまま使える",
+   "flow": {
+    "steps": [
+     "データセットを定義",
+     "solverを書く",
+     "評価を実行",
+     "採点",
+     "全サンプルをログ"
+    ],
+    "back": [
+     "再現のため再実行"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "src/inspect_sandbox_tools/src/inspect_sandbox_tools/_remote_tools/_mcp/mcp_server_session.py",
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "api-contract"
+ ],
+ "spec_unit": "test",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Define the dataset",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Write the solver",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Run the eval",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Score",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Log every sample",
+    "l": "L5",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 2,
+    "s": "re-run for reproducibility"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

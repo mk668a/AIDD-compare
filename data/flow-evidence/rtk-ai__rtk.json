@@ -1,0 +1,126 @@
+{
+ "entry": "RTK (Rust Token Killer)",
+ "slug": "rtk-ai/rtk",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Agent runs a command",
+   "l": null,
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude/agents/code-reviewer.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/debugger.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/rtk-testing-specialist.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Hook redirects it to RTK",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "RTK runs the real command",
+   "l": "L1",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude/commands/clean-worktree.md",
+     "matched": [
+      "command"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/commands/clean-worktrees.md",
+     "matched": [
+      "command"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/commands/diagnose.md",
+     "matched": [
+      "command"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Compress the output",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Return it to the model",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "develop",
+  "tree_sha": "e53ec1cf180d801f33121855dce37b393ede258c"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".claude/agents/code-reviewer.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/debugger.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/rtk-testing-specialist.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/clean-worktree.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/clean-worktrees.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/diagnose.md"
+  }
+ ]
+}

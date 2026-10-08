@@ -1,0 +1,229 @@
+{
+ "entry": "AI-DLC Workflows",
+ "slug": "awslabs/aidlc-workflows",
+ "flow": {
+  "basis": "repo",
+  "path": "core/aidlc-common/stages/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Initialization",
+   "l": null,
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/ideation/scope-definition.md",
+     "matched": [
+      "initialization"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/initialization/state-init.md",
+     "matched": [
+      "initialization"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/initialization/workspace-detection.md",
+     "matched": [
+      "initialization"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Ideation",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/ideation/approval-handoff.md",
+     "matched": [
+      "ideation"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/ideation/feasibility.md",
+     "matched": [
+      "ideation"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/ideation/intent-capture.md",
+     "matched": [
+      "ideation"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Inception",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/inception/contract-design.md",
+     "matched": [
+      "inception"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/inception/delivery-planning.md",
+     "matched": [
+      "inception"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/inception/domain-design.md",
+     "matched": [
+      "inception"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Construction",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/construction/build-and-test.md",
+     "matched": [
+      "construction"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/construction/ci-pipeline.md",
+     "matched": [
+      "construction"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/construction/code-generation.md",
+     "matched": [
+      "construction"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Operation",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "core/agents/aidlc-operations-agent.md",
+     "matched": [
+      "operation"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/operation/deployment-execution.md",
+     "matched": [
+      "operation"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "core/aidlc-common/stages/operation/deployment-pipeline.md",
+     "matched": [
+      "operation"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "22ed2d101f4f01196b76d5725cf8d9aabe5fef9e"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "core/agents/aidlc-operations-agent.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/construction/build-and-test.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/construction/ci-pipeline.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/construction/code-generation.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/ideation/approval-handoff.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/ideation/feasibility.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/ideation/intent-capture.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/ideation/scope-definition.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/inception/contract-design.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/inception/delivery-planning.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/inception/domain-design.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/initialization/state-init.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/initialization/workspace-detection.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/operation/deployment-execution.md"
+  },
+  {
+   "kind": "path",
+   "value": "core/aidlc-common/stages/operation/deployment-pipeline.md"
+  }
+ ]
+}

@@ -1,0 +1,252 @@
+{
+ "slug": "gotalab/cc-sdd",
+ "n": "cc-sdd",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "gated",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/rules/design-principles.md"
+   },
+   {
+    "id": "flowchart",
+    "ev": "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/templates/specs/design.md"
+   },
+   {
+    "id": "openapi",
+    "ev": "https://github.com/gotalab/cc-sdd/blob/main/.kiro/specs/customer-support-rag-backend-en/tasks.md"
+   },
+   {
+    "id": "erd",
+    "ev": "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/rules/design-principles.md"
+   },
+   {
+    "id": "sequence",
+    "ev": "https://github.com/gotalab/cc-sdd/blob/main/.kiro/settings/rules/design-principles.md"
+   },
+   {
+    "id": "class-diagram",
+    "ev": "https://github.com/gotalab/cc-sdd/blob/main/.kiro/specs/customer-support-rag-backend-en/design.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 3708,
+ "push": "2026-09-23",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Four phases: requirements, design, tasks, implementation, with a human approval gate between each. Multilingual, including Japanese.",
+ "art": "phase documents (persistent)",
+ "tok": "moderate",
+ "p": [
+  3,
+  3,
+  2,
+  1,
+  2,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 3,
+  "rebuild": 4,
+  "replace": 3,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "none",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "impl",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/skills/cc-sdd-new-agent/SKILL.md",
+   "fs.example": ".kiro/settings/templates/specs/design.md",
+   "rl.tests": "tools/cc-sdd/test/agentLayout.test.ts",
+   "rl.ci": ".github/workflows/claude-dispatch.yml",
+   "mt.process": "CHANGELOG.md",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (AGENTS.md, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T6/T10 introduced, controls approval impl",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and approval is impl",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Windsurf, OpenCode, Gemini CLI, GitHub Copilot (README.md)",
+   "ic.surface": "Surface: cli (tools/cc-sdd/package.json)",
+   "ic.help": "built-in usage text: tools/cc-sdd/src/index.ts (Usage: )",
+   "ic.error": "a dry run the operator can ask for before the real one: tools/cc-sdd/src/index.ts (--dry-run)",
+   "rl.resume": "recovering is described in prose, not implemented: README.md (resume a)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx c)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "a human available to approve"
+ ],
+ "anti": [
+  "long unattended runs",
+  "cases where the approval overhead is unwelcome"
+ ],
+ "th": [
+  "T6",
+  "T10"
+ ],
+ "ctrl": {
+  "approval": "impl"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "One of the few SDD implementations with approval gates built into the design. Like the others, it turns into T10 as volume grows",
+ "sources": [
+  {
+   "url": "https://github.com/gotalab/cc-sdd",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "cc-sdd",
+   "sum": "要求→設計→タスク→実装の4フェーズ。各フェーズ間に人間の承認ゲートを置く。日本語を含む多言語対応。",
+   "art": "フェーズ文書（永続）",
+   "pre": [
+    "承認する人間がいること"
+   ],
+   "anti": [
+    "無人での長時間実行",
+    "承認の手間を省きたい場合"
+   ],
+   "gnote": "承認ゲートを設計に組み込んでいる数少ないSDD。件数が増えればT10に転じる点は他と同じ",
+   "flow": {
+    "steps": [
+     "要件",
+     "人が承認",
+     "設計",
+     "人が承認",
+     "タスク",
+     "実装"
+    ],
+    "back": [
+     "差し戻し",
+     "差し戻し"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_skills": "tools/cc-sdd/templates/agents/antigravity-skills/skills/kiro-debug/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "api-contract",
+  "behaviour",
+  "data-model",
+  "process"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Requirements",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Human approves",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Design",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Human approves",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Tasks",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Implement",
+    "l": "L1",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 1,
+    "to": 0,
+    "s": "rejected"
+   },
+   {
+    "from": 3,
+    "to": 2,
+    "s": "rejected"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

@@ -1,0 +1,228 @@
+{
+ "slug": "ag-ui-protocol/ag-ui",
+ "n": "AG-UI",
+ "entry_kind": "implementation",
+ "l": "L7",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code",
+  "ui"
+ ],
+ "artifact": {
+  "format": "code",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 16376,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "An event-based protocol for the connection between an agent and the interface a person is looking at, with reference integrations for several agent frameworks.",
+ "art": "protocol implementations and integrations (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  2,
+  1,
+  0,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 3
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "impl",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "none",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "fs.example": "apps/dojo/e2e/fixtures/openai/agentic-chat-multimodal.json",
+   "rl.tests": "apps/dojo/e2e/tests/a2aMiddlewareTests/a2aChatPage.spec.ts",
+   "rl.ci": ".github/workflows/auto-approve-community.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "apps/dojo/e2e/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 4 of the 5 neutral interface standards (MCP, AGENTS.md, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T6/T10 introduced, controls log part, approval part, agentauth none",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and approval is part",
+   "fx.exit": "artifact.format code: source files in the repository's own language, readable without the tool",
+   "pe.budget": "a ceiling named in the documentation only: middlewares/mcp-middleware/src/index.ts (maxIterations:)",
+   "ic.surface": "Surface: library (typescript-sdk and python-sdk (README: the protocol and its SDKs are what a developer imports; npx create-ag-ui-app only scaffolds))",
+   "ic.error": "documented only, nothing in the code checks: README.md (Human-in-the-loop)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx c)",
+   "fx.byo": "the provider is the operator's choice: BEDROCK, BASEURL (integrations/a2a/typescript/tsconfig.json)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "an agent backend and a front end that both need to speak to each other",
+  "willingness to adopt an event stream rather than request and response"
+ ],
+ "anti": [
+  "agents with no human-facing surface",
+  "work where the interface is a terminal and an event protocol adds nothing"
+ ],
+ "th": [
+  "T6",
+  "T10"
+ ],
+ "ctrl": {
+  "log": "part",
+  "approval": "part",
+  "agentauth": "none",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Standardises the one direction the other protocols leave alone: MCP fixes the agent-to-tool edge, A2A fixes agent-to-agent, and this fixes agent-to-person. It is a protocol maintained as a project rather than through a foundation, which is recorded as fact.",
+ "sources": [
+  {
+   "url": "https://github.com/ag-ui-protocol/ag-ui",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/ag-ui-protocol/ag-ui/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "AG-UI",
+   "sum": "エージェントと、人が見ている画面との間をつなぐイベントベースのプロトコル。主要なエージェント基盤向けの参照実装を持つ。",
+   "art": "プロトコル実装と各種統合（永続）",
+   "pre": [
+    "互いに話す必要のあるエージェント側と画面側",
+    "要求と応答ではなくイベントストリームを受け入れる意思"
+   ],
+   "anti": [
+    "人に向いた面を持たないエージェント",
+    "画面が端末で、イベントプロトコルが何も足さない場合"
+   ],
+   "gnote": "他のプロトコルが触れていない方向を標準化している。MCPはエージェントとツールの境界を、A2Aはエージェント同士を、これはエージェントと人の境界を固定する。財団ではなくプロジェクトとして維持されている点は事実として記録する。",
+   "ui_ux_note": "エージェントの動きを、人が見ている面まで運ぶプロトコル。フィードバック経路を持たないツールが多い中で、経路そのものを標準化している。",
+   "flow": {
+    "steps": [
+     "エージェント実行",
+     "型付きイベント送出",
+     "クライアント描画",
+     "人が応答"
+    ],
+    "back": [
+     "共有状態"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": ".mcp.json",
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "sdks/dotnet/plugins/ag-ui-dotnet/skills/agui-dotnet-client-tools/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "api-contract",
+  "screen-flow"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Agent runs",
+    "l": "L7",
+    "who": "model"
+   },
+   {
+    "s": "Emit typed events",
+    "l": "L7",
+    "who": "tool"
+   },
+   {
+    "s": "Client renders",
+    "l": null,
+    "who": "tool"
+   },
+   {
+    "s": "Human replies",
+    "l": null,
+    "who": "human"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 0,
+    "s": "shared state"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "ui_ux": {
+  "hcd_activities": [
+   "design"
+  ],
+  "artifact": "an event stream the interface renders",
+  "feedback_channel": "the running application",
+  "handoff": [
+   "the front-end framework"
+  ],
+  "a11y_standard": "none",
+  "note": "The protocol carries what the agent is doing to a surface a person watches, which is a feedback channel where most entries have none."
+ }
+}

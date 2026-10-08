@@ -1,0 +1,93 @@
+{
+ "entry": "mem0",
+ "slug": "mem0ai/mem0",
+ "flow": {
+  "basis": "repo",
+  "path": "integrations/claude-code-plugin/skills/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 1
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Observe the conversation",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Extract the facts",
+   "l": "L3",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Resolve conflicts",
+   "l": "L3",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Store",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Search on the next turn",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "integrations/antigravity-plugin/skills/search/SKILL.md",
+     "matched": [
+      "search"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "integrations/claude-code-plugin/skills/search/SKILL.md",
+     "matched": [
+      "search"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "integrations/codex-plugin/skills/search/SKILL.md",
+     "matched": [
+      "search"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "b7ad69afda6b6ed030347c66d48a13e4de9dec08"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "integrations/antigravity-plugin/skills/search/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "integrations/claude-code-plugin/skills/search/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "integrations/codex-plugin/skills/search/SKILL.md"
+  }
+ ]
+}

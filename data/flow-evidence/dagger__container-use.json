@@ -1,0 +1,113 @@
+{
+ "entry": "container-use",
+ "slug": "dagger/container-use",
+ "flow": {
+  "basis": "repo",
+  "path": "rules/agent.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Agent asks for an environment",
+   "l": "L7",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "rules/agent.md",
+     "matched": [
+      "agent",
+      "environment"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "rules/agent.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Create a container and a branch",
+   "l": "L1",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "rules/agent.md",
+     "matched": [
+      "container"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Agent works in isolation",
+   "l": "L1",
+   "who": "model",
+   "par": [
+    "agent 1",
+    "agent 2",
+    "agent n"
+   ],
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "rules/agent.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "rules/agent.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Human reviews the branch",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Merge",
+   "l": null,
+   "who": "human",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "2e43e625e95216b719ec9338f4034fd3a0be2734"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "rules/agent.md",
+   "value": "ALWAYS use ONLY Environments for ANY and ALL file, code, or shell operations—NO EXCEPTIONS—even for simple or generic requests.\nDO NOT install or use the git cli with the environment_run_cmd tool. All environment tools will handle git operations for you. Changing \".git\" yourself will compromise the integrity of your environment.\nYou MUST inform the user how to view your work using `container-use log <env_id>` AND `container-use checkout <env_id>`. Failure to do this will make your work inaccessible to others."
+  },
+  {
+   "kind": "path",
+   "value": "rules/agent.md"
+  }
+ ]
+}

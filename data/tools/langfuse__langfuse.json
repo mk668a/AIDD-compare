@@ -1,0 +1,214 @@
+{
+ "slug": "langfuse/langfuse",
+ "n": "Langfuse",
+ "entry_kind": "implementation",
+ "l": "L5",
+ "s2": [
+  "L3"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "trace-log",
+  "lifecycle": "persistent",
+  "addressee": "human",
+  "addressee_basis": "inferred",
+  "addressee_note": "traces and eval definitions surfaced through an observability interface: the shape is a view for a person",
+  "format_detail": [
+   {
+    "id": "clickhouse",
+    "ev": "README.md (ClickHouse)"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 35484,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Tracing and evaluation substrate. Records every LLM call and its cost so runs can be reconstructed.",
+ "art": "traces and eval definitions (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  0,
+  3,
+  2,
+  1,
+  3
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "doc",
+  "co.standards": "part",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "none",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "doc",
+  "se.residency": "part",
+  "se.attest": "impl",
+  "se.threats": "na",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/AGENTS.md",
+   "fs.example": "packages/shared/src/server/clickhouse/fixtures/fake-migrate.sh",
+   "rl.tests": "packages/in-app-agent-sandbox-runtime/tests/sandbox.test.ts",
+   "rl.ci": ".github/workflows/_deploy_ecs_service.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service",
+   "se.threats": "cites th: no OWASP Agentic AI threat is introduced by adopting this entry, so there is nothing here to control against",
+   "fx.exit": "artifact.format trace-log: a run log the tool writes; readable as text, structured for the tool",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "pe.budget": "a ceiling named in the documentation only: packages/in-app-agent-sandbox-runtime/src/server.ts (timeoutMs:)",
+   "ic.surface": "Surface: web (web/next.config.mjs)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/build-sandbox-microvm-image.yml (sha256sum)",
+   "fx.install": "an install that does not change the machine globally: .agents/skills/clickhouse-best-practices/README.md (npx s)",
+   "fx.byo": "the provider is the operator's choice: LITELLM, OLLAMA, VLLM, BEDROCK (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: worker/src/app.ts (SIGINT)",
+   "rl.resume": "recovering is described in prose, not implemented: .agents/skills/clickhouse-best-practices/rules/insert-mutation-avoid-update.md (rollback)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "self-hosting or SaaS",
+  "effort to instrument"
+ ],
+ "anti": [
+  "small one-off tasks"
+ ],
+ "th": [],
+ "ctrl": {
+  "log": "impl"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Dual-licensed, stated in the repository as \"This repository is MIT licensed, except for the ee folders.\" The open-source portion is usable standalone; the ee tree is the enterprise edition.",
+ "sources": [
+  {
+   "url": "https://github.com/langfuse/langfuse",
+   "accessed": "2026-09-01"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Langfuse",
+   "sum": "トレースと評価の基盤。全LLM呼び出しとコストを記録し、後から再現できるようにする。",
+   "art": "トレース・評価定義（永続）",
+   "pre": [
+    "自己ホストまたはSaaS",
+    "計測を仕込む工数"
+   ],
+   "anti": [
+    "単発の小さな作業"
+   ],
+   "gnote": "二重ライセンス。リポジトリに「This repository is MIT licensed, except for the ee folders.」と明記されている。OSS部分だけで単体利用でき、ee配下がエンタープライズ版。",
+   "flow": {
+    "steps": [
+     "LLM呼び出しを包む",
+     "トレースと費用を記録",
+     "トレースからデータセットを作る",
+     "評価を実行",
+     "バージョンを比較"
+    ],
+    "back": [
+     "次のリリース"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": false
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Wrap the LLM call",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Record the trace and the cost",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Build a dataset from traces",
+    "l": "L5",
+    "who": "human"
+   },
+   {
+    "s": "Run an evaluation",
+    "l": "L5",
+    "who": "tool"
+   },
+   {
+    "s": "Compare versions",
+    "l": null,
+    "who": "human"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "next release"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "open_core": true
+}

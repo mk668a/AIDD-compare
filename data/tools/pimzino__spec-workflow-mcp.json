@@ -1,0 +1,228 @@
+{
+ "slug": "Pimzino/spec-workflow-mcp",
+ "n": "Spec Workflow MCP",
+ "entry_kind": "implementation",
+ "l": "L4",
+ "s2": [
+  "L5"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "both",
+  "addressee_basis": "gated",
+  "format_detail": [
+   {
+    "id": "mermaid",
+    "ev": "https://github.com/Pimzino/spec-workflow-mcp/blob/main/src/markdown/templates/design-template.md"
+   }
+  ]
+ },
+ "lic": "GPL-3.0",
+ "stars": 4302,
+ "push": "2026-07-03",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Serves a spec workflow over MCP, with a dashboard showing approval state.",
+ "art": "spec documents (persistent)",
+ "tok": "moderate",
+ "p": [
+  3,
+  2,
+  1,
+  1,
+  2,
+  0,
+  1
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "impl",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".claude-plugin/.mcp.json",
+   "fs.example": "src/markdown/templates/design-template.md",
+   "rl.tests": "src/__tests__/config.test.ts",
+   "rl.ci": ".github/workflows/claude-code-review.yml",
+   "mt.process": "docs/technical-documentation/contributing.md",
+   "mt.units": "vscode-extension/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (MCP, Agent Plugins)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T6 introduced, controls approval part",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and approval is part",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cline, Cursor, OpenCode, Windsurf, Codex CLI (README.md)",
+   "ic.surface": "Surface: cli (package.json)",
+   "ic.help": "a command-line parser that prints its own usage: vscode-extension/webview-dist/main.js (click)",
+   "fx.install": "an install that does not change the machine globally: README.md (npx @)",
+   "fx.byo": "the provider is the operator's choice: BASEURL (vscode-extension/tsconfig.app.json)",
+   "sf.stop": "a stop path, and the state it leaves behind is described: src/index.ts (graceful shutdown); docs/CONFIGURATION.ar.md (Ctrl+C)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "an MCP-capable harness"
+ ],
+ "anti": [
+  "environments where MCP is unavailable",
+  "distribution that must avoid GPL"
+ ],
+ "th": [
+  "T6"
+ ],
+ "ctrl": {
+  "approval": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "GPL-3.0. Depending on how it is embedded, the licence implications need review",
+ "sources": [
+  {
+   "url": "https://github.com/Pimzino/spec-workflow-mcp",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Spec Workflow MCP",
+   "sum": "仕様ワークフローをMCPとして提供。ダッシュボードで承認状況を可視化する。",
+   "art": "仕様文書（永続）",
+   "pre": [
+    "MCP対応のハーネス"
+   ],
+   "anti": [
+    "MCPを使えない環境",
+    "GPLを避けたい配布形態"
+   ],
+   "gnote": "GPL-3.0。組み込み方によってはライセンスの影響を検討する必要がある",
+   "flow": {
+    "steps": [
+     "要件",
+     "ダッシュボードで承認",
+     "設計",
+     "承認",
+     "タスク",
+     "実装"
+    ],
+    "back": [
+     "差し戻し",
+     "差し戻し"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": ".claude-plugin/.mcp.json",
+   "agent_plugins": ".claude-plugin/.mcp.json"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "behaviour"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "repo",
+  "path": "src/markdown/templates/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Requirements",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Approval on the dashboard",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Design",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Approval",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Tasks",
+    "l": "L4",
+    "who": "model"
+   },
+   {
+    "s": "Implement",
+    "l": "L1",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 1,
+    "to": 0,
+    "s": "rejected"
+   },
+   {
+    "from": 3,
+    "to": 2,
+    "s": "rejected"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

@@ -1,0 +1,57 @@
+{
+ "entry": "Inspect AI",
+ "slug": "UKGovernmentBEIS/inspect_ai",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 0
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Define the dataset",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Write the solver",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Run the eval",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "Score",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Log every sample",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "856f41f19debe008756ec4c5831f0600c861c51a"
+ },
+ "evidence": []
+}

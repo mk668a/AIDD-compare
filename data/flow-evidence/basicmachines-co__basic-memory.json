@@ -1,0 +1,142 @@
+{
+ "entry": "Basic Memory",
+ "slug": "basicmachines-co/basic-memory",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Write a note as Markdown",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/cmux-markdown/SKILL.md",
+     "matched": [
+      "markdown"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/cmux-markdown/agents/openai.yaml",
+     "matched": [
+      "markdown"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/cmux-markdown/references/commands.md",
+     "matched": [
+      "markdown"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Index the links",
+   "l": "L3",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Agent searches",
+   "l": "L2",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/adversarial-review/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/adversarial-review/prompts/refute.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/adversarial-review/prompts/review.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Read back into context",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/pythonic-code/evals/context/AGENTS.md",
+     "matched": [
+      "context"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/pythonic-code/evals/context/pyproject.toml",
+     "matched": [
+      "context"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "cf54013c5422929c8889996e73c074e6a9ca3aa7"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".agents/skills/adversarial-review/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/adversarial-review/prompts/refute.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/adversarial-review/prompts/review.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/cmux-markdown/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/cmux-markdown/agents/openai.yaml"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/cmux-markdown/references/commands.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/pythonic-code/evals/context/AGENTS.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/pythonic-code/evals/context/pyproject.toml"
+  }
+ ]
+}

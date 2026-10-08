@@ -1,0 +1,142 @@
+{
+ "entry": "promptfoo",
+ "slug": "promptfoo/promptfoo",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Write promptfooconfig",
+   "l": "L5",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude/skills/promptfoo-evals/SKILL.md",
+     "matched": [
+      "promptfooconfig"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/skills/promptfoo-evals/references/cheatsheet.md",
+     "matched": [
+      "promptfooconfig"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".github/workflows/promptfoo-code-scan.yml",
+     "matched": [
+      "promptfooconfig"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Define the assertions",
+   "l": "L5",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Run the eval",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude/skills/promptfoo-evals/SKILL.md",
+     "matched": [
+      "eval"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/skills/promptfoo-evals/references/cheatsheet.md",
+     "matched": [
+      "eval"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "examples/openai-eval-factuality/prompts/name_capitals_concise.txt",
+     "matched": [
+      "eval"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Red-team probes",
+   "l": "L5",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/redteam-plugin-development/SKILL.md",
+     "matched": [
+      "team"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/skills/redteam-plugin-development/SKILL.md",
+     "matched": [
+      "team"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Gate the CI",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "6d0395a20520e19cf8889d572b879ec9c2831a52"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".agents/skills/redteam-plugin-development/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/skills/promptfoo-evals/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/skills/promptfoo-evals/references/cheatsheet.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/skills/redteam-plugin-development/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".github/workflows/promptfoo-code-scan.yml"
+  },
+  {
+   "kind": "path",
+   "value": "examples/openai-eval-factuality/prompts/name_capitals_concise.txt"
+  }
+ ]
+}

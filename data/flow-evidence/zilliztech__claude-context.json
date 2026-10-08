@@ -1,0 +1,137 @@
+{
+ "entry": "Claude Context",
+ "slug": "zilliztech/claude-context",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "index_codebase",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "index",
+      "codebase"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "index"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "index"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Embed and store",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "search_code",
+   "l": "L2",
+   "who": "model",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "code"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "README.md",
+     "matched": [
+      "search",
+      "code"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "code"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Return the relevant parts",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "master",
+  "tree_sha": "6fc318b4e3ce58e2898b00a9c3538ead9e24dee5"
+ },
+ "evidence": [
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "1. `index_codebase`"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "2. `search_code`"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "3. `clear_index`"
+  },
+  {
+   "kind": "heading",
+   "source": "README.md",
+   "value": "4. `get_indexing_status`"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "Go to: `Settings` -> `Cursor Settings` -> `MCP` -> `Add new global MCP server`"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "Go to: `Settings` -> `MCP` -> `Add MCP Server`"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "1. Navigate to **Settings → MCP Servers → Add Server**."
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "1. Open Roo Code and navigate to **Settings → MCP Servers → Edit Global Config**."
+  }
+ ]
+}

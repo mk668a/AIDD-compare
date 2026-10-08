@@ -1,0 +1,221 @@
+{
+ "slug": "getzep/graphiti",
+ "n": "Graphiti",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": [
+   {
+    "id": "redis",
+    "ev": "pyproject.toml (redis)"
+   },
+   {
+    "id": "neo4j",
+    "ev": "pyproject.toml (neo4j)"
+   },
+   {
+    "id": "kuzu",
+    "ev": "pyproject.toml (Kuzu)"
+   },
+   {
+    "id": "elasticsearch",
+    "ev": "pyproject.toml (opensearch)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 31520,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Keeps memory as a temporal knowledge graph, so facts carry a validity period.",
+ "art": "temporal knowledge graph (persistent)",
+ "tok": "moderate",
+ "p": [
+  1,
+  1,
+  1,
+  0,
+  0,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 1,
+  "wrap": 2
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "none",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "none",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "doc",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "examples/azure-openai/.env.example",
+   "rl.tests": "mcp_server/tests/README.md",
+   "rl.ci": ".github/workflows/lint.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "mcp_server/pyproject.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (MCP, AGENTS.md)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "pe.budget": "a ceiling the operator sets in configuration: mcp_server/config/config-docker-falkordb-combined.yaml (max_tokens:)",
+   "ic.surface": "Surface: library (pyproject.toml)",
+   "ic.help": "built-in usage text: mcp_server/main.py (Usage:\n)",
+   "fx.install": "an install that does not change the machine globally: README.md (docker run)",
+   "fx.byo": "the provider is the operator's choice: OPENAI, OPENROUTER, OLLAMA, VLLM, LLAMA.CPP, LMSTUDIO (README.md)",
+   "sf.warn": "the documentation warns, and nothing stops the operator: README.md (> [!WARNING])"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "operating a graph database"
+ ],
+ "anti": [
+  "light one-off use"
+ ],
+ "th": [
+  "T1"
+ ],
+ "ctrl": {
+  "memval": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Carrying a time axis also means contaminated memory persists longer",
+ "sources": [
+  {
+   "url": "https://github.com/getzep/graphiti",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Graphiti",
+   "sum": "時間軸を持つ知識グラフとして記憶を保つ。事実の有効期間を扱えるのが特徴。",
+   "art": "時系列知識グラフ（永続）",
+   "pre": [
+    "グラフDBの運用"
+   ],
+   "anti": [
+    "軽量な単発利用"
+   ],
+   "gnote": "時間軸を持つ分、汚染された記憶の影響も長く残る",
+   "flow": {
+    "steps": [
+     "エピソードを取り込む",
+     "エンティティと関係を抽出",
+     "有効期間を設定",
+     "矛盾した事実を無効化",
+     "時点を指定して問い合わせ"
+    ],
+    "back": [
+     "新しいエピソード"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "mcp_server/.env.example",
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "yes",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Ingest an episode",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Extract entities and edges",
+    "l": "L3",
+    "who": "model"
+   },
+   {
+    "s": "Set the validity window",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Invalidate contradicted facts",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Query at a point in time",
+    "l": "L2",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "new episode"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

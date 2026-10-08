@@ -1,0 +1,156 @@
+{
+ "entry": "CLI Agent Orchestrator (CAO)",
+ "slug": "awslabs/cli-agent-orchestrator",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Install agent profile",
+   "l": "L7",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "examples/aidlc-portfolio/skills/aidlc-portfolio/agents/openai.yaml",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/cao-agent-routing/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/mcp-apps-builder/references/installation-per-agent.md",
+     "matched": [
+      "install",
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Start cao-server",
+   "l": null,
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Launch supervisor",
+   "l": "L7",
+   "who": "human",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/cao-supervisor-protocols/SKILL.md",
+     "matched": [
+      "supervisor"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Supervisor delegates workers",
+   "l": "L7",
+   "who": "model",
+   "par": [
+    "worker A",
+    "worker B"
+   ],
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/cao-supervisor-protocols/SKILL.md",
+     "matched": [
+      "supervisor"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "skills/cao-worker-protocols/SKILL.md",
+     "matched": [
+      "workers"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Workers execute in tmux CLIs",
+   "l": "L6",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/cao-worker-protocols/SKILL.md",
+     "matched": [
+      "workers"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Capture outcome, promote lesson",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "skills/cao-provider/references/lessons-learnt.md",
+     "matched": [
+      "lesson"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "dc5efb3179742bed5bca7f0c17f2a4b5d52a9f4c"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "examples/aidlc-portfolio/skills/aidlc-portfolio/agents/openai.yaml"
+  },
+  {
+   "kind": "path",
+   "value": "skills/cao-agent-routing/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/cao-provider/references/lessons-learnt.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/cao-supervisor-protocols/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/cao-worker-protocols/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "skills/mcp-apps-builder/references/installation-per-agent.md"
+  }
+ ]
+}

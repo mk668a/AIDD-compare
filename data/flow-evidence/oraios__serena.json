@@ -1,0 +1,117 @@
+{
+ "entry": "Serena",
+ "slug": "oraios/serena",
+ "flow": {
+  "basis": "repo",
+  "path": "src/serena/resources/config/modes/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Onboard the project",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "path",
+     "source": "src/serena/resources/config/modes/no-onboarding.yml",
+     "matched": [
+      "onboard"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "src/serena/resources/config/modes/onboarding.yml",
+     "matched": [
+      "onboard"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "src/serena/resources/config/modes/query-projects.yml",
+     "matched": [
+      "project"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Index with the language server",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Agent asks for a symbol",
+   "l": "L2",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "test/resources/repos/ansible/test_repo/roles/common/tasks/main.yml",
+     "matched": [
+      "asks"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Return just that slice",
+   "l": "L2",
+   "who": "tool",
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Edit at symbol level",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "src/serena/resources/config/modes/editing.yml",
+     "matched": [
+      "edit"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "7cde5581589bbed3ae82f6ba82dda2afc51ceff1"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "src/serena/resources/config/modes/editing.yml"
+  },
+  {
+   "kind": "path",
+   "value": "src/serena/resources/config/modes/no-onboarding.yml"
+  },
+  {
+   "kind": "path",
+   "value": "src/serena/resources/config/modes/onboarding.yml"
+  },
+  {
+   "kind": "path",
+   "value": "src/serena/resources/config/modes/query-projects.yml"
+  },
+  {
+   "kind": "path",
+   "value": "test/resources/repos/ansible/test_repo/roles/common/tasks/main.yml"
+  }
+ ]
+}

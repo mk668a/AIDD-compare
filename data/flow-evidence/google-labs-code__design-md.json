@@ -1,0 +1,98 @@
+{
+ "entry": "DESIGN.md",
+ "slug": "google-labs-code/design.md",
+ "flow": {
+  "basis": "derived",
+  "kind": "loop",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 2
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Write DESIGN.md",
+   "l": "L4",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 1,
+   "s": "Declare tokens in front matter",
+   "l": "L4",
+   "who": "human",
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Validate references and contrast",
+   "l": "L5",
+   "who": "tool",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/typed-service-contracts/SKILL.md",
+     "matched": [
+      "contrast"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Agent builds the UI from tokens",
+   "l": "L1",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": ".agents/skills/agent-dx-cli-scale/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/ink/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agents/skills/tdd/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "9bf8eae67128b6cc55ad9bf86665767deb4c11cd"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": ".agents/skills/agent-dx-cli-scale/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/ink/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/tdd/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": ".agents/skills/typed-service-contracts/SKILL.md"
+  }
+ ]
+}

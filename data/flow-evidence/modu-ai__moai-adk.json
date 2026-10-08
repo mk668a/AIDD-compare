@@ -1,0 +1,186 @@
+{
+ "entry": "MoAI-ADK",
+ "slug": "modu-ai/moai-adk",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 4
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "plan, write the SPEC",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "plan",
+      "write",
+      "spec"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/harness/cli-template-specialist.md",
+     "matched": [
+      "spec"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/harness/hns-github-specialist.md",
+     "matched": [
+      "spec"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "plan-auditor",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/moai/plan-auditor.md",
+     "matched": [
+      "plan",
+      "auditor"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/moai/sync-auditor.md",
+     "matched": [
+      "auditor"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "run, TDD",
+   "l": "L1",
+   "who": "model",
+   "support": []
+  },
+  {
+   "i": 3,
+   "s": "sync-auditor",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "path",
+     "source": ".claude/agents/moai/plan-auditor.md",
+     "matched": [
+      "auditor"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/moai/sync-auditor.md",
+     "matched": [
+      "sync",
+      "auditor"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/commands/moai/sync.md",
+     "matched": [
+      "sync"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "sync, docs and PR",
+   "l": null,
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "docs"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/harness/hns-oss-docs-content-author-specialist.md",
+     "matched": [
+      "docs"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".claude/agents/harness/hns-oss-docs-locale-translator-specialist.md",
+     "matched": [
+      "docs"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "7ad9f8534dc48719854c67e2b9a06db97b594eaf"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "A session holds one context window, and a long SPEC fills it. Everything that comes after carries everything that came before: the plan you no longer need is still in the window while you review, and the review is still there while you write docs. The usual escape is `/clear`, which thr"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/harness/cli-template-specialist.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/harness/hns-github-specialist.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/harness/hns-oss-docs-content-author-specialist.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/harness/hns-oss-docs-locale-translator-specialist.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/moai/plan-auditor.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/agents/moai/sync-auditor.md"
+  },
+  {
+   "kind": "path",
+   "value": ".claude/commands/moai/sync.md"
+  }
+ ]
+}

@@ -1,0 +1,217 @@
+{
+ "slug": "volcengine/OpenViking",
+ "n": "OpenViking",
+ "entry_kind": "implementation",
+ "l": "L3",
+ "s2": [
+  "L2"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "store",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "AGPL-3.0",
+ "stars": 39360,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Presents memories, resources and skills as one virtual filesystem under a viking:// protocol, so an agent browses its context with ls and find instead of querying an opaque index. Every retrieval leaves a trajectory.",
+ "art": "context filesystem with three detail tiers (persistent)",
+ "tok": "frugal",
+ "p": [
+  0,
+  0,
+  1,
+  0,
+  1,
+  0,
+  3
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 2,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 2,
+  "wrap": 1
+ },
+ "fit_na": true,
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "doc",
+  "se.residency": "part",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "part",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": ".agents/plugins/marketplace.json",
+   "fs.example": "bot/demo/werewolf/Cubic_11_1.010_R.ttf",
+   "rl.tests": "bot/tests/conftest.py",
+   "rl.ci": ".github/workflows/_docs.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "bot/bridge/package.json",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (MCP, Agent Plugins, Agent Skills)",
+   "se.residency": "cites data_residency: self-hostable, the state leaves the machine but the operator can own the service; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T1/T6 introduced, controls memval none, log impl",
+   "fx.exit": "artifact.format store: a store the tool owns; what survives removal depends on an export path",
+   "sf.reach": "restates exec, ctrl and data_residency: the entry does not execute code itself, but self-hostable means its state reaches a service, and no egress control is recorded",
+   "pe.budget": "a ceiling the operator sets on the command line: crates/ov_cli/README.md (--timeout )",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, OpenCode (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (typer)",
+   "ic.error": "a dry run the operator can ask for before the real one: openviking/ingest/cli.py (dry_run)",
+   "rl.resume": "recovering is described in prose, not implemented: bot/docs/en/concepts/04-openviking-integration.md (checkpoint)",
+   "fx.install": "only a global install is documented: README.md (pip install o)",
+   "fx.byo": "the provider is the operator's choice: OLLAMA, LITELLM (README.md)",
+   "sf.stop": "it can be stopped, but what the working tree looks like afterwards is not described: openviking/ingest/cli.py (SIGINT)"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "somewhere to run the database",
+  "acceptance of AGPL-3.0, which reaches network use"
+ ],
+ "anti": [
+  "proprietary products that cannot carry a copyleft obligation over a network boundary",
+  "cases where a plain markdown file in the repository would do"
+ ],
+ "th": [
+  "T1",
+  "T6"
+ ],
+ "ctrl": {
+  "memval": "none",
+  "log": "impl",
+  "approval": "na",
+  "sandbox": "na"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "A browsable filesystem is the one memory design here whose contents a person can inspect the way they inspect a repository, and recording a trajectory for every retrieval is the only observability in this layer. AGPL-3.0 is a licence decision with consequences for anyone shipping a service on top.",
+ "sources": [
+  {
+   "url": "https://github.com/volcengine/OpenViking",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/volcengine/OpenViking/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "OpenViking",
+   "sum": "記憶・資料・スキルをviking:// プロトコルの単一仮想ファイルシステムとして見せる。エージェントは不透明な索引に問い合わせるのではなくlsやfindで自分の文脈を歩く。検索のたびに軌跡が残る。",
+   "art": "3階層の詳細度を持つコンテキストファイルシステム（永続）",
+   "pre": [
+    "データベースを動かす場所",
+    "ネットワーク越しの利用に及ぶAGPL-3.0の受け入れ"
+   ],
+   "anti": [
+    "ネットワーク境界を越えるコピーレフト義務を負えないプロプライエタリ製品",
+    "リポジトリ内の素のmarkdownで足りる場合"
+   ],
+   "gnote": "閲覧できるファイルシステムは、この層で唯一、人がリポジトリを見るのと同じやり方で中身を確認できる記憶設計である。検索ごとに軌跡を残すのもこの層で唯一の可観測性。AGPL-3.0はその上でサービスを出す者にとって帰結のあるライセンス判断である。",
+   "flow": {
+    "steps": [
+     "viking:// をマウント",
+     "エージェントがls / find",
+     "エントリを読む",
+     "トラジェクトリを記録"
+    ],
+    "back": [
+     "次の検索"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "agent-plugins/mcp.json",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "agent-plugins/skills/openviking-memory/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "self-hostable",
+  "byok": true
+ },
+ "design_concerns": [
+  "data-model"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "agent-plugins/skills/openviking-memory/SKILL.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Mount viking://",
+    "l": "L3",
+    "who": "tool"
+   },
+   {
+    "s": "Agent runs ls and find",
+    "l": "L2",
+    "who": "model"
+   },
+   {
+    "s": "Read the entry",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Record the trajectory",
+    "l": "L5",
+    "who": "tool"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 1,
+    "s": "next retrieval"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}

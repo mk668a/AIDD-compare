@@ -1,0 +1,232 @@
+{
+ "slug": "frankbria/ralph-claude-code",
+ "n": "Ralph for Claude Code",
+ "entry_kind": "implementation",
+ "l": "L6",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "config",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "loop configuration and prompt files: the prompt is the agent's input, and the configuration is read by the loop",
+  "format_detail": [
+   {
+    "id": "markdown",
+    "ev": "examples/rest-api/.ralph/PROMPT.md"
+   }
+  ]
+ },
+ "lic": "MIT",
+ "stars": 9666,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "An implementation of the Ralph loop for Claude Code. Runs autonomous iteration with a dual-condition exit gate and rate limiting, which is the cap the pattern itself leaves to the operator.",
+ "art": "loop configuration and prompt files (persistent)",
+ "tok": "unbounded",
+ "p": [
+  0,
+  0,
+  3,
+  2,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 3,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 2,
+  "wrap": 1
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "none",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "doc",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "part",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "doc",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.example": "examples/rest-api/.ralph/PROMPT.md",
+   "rl.tests": "tests/e2e/helpers/e2e_helper.bash",
+   "rl.ci": ".github/workflows/test.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "tests/integration/test_backward_compat.bats",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T4/T7/T8 introduced, controls limits impl, approval none, sandbox none, log part, kill part",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by approval none, sandbox none",
+   "fx.exit": "artifact.format config: a configuration file in an open text format",
+   "pe.budget": "a ceiling the operator sets on the command line: README.md (--timeout )",
+   "co.coexist": "states the hosts it sits beside: Claude Code, OpenCode, Aider (README.md)",
+   "ic.surface": "Surface: library (package.json)",
+   "ic.help": "usage is documented, not carried by the surface: README.md (--help)",
+   "ic.error": "a documented flag that gates or previews the action: README.md (--dry-run)",
+   "rl.resume": "a resume the operator can ask for: README.md (--resume)",
+   "fx.install": "an install that does not change the machine globally: README.md (docker pull)",
+   "fx.byo": "one provider is named and nothing else is offered: ANTHROPIC (README.md)",
+   "sf.stop": "stopping is described in prose only: README.md (Ctrl+C)",
+   "sf.warn": "the irreversible step is both warned about and gated: docs/CLI_OPTIONS.md (destructive)",
+   "fs.scope": "CLAUDE.md, an agent-facing declaration of what the repository is for"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 3,
+  "complex": 1,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental"
+ ],
+ "pre": [
+  "a test or check that decides pass or fail from outside the loop",
+  "Claude Code installed and authenticated",
+  "a budget the operator is willing to lose"
+ ],
+ "anti": [
+  "work with no external check, where the loop cannot know it is done",
+  "UI work judged subjectively",
+  "running it unattended with the rate limit disabled"
+ ],
+ "th": [
+  "T4",
+  "T7",
+  "T8"
+ ],
+ "ctrl": {
+  "limits": "impl",
+  "approval": "none",
+  "sandbox": "none",
+  "log": "part",
+  "kill": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "The exit gate requires both completion indicators and an explicit EXIT_SIGNAL, which is a stricter stopping condition than the pattern it implements. Rate limiting is implemented rather than documented, and it is the only thing standing between an autonomous loop and an unbounded bill.",
+ "sources": [
+  {
+   "url": "https://github.com/frankbria/ralph-claude-code",
+   "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/frankbria/ralph-claude-code/main/README.md",
+   "accessed": "2026-09-02"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Ralph for Claude Code",
+   "sum": "RalphループをClaude Code向けに実装したもの。二重条件の終了判定とレート制限を備えた自律反復を回す。パターン本体が利用者任せにしていた上限を、実装として持っている。",
+   "art": "ループ設定とプロンプトファイル（永続）",
+   "pre": [
+    "ループの外側で合否を判定できるテストや検査",
+    "Claude Codeの導入と認証",
+    "失っても構う範囲の予算"
+   ],
+   "anti": [
+    "外部の検査がなく、完了を判定できない作業",
+    "主観で良否が決まるUI作業",
+    "レート制限を切ったままの無人実行"
+   ],
+   "gnote": "終了判定は完了の兆候と明示的なEXIT_SIGNALの両方を要求する。これは元のパターンより厳しい停止条件である。レート制限は文書ではなく実装として存在し、自律ループと青天井の請求の間に立っている唯一のものでもある。",
+   "cost_warning": "自律ループは構造上、上限を持たない。この実装はレート制限と終了判定を足しているが、予算を決めるのは依然として利用者である。",
+   "flow": {
+    "steps": [
+     "PROMPT.mdを読む",
+     "エージェントを実行",
+     "終了条件を判定",
+     "レート制限ガード",
+     "fix_plan.mdを更新"
+    ],
+    "back": [
+     "再ループ"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {},
+  "mcp": "no",
+  "agents_md": "no",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Read PROMPT.md",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Run the agent",
+    "l": "L1",
+    "who": "model"
+   },
+   {
+    "s": "Check the exit condition",
+    "l": "L6",
+    "who": "tool",
+    "gate": true
+   },
+   {
+    "s": "Rate-limit guard",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Update fix_plan.md",
+    "l": "L3",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 4,
+    "to": 0,
+    "s": "loop again"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "cost_warning": "An autonomous loop has no ceiling by construction. This implementation adds rate limiting and an exit gate, but the budget is still the operator's to set."
+}

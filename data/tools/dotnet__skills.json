@@ -1,0 +1,214 @@
+{
+ "slug": "dotnet/skills",
+ "n": ".NET Agent Skills",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "markdown",
+  "lifecycle": "persistent",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "addressee_note": "skill and plugin files installed into a harness's marketplace: their reader is the agent that loads them",
+  "format_detail": []
+ },
+ "lic": "MIT",
+ "stars": 5571,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": false,
+ "sum": "Microsoft's official curated collection of Agent Skills and custom agents for .NET/C# development, spanning builds, tests, upgrades, diagnostics, and AI integration, installable across Claude Code, Copilot CLI, Cursor, Codex CLI, and VS Code.",
+ "art": "skill/plugin files installed into the harness's project or plugin marketplace (persistent)",
+ "tok": "moderate",
+ "p": [
+  0,
+  1,
+  3,
+  3,
+  1,
+  1,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 5,
+  "restructure": 3,
+  "rebuild": 1,
+  "replace": 1,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "part",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "na",
+  "ic.help": "none",
+  "ic.error": "doc",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "part",
+  "mt.code": "not-assessed",
+  "fx.install": "none",
+  "fx.byo": "na",
+  "fx.exit": "impl",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "README.md plugin table: 14 plugins, each with a declared scope/description",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (AGENTS.md, Agent Plugins, Agent Skills)",
+   "ic.surface": "Surface: none. Nothing is operated directly. The entry is read by an agent, which is a finding rather than a gap (.agents/plugins/marketplace.json)",
+   "rl.ci": ".github/workflows/pages/pages-build-deployment.yml (Skill Value dashboard build) plus repository-reported CI",
+   "mt.process": "CONTRIBUTING guidance and the per-plugin directory convention (plugins/<name>/skills/<skill>/SKILL.md)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T17 introduced, controls approval doc, prov none",
+   "sf.reach": "restates exec and ctrl: the entry does not execute on its own, and approval is doc",
+   "fx.exit": "artifact.format markdown: Markdown, which any editor already reads",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Codex CLI, OpenAI Codex (README.md)",
+   "ic.error": "documented only, nothing in the code checks: docs/design/pr-triage-workflows.md (dry_run)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/actionlint.yml (sha256sum)",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "fs.example": "eng/skill-validator/tests/fixtures/sample-skill/SKILL.md exists as a validator fixture, and nothing points a reader to it as an example",
+   "rl.tests": "eng/skill-validator/tests/Check/AgentPluginTests.cs",
+   "mt.units": "plugins/dotnet-advanced/.claude-plugin/plugin.json, one of a set of plugins each installable on its own"
+  }
+ },
+ "cyn": {
+  "clear": 4,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "a harness with an Agent Skills or plugin-marketplace mechanism (Claude Code, Copilot CLI, Cursor, Codex CLI, or VS Code Insiders preview)",
+  "a .NET/C# codebase these skills are written against"
+ ],
+ "anti": [
+  "non-.NET codebases; every plugin is C#/.NET-specific",
+  "harnesses with no skill or plugin-marketplace mechanism",
+  "teams that need stable VS Code integration today (that path is an explicitly-labelled preview)"
+ ],
+ "th": [
+  "T17"
+ ],
+ "ctrl": {
+  "approval": "doc",
+  "sandbox": "na",
+  "allowlist": "na",
+  "prov": "none"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Skills and agents are Markdown/plugin files fetched from a marketplace and installed as ordinary editable source, so the install step is itself a supply-chain step (T17); no gate is applied to the code the skills help an agent write.",
+ "sources": [
+  {
+   "url": "https://github.com/dotnet/skills",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/dotnet/skills/main/README.md",
+   "accessed": "2026-09-06"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": ".NET Agent Skills",
+   "sum": "Microsoftが公式に提供する.NET/C#向けAgent Skillsとカスタムエージェントの集合。ビルド、テスト、アップグレード、診断、AI統合まで幅広くカバーし、Claude Code・Copilot CLI・Cursor・Codex CLI・VS Codeに対応。",
+   "art": "ハーネスのプロジェクトまたはプラグインマーケットプレイスにインストールされるskill/pluginファイル(永続)",
+   "pre": [
+    "Agent Skillsまたはプラグインマーケットプレイス機構を持つハーネス(Claude Code、Copilot CLI、Cursor、Codex CLI、またはVS Code Insidersプレビュー)",
+    "これらのskillが対象とする.NET/C#コードベース"
+   ],
+   "anti": [
+    ".NET以外のコードベース(全プラグインがC#/.NET専用)",
+    "skillやプラグインマーケットプレイス機構を持たないハーネス",
+    "今すぐ安定したVS Code統合が必要なチーム(その経路は明示的にプレビュー扱い)"
+   ],
+   "gnote": "skillとagentはマーケットプレイスから取得してインストールされるMarkdown/pluginファイルであり、インストール自体がサプライチェーン上の一歩(T17)。skillがエージェントに書かせるコードそのものへのゲートは無い。",
+   "flow": {
+    "steps": [
+     "リポジトリをプラグインマーケットプレイスに追加",
+     "個別プラグインをインストール",
+     "タスクに応じてskillが発火",
+     "エージェントがskillの指針に従う",
+     "ダッシュボードが合否/トークン率を記録"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "plugins/dotnet-advanced/skills/csharp-scripts/SKILL.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "convention",
+  "process"
+ ],
+ "spec_unit": "document-per-concern",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Add repo as plugin marketplace",
+    "l": "L1",
+    "who": "human"
+   },
+   {
+    "s": "Install specific plugin",
+    "l": "L1",
+    "who": "human"
+   },
+   {
+    "s": "Skill activates on task",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Agent follows skill guidance",
+    "l": "L2",
+    "who": "model"
+   },
+   {
+    "s": "Dashboard tracks pass/token rates",
+    "l": "L5",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

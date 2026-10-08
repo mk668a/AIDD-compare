@@ -1,0 +1,129 @@
+{
+ "entry": "OpenViking",
+ "slug": "volcengine/OpenViking",
+ "flow": {
+  "basis": "repo",
+  "path": "agent-plugins/skills/openviking-memory/SKILL.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 4,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Mount viking://",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "agent-plugins/skills/openviking-memory/SKILL.md",
+     "matched": [
+      "viking"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agent-plugins/skills/openviking-memory/SKILL.md",
+     "matched": [
+      "viking"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agent-plugins/skills/openviking-memory/references/optional-tools.md",
+     "matched": [
+      "viking"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Agent runs ls and find",
+   "l": "L2",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "agent-plugins/skills/openviking-memory/SKILL.md",
+     "matched": [
+      "agent",
+      "find"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agent-plugins/skills/openviking-memory/SKILL.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "agent-plugins/skills/openviking-memory/references/optional-tools.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Read the entry",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "agent-plugins/skills/openviking-memory/SKILL.md",
+     "matched": [
+      "read"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "bot/workspace/skills/README.md",
+     "matched": [
+      "read"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Record the trajectory",
+   "l": "L5",
+   "who": "tool",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "0c5147cae26aec8d6d93445ec6ad86d5faff4035"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "agent-plugins/skills/openviking-memory/SKILL.md",
+   "value": "name: openviking-memory\ndescription: Recall and persist long-term memory through the OpenViking MCP tools. Use at the start of any substantive task (coding, configuration, debugging, multi-step or tool-based work) to retrieve relevant prior knowledge with find/search/read, and during or after work to persist durable facts, preferences, decisions, and lessons with remember. Do not use for casual chat or simple factual questions the model can answer directly.\n# OpenViking Memory\nOpenViking is a long-term semantic memory store addressed by `viking://` URIs.\nautomatically — you drive both halves of the loop with the `openviking` MCP\n- Recall: `find`, `search`, `read`, `list`, `grep`, `glob`\npresent, read [references/optional-tools.md](references/optional-tools.md)\nback to raw HTTP. If no OpenViking tools are registered at all, continue\n3. Call `find` (fast, ranked results with URI + abstract + score) with\n   `viking://~/memories/experiences` for prior task experience.\n4. Judge results by task and environment fit, not title similarity. `read` the"
+  },
+  {
+   "kind": "path",
+   "value": "agent-plugins/skills/openviking-memory/SKILL.md"
+  },
+  {
+   "kind": "path",
+   "value": "agent-plugins/skills/openviking-memory/references/optional-tools.md"
+  },
+  {
+   "kind": "path",
+   "value": "bot/workspace/skills/README.md"
+  }
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "entry": "Spec Workflow MCP",
+ "slug": "Pimzino/spec-workflow-mcp",
+ "flow": {
+  "basis": "repo",
+  "path": "src/markdown/templates/",
+  "kind": "loop",
+  "cite_verified": "listing"
+ },
+ "support": {
+  "steps": 6,
+  "with_evidence": 3
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Requirements",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "src/markdown/templates/requirements-template.md",
+     "matched": [
+      "requirements"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.es.md",
+     "matched": [
+      "requirements"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.it.md",
+     "matched": [
+      "requirements"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Approval on the dashboard",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": []
+  },
+  {
+   "i": 2,
+   "s": "Design",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "src/markdown/templates/design-template.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.de.md",
+     "matched": [
+      "design"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.it.md",
+     "matched": [
+      "design"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Approval",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": []
+  },
+  {
+   "i": 4,
+   "s": "Tasks",
+   "l": "L4",
+   "who": "model",
+   "support": [
+    {
+     "kind": "path",
+     "source": "src/markdown/templates/tasks-template.md",
+     "matched": [
+      "tasks"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Implement",
+   "l": "L1",
+   "who": "model",
+   "support": []
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "d38e82eaa8a6a2f5480285fa1feb8cf8378c86e0"
+ },
+ "evidence": [
+  {
+   "kind": "path",
+   "value": "src/markdown/templates/design-template.md"
+  },
+  {
+   "kind": "path",
+   "value": "src/markdown/templates/requirements-template.md"
+  },
+  {
+   "kind": "path",
+   "value": "src/markdown/templates/tasks-template.md"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.de.md",
+   "value": "Strukturierter Entwicklungsworkflow** - Sequenzielle Spec-Erstellung (Anforderungen → Design → Aufgaben)"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.es.md",
+   "value": "Flujo de Trabajo de Desarrollo Estructurado** - Creación secuencial de especificaciones (Requisitos → Diseño → Tareas)"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.it.md",
+   "value": "Flusso di Lavoro Strutturato** - Creazione sequenziale delle specifiche (Requisiti → Design → Task)"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "entry": "Beads",
+ "slug": "gastownhall/beads",
+ "flow": {
+  "basis": "repo",
+  "path": "README.md",
+  "kind": "loop",
+  "cite_verified": "content"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "bd create",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "create"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/beads/skills/beads/commands/create.md",
+     "matched": [
+      "create"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "README.md",
+     "matched": [
+      "create"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Dependency graph",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "dependency",
+      "graph"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "README.md",
+     "matched": [
+      "dependency",
+      "graph"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "bd ready",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "ready"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/beads/skills/beads/commands/ready.md",
+     "matched": [
+      "ready"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "README.md",
+     "matched": [
+      "ready"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Agent claims it",
+   "l": "L7",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "agent",
+      "claims"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".agent/workflows/resolve-beads-conflict.md",
+     "matched": [
+      "agent"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "internal/templates/agents/defaults/beads-section-codex.md",
+     "matched": [
+      "agent"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "bd close",
+   "l": "L3",
+   "who": "model",
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "close"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": "plugins/beads/skills/beads/commands/close.md",
+     "matched": [
+      "close"
+     ]
+    },
+    {
+     "kind": "mermaid",
+     "source": "README.md",
+     "matched": [
+      "close"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "c0d8da42de5fd15c95adac85e342ba4a121da0fb"
+ },
+ "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "**Distributed graph issue tracker for AI agents, powered by [Dolt](https://github.com/dolthub/dolt).**\nBeads provides a persistent, structured memory for coding agents. It replaces messy markdown plans with a dependency-aware graph, allowing agents to handle long-horizon tasks without losing context.\n    create[\"bd create<br/>new bead\"] --> depgraph[\"dependency<br/>graph\"]\n    depgraph --> ready[\"bd ready<br/>claimable work\"]\n    ready --> claim[\"bd update --claim<br/>agent takes it\"]\n    claim --> close[\"bd close<br/>work done\"]\n    close -->|blockers released| ready\n    depgraph <-->|\"bd dolt push / pull\"| remote[(\"other machines<br/>and agents\")]\n# Optional: refresh or install richer instructions for your agent\nbd setup codex    # Codex CLI - installs skill, AGENTS.md guidance, and hooks\nbd setup factory  # Factory.ai Droid - creates/updates AGENTS.md\n`bd init` creates or updates `AGENTS.md` by default so agents can discover the beads workflow, and also installs project Claude/Codex integrations unless you pass `--skip-agents` or `--stealth`. Use `bd setup --list` to see supported integrations, including `bd setup codex`, `bd setup factory`, `bd setup claude`, `bd setup mux`, `bd setup cursor`, and more. See [Agent and IDE setup](docs/getting-started/ide-setup.md)."
+  },
+  {
+   "kind": "path",
+   "value": ".agent/workflows/resolve-beads-conflict.md"
+  },
+  {
+   "kind": "path",
+   "value": "internal/templates/agents/defaults/beads-section-codex.md"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/beads/skills/beads/commands/close.md"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/beads/skills/beads/commands/create.md"
+  },
+  {
+   "kind": "path",
+   "value": "plugins/beads/skills/beads/commands/ready.md"
+  }
+ ]
+}

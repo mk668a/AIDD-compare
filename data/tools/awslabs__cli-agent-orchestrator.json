@@ -1,0 +1,252 @@
+{
+ "slug": "awslabs/cli-agent-orchestrator",
+ "n": "CLI Agent Orchestrator (CAO)",
+ "entry_kind": "implementation",
+ "l": "L7",
+ "s2": [
+  "L6",
+  "L3"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "trace-log",
+  "lifecycle": "ephemeral",
+  "addressee": "human",
+  "addressee_basis": "inferred",
+  "addressee_note": "a workflow and event journal of a multi-agent run: its shape is a record to inspect after the fact, not an input another agent reads back",
+  "format_detail": [
+   {
+    "id": "opentelemetry",
+    "ev": "pyproject.toml (OpenTelemetry)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 1394,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Coordinates multiple AI coding CLIs (Claude Code, Codex, Kiro, and nine others) as a supervisor delegating to parallel or sequential workers, each running as a full CLI process in an isolated tmux session.",
+ "art": "tmux sessions and a workflow/event journal (ephemeral by default; opt-in self-learning can promote lessons into agent profile files)",
+ "tok": "unbounded",
+ "p": [
+  0,
+  1,
+  3,
+  2,
+  0,
+  0,
+  2
+ ],
+ "fit": {
+  "greenfield": 3,
+  "extend": 4,
+  "restructure": 3,
+  "rebuild": 2,
+  "replace": 1,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "doc",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": "examples/aidlc-portfolio/skills/aidlc-portfolio/SKILL.md",
+   "fs.example": "docs/examples/conditional_example.py",
+   "co.standards": "cites standards_conformance.evidence: conforms to 3 of the 5 neutral interface standards (MCP, Agent Plugins, Agent Skills)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: pyproject.toml (click)",
+   "rl.tests": "cao_mcp_apps/src/test/__snapshots__/layout.test.tsx.snap",
+   "rl.ci": ".github/workflows/ci.yml",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T2/T3/T11/T12/T13 introduced, controls tool_restrictions part, provider_isolation none, process_sandbox none, plugin_events doc, role_separation part",
+   "mt.units": "docusaurus/package.json",
+   "mt.process": "CONTRIBUTING.md",
+   "fx.install": "an install that does not change the machine globally: README.md (uv tool install)",
+   "fx.byo": "the provider is the operator's choice: BASEURL (docusaurus/tsconfig.json)",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by tool_restrictions part",
+   "sf.stop": "stopping is described in prose only: docs/cursor-cli.md (ctrl+c)",
+   "sf.warn": "the irreversible step is both warned about and gated: SECURITY.md (destructive)",
+   "fx.exit": "artifact.format trace-log: a run log the tool writes; readable as text, structured for the tool",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Codex CLI, GitHub Copilot, OpenCode, Cursor, Gemini CLI (README.md)",
+   "ic.error": "a documented flag that gates or previews the action: docs/issues/345-okf-export-import/design.md (dry_run)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/secret-scan.yml (sha256sum)"
+  }
+ },
+ "cyn": {
+  "clear": 3,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 2
+ },
+ "cons": [
+  "experimental",
+  "standard"
+ ],
+ "pre": [
+  "at least one supported provider CLI installed and authenticated (Kiro, Claude Code, Codex, Antigravity, Hermes, Kimi, MiniMax Code, Copilot CLI, OpenCode, Oh My Pi, Cursor CLI, or Grok Build)",
+  "tmux 3.3+ and uv available on the operator's machine",
+  "work that can be decomposed into a supervisor role plus one or more worker roles"
+ ],
+ "anti": [
+  "a single small task one CLI agent handles directly; the supervisor/worker split adds coordination overhead with no payoff",
+  "environments where tmux cannot run or where authenticating multiple provider CLIs is impractical"
+ ],
+ "th": [
+  "T2",
+  "T3",
+  "T11",
+  "T12",
+  "T13"
+ ],
+ "ctrl": {
+  "tool_restrictions": "part",
+  "provider_isolation": "none",
+  "process_sandbox": "none",
+  "plugin_events": "doc",
+  "role_separation": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "CAO orchestrates delegated CLI agents; it does not itself gate the code they produce. Its own CI runs a secret-scan workflow, but that scans CAO's own repository, not output from the coding agents it dispatches. Its event/workflow journal also keeps step output verbatim by default (workflow_journal_capture_output), so a delegated agent's output containing a secret is retained unredacted unless the operator changes defaults.",
+ "sources": [
+  {
+   "url": "https://github.com/awslabs/cli-agent-orchestrator",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/awslabs/cli-agent-orchestrator/main/README.md",
+   "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://raw.githubusercontent.com/awslabs/cli-agent-orchestrator/main/docs/configuration.md",
+   "accessed": "2026-09-06"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "CLI Agent Orchestrator (CAO)",
+   "sum": "複数のAIコーディングCLI(Claude Code、Codex、Kiroなど12種)をスーパーバイザーが並列/逐次のワーカーとして委任し、それぞれ隔離されたtmuxセッション上のフルCLIプロセスとして調整する。",
+   "art": "tmuxセッションとワークフロー/イベントジャーナル(既定では一時的。オプトインの自己学習機能で教訓をエージェントプロファイルに昇格・永続化できる)",
+   "pre": [
+    "サポート対象のプロバイダCLI(Kiro、Claude Code、Codex、Antigravity、Hermes、Kimi、MiniMax Code、Copilot CLI、OpenCode、Oh My Pi、Cursor CLI、Grok Buildのいずれか)が導入・認証済みであること",
+    "オペレータのマシンでtmux 3.3以上とuvが利用できること",
+    "スーパーバイザー役と1つ以上のワーカー役に分解できる作業であること"
+   ],
+   "anti": [
+    "1つのCLIエージェントで十分な小さな単発タスク。スーパーバイザー/ワーカー分割の調整コストが見合わない",
+    "tmuxが動かせない、または複数プロバイダCLIの認証が現実的でない環境"
+   ],
+   "gnote": "CAOは委任先のCLIエージェントを調整するだけで、それらが生成するコード自体はゲートしない。自身のCIにはsecret-scanワークフローがあるが、これはCAO自身のリポジトリ用であり、委任先エージェントの出力は対象外。既定ではイベント/ワークフロージャーナルがステップ出力をそのまま保持するため(workflow_journal_capture_output)、シークレットを含む出力もデフォルト設定では無編集のまま残る。",
+   "flow": {
+    "steps": [
+     "プロファイルを導入",
+     "cao-serverを起動",
+     "スーパーバイザーを起動",
+     "スーパーバイザーがワーカーに委任",
+     "ワーカーがtmux上のCLIで実行",
+     "結果を記録し教訓を昇格"
+    ],
+    "back": [
+     "オプトインの指示昇格"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "agent-plugin/cao/.mcp.json",
+   "agent_plugins": "agent-plugin/cao-contributor/.claude-plugin/plugin.json",
+   "agent_skills": "agent-plugin/cao-contributor/skills/cao-plugin/SKILL.md"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "yes",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true,
+  "note": "cao-server runs on the operator's machine; each provider CLI is authenticated by the operator with its own vendor credentials."
+ },
+ "design_concerns": [
+  "process"
+ ],
+ "spec_unit": "not-assessed",
+ "flow": {
+  "basis": "repo",
+  "path": "skills/",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Install agent profile",
+    "l": "L7",
+    "who": "human"
+   },
+   {
+    "s": "Start cao-server",
+    "l": null,
+    "who": "tool"
+   },
+   {
+    "s": "Launch supervisor",
+    "l": "L7",
+    "who": "human"
+   },
+   {
+    "s": "Supervisor delegates workers",
+    "l": "L7",
+    "who": "model",
+    "par": [
+     "worker A",
+     "worker B"
+    ]
+   },
+   {
+    "s": "Workers execute in tmux CLIs",
+    "l": "L6",
+    "who": "tool"
+   },
+   {
+    "s": "Capture outcome, promote lesson",
+    "l": "L3",
+    "who": "model"
+   }
+  ],
+  "back": [
+   {
+    "from": 5,
+    "to": 0,
+    "s": "opt-in instruction promotion"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07",
+ "cost_warning": "No built-in ceiling on total spend across a fleet: pe.budget grades none. The runtime exposes protocol timeouts (mcp_request_timeout, provider_init_timeout) but no per-run token, turn, or cost cap, so a supervisor can fan out to many parallel long-running provider CLIs whose combined cost is bounded only by each provider's own limits."
+}

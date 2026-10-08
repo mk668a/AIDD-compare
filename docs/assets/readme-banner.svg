@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="396" viewBox="0 0 1200 396" role="img" aria-labelledby="title desc">
+  <title id="title">AI-Driven Development Tools Comparison</title>
+  <desc id="desc">Compare tools across seven layers: environment, context, memory, specification, verification, iteration, and coordination.</desc>
+  <rect width="1200" height="396" rx="20" fill="#0b1423"/>
+  <path d="M56 56H116" stroke="#67e8c6" stroke-width="5"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="132" y="62" fill="#67e8c6" font-size="16" font-weight="700" letter-spacing="3">AIDD COMPARE</text>
+    <text x="56" y="128" fill="#f8fafc" font-size="44" font-weight="700">AI-Driven Development</text>
+    <text x="56" y="181" fill="#a9b9ce" font-size="30">Compare tools. Find your fit.</text>
+<g transform="translate(56 236)">
+      <rect width="144" height="104" rx="12" fill="#17263b" stroke="#33465f"/>
+      <text x="16" y="34" fill="#67e8c6" font-size="18" font-weight="700">L1</text>
+      <text x="16" y="76" fill="#e2e8f0" font-size="16">Environment</text>
+    </g>
+<g transform="translate(214 236)">
+      <rect width="144" height="104" rx="12" fill="#17263b" stroke="#33465f"/>
+      <text x="16" y="34" fill="#67e8c6" font-size="18" font-weight="700">L2</text>
+      <text x="16" y="76" fill="#e2e8f0" font-size="16">Context</text>
+    </g>
+<g transform="translate(372 236)">
+      <rect width="144" height="104" rx="12" fill="#17263b" stroke="#33465f"/>
+      <text x="16" y="34" fill="#67e8c6" font-size="18" font-weight="700">L3</text>
+      <text x="16" y="76" fill="#e2e8f0" font-size="16">Memory</text>
+    </g>
+<g transform="translate(530 236)">
+      <rect width="144" height="104" rx="12" fill="#17263b" stroke="#33465f"/>
+      <text x="16" y="34" fill="#67e8c6" font-size="18" font-weight="700">L4</text>
+      <text x="16" y="76" fill="#e2e8f0" font-size="16">Specification</text>
+    </g>
+<g transform="translate(688 236)">
+      <rect width="144" height="104" rx="12" fill="#17263b" stroke="#33465f"/>
+      <text x="16" y="34" fill="#67e8c6" font-size="18" font-weight="700">L5</text>
+      <text x="16" y="76" fill="#e2e8f0" font-size="16">Verification</text>
+    </g>
+<g transform="translate(846 236)">
+      <rect width="144" height="104" rx="12" fill="#17263b" stroke="#33465f"/>
+      <text x="16" y="34" fill="#67e8c6" font-size="18" font-weight="700">L6</text>
+      <text x="16" y="76" fill="#e2e8f0" font-size="16">Iteration</text>
+    </g>
+<g transform="translate(1004 236)">
+      <rect width="144" height="104" rx="12" fill="#17263b" stroke="#33465f"/>
+      <text x="16" y="34" fill="#67e8c6" font-size="18" font-weight="700">L7</text>
+      <text x="16" y="76" fill="#e2e8f0" font-size="16">Coordination</text>
+    </g>
+  </g>
+</svg>

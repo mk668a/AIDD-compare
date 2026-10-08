@@ -1,0 +1,215 @@
+{
+ "entry": "Headroom",
+ "slug": "headroomlabs-ai/headroom",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "cite_verified": "none"
+ },
+ "support": {
+  "steps": 5,
+  "with_evidence": 5
+ },
+ "steps": [
+  {
+   "i": 0,
+   "s": "Input received",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "input",
+      "received"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "input"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "s": "Cache aligner",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "cache",
+      "aligner"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "cache"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "cache",
+      "aligner"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Content router",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "heading",
+     "source": "docs/context-mode-integration-analysis.md",
+     "matched": [
+      "content"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/context-mode-integration-analysis.md",
+     "matched": [
+      "content"
+     ]
+    },
+    {
+     "kind": "heading",
+     "source": "docs/context-mode-integration-analysis.md",
+     "matched": [
+      "content"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "s": "Compress",
+   "l": "L2",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "compress"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "compress"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "docs/context-mode-integration-analysis.md",
+     "matched": [
+      "compress"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Remember",
+   "l": "L3",
+   "who": "tool",
+   "support": [
+    {
+     "kind": "arrow",
+     "source": "README.md",
+     "matched": [
+      "remember"
+     ]
+    }
+   ]
+  }
+ ],
+ "probe": {
+  "probed_at": "2026-09-17",
+  "source": "GitHub git/trees and raw.githubusercontent",
+  "branch": "main",
+  "tree_sha": "e67b3c8a29443a60d6b0018fb22f525c5cd7e709"
+ },
+ "evidence": [
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "1. Bottom line"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "2. context-mode: portable IP inventory"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "3. Headroom's actual extension seams"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "4. Proposed plugins & variants"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "5. Evidence base"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "6. Blockers — resolve these before writing code"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "7. Sequencing"
+  },
+  {
+   "kind": "heading",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "8. Follow-up verification"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "│  CacheAligner  →  ContentRouter  →  CCR            │"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`Setup` → `Pre-Start` → `Post-Start` → `Input Received` → `Input Cached` →"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "`Input Routed` → `Input Compressed` → `Input Remembered` → `Pre-Send` →"
+  },
+  {
+   "kind": "arrow",
+   "source": "README.md",
+   "value": "Transforms** do the work: CacheAligner → ContentRouter → SmartCrusher / CodeCompressor / Kompress-base, live-zone only. IntelligentContext and RollingWindow were retired in PR-B1."
+  },
+  {
+   "kind": "arrow",
+   "source": "docs/context-mode-integration-analysis.md",
+   "value": "Composes rather than replaces: `compress` → return squeezed text + hash → store the *original* in"
+  }
+ ]
+}

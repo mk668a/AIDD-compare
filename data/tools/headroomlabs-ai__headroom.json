@@ -1,0 +1,203 @@
+{
+ "slug": "headroomlabs-ai/headroom",
+ "n": "Headroom",
+ "entry_kind": "implementation",
+ "l": "L2",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "ephemeral-path",
+  "lifecycle": "ephemeral",
+  "addressee": "agent",
+  "addressee_basis": "inferred",
+  "format_detail": []
+ },
+ "lic": "Apache-2.0",
+ "stars": 74574,
+ "push": "2026-10-07",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Compresses tool output, logs, files and RAG chunks before they reach the model.",
+ "art": "none (compression path)",
+ "tok": "frugal",
+ "p": [
+  0,
+  1,
+  3,
+  2,
+  2,
+  1,
+  2
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "impl",
+  "co.standards": "impl",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "impl",
+  "rl.tests": "impl",
+  "rl.ci": "impl",
+  "rl.resume": "impl",
+  "se.residency": "impl",
+  "se.attest": "impl",
+  "se.threats": "part",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "impl",
+  "fx.byo": "impl",
+  "fx.exit": "part",
+  "sf.reach": "none",
+  "sf.stop": "impl",
+  "sf.warn": "impl",
+  "evidence": {
+   "fs.scope": ".claude-plugin/marketplace.json",
+   "fs.example": "crates/headroom-parity/examples/diff_fixture.rs",
+   "rl.tests": "crates/headroom-core/tests/auth_mode.rs",
+   "rl.ci": ".github/workflows/ci.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "crates/headroom-core/Cargo.toml",
+   "co.standards": "cites standards_conformance.evidence: conforms to 2 of the 5 neutral interface standards (MCP, Agent Plugins)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine",
+   "se.threats": "cites th and ctrl: T2 introduced, controls log part",
+   "fx.exit": "artifact.format ephemeral-path: a path that exists for the run; nothing durable survives it",
+   "pe.budget": "a ceiling the operator sets on the command line: headroom/proxy/server.py (--limit-concurrency)",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Aider, OpenCode, Cline, GitHub Copilot, Codex CLI, Zed, OpenAI Codex (README.md)",
+   "ic.surface": "Surface: cli (pyproject.toml)",
+   "ic.help": "a command-line parser that prints its own usage: Cargo.toml (clap)",
+   "ic.error": "a documented flag that gates or previews the action: docs/content/docs/configuration.mdx (--dry-run)",
+   "rl.resume": "a resume the operator can ask for: wiki/cli.md (--resume)",
+   "se.attest": "signs or attests what it publishes: .github/workflows/docker.yml (cosign)",
+   "fx.install": "an install that does not change the machine globally: README.md (uv tool install)",
+   "fx.byo": "the provider is the operator's choice: BEDROCK, LITELLM, OPENROUTER, OLLAMA (README.md)",
+   "sf.stop": "a stop path, and the state it leaves behind is described: e2e/wrap/run.py (SIGINT); README.md (Ctrl+C)",
+   "sf.warn": "the irreversible step is both warned about and gated: wiki/configuration.md (overwrites the)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 3,
+  "chaotic": 4
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "integration into a supported harness"
+ ],
+ "anti": [
+  "audit work that requires complete output"
+ ],
+ "th": [
+  "T2"
+ ],
+ "ctrl": {
+  "log": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "Compression can drop something that mattered; visibility into what was discarded is required",
+ "sources": [
+  {
+   "url": "https://github.com/headroomlabs-ai/headroom",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "Headroom",
+   "sum": "ツール出力・ログ・ファイル・RAGチャンクを、モデルに届く前に圧縮する。",
+   "art": "なし（圧縮経路）",
+   "pre": [
+    "対応ハーネスへの組み込み"
+   ],
+   "anti": [
+    "出力の完全性が必要な監査用途"
+   ],
+   "gnote": "圧縮によって重要な情報が落ちる可能性があり、何を捨てたかの可視性が要る",
+   "flow": {
+    "steps": [
+     "入力を受領",
+     "キャッシュ整列",
+     "内容ルーティング",
+     "圧縮",
+     "記憶"
+    ],
+    "back": []
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "mcp": "headroom/ccr/mcp_server.py",
+   "agent_plugins": ".claude-plugin/marketplace.json"
+  },
+  "mcp": "yes",
+  "agents_md": "no",
+  "agent_plugins": "yes",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": null
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "readme",
+  "kind": "sequence",
+  "steps": [
+   {
+    "s": "Input received",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Cache aligner",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Content router",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Compress",
+    "l": "L2",
+    "who": "tool"
+   },
+   {
+    "s": "Remember",
+    "l": "L3",
+    "who": "tool"
+   }
+  ],
+  "back": []
+ },
+ "verified_at": "2026-10-07"
+}

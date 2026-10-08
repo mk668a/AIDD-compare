@@ -1,0 +1,223 @@
+{
+ "slug": "dagger/container-use",
+ "n": "container-use",
+ "entry_kind": "implementation",
+ "l": "L7",
+ "s2": [
+  "L1"
+ ],
+ "dom": [
+  "code"
+ ],
+ "artifact": {
+  "format": "environment",
+  "lifecycle": "ephemeral",
+  "addressee": "na",
+  "addressee_basis": "na",
+  "format_detail": [
+   {
+    "id": "container",
+    "ev": "go.mod (container)"
+   }
+  ]
+ },
+ "lic": "Apache-2.0",
+ "stars": 4060,
+ "push": "2026-09-21",
+ "conf": "ok",
+ "exec": true,
+ "sum": "Gives each agent a container and a separate branch, so they run in parallel.",
+ "art": "isolated environments",
+ "tok": "moderate",
+ "p": [
+  0,
+  0,
+  3,
+  2,
+  1,
+  0,
+  0
+ ],
+ "fit": {
+  "greenfield": 4,
+  "extend": 4,
+  "restructure": 4,
+  "rebuild": 3,
+  "replace": 3,
+  "wrap": 2
+ },
+ "quality": {
+  "fs.scope": "impl",
+  "fs.example": "impl",
+  "pe.budget": "none",
+  "co.standards": "part",
+  "co.coexist": "impl",
+  "ic.surface": "impl",
+  "ic.help": "impl",
+  "ic.error": "none",
+  "rl.tests": "impl",
+  "rl.ci": "part",
+  "rl.resume": "none",
+  "se.residency": "impl",
+  "se.attest": "none",
+  "se.threats": "impl",
+  "mt.units": "impl",
+  "mt.process": "impl",
+  "mt.code": "not-assessed",
+  "fx.install": "part",
+  "fx.byo": "na",
+  "fx.exit": "part",
+  "sf.reach": "part",
+  "sf.stop": "none",
+  "sf.warn": "none",
+  "evidence": {
+   "fs.scope": "AGENTS.md",
+   "fs.example": "examples/hello_world.md",
+   "rl.tests": "cmd/container-use/agent/configure_test.go",
+   "rl.ci": ".github/workflows/build.yml",
+   "mt.process": "CONTRIBUTING.md",
+   "mt.units": "go.mod",
+   "co.standards": "cites standards_conformance.evidence: conforms to 1 of the 5 neutral interface standards (AGENTS.md)",
+   "se.residency": "cites data_residency: local-first, the operator's state stays on their machine; keys are the operator's own (byok)",
+   "se.threats": "cites th and ctrl: T4 introduced, controls sandbox impl, egress part, limits part, log part, kill part",
+   "sf.reach": "restates exec and ctrl: the entry executes, and its reach is bounded by sandbox impl",
+   "co.coexist": "states the hosts it sits beside: Claude Code, Cursor, Amazon Q, Windsurf, GitHub Copilot, Zed, OpenCode, Cline, Kilo Code, OpenAI Codex (README.md)",
+   "ic.surface": "Surface: cli (cmd/container-use/main.go)",
+   "ic.help": "a command-line parser that prints its own usage: go.mod (cobra)",
+   "fx.install": "only a global install is documented: README.md (brew install )",
+   "fx.byo": "the entry does not call a model provider itself, so there is no provider for the operator to substitute",
+   "fx.exit": "artifact.format environment: the container is the tool's own and does not outlive it. The work it holds lands on a git branch, which git reads without the tool (README: git checkout <branch_name>)"
+  }
+ },
+ "cyn": {
+  "clear": 5,
+  "complicated": 4,
+  "complex": 2,
+  "chaotic": 1
+ },
+ "cons": [
+  "experimental",
+  "standard",
+  "regulated"
+ ],
+ "pre": [
+  "a container runtime",
+  "genuine need for parallel work"
+ ],
+ "anti": [
+  "situations where sequential work suffices"
+ ],
+ "th": [
+  "T4"
+ ],
+ "ctrl": {
+  "sandbox": "impl",
+  "egress": "part",
+  "limits": "part",
+  "log": "part",
+  "kill": "part"
+ },
+ "gate": {
+  "sast": "none",
+  "dep": "none",
+  "secret": "none"
+ },
+ "gnote": "One of the few layers that directly mitigates tool misuse and privilege compromise (T2/T3)",
+ "sources": [
+  {
+   "url": "https://github.com/dagger/container-use",
+   "accessed": "2026-08-30"
+  }
+ ],
+ "i18n": {
+  "ja": {
+   "n": "container-use",
+   "sum": "エージェントごとにコンテナと分離ブランチを与え、並列に走らせる。",
+   "art": "隔離環境",
+   "pre": [
+    "コンテナ実行環境",
+    "並列作業の必要性"
+   ],
+   "anti": [
+    "逐次で足りる場面"
+   ],
+   "gnote": "T2/T3の緩和に直接効く数少ない層",
+   "flow": {
+    "steps": [
+     "エージェントが環境を要求",
+     "コンテナとブランチを作成",
+     "隔離環境で作業",
+     "人がブランチをレビュー",
+     "マージ"
+    ],
+    "back": [
+     "修正要求"
+    ]
+   }
+  }
+ },
+ "standards_conformance": {
+  "evidence": {
+   "agents_md": "AGENTS.md"
+  },
+  "mcp": "no",
+  "agents_md": "yes",
+  "agent_plugins": "no",
+  "agent_skills": "no",
+  "a2a": "no"
+ },
+ "data_residency": {
+  "mode": "local-first",
+  "byok": true
+ },
+ "design_concerns": [
+  "none"
+ ],
+ "spec_unit": "none",
+ "flow": {
+  "basis": "repo",
+  "path": "rules/agent.md",
+  "kind": "loop",
+  "steps": [
+   {
+    "s": "Agent asks for an environment",
+    "l": "L7",
+    "who": "model"
+   },
+   {
+    "s": "Create a container and a branch",
+    "l": "L1",
+    "who": "tool"
+   },
+   {
+    "s": "Agent works in isolation",
+    "l": "L1",
+    "who": "model",
+    "par": [
+     "agent 1",
+     "agent 2",
+     "agent n"
+    ]
+   },
+   {
+    "s": "Human reviews the branch",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Merge",
+    "l": null,
+    "who": "human"
+   }
+  ],
+  "back": [
+   {
+    "from": 3,
+    "to": 2,
+    "s": "changes requested"
+   }
+  ]
+ },
+ "verified_at": "2026-10-07"
+}
