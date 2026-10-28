@@ -18,8 +18,8 @@
   "addressee_note": "a spec agreed by a person, plus the worktree an agent works in against it"
  },
  "lic": "MIT",
- "stars": 1673,
- "push": "2026-10-07",
+ "stars": 1706,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "Spec-driven development with per-feature isolation via git worktrees.",
@@ -123,6 +123,14 @@
   {
    "url": "https://github.com/spec-kitty/spec-kitty",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/spec-kitty/spec-kitty",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/spec-kitty/spec-kitty/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
@@ -156,7 +164,7 @@
  "standards_conformance": {
   "evidence": {
    "agents_md": ".kittify/overrides/AGENTS.md",
-   "agent_skills": "src/charter/offering/skills/ad-hoc-profile-load/SKILL.md"
+   "agent_skills": "src/charter/offering/skills/spec-kitty/SKILL.md"
   },
   "mcp": "no",
   "agents_md": "yes",

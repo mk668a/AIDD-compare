@@ -22,8 +22,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 31139,
- "push": "2026-10-06",
+ "stars": 31438,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "A memory engine that extracts facts from conversations, keeps profiles, reconciles contradictions and expires what is stale, rather than storing everything and searching later.",
@@ -132,6 +132,14 @@
   {
    "url": "https://raw.githubusercontent.com/supermemoryai/supermemory/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/supermemoryai/supermemory",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/supermemoryai/supermemory/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

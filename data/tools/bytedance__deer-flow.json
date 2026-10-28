@@ -35,8 +35,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 83467,
- "push": "2026-10-07",
+ "stars": 84518,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "A harness built for tasks measured in hours rather than turns: subagents, sandboxes, memory and skills coordinated behind one long-horizon loop.",
@@ -154,6 +154,14 @@
   {
    "url": "https://raw.githubusercontent.com/bytedance/deer-flow/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/bytedance/deer-flow",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/bytedance/deer-flow/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

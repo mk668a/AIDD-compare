@@ -27,8 +27,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 8720,
- "push": "2026-10-07",
+ "stars": 8976,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": true,
  "sum": "An SDK for the loop you would otherwise write yourself: turn limits, token budgets, cancellation and stop reasons as first-class controls, running in your own process with no hosted control plane.",
@@ -142,6 +142,14 @@
   {
    "url": "https://raw.githubusercontent.com/strands-agents/harness-sdk/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/strands-agents/harness-sdk",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/strands-agents/harness-sdk/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

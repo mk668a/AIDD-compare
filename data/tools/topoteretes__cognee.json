@@ -42,8 +42,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 31541,
- "push": "2026-10-07",
+ "stars": 32832,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
  "sum": "Ingests documents of any format and builds a self-hosted knowledge graph from them, so retrieval traverses relations instead of ranking chunks.",
@@ -154,6 +154,14 @@
   {
    "url": "https://raw.githubusercontent.com/topoteretes/cognee/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/topoteretes/cognee",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/topoteretes/cognee/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

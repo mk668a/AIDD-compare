@@ -23,8 +23,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 35484,
- "push": "2026-10-07",
+ "stars": 36625,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "Tracing and evaluation substrate. Records every LLM call and its cost so runs can be reconstructed.",
@@ -124,6 +124,14 @@
   {
    "url": "https://github.com/langfuse/langfuse",
    "accessed": "2026-09-01"
+  },
+  {
+   "url": "https://api.github.com/repos/langfuse/langfuse",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/langfuse/langfuse/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

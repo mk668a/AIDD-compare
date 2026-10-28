@@ -22,7 +22,7 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 4060,
+ "stars": 4078,
  "push": "2026-09-21",
  "conf": "ok",
  "exec": true,
@@ -127,6 +127,14 @@
   {
    "url": "https://github.com/dagger/container-use",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/dagger/container-use",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/dagger/container-use/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

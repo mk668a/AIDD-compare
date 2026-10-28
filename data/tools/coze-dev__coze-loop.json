@@ -26,8 +26,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 5762,
- "push": "2026-10-05",
+ "stars": 5790,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "A self-hostable platform for developing and operating agents: prompt management, evaluation and monitoring in one deployment. The open edition is the core of a commercial product.",
@@ -136,6 +136,14 @@
   {
    "url": "https://raw.githubusercontent.com/coze-dev/coze-loop/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/coze-dev/coze-loop",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/coze-dev/coze-loop/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

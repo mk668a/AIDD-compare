@@ -17,8 +17,8 @@
   "addressee_quote": "compiling the results into one reviewer-ready packet a human can sign off on [...] the operating instructions the next AI coding agent inherits"
  },
  "lic": "MIT",
- "stars": 26820,
- "push": "2026-09-14",
+ "stars": 27456,
+ "push": "2026-10-16",
  "conf": "ok",
  "exec": false,
  "sum": "Product-management frameworks packaged as skills and slash commands in nine plugins. Eight produce documents such as discovery plans, PRDs, OKRs and roadmaps; the ninth documents and audits an AI-written codebase before it ships.",
@@ -125,6 +125,14 @@
   {
    "url": "https://raw.githubusercontent.com/phuryn/pm-skills/main/README.md",
    "accessed": "2026-10-07"
+  },
+  {
+   "url": "https://api.github.com/repos/phuryn/pm-skills",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/phuryn/pm-skills/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

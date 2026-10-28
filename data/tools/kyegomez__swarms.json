@@ -22,8 +22,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 7233,
- "push": "2026-10-06",
+ "stars": 7307,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "Prebuilt multi-agent architectures, sequential, concurrent and hierarchical, offered as ready shapes rather than as primitives to assemble.",
@@ -135,6 +135,14 @@
   {
    "url": "https://raw.githubusercontent.com/kyegomez/swarms/master/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/kyegomez/swarms",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/kyegomez/swarms/blob/master/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

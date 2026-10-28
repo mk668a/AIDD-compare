@@ -23,8 +23,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 806,
- "push": "2026-10-07",
+ "stars": 1004,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "Local-first runtime security layer that intercepts AI-agent tool calls, package/plugin installs and MCP traffic across 13+ CLI harnesses, blocking or requiring human approval before risky actions execute.",
@@ -144,6 +144,14 @@
   {
    "url": "https://raw.githubusercontent.com/hashgraph-online/hol-guard/main/README.md",
    "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://api.github.com/repos/hashgraph-online/hol-guard",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/hashgraph-online/hol-guard/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

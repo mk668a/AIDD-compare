@@ -3,13 +3,13 @@
  "slug": "github/spec-kit",
  "flow": {
   "basis": "repo",
-  "path": "presets/lean/commands/",
+  "path": "README.md",
   "kind": "loop",
-  "cite_verified": "listing"
+  "cite_verified": "content"
  },
  "support": {
-  "steps": 5,
-  "with_evidence": 5
+  "steps": 6,
+  "with_evidence": 6
  },
  "steps": [
   {
@@ -31,6 +31,13 @@
      "matched": [
       "constitution"
      ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.ja.md",
+     "matched": [
+      "constitution"
+     ]
     }
    ]
   },
@@ -41,6 +48,13 @@
    "who": "model",
    "support": [
     {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "specify"
+     ]
+    },
+    {
      "kind": "path",
      "source": "presets/lean/commands/speckit.specify.md",
      "matched": [
@@ -48,15 +62,8 @@
      ]
     },
     {
-     "kind": "path",
-     "source": "presets/scaffold/commands/speckit.specify.md",
-     "matched": [
-      "specify"
-     ]
-    },
-    {
-     "kind": "path",
-     "source": "presets/self-test/commands/speckit.specify.md",
+     "kind": "arrow",
+     "source": "README.ja.md",
      "matched": [
       "specify"
      ]
@@ -70,6 +77,13 @@
    "who": "model",
    "support": [
     {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "plan"
+     ]
+    },
+    {
      "kind": "path",
      "source": "presets/lean/commands/speckit.plan.md",
      "matched": [
@@ -77,15 +91,8 @@
      ]
     },
     {
-     "kind": "heading",
-     "source": "README.md",
-     "matched": [
-      "plan"
-     ]
-    },
-    {
      "kind": "arrow",
-     "source": "docs/history.md",
+     "source": "README.ja.md",
      "matched": [
       "plan"
      ]
@@ -100,21 +107,21 @@
    "support": [
     {
      "kind": "path",
+     "source": "extensions/github/commands/speckit.github.taskstoissues.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "path",
      "source": "presets/lean/commands/speckit.tasks.md",
      "matched": [
       "tasks"
      ]
     },
     {
-     "kind": "heading",
-     "source": "README.md",
-     "matched": [
-      "tasks"
-     ]
-    },
-    {
      "kind": "arrow",
-     "source": "docs/history.md",
+     "source": "README.ja.md",
      "matched": [
       "tasks"
      ]
@@ -128,6 +135,13 @@
    "who": "model",
    "support": [
     {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "implement"
+     ]
+    },
+    {
      "kind": "path",
      "source": "presets/lean/commands/speckit.implement.md",
      "matched": [
@@ -135,17 +149,40 @@
      ]
     },
     {
-     "kind": "heading",
-     "source": "README.md",
+     "kind": "arrow",
+     "source": "README.ja.md",
      "matched": [
       "implement"
      ]
-    },
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "s": "Converge",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
     {
-     "kind": "heading",
+     "kind": "cited-document",
      "source": "README.md",
      "matched": [
-      "implement"
+      "converge"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.ja.md",
+     "matched": [
+      "converge"
+     ]
+    },
+    {
+     "kind": "arrow",
+     "source": "README.ko.md",
+     "matched": [
+      "converge"
      ]
     }
    ]
@@ -155,9 +192,18 @@
   "probed_at": "2026-09-17",
   "source": "GitHub git/trees and raw.githubusercontent",
   "branch": "main",
-  "tree_sha": "4a7341a93d944d6efe153b71da4a1adb9c2b578c"
+  "tree_sha": "222a973f8b8794366680c043fb935a31f71902af"
  },
  "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "| Build a feature or application | [Spec-Driven Development](#spec-driven-development) | A specification carried through planning, implementation, and convergence |"
+  },
+  {
+   "kind": "path",
+   "value": "extensions/github/commands/speckit.github.taskstoissues.md"
+  },
   {
    "kind": "path",
    "value": "presets/constitution-sync/commands/speckit.constitution.md"
@@ -177,18 +223,6 @@
   {
    "kind": "path",
    "value": "presets/lean/commands/speckit.specify.md"
-  },
-  {
-   "kind": "path",
-   "value": "presets/lean/commands/speckit.tasks.md"
-  },
-  {
-   "kind": "path",
-   "value": "presets/scaffold/commands/speckit.specify.md"
-  },
-  {
-   "kind": "path",
-   "value": "presets/self-test/commands/speckit.specify.md"
   }
  ]
 }

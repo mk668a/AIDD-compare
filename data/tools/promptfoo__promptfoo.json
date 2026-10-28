@@ -21,8 +21,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 25788,
- "push": "2026-10-07",
+ "stars": 26524,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "Codifies prompt and agent evaluation and runs it in CI. Also does red-teaming.",
@@ -125,6 +125,14 @@
   {
    "url": "https://github.com/promptfoo/promptfoo",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/promptfoo/promptfoo",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/promptfoo/promptfoo/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -17,11 +17,11 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 62765,
- "push": "2026-10-07",
+ "stars": 63804,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
- "sum": "Injects current library documentation over MCP, reducing errors caused by stale knowledge.",
+ "sum": "Retrieves version-specific library documentation and examples for coding agents. Available through MCP or through the ctx7 CLI paired with Agent Skills.",
  "art": "none (retrieval path)",
  "tok": "frugal",
  "p": [
@@ -120,12 +120,24 @@
   {
    "url": "https://github.com/upstash/context7",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/upstash/context7",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/upstash/context7/blob/master/README.md",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/upstash/context7/blob/master/plugins/agent-plugins/context7/plugin.json",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "Context7",
-   "sum": "ライブラリの最新ドキュメントをMCP経由で注入し、古い知識による誤りを減らす。",
+   "sum": "ライブラリのバージョンに対応したドキュメントと例をコーディングエージェントへ渡す。MCPのほか、ctx7 CLIとAgent Skillsの組み合わせでも利用できる。",
    "art": "なし（取得経路）",
    "pre": [
     "対象ライブラリが収録されていること"
@@ -148,7 +160,7 @@
  "standards_conformance": {
   "evidence": {
    "mcp": "plugins/agent-plugins/context7/mcp.json",
-   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_plugins": "plugins/agent-plugins/context7/plugin.json",
    "agent_skills": "packages/opencode/skills/context7-mcp/SKILL.md"
   },
   "mcp": "yes",

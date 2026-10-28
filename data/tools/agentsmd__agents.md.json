@@ -16,7 +16,7 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 24805,
+ "stars": 25177,
  "push": "2026-09-10",
  "conf": "ok",
  "exec": false,
@@ -107,6 +107,14 @@
   {
    "url": "https://github.com/agentsmd/agents.md",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/agentsmd/agents.md",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/agentsmd/agents.md/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

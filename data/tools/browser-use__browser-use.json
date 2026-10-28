@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 117360,
- "push": "2026-10-07",
+ "stars": 119338,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": true,
  "sum": "Gives an agent a browser it can actually use: pages, clicks, forms and extraction, driven from a task written in words.",
@@ -130,6 +130,14 @@
   {
    "url": "https://raw.githubusercontent.com/browser-use/browser-use/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/browser-use/browser-use",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/browser-use/browser-use/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -32,11 +32,11 @@
   ]
  },
  "lic": "MIT",
- "stars": 279155,
- "push": "2026-10-07",
+ "stars": 305062,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
- "sum": "A set of engineering and productivity skills installed into a project as editable source files, covering TDD, spec and ticket generation, and architectural review.",
+ "sum": "Composable engineering and productivity skills covering TDD, specifications, tickets and architectural review. Install as an updating plugin or copy editable skill files into a project.",
  "art": "skill files, CONTEXT.md and ADRs written into the project (persistent)",
  "tok": "moderate",
  "p": [
@@ -111,7 +111,6 @@
  ],
  "anti": [
   "one-off edits where the ceremony costs more than the change",
-  "UI or visual work, which none of the skills cover",
   "harnesses with no skill mechanism"
  ],
  "th": [
@@ -129,17 +128,25 @@
   "dep": "none",
   "secret": "none"
  },
- "gnote": "Skills are executed instructions fetched from a repository, so the install step is a supply chain step. Files land as ordinary editable source rather than a managed bundle.",
+ "gnote": "Skills are executable instructions fetched from a repository, so installation is a supply-chain step. Choose a managed plugin or editable source copies.",
  "sources": [
   {
    "url": "https://github.com/mattpocock/skills",
    "accessed": "2026-09-01"
+  },
+  {
+   "url": "https://api.github.com/repos/mattpocock/skills",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/mattpocock/skills/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "Skills for Real Engineers",
-   "sum": "エンジニアリングと生産性のスキル集。編集可能なソースとしてプロジェクトへ書き込まれ、TDD、仕様・チケット生成、設計レビューを扱う。",
+   "sum": "TDD、仕様、チケット、アーキテクチャレビューを扱う、組み合わせ可能な開発・生産性スキル。更新可能なプラグインとして導入するか、編集可能なスキルファイルをプロジェクトへコピーする。",
    "art": "プロジェクトへ書き込まれるスキル・CONTEXT.md・ADR（永続）",
    "pre": [
     "スキルを読み込むハーネス（Claude Code、Codexなど）",
@@ -147,10 +154,9 @@
    ],
    "anti": [
     "手順の重さが変更量を上回る単発の編集",
-    "UI・視覚的な作業。該当するスキルがない",
     "スキル機構を持たないハーネス"
    ],
-   "gnote": "スキルはリポジトリから取得される実行される指示であり、インストールは供給チェーンの一段になる。ファイルは管理されたバンドルではなく通常の編集可能なソースとして置かれる。",
+   "gnote": "スキルはリポジトリから取得する実行指示であり、インストールも供給チェーンの一部になる。管理されたプラグインか、編集可能なソースのコピーを選べる。",
    "flow": {
     "steps": [
      "スキルをソースとして導入",

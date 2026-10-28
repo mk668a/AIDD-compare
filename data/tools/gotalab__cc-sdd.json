@@ -42,11 +42,11 @@
   ]
  },
  "lic": "MIT",
- "stars": 3708,
- "push": "2026-09-23",
+ "stars": 3746,
+ "push": "2026-10-22",
  "conf": "ok",
  "exec": false,
- "sum": "Four phases: requirements, design, tasks, implementation, with a human approval gate between each. Multilingual, including Japanese.",
+ "sum": "Agent Skills for discovery, requirements, design, tasks and long-running implementation. Approved tasks run through TDD and per-task review; hosts with native subagents use separate implementers and reviewers.",
  "art": "phase documents (persistent)",
  "tok": "moderate",
  "p": [
@@ -122,11 +122,12 @@
   "regulated"
  ],
  "pre": [
-  "a human available to approve"
+  "a supported coding agent; Claude Code and Codex are stable integrations, other listed integrations are beta",
+  "approved specification tasks for autonomous implementation; native subagents for independent per-task review"
  ],
  "anti": [
-  "long unattended runs",
-  "cases where the approval overhead is unwelcome"
+  "hosts without native subagents when independent per-task review is required",
+  "work that must bypass specification approval gates"
  ],
  "th": [
   "T6",
@@ -145,33 +146,43 @@
   {
    "url": "https://github.com/gotalab/cc-sdd",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/gotalab/cc-sdd",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/gotalab/cc-sdd/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "cc-sdd",
-   "sum": "要求→設計→タスク→実装の4フェーズ。各フェーズ間に人間の承認ゲートを置く。日本語を含む多言語対応。",
+   "sum": "課題の整理、要件、設計、タスク、長時間の実装を支えるAgent Skills。承認済みタスクをTDDとタスクごとのレビューで進め、ネイティブのサブエージェントに対応するホストでは実装者とレビュアーを分ける。",
    "art": "フェーズ文書（永続）",
    "pre": [
-    "承認する人間がいること"
+    "対応するコーディングエージェント。Claude CodeとCodexは安定版の連携で、その他の掲載連携はベータ",
+    "自律実装には承認済みの仕様タスク。タスクごとの独立レビューにはネイティブのサブエージェント"
    ],
    "anti": [
-    "無人での長時間実行",
-    "承認の手間を省きたい場合"
+    "タスクごとの独立レビューが必要なのにネイティブのサブエージェントを使えないホスト",
+    "仕様の承認ゲートを省略する必要がある作業"
    ],
    "gnote": "承認ゲートを設計に組み込んでいる数少ないSDD。件数が増えればT10に転じる点は他と同じ",
    "flow": {
     "steps": [
-     "要件",
-     "人が承認",
-     "設計",
-     "人が承認",
+     "対象範囲を整理",
+     "要件と設計を定義",
+     "人が仕様を承認",
      "タスク",
-     "実装"
+     "人がタスクを承認",
+     "TDDで実装",
+     "タスクをレビュー"
     ],
     "back": [
-     "差し戻し",
-     "差し戻し"
+     "レビュー差し戻し",
+     "次のタスク"
     ]
    }
   }
@@ -199,27 +210,22 @@
  ],
  "spec_unit": "document-per-concern",
  "flow": {
-  "basis": "readme",
+  "basis": "repo",
+  "path": "README.md",
   "kind": "loop",
   "steps": [
    {
-    "s": "Requirements",
+    "s": "Discover scope",
     "l": "L4",
     "who": "model"
    },
    {
-    "s": "Human approves",
-    "l": "L5",
-    "who": "human",
-    "gate": true
-   },
-   {
-    "s": "Design",
+    "s": "Specify requirements and design",
     "l": "L4",
     "who": "model"
    },
    {
-    "s": "Human approves",
+    "s": "Human approves specification",
     "l": "L5",
     "who": "human",
     "gate": true
@@ -230,21 +236,33 @@
     "who": "model"
    },
    {
-    "s": "Implement",
+    "s": "Human approves tasks",
+    "l": "L5",
+    "who": "human",
+    "gate": true
+   },
+   {
+    "s": "Implement with TDD",
     "l": "L1",
     "who": "model"
+   },
+   {
+    "s": "Review task",
+    "l": "L5",
+    "who": "model",
+    "gate": true
    }
   ],
   "back": [
    {
-    "from": 1,
-    "to": 0,
-    "s": "rejected"
+    "from": 6,
+    "to": 5,
+    "s": "review rejected"
    },
    {
-    "from": 3,
-    "to": 2,
-    "s": "rejected"
+    "from": 6,
+    "to": 3,
+    "s": "next task"
    }
   ]
  },

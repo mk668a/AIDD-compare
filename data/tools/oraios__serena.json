@@ -17,11 +17,11 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 30078,
- "push": "2026-10-06",
+ "stars": 30792,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": true,
- "sum": "Semantic code search backed by a language server, served over MCP. A tool for avoiding whole-repository injection.",
+ "sum": "Language-server-backed code retrieval, editing, refactoring and debugging over MCP. Version 2 adds a REPL interface for composing operations without injecting an entire repository into context.",
  "art": "none (search path)",
  "tok": "frugal",
  "p": [
@@ -122,12 +122,20 @@
   {
    "url": "https://github.com/oraios/serena",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/oraios/serena",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/oraios/serena/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "Serena",
-   "sum": "言語サーバによる意味的なコード検索をMCPで提供。全文投入を避ける方向のツール。",
+   "sum": "言語サーバを使ったコード検索、編集、リファクタリング、デバッグをMCPで提供する。v2ではREPLインターフェースが加わり、リポジトリ全体をコンテキストに渡さずに操作を組み合わせられる。",
    "art": "なし（検索経路）",
    "pre": [
     "対象言語のLSPが動くこと"

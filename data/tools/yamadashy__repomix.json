@@ -24,8 +24,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 28738,
- "push": "2026-10-03",
+ "stars": 29052,
+ "push": "2026-10-25",
  "conf": "ok",
  "exec": false,
  "sum": "Packs an entire repository into one file shaped for a model.",
@@ -123,6 +123,14 @@
   {
    "url": "https://github.com/yamadashy/repomix",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/yamadashy/repomix",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/yamadashy/repomix/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

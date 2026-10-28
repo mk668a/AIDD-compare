@@ -27,8 +27,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 27705,
- "push": "2026-10-07",
+ "stars": 28250,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "Issue tracker for agents. Puts memory in structured data rather than conversation.",
@@ -134,6 +134,14 @@
   {
    "url": "https://github.com/gastownhall/beads",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/gastownhall/beads",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/gastownhall/beads/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

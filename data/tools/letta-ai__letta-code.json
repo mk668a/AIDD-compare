@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 3537,
- "push": "2026-10-07",
+ "stars": 3722,
+ "push": "2026-10-28",
  "conf": "check",
  "exec": true,
  "sum": "MemGPT lineage. Stateful agent harness whose agents rewrite their own memory, skills and prompts over time. Context is tracked in git through MemFS.",
@@ -131,6 +131,14 @@
   {
    "url": "https://raw.githubusercontent.com/letta-ai/letta/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/letta-ai/letta-code",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/letta-ai/letta-code/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

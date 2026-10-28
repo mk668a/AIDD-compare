@@ -24,8 +24,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 1394,
- "push": "2026-10-07",
+ "stars": 1483,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "Coordinates multiple AI coding CLIs (Claude Code, Codex, Kiro, and nine others) as a supervisor delegating to parallel or sequential workers, each running as a full CLI process in an isolated tmux session.",
@@ -146,6 +146,18 @@
   {
    "url": "https://raw.githubusercontent.com/awslabs/cli-agent-orchestrator/main/docs/configuration.md",
    "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://api.github.com/repos/awslabs/cli-agent-orchestrator",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/awslabs/cli-agent-orchestrator/blob/main/README.md",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/awslabs/cli-agent-orchestrator/blob/main/agent-plugin/cao/plugin.json",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
@@ -181,7 +193,7 @@
  "standards_conformance": {
   "evidence": {
    "mcp": "agent-plugin/cao/.mcp.json",
-   "agent_plugins": "agent-plugin/cao-contributor/.claude-plugin/plugin.json",
+   "agent_plugins": "agent-plugin/cao/plugin.json",
    "agent_skills": "agent-plugin/cao-contributor/skills/cao-plugin/SKILL.md"
   },
   "mcp": "yes",

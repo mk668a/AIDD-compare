@@ -18,11 +18,11 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 157,
- "push": "2026-10-07",
+ "stars": 167,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
- "sum": "MCP server that orchestrates existing LSP servers (gopls, rust-analyzer, and 29 more) into batched, speculative and phase-enforced workflows for AI coding agents.",
+ "sum": "MCP server that orchestrates existing language servers into batched, speculative and phase-enforced workflows for coding agents, with a persistent warm runtime.",
  "art": "warm MCP/LSP daemon process (ephemeral); auto-exits after 30 minutes idle, no artifact survives removal",
  "tok": "frugal",
  "p": [
@@ -138,12 +138,20 @@
   {
    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/docs/guide/phase-enforcement.md",
    "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://api.github.com/repos/blackwell-systems/agent-lsp",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "agent-lsp",
-   "sum": "既存のLSPサーバー(gopls、rust-analyzerなど31言語分)をバッチ化・投機的編集・フェーズ強制付きのワークフローとしてAIコーディングエージェントに提供するMCPサーバー。",
+   "sum": "既存の言語サーバをMCPでまとめ、コーディングエージェント向けにバッチ操作、試行的な編集、段階を制御するワークフローを提供する。起動済みの実行環境を維持する。",
    "art": "常駐するMCP/LSPデーモンプロセス(一時的)。30分アイドルで自動終了し、削除後に残る成果物はない",
    "pre": [
     "CIで検証済みの31言語のいずれか(Go、Python、TypeScript、Rust、Java、C/C++、C#、Ruby、PHP、Kotlin、Swift、Scala、Zig、Lua、Elixir、Gleam、Clojure、Dart、Terraform、Nix、Prisma、SQL、MongoDBなど)で、保守されているLSPサーバーがあること",

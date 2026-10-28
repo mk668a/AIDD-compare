@@ -52,8 +52,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 66766,
- "push": "2026-10-07",
+ "stars": 67958,
+ "push": "2026-10-26",
  "conf": "ok",
  "exec": false,
  "sum": "Long-term memory layer for agents. Handles extraction, storage and recall.",
@@ -155,6 +155,18 @@
   {
    "url": "https://github.com/mem0ai/mem0",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/mem0ai/mem0",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/mem0ai/mem0/blob/main/README.md",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/mem0ai/mem0/blob/main/integrations/mem0-agent-plugin/plugin.json",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
@@ -188,7 +200,7 @@
   "evidence": {
    "mcp": "integrations/agent-plugin-core/python/mcp_server.py",
    "agents_md": ".github/AGENTS.md",
-   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_plugins": "integrations/mem0-agent-plugin/plugin.json",
    "agent_skills": "integrations/antigravity-plugin/skills/forget/SKILL.md"
   },
   "mcp": "yes",

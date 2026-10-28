@@ -67,8 +67,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 9978,
- "push": "2026-10-02",
+ "stars": 10405,
+ "push": "2026-10-11",
  "conf": "ok",
  "exec": false,
  "sum": "Turns text and real system sources into maintainable .drawio architecture models, syncs them incrementally without discarding manual layout, and enforces architecture contracts as a test in CI.",
@@ -175,6 +175,14 @@
   {
    "url": "https://raw.githubusercontent.com/Agents365-ai/drawio-skill/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/Agents365-ai/drawio-skill",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/Agents365-ai/drawio-skill/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

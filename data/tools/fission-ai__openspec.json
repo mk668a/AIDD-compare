@@ -19,8 +19,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 71250,
- "push": "2026-10-07",
+ "stars": 73196,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "Describes changes as ADDED / MODIFIED / REMOVED deltas, so the spec survives and grows.",
@@ -121,6 +121,14 @@
   {
    "url": "https://github.com/Fission-AI/OpenSpec",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/Fission-AI/OpenSpec",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/Fission-AI/OpenSpec/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

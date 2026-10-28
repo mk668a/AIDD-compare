@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 28270,
- "push": "2026-10-01",
+ "stars": 28607,
+ "push": "2026-10-16",
  "conf": "ok",
  "exec": false,
  "sum": "A file format for describing a visual identity to a coding agent: machine-readable tokens in front matter, and the reasoning behind them in prose. Ships a validator that checks token references and WCAG contrast.",
@@ -124,6 +124,14 @@
   {
    "url": "https://raw.githubusercontent.com/google-labs-code/design.md/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/google-labs-code/design.md",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/google-labs-code/design.md/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

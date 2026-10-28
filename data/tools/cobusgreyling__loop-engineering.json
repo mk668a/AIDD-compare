@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 11436,
- "push": "2026-10-07",
+ "stars": 11649,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "A pattern library for operating agents around a codebase: loops that discover work, hand it to an agent, verify the result and persist state, with an audit and a cost tool beside them.",
@@ -132,6 +132,14 @@
   {
    "url": "https://raw.githubusercontent.com/cobusgreyling/loop-engineering/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/cobusgreyling/loop-engineering",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/cobusgreyling/loop-engineering/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

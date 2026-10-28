@@ -23,8 +23,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 86969,
- "push": "2026-10-07",
+ "stars": 108297,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "Runs several coding agents side by side, each in its own git worktree, and puts the comparison of their results in front of a person before anything is merged.",
@@ -142,6 +142,14 @@
   {
    "url": "https://raw.githubusercontent.com/stablyai/orca/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/stablyai/orca",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/stablyai/orca/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

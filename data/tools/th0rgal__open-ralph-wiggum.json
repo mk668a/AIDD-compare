@@ -22,7 +22,7 @@
   ]
  },
  "lic": "MIT",
- "stars": 1897,
+ "stars": 1906,
  "push": "2026-06-02",
  "conf": "ok",
  "exec": true,
@@ -130,6 +130,14 @@
   {
    "url": "https://raw.githubusercontent.com/Th0rgal/open-ralph-wiggum/master/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/Th0rgal/open-ralph-wiggum",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/Th0rgal/open-ralph-wiggum/blob/master/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

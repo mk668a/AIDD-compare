@@ -18,11 +18,11 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 5571,
- "push": "2026-10-07",
+ "stars": 5752,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
- "sum": "Microsoft's official curated collection of Agent Skills and custom agents for .NET/C# development, spanning builds, tests, upgrades, diagnostics, and AI integration, installable across Claude Code, Copilot CLI, Cursor, Codex CLI, and VS Code.",
+ "sum": "Microsoft's .NET/C# skills and host-specific custom agents for builds, tests, upgrades, diagnostics and AI integration. Skills and compatible MCP servers work across plugin clients; custom-agent and LSP features depend on the host.",
  "art": "skill/plugin files installed into the harness's project or plugin marketplace (persistent)",
  "tok": "moderate",
  "p": [
@@ -127,12 +127,20 @@
   {
    "url": "https://raw.githubusercontent.com/dotnet/skills/main/README.md",
    "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://api.github.com/repos/dotnet/skills",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/dotnet/skills/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": ".NET Agent Skills",
-   "sum": "Microsoftが公式に提供する.NET/C#向けAgent Skillsとカスタムエージェントの集合。ビルド、テスト、アップグレード、診断、AI統合まで幅広くカバーし、Claude Code・Copilot CLI・Cursor・Codex CLI・VS Codeに対応。",
+   "sum": "Microsoftが提供する.NET/C#向けスキルとホスト固有のカスタムエージェント。ビルド、テスト、アップグレード、診断、AI連携を支える。スキルと対応するMCPサーバは複数クライアントで利用でき、カスタムエージェントやLSP機能はホストに依存する。",
    "art": "ハーネスのプロジェクトまたはプラグインマーケットプレイスにインストールされるskill/pluginファイル(永続)",
    "pre": [
     "Agent Skillsまたはプラグインマーケットプレイス機構を持つハーネス(Claude Code、Copilot CLI、Cursor、Codex CLI、またはVS Code Insidersプレビュー)",

@@ -17,8 +17,8 @@
   "addressee_basis": "inferred"
  },
  "lic": "Apache-2.0",
- "stars": 67033,
- "push": "2026-10-07",
+ "stars": 72400,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "A penetration testing agent for an application you own. It reads the source, runs the application in a Docker sandbox, and reports only the weaknesses it could reproduce with a working proof-of-concept exploit. Nine skills let Claude Code, Cursor or Codex start a scan, fix the findings and set up scanning on pull requests.",
@@ -139,6 +139,14 @@
   {
    "url": "https://raw.githubusercontent.com/usestrix/strix/main/README.md",
    "accessed": "2026-10-07"
+  },
+  {
+   "url": "https://api.github.com/repos/usestrix/strix",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/usestrix/strix/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 16376,
- "push": "2026-10-07",
+ "stars": 16860,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
  "sum": "An event-based protocol for the connection between an agent and the interface a person is looking at, with reference integrations for several agent frameworks.",
@@ -127,6 +127,14 @@
   {
    "url": "https://raw.githubusercontent.com/ag-ui-protocol/ag-ui/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/ag-ui-protocol/ag-ui",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/ag-ui-protocol/ag-ui/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -24,8 +24,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 53893,
- "push": "2026-10-07",
+ "stars": 54651,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
  "sum": "Heavyweight framework running planning through implementation across many role-separated agents.",
@@ -127,6 +127,14 @@
   {
    "url": "https://github.com/bmad-code-org/BMAD-METHOD",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/bmad-code-org/BMAD-METHOD",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/bmad-code-org/BMAD-METHOD/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

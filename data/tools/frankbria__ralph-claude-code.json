@@ -23,8 +23,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 9666,
- "push": "2026-10-07",
+ "stars": 9718,
+ "push": "2026-10-25",
  "conf": "ok",
  "exec": true,
  "sum": "An implementation of the Ralph loop for Claude Code. Runs autonomous iteration with a dual-condition exit gate and rate limiting, which is the cap the pattern itself leaves to the operator.",
@@ -139,6 +139,14 @@
   {
    "url": "https://raw.githubusercontent.com/frankbria/ralph-claude-code/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/frankbria/ralph-claude-code",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/frankbria/ralph-claude-code/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

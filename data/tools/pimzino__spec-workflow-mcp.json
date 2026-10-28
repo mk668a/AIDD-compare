@@ -22,7 +22,7 @@
   ]
  },
  "lic": "GPL-3.0",
- "stars": 4302,
+ "stars": 4303,
  "push": "2026-07-03",
  "conf": "ok",
  "exec": false,
@@ -123,6 +123,14 @@
   {
    "url": "https://github.com/Pimzino/spec-workflow-mcp",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/Pimzino/spec-workflow-mcp",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/Pimzino/spec-workflow-mcp/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

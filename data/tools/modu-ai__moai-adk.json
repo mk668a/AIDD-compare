@@ -36,8 +36,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 1230,
- "push": "2026-10-07",
+ "stars": 1245,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "CLI wrapping a coding agent. Spec-first Plan, Run, Sync with a TDD gate between.",
@@ -141,6 +141,14 @@
   {
    "url": "https://github.com/modu-ai/moai-adk",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/modu-ai/moai-adk",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/modu-ai/moai-adk/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -18,11 +18,11 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 2358,
- "push": "2026-10-05",
+ "stars": 2369,
+ "push": "2026-10-26",
  "conf": "ok",
  "exec": false,
- "sum": "Blocks implementation written before a test, via hooks. Turns TDD from discipline into enforcement.",
+ "sum": "Hook-based TDD enforcement for Claude Code, blocking implementation before failing tests exist. Still maintained; the project directs new users to its successor, Probity.",
  "art": "hook configuration (persistent)",
  "tok": "frugal",
  "p": [
@@ -97,8 +97,8 @@
   "regulated"
  ],
  "pre": [
-  "a supported test framework",
-  "a supported harness"
+  "Claude Code with hooks enabled",
+  "Node.js 22+ and a supported test framework"
  ],
  "anti": [
   "areas where tests cannot be written",
@@ -116,16 +116,24 @@
   {
    "url": "https://github.com/nizos/tdd-guard",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/nizos/tdd-guard",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/nizos/tdd-guard/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "TDD Guard",
-   "sum": "テストを書く前の実装をフックで阻止する。TDDを規律ではなく強制にする。",
+   "sum": "Claude CodeのフックでTDDを強制し、失敗するテストがない段階での実装を止める。保守は継続中で、新規利用者には後継のProbityを案内している。",
    "art": "フック設定（永続）",
    "pre": [
-    "テストフレームワークの対応",
-    "対応ハーネス"
+    "フックを有効にしたClaude Code",
+    "Node.js 22以降と対応するテストフレームワーク"
    ],
    "anti": [
     "テストが書けない領域",

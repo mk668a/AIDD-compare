@@ -2,58 +2,60 @@
  "entry": "cc-sdd",
  "slug": "gotalab/cc-sdd",
  "flow": {
-  "basis": "readme",
+  "basis": "repo",
+  "path": "README.md",
   "kind": "loop",
-  "cite_verified": "none"
+  "cite_verified": "content"
  },
  "support": {
-  "steps": 6,
-  "with_evidence": 4
+  "steps": 7,
+  "with_evidence": 7
  },
  "steps": [
   {
    "i": 0,
-   "s": "Requirements",
+   "s": "Discover scope",
    "l": "L4",
    "who": "model",
    "support": [
     {
-     "kind": "path",
-     "source": ".kiro/settings/rules/requirements-review-gate.md",
+     "kind": "cited-document",
+     "source": "README.md",
      "matched": [
-      "requirements"
+      "discover",
+      "scope"
      ]
     },
     {
      "kind": "path",
-     "source": ".kiro/settings/templates/specs/requirements-init.md",
+     "source": ".kiro/settings/rules/design-discovery-full.md",
      "matched": [
-      "requirements"
+      "discover"
      ]
     },
     {
      "kind": "path",
-     "source": ".kiro/settings/templates/specs/requirements.md",
+     "source": ".kiro/settings/rules/design-discovery-light.md",
      "matched": [
-      "requirements"
+      "discover"
      ]
     }
    ]
   },
   {
    "i": 1,
-   "s": "Human approves",
-   "l": "L5",
-   "who": "human",
-   "gate": true,
-   "support": []
-  },
-  {
-   "i": 2,
-   "s": "Design",
+   "s": "Specify requirements and design",
    "l": "L4",
    "who": "model",
    "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "requirements",
+      "design"
+     ]
+    },
     {
      "kind": "path",
      "source": ".kiro/settings/rules/design-discovery-full.md",
@@ -67,30 +69,38 @@
      "matched": [
       "design"
      ]
-    },
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "s": "Human approves specification",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": [
     {
-     "kind": "path",
-     "source": ".kiro/settings/rules/design-principles.md",
+     "kind": "cited-document",
+     "source": "README.md",
      "matched": [
-      "design"
+      "approves"
      ]
     }
    ]
   },
   {
    "i": 3,
-   "s": "Human approves",
-   "l": "L5",
-   "who": "human",
-   "gate": true,
-   "support": []
-  },
-  {
-   "i": 4,
    "s": "Tasks",
    "l": "L4",
    "who": "model",
    "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "tasks"
+     ]
+    },
     {
      "kind": "path",
      "source": ".kiro/settings/rules/tasks-generation.md",
@@ -104,10 +114,34 @@
      "matched": [
       "tasks"
      ]
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "s": "Human approves tasks",
+   "l": "L5",
+   "who": "human",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "approves",
+      "tasks"
+     ]
     },
     {
      "kind": "path",
-     "source": ".kiro/settings/templates/specs/tasks.md",
+     "source": ".kiro/settings/rules/tasks-generation.md",
+     "matched": [
+      "tasks"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/tasks-parallel-analysis.md",
      "matched": [
       "tasks"
      ]
@@ -116,15 +150,53 @@
   },
   {
    "i": 5,
-   "s": "Implement",
+   "s": "Implement with TDD",
    "l": "L1",
    "who": "model",
    "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "implement"
+     ]
+    },
     {
      "kind": "path",
      "source": "tools/cc-sdd/templates/agents/antigravity-skills/skills/kiro-impl/templates/implementer-prompt.md",
      "matched": [
       "implement"
+     ]
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "s": "Review task",
+   "l": "L5",
+   "who": "model",
+   "gate": true,
+   "support": [
+    {
+     "kind": "cited-document",
+     "source": "README.md",
+     "matched": [
+      "review",
+      "task"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/design-review-gate.md",
+     "matched": [
+      "review"
+     ]
+    },
+    {
+     "kind": "path",
+     "source": ".kiro/settings/rules/design-review.md",
+     "matched": [
+      "review"
      ]
     }
    ]
@@ -134,9 +206,14 @@
   "probed_at": "2026-09-17",
   "source": "GitHub git/trees and raw.githubusercontent",
   "branch": "main",
-  "tree_sha": "29aee950f4addc36f9aeecb9881c46540e71ecc9"
+  "tree_sha": "e2a0c671aef37a482404905b409ab5c27092b25b"
  },
  "evidence": [
+  {
+   "kind": "cited-document",
+   "source": "README.md",
+   "value": "# cc-sdd: Long-running spec-driven implementation for AI coding agents\n## Turn approved specs into long-running autonomous implementation\nOne command installs an agentic SDLC workflow as Agent Skills: discovery, requirements, design, tasks, and autonomous implementation with per-task independent review on hosts with native subagents. Works across 8 AI coding agents, with the same 17-skill set on each.\ncc-sdd v3.0 is a rework around Agent Skills and long-running autonomous implementation.\n- **`/kiro-discovery` as the new entry point.** Discovery routes new work into one of: extend an existing spec, implement directly with no spec, create one new spec, decompose into multiple specs, or mixed decomposition. It writes `brief.md` and, when needed, `roadmap.md`, so you can resume a workstream without re-explaining scope.\n- **`/kiro-impl` for long-running autonomous implementation.** When native subagents are available, each task gets a fresh implementer running TDD (RED → GREEN) behind a feature flag, an independent reviewer, and an auto-debug pass when blocked or after repeated review rejection. Otherwise, implementation and review run inline. Learnings propagate via `## Implementation Notes` in `tasks.md`. Each iteration handles one task; recorded task state supports resumption after checking unfinished work and active workers.\n- **Boundary-first spec discipline.** `design.md` now includes a File Structure Plan that drives task boundaries. Tasks carry `_Boundary:_` and `_Depends:_` annotations. Review and validation look for boundary violations, not just style issues."
+  },
   {
    "kind": "path",
    "value": ".kiro/settings/rules/design-discovery-full.md"
@@ -147,11 +224,11 @@
   },
   {
    "kind": "path",
-   "value": ".kiro/settings/rules/design-principles.md"
+   "value": ".kiro/settings/rules/design-review-gate.md"
   },
   {
    "kind": "path",
-   "value": ".kiro/settings/rules/requirements-review-gate.md"
+   "value": ".kiro/settings/rules/design-review.md"
   },
   {
    "kind": "path",
@@ -160,18 +237,6 @@
   {
    "kind": "path",
    "value": ".kiro/settings/rules/tasks-parallel-analysis.md"
-  },
-  {
-   "kind": "path",
-   "value": ".kiro/settings/templates/specs/requirements-init.md"
-  },
-  {
-   "kind": "path",
-   "value": ".kiro/settings/templates/specs/requirements.md"
-  },
-  {
-   "kind": "path",
-   "value": ".kiro/settings/templates/specs/tasks.md"
   },
   {
    "kind": "path",

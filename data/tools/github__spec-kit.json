@@ -18,12 +18,12 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 140508,
- "push": "2026-10-07",
+ "stars": 143396,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
- "sum": "CLI running spec, plan, tasks and implementation as four stages. A constitution pins the constraints.",
- "art": "spec set (leans ephemeral)",
+ "sum": "A CLI for spec-driven development with reusable templates, a project constitution and composable workflows. Bug-fixing and idea-assessment extensions provide separate entry points alongside the core specification process.",
+ "art": "specifications, plans, tasks and convergence records",
  "tok": "heavy",
  "p": [
   3,
@@ -101,9 +101,7 @@
   "time available to write the spec"
  ],
  "anti": [
-  "changing a single constant",
-  "products whose requirements are still exploratory",
-  "cases where the spec must survive into operations"
+  "changing a single constant"
  ],
  "th": [
   "T6",
@@ -120,21 +118,27 @@
   {
    "url": "https://github.com/github/spec-kit",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/github/spec-kit",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/github/spec-kit/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "GitHub Spec-Kit",
-   "sum": "仕様→計画→タスク→実装の4段階を回すCLI。憲法で制約を固定する。",
-   "art": "仕様書一式（使い捨て寄り）",
+   "sum": "仕様駆動開発のCLI。テンプレート、プロジェクトの原則、組み合わせ可能なワークフローを提供する。中核の仕様作成に加え、バグ修正とアイデア評価を拡張機能として選べる。",
+   "art": "仕様、計画、タスク、収束確認の記録",
    "pre": [
     "新規または境界の明確なモジュール",
     "仕様を書く時間が取れること"
    ],
    "anti": [
-    "定数1つの変更",
-    "要件が探索段階のプロダクト",
-    "仕様を残して運用したい場合"
+    "定数1つの変更"
    ],
    "gnote": "検証は利用側のCIに依存する",
    "flow": {
@@ -143,10 +147,11 @@
      "Specify（仕様）",
      "Plan（計画）",
      "Tasks（タスク分解）",
-     "Implement（実装）"
+     "Implement（実装）",
+     "Converge（収束確認）"
     ],
     "back": [
-     "タスク失敗"
+     "未収束"
     ]
    }
   }
@@ -172,7 +177,7 @@
  "spec_unit": "phase-document",
  "flow": {
   "basis": "repo",
-  "path": "presets/lean/commands/",
+  "path": "README.md",
   "kind": "loop",
   "steps": [
    {
@@ -199,13 +204,19 @@
     "s": "Implement",
     "l": "L1",
     "who": "model"
+   },
+   {
+    "s": "Converge",
+    "l": "L5",
+    "who": "model",
+    "gate": true
    }
   ],
   "back": [
    {
-    "from": 4,
-    "to": 3,
-    "s": "task fails"
+    "from": 5,
+    "to": 4,
+    "s": "not converged"
    }
   ]
  },

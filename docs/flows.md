@@ -478,7 +478,9 @@ flowchart TD
   s2 --> s3
   s4["Implement (L1) @model"]
   s3 --> s4
-  s4 -.->|"task fails"| s3
+  s5["Converge (L5) @model — gate"]
+  s4 --> s5
+  s5 -.->|"not converged"| s4
 ```
 
 ## Framelink Figma MCP
@@ -514,23 +516,25 @@ flowchart TD
 
 ## cc-sdd
 
-Basis: readme. [Tool record](../data/tools/gotalab__cc-sdd.json) · [Evidence](../data/flow-evidence/gotalab__cc-sdd.json).
+Basis: repo. [Tool record](../data/tools/gotalab__cc-sdd.json) · [Evidence](../data/flow-evidence/gotalab__cc-sdd.json).
 
 ```mermaid
 flowchart TD
-  s0["Requirements (L4) @model"]
-  s1["Human approves (L5) @human — gate"]
+  s0["Discover scope (L4) @model"]
+  s1["Specify requirements and design (L4) @model"]
   s0 --> s1
-  s2["Design (L4) @model"]
+  s2["Human approves specification (L5) @human — gate"]
   s1 --> s2
-  s3["Human approves (L5) @human — gate"]
+  s3["Tasks (L4) @model"]
   s2 --> s3
-  s4["Tasks (L4) @model"]
+  s4["Human approves tasks (L5) @human — gate"]
   s3 --> s4
-  s5["Implement (L1) @model"]
+  s5["Implement with TDD (L1) @model"]
   s4 --> s5
-  s1 -.->|"rejected"| s0
-  s3 -.->|"rejected"| s2
+  s6["Review task (L5) @model — gate"]
+  s5 --> s6
+  s6 -.->|"review rejected"| s5
+  s6 -.->|"next task"| s3
 ```
 
 ## hol-guard

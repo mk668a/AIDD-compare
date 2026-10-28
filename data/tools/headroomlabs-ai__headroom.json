@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 74574,
- "push": "2026-10-07",
+ "stars": 78063,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "Compresses tool output, logs, files and RAG chunks before they reach the model.",
@@ -122,6 +122,14 @@
   {
    "url": "https://github.com/headroomlabs-ai/headroom",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/headroomlabs-ai/headroom",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/headroomlabs-ai/headroom/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

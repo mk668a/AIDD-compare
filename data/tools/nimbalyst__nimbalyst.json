@@ -25,8 +25,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 1848,
- "push": "2026-10-05",
+ "stars": 1990,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": true,
  "sum": "Open-source visual desktop workspace for running Codex, Claude Code, OpenCode and Copilot in parallel git worktrees, editing their work in WYSIWYG markdown/mockup/diagram editors, and reviewing diffs before they land. Formerly Stravu Crystal, renamed 2026.",
@@ -135,6 +135,14 @@
   {
    "url": "https://raw.githubusercontent.com/nimbalyst/nimbalyst/main/README.md",
    "accessed": "2026-09-06"
+  },
+  {
+   "url": "https://api.github.com/repos/nimbalyst/nimbalyst",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/nimbalyst/nimbalyst/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

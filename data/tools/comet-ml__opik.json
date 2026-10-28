@@ -22,8 +22,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 22429,
- "push": "2026-10-07",
+ "stars": 22978,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "Tracing, evaluation and prompt management for LLM applications, self-hostable in full rather than as a cut-down edition.",
@@ -133,6 +133,14 @@
   {
    "url": "https://raw.githubusercontent.com/comet-ml/opik/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/comet-ml/opik",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/comet-ml/opik/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

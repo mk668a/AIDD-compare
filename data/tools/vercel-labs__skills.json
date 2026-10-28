@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 33334,
- "push": "2026-10-07",
+ "stars": 36900,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "A command line for the open skills ecosystem: install a skill into a project, or generate its prompt and run an agent with it without installing anything.",
@@ -125,6 +125,14 @@
   {
    "url": "https://raw.githubusercontent.com/vercel-labs/skills/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/vercel-labs/skills",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/vercel-labs/skills/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
@@ -155,7 +163,7 @@
  "standards_conformance": {
   "evidence": {
    "agents_md": "AGENTS.md",
-   "agent_skills": ".factory/workflows/pr-labeling/skills/pr-labeling/SKILL.md"
+   "agent_skills": "skills/find-skills/SKILL.md"
   },
   "mcp": "no",
   "agents_md": "yes",

@@ -1,6 +1,6 @@
 {
  "_meta": {
-  "measured": "2026-08-30",
+  "measured": "2026-10-28",
   "window": "trailing 30 days",
   "rule": "A star count is never displayed alone. Where stars appear, downloads appear beside them, or the cell reads not measurable."
  },
@@ -8,99 +8,98 @@
   {
    "package": "semgrep",
    "registry": "pypi",
-   "downloads_monthly": 30558846,
+   "downloads_monthly": 17837688,
    "repo": "semgrep/semgrep",
-   "stars": 16445,
-   "downloads_per_star": 1858.25
+   "stars": 17312,
+   "downloads_per_star": 1030.37
   },
   {
    "package": "crewai",
    "registry": "pypi",
-   "downloads_monthly": 29105346,
+   "downloads_monthly": 2442764,
    "repo": "crewAIInc/crewAI",
-   "stars": 57829,
-   "downloads_per_star": 503.3
+   "stars": 60193,
+   "downloads_per_star": 40.58
   },
   {
    "package": "deepeval",
    "registry": "pypi",
-   "downloads_monthly": 4864647,
+   "downloads_monthly": 2584198,
    "repo": "confident-ai/deepeval",
-   "stars": 17969,
-   "downloads_per_star": 270.72
+   "stars": 19152,
+   "downloads_per_star": 134.93
   },
   {
    "package": "mem0ai",
    "registry": "pypi",
-   "downloads_monthly": 3742413,
+   "downloads_monthly": 2020516,
    "repo": "mem0ai/mem0",
-   "stars": 64361,
-   "downloads_per_star": 58.15
+   "stars": 67958,
+   "downloads_per_star": 29.73
   },
   {
    "package": "promptfoo",
    "registry": "npm",
-   "downloads_monthly": 2493929,
+   "downloads_monthly": 3156271,
    "repo": "promptfoo/promptfoo",
-   "stars": 24675,
-   "downloads_per_star": 101.07
+   "stars": 26524,
+   "downloads_per_star": 119
   },
   {
    "package": "graphiti-core",
    "registry": "pypi",
-   "downloads_monthly": 1163154,
+   "downloads_monthly": 619128,
    "repo": "getzep/graphiti",
-   "stars": 30420,
-   "downloads_per_star": 38.24
+   "stars": 32294,
+   "downloads_per_star": 19.17
   },
   {
    "package": "repomix",
    "registry": "npm",
-   "downloads_monthly": 373996,
+   "downloads_monthly": 336389,
    "repo": "yamadashy/repomix",
-   "stars": 28125,
-   "downloads_per_star": 13.3
+   "stars": 29052,
+   "downloads_per_star": 11.58
   },
   {
    "package": "serena-agent",
    "registry": "pypi",
-   "downloads_monthly": 163271,
+   "downloads_monthly": 147731,
    "repo": "oraios/serena",
-   "stars": 28646,
-   "downloads_per_star": 5.7
+   "stars": 30792,
+   "downloads_per_star": 4.8
   },
   {
    "package": "basic-memory",
    "registry": "pypi",
-   "downloads_monthly": 51819,
+   "downloads_monthly": 27770,
    "repo": "basicmachines-co/basic-memory",
-   "stars": 3804,
-   "downloads_per_star": 13.62
+   "stars": 4379,
+   "downloads_per_star": 6.34
   },
   {
    "package": "cc-sdd",
    "registry": "npm",
-   "downloads_monthly": 40915,
+   "downloads_monthly": 29666,
    "repo": "gotalab/cc-sdd",
-   "stars": 3645,
-   "downloads_per_star": 11.22
+   "stars": 3746,
+   "downloads_per_star": 7.92
   },
   {
    "package": "spec-workflow-mcp",
    "registry": "npm",
-   "downloads_monthly": 317,
+   "downloads_monthly": 141,
    "repo": "Pimzino/spec-workflow-mcp",
-   "stars": 4291,
-   "downloads_per_star": 0.07
+   "stars": 4303,
+   "downloads_per_star": 0.03
   },
   {
    "package": "lean-ctx-bin",
    "registry": "npm",
-   "downloads_monthly": 3557,
+   "downloads_monthly": 3459,
    "repo": "yvgude/lean-ctx",
-   "stars": 3796,
-   "downloads_per_star": 0.94,
-   "note": "The Rust crate lean-ctx reports 7662 downloads over the trailing 90 days on crates.io; the npm figure is used here because it matches the 30-day window this table measures."
+   "stars": 3903,
+   "downloads_per_star": 0.89
   }
  ]
 }

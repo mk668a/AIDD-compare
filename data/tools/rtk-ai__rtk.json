@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 82619,
- "push": "2026-10-07",
+ "stars": 84820,
+ "push": "2026-10-26",
  "conf": "ok",
  "exec": true,
  "sum": "CLI proxy that compresses shell command output before it reaches the model, intervening transparently through hooks.",
@@ -121,6 +121,14 @@
   {
    "url": "https://github.com/rtk-ai/rtk",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/rtk-ai/rtk",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/rtk-ai/rtk/blob/develop/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

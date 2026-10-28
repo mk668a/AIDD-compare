@@ -18,11 +18,11 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 3866,
- "push": "2026-10-07",
+ "stars": 3903,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": true,
- "sum": "Sits between an existing agent and the model: caches and compresses file reads, command output and each request before they arrive, and carries session memory and a cost ledger across chats.",
+ "sum": "A local context gateway that selects and compresses information before it reaches AI tools, applies supported access and content controls, and records delivery evidence. Available through CLI, MCP, hooks, proxy paths and an SDK.",
  "art": "Session memory, a BM25-indexed artifact registry, and a savings ledger with receipts, held in the tool local store (persistent). The compressed request and the shaped command output are a path, not an artifact.",
  "tok": "frugal",
  "p": [
@@ -153,12 +153,20 @@
   {
    "url": "https://crates.io/api/v1/crates/lean-ctx",
    "accessed": "2026-09-17"
+  },
+  {
+   "url": "https://api.github.com/repos/yvgude/lean-ctx",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/yvgude/lean-ctx/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "LeanCTX",
-   "sum": "既存のエージェントとモデルの間に入り、ファイル読み取り・コマンド出力・各リクエストを到達前にキャッシュして圧縮する。セッション記憶とコスト台帳をチャットをまたいで持ち越す。",
+   "sum": "AIツールへ届く前に情報を選択・圧縮するローカルのコンテキストゲートウェイ。対応するアクセス制御や内容の制御を適用し、渡した情報の証跡を記録する。CLI、MCP、フック、プロキシ、SDKを提供する。",
    "art": "セッション記憶、BM25で索引した成果物レジストリ、レシート付きの節約台帳を、ツールのローカルストアに永続化する(永続)。圧縮後のリクエストと整形後のコマンド出力は通り道であって成果物ではない。",
    "pre": [
     "MCPを話せるエージェント、またはコマンドをフックできるシェル",

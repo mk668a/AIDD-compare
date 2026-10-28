@@ -20,7 +20,7 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 1593,
+ "stars": 1613,
  "push": "2026-07-07",
  "conf": "ok",
  "exec": false,
@@ -124,6 +124,14 @@
   {
    "url": "https://raw.githubusercontent.com/BAI-LAB/MemoryOS/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/BAI-LAB/MemoryOS",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/BAI-LAB/MemoryOS/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -27,11 +27,11 @@
   ]
  },
  "lic": "MIT",
- "stars": 40271,
- "push": "2026-10-05",
+ "stars": 41897,
+ "push": "2026-10-26",
  "conf": "ok",
  "exec": false,
- "sum": "A marketplace of agent definitions, skills and commands maintained as one Markdown source and rendered natively onto five harnesses.",
+ "sum": "A shared collection of agent definitions, skills and commands adapted for Claude Code, Codex CLI, Cursor, OpenCode, Antigravity CLI, GitHub Copilot and Pi. Available components depend on the host and installation route.",
  "art": "plugin, agent and skill definitions in Markdown (persistent)",
  "tok": "moderate",
  "p": [
@@ -139,12 +139,20 @@
   {
    "url": "https://raw.githubusercontent.com/wshobson/agents/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/wshobson/agents",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/wshobson/agents/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "Agentic Plugin Marketplace",
-   "sum": "エージェント定義・スキル・コマンドの配布所。単一のMarkdownソースを保守し、5つのハーネス向けにそれぞれの流儀で生成する。",
+   "sum": "エージェント定義、スキル、コマンドの共通コレクション。Claude Code、Codex CLI、Cursor、OpenCode、Antigravity CLI、GitHub Copilot、Piへ展開し、利用できる構成要素はホストと導入方法によって異なる。",
    "art": "Markdownによるプラグイン・エージェント・スキル定義（永続）",
    "pre": [
     "対応ハーネスのいずれか",

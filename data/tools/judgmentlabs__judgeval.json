@@ -22,8 +22,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 1063,
- "push": "2026-10-05",
+ "stars": 1071,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
  "sum": "Traces an agent with OpenTelemetry and scores its behaviour with prompt-defined judges, so a failure can be traced to a cause and a fix validated against the case that produced it.",
@@ -128,6 +128,14 @@
   {
    "url": "https://raw.githubusercontent.com/JudgmentLabs/judgeval/main/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/JudgmentLabs/judgeval",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/JudgmentLabs/judgeval/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -28,8 +28,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 10269,
- "push": "2026-10-07",
+ "stars": 10940,
+ "push": "2026-10-28",
  "conf": "check",
  "exec": false,
  "sum": "Meta-prompt driven SDD run as a five-step phase loop: discuss, plan, execute, verify, ship. Heavy work runs in fresh-context subagents to keep the main session lean.",
@@ -133,6 +133,14 @@
   {
    "url": "https://github.com/gsd-build/get-shit-done",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/open-gsd/gsd-core",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/open-gsd/gsd-core/blob/next/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -32,8 +32,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 31520,
- "push": "2026-10-07",
+ "stars": 32294,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
  "sum": "Keeps memory as a temporal knowledge graph, so facts carry a validity period.",
@@ -132,6 +132,14 @@
   {
    "url": "https://github.com/getzep/graphiti",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/getzep/graphiti",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/getzep/graphiti/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

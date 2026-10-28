@@ -21,8 +21,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 18680,
- "push": "2026-10-07",
+ "stars": 19152,
+ "push": "2026-10-27",
  "conf": "ok",
  "exec": false,
  "sum": "Writes LLM output evaluation as unit tests, in pytest-compatible form.",
@@ -121,6 +121,14 @@
   {
    "url": "https://github.com/confident-ai/deepeval",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/confident-ai/deepeval",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/confident-ai/deepeval/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

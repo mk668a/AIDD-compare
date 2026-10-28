@@ -28,8 +28,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 74050,
- "push": "2026-10-07",
+ "stars": 79836,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "Orchestration harness that coordinates many agents in hierarchical, mesh or adaptive swarms, with consensus and a persistent vector memory.",
@@ -140,6 +140,14 @@
   {
    "url": "https://github.com/ruvnet/ruflo",
    "accessed": "2026-09-01"
+  },
+  {
+   "url": "https://api.github.com/repos/ruvnet/ruflo",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/ruvnet/ruflo/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

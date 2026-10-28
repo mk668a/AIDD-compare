@@ -32,8 +32,8 @@
   ]
  },
  "lic": "MIT-0",
- "stars": 5044,
- "push": "2026-10-07",
+ "stars": 5550,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
  "sum": "Adaptive workflow steering rules implementing the AI-Driven Life Cycle. 5 phases and 33 stages driven by a 14-agent roster, rendered onto seven harnesses from one harness-neutral core.",
@@ -153,6 +153,14 @@
   {
    "url": "https://raw.githubusercontent.com/awslabs/aidlc-workflows/main/core/aidlc-common/stages/construction/code-generation.md",
    "accessed": "2026-09-01"
+  },
+  {
+   "url": "https://api.github.com/repos/awslabs/aidlc-workflows",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/awslabs/aidlc-workflows/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {

@@ -21,11 +21,11 @@
   ]
  },
  "lic": "MIT",
- "stars": 2952,
- "push": "2026-10-07",
+ "stars": 3115,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": false,
- "sum": "Evaluation framework from the UK AI Safety Institute. Leans on reproducibility and rigorous logging.",
+ "sum": "Evaluation framework from the UK AI Security Institute, with reusable components for tools, multi-turn interactions and model-graded evaluations, plus logging and reproducible evaluation tasks.",
  "art": "evaluation task definitions (persistent)",
  "tok": "frugal",
  "p": [
@@ -122,12 +122,20 @@
   {
    "url": "https://github.com/UKGovernmentBEIS/inspect_ai",
    "accessed": "2026-08-30"
+  },
+  {
+   "url": "https://api.github.com/repos/UKGovernmentBEIS/inspect_ai",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/UKGovernmentBEIS/inspect_ai/blob/main/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
   "ja": {
    "n": "Inspect AI",
-   "sum": "英国AI安全研究所による評価フレームワーク。再現性とログの厳密さに寄る。",
+   "sum": "英国AI Security Instituteの評価フレームワーク。ツール利用、複数ターンの対話、モデルによる採点を組み合わせ、ログと再現可能な評価タスクを提供する。",
    "art": "評価タスク定義（永続）",
    "pre": [
     "評価設計の知識"

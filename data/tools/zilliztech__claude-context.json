@@ -22,7 +22,7 @@
   ]
  },
  "lic": "MIT",
- "stars": 12589,
+ "stars": 12652,
  "push": "2026-07-14",
  "conf": "ok",
  "exec": false,
@@ -132,6 +132,14 @@
   {
    "url": "https://raw.githubusercontent.com/zilliztech/claude-context/master/README.md",
    "accessed": "2026-09-02"
+  },
+  {
+   "url": "https://api.github.com/repos/zilliztech/claude-context",
+   "accessed": "2026-10-28"
+  },
+  {
+   "url": "https://github.com/zilliztech/claude-context/blob/master/README.md",
+   "accessed": "2026-10-28"
   }
  ],
  "i18n": {
