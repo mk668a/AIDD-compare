@@ -33,15 +33,123 @@
 主レイヤで分類しています。副レイヤを含む詳細は各リンク先で確認できます。比較対象の規約やパターンも含みます。
 
 <!-- tools-by-layer:start -->
-| レイヤ | 設計するもの | ツール |
-|---|---|---|
-| [L1](../docs/layers/L1.md) | エージェントの実行環境と使えるツール | [agent-lsp](../data/tools/blackwell-systems__agent-lsp.json), [Browser Use](../data/tools/browser-use__browser-use.json), [gh-aw](../data/tools/github__gh-aw.json), [Strands Agents](../data/tools/strands-agents__harness-sdk.json) |
-| [L2](../docs/layers/L2.md) | 推論に渡すコンテキスト | [.NET Agent Skills](../data/tools/dotnet__skills.json), [Agentic Plugin Marketplace](../data/tools/wshobson__agents.json), [AGENTS.md](../data/tools/agentsmd__agents.md.json), [Claude Context](../data/tools/zilliztech__claude-context.json), [CodeGraph](../data/tools/colbymchenry__codegraph.json), [Context7](../data/tools/upstash__context7.json), [Framelink Figma MCP](../data/tools/glips__figma-context-mcp.json), [Headroom](../data/tools/headroomlabs-ai__headroom.json), [LeanCTX](../data/tools/yvgude__lean-ctx.json), [Repomix](../data/tools/yamadashy__repomix.json), [RTK (Rust Token Killer)](../data/tools/rtk-ai__rtk.json), [Serena](../data/tools/oraios__serena.json), [skills CLI](../data/tools/vercel-labs__skills.json), [Skills for Real Engineers](../data/tools/mattpocock__skills.json), [snip](../data/tools/edouard-claude__snip.json) |
-| [L3](../docs/layers/L3.md) | ターンやセッションを越えて残す記憶 | [Basic Memory](../data/tools/basicmachines-co__basic-memory.json), [Beads](../data/tools/gastownhall__beads.json), [Cognee](../data/tools/topoteretes__cognee.json), [Graphiti](../data/tools/getzep__graphiti.json), [Letta Code](../data/tools/letta-ai__letta-code.json), [mem0](../data/tools/mem0ai__mem0.json), [MemoryOS](../data/tools/bai-lab__memoryos.json), [MemOS](../data/tools/memtensor__memos.json), [MemPalace](../data/tools/mempalace__mempalace.json), [OpenViking](../data/tools/volcengine__openviking.json), [Supermemory](../data/tools/supermemoryai__supermemory.json) |
-| [L4](../docs/layers/L4.md) | 実装する変更の仕様 | [AI-DLC Workflows](../data/tools/awslabs__aidlc-workflows.json), [BMAD-METHOD](../data/tools/bmad-code-org__bmad-method.json), [cc-sdd](../data/tools/gotalab__cc-sdd.json), [DESIGN.md](../data/tools/google-labs-code__design-md.json), [drawio-skill](../data/tools/agents365-ai__drawio-skill.json), [GitHub Spec-Kit](../data/tools/github__spec-kit.json), [GSD Core](../data/tools/open-gsd__gsd-core.json), [MoAI-ADK](../data/tools/modu-ai__moai-adk.json), [OpenSpec](../data/tools/fission-ai__openspec.json), [Planning with Files](../data/tools/othmanadi__planning-with-files.json), [PM Skills Marketplace](../data/tools/phuryn__pm-skills.json), [Spec Kitty](../data/tools/spec-kitty__spec-kitty.json), [Spec Workflow MCP](../data/tools/pimzino__spec-workflow-mcp.json) |
-| [L5](../docs/layers/L5.md) | 検証方法と完了条件 | [Coze Loop](../data/tools/coze-dev__coze-loop.json), [DeepEval](../data/tools/confident-ai__deepeval.json), [hol-guard](../data/tools/hashgraph-online__hol-guard.json), [Inspect AI](../data/tools/ukgovernmentbeis__inspect_ai.json), [judgeval](../data/tools/judgmentlabs__judgeval.json), [Langfuse](../data/tools/langfuse__langfuse.json), [Opik](../data/tools/comet-ml__opik.json), [promptfoo](../data/tools/promptfoo__promptfoo.json), [Semgrep OSS](../data/tools/semgrep__semgrep.json), [SkillSpector](../data/tools/nvidia__skillspector.json), [Strix](../data/tools/usestrix__strix.json), [TDD Guard](../data/tools/nizos__tdd-guard.json) |
-| [L6](../docs/layers/L6.md) | 反復、フィードバック、停止条件 | [DeerFlow](../data/tools/bytedance__deer-flow.json), [Loop Engineering](../data/tools/cobusgreyling__loop-engineering.json), [Open Ralph Wiggum](../data/tools/th0rgal__open-ralph-wiggum.json), [Ralph for Claude Code](../data/tools/frankbria__ralph-claude-code.json), [Ralph Loop（パターン）](../data/tools/ghuntley.com__ralph.json), [Superpowers](../data/tools/obra__superpowers.json) |
-| [L7](../docs/layers/L7.md) | 複数エージェントの役割分担と協調 | [AG-UI](../data/tools/ag-ui-protocol__ag-ui.json), [CLI Agent Orchestrator (CAO)](../data/tools/awslabs__cli-agent-orchestrator.json), [container-use](../data/tools/dagger__container-use.json), [CrewAI](../data/tools/crewaiinc__crewai.json), [Nimbalyst](../data/tools/nimbalyst__nimbalyst.json), [Orca](../data/tools/stablyai__orca.json), [Ruflo](../data/tools/ruvnet__ruflo.json), [Swarms](../data/tools/kyegomez__swarms.json) |
+### L1 — エージェントの実行環境と使えるツール
+
+[レイヤの説明と比較](../docs/layers/L1.md)
+
+| ツール | 用途・特徴 | 成果物 | 導入前提・向かない用途 |
+|---|---|---|---|
+| [agent-lsp](../data/tools/blackwell-systems__agent-lsp.json)<br>副レイヤ: L5, L2 | 既存の言語サーバをMCPでまとめ、コーディングエージェント向けにバッチ操作、試行的な編集、段階を制御するワークフローを提供する。起動済みの実行環境を維持する。 | 常駐するMCP/LSPデーモンプロセス(一時的)。30分アイドルで自動終了し、削除後に残る成果物はない | 前提：CIで検証済みの31言語のいずれか(Go、Python、TypeScript、Rust、Java、C/C++、C#、Ruby、PHP、Kotlin、Swift、Scala、Zig、Lua、Elixir、Gleam、Clojure、Dart、Terraform、Nix、Prisma、SQL、MongoDBなど)で、保守されているLSPサーバーがあること、MCP対応のエージェントクライアント(Claude Code、Cursor、Windsurf、Gemini CLI、Continue、Cline、または任意のMCPクライアント)、逐次的なgrep/read呼び出しよりバッチ影響分析が有利になる規模・相互依存度のコードベース<br>不向き：ファイル間の依存関係がない小さなスクリプトや単一ファイル。grepの方が単純で、デーモンのウォームアップに見合わない、保守されているLSPサーバーが存在しない言語。agent-lspは既存サーバーをorchestrateするだけで自前実装はしない、サブプロセスを起動できない、またはcurl\|shスクリプトやDockerイメージを取得できないサンドボックス。インストールと各言語サーバー呼び出しの両方がこれに依存する |
+| [Browser Use](../data/tools/browser-use__browser-use.json)<br>副レイヤ: L5 | エージェントに実際に使えるブラウザを与える。ページを開き、クリックし、フォームを埋め、情報を取り出す。指示は言葉で書く。 | ブラウザセッションと抽出データ（使い捨て） | 前提：ブラウザ実行環境とその置き場所、自動操作を許容する対象<br>不向き：誤クリックが実害になる対象。どこを押すかはエージェントが決める、自動化を禁じている利用規約のサイト |
+| [gh-aw](../data/tools/github__gh-aw.json)<br>副レイヤ: L6, L7 | GitHubの公式CLI拡張。Markdown+YAMLで書いたagentic workflowをコンパイルし、5種の組み込みAIエンジンを、権限を絞りサンドボックス化したGitHub Actions実行として動かす。 | コミットされた.lock.yml形式のコンパイル済みGitHub Actionsワークフロー(永続) | 前提：GitHub Actionsを既に使っているリポジトリで、CLI拡張のインストール権限とワークフローのシークレット/エンジン認証情報を設定できること、issue triage、レビューコメント、定期ダイジェストなど、明確で範囲の定まった自動化タスクであること(オープンエンドなコード変更ではない)、ワークフローごとの権限・ネットワーク許可リスト・safe-outputsの範囲を読んで調整する担当者がいること<br>不向き：決定的で再現可能なCI(ビルド・テスト・lint・デプロイ)には向かない。README自身が通常のGitHub Actionsを使うよう明言している、ワークフローごとの権限・ネットワーク許可リスト・safe-outputsの範囲を誰もレビュー/調整しないリポジトリ。セキュリティモデルはその人的な注意深さに依存する、GitHubでホストされていないgit(GitLab、Bitbucket、セルフホストforge)。コンパイル先はGitHub Actionsに限定される |
+| [Strands Agents](../data/tools/strands-agents__harness-sdk.json)<br>副レイヤ: L6, L7 | 自分で書くことになるループを、SDKとして持つもの。ターン上限・トークン予算・キャンセル・停止理由を一級の制御として備え、ホストされた管理面を持たず自分のプロセス内で動く。 | PythonまたはTypeScriptによるエージェント定義（永続） | 前提：エージェントを自分で組む工数、PythonかTypeScript<br>不向き：ライブラリではなく完成品が欲しい場合、走らせるループを自分で持つ気のないチーム |
+
+### L2 — 推論に渡すコンテキスト
+
+[レイヤの説明と比較](../docs/layers/L2.md)
+
+| ツール | 用途・特徴 | 成果物 | 導入前提・向かない用途 |
+|---|---|---|---|
+| [.NET Agent Skills](../data/tools/dotnet__skills.json)<br>副レイヤ: L1 | Microsoftが提供する.NET/C#向けスキルとホスト固有のカスタムエージェント。ビルド、テスト、アップグレード、診断、AI連携を支える。スキルと対応するMCPサーバは複数クライアントで利用でき、カスタムエージェントやLSP機能はホストに依存する。 | ハーネスのプロジェクトまたはプラグインマーケットプレイスにインストールされるskill/pluginファイル(永続) | 前提：Agent Skillsまたはプラグインマーケットプレイス機構を持つハーネス(Claude Code、Copilot CLI、Cursor、Codex CLI、またはVS Code Insidersプレビュー)、これらのskillが対象とする.NET/C#コードベース<br>不向き：.NET以外のコードベース(全プラグインがC#/.NET専用)、skillやプラグインマーケットプレイス機構を持たないハーネス、今すぐ安定したVS Code統合が必要なチーム(その経路は明示的にプレビュー扱い) |
+| [Agentic Plugin Marketplace](../data/tools/wshobson__agents.json)<br>副レイヤ: L7, L1 | エージェント定義、スキル、コマンドの共通コレクション。Claude Code、Codex CLI、Cursor、OpenCode、Antigravity CLI、GitHub Copilot、Piへ展開し、利用できる構成要素はホストと導入方法によって異なる。 | Markdownによるプラグイン・エージェント・スキル定義（永続） | 前提：対応ハーネスのいずれか、生成された指示ファイルがプロジェクトに置かれることを許容できること<br>不向き：対応5ハーネス以外の環境、読み込む指示をすべて事前にレビューしたいチーム。カタログが大きすぎる |
+| [AGENTS.md](../data/tools/agentsmd__agents.md.json) | リポジトリにエージェント向けの指示を置く共通ファイル規約。ツールではなく取り決め。 | 規約ファイル（永続） | 前提：書く内容の合意（実質これが全て）<br>不向き：規約が守られているか検証しないまま置くこと |
+| [Claude Context](../data/tools/zilliztech__claude-context.json)<br>副レイヤ: L3 | MCP越しに提供する意味検索。コードベースを一度ベクトル索引に入れ、ディレクトリを丸ごと渡す代わりに関係する箇所だけをエージェントが引く。 | コードベースのベクトル索引（永続） | 前提：索引先のベクトルデータベース、埋め込みプロバイダ。費用でもありデータ持ち出しの判断でもある<br>不向き：丸ごと読める規模のリポジトリ、ソースを埋め込みサービスへ送れない業務 |
+| [CodeGraph](../data/tools/colbymchenry__codegraph.json)<br>副レイヤ: L3 | リポジトリをコードグラフとして索引し、ファイルの変更に追随させる。エージェントは読み進める代わりにグラフに問う。ローカルで動き、9つのハーネスからMCPで到達できる。 | 事前索引されたコードグラフ（永続） | 前提：対応言語と、読むこと自体が費用になる規模のリポジトリ、同期を維持できる索引<br>不向き：小さなリポジトリ。索引のほうが、省ける読解より高くつく、対応外の言語 |
+| [Context7](../data/tools/upstash__context7.json)<br>副レイヤ: L1 | ライブラリのバージョンに対応したドキュメントと例をコーディングエージェントへ渡す。MCPのほか、ctx7 CLIとAgent Skillsの組み合わせでも利用できる。 | なし（取得経路） | 前提：対象ライブラリが収録されていること<br>不向き：社内独自ライブラリ中心の環境 |
+| [Framelink Figma MCP](../data/tools/glips__figma-context-mcp.json)<br>副レイヤ: L1 | Figmaのレイアウト情報をMCPでコーディングエージェントに渡す。APIの応答を簡約してから渡すので、デザインはスクリーンショットではなく文脈として届く。 | 文脈へ渡される簡約済みレイアウト情報（使い捨て） | 前提：実際にFigmaにあるデザイン、Figmaのアクセストークン。データ持ち出しの判断でもある<br>不向き：デザインがFigmaにないプロジェクト、デザインファイルが合意内容と乖離している状況 |
+| [Headroom](../data/tools/headroomlabs-ai__headroom.json)<br>副レイヤ: L1 | ツール出力・ログ・ファイル・RAGチャンクを、モデルに届く前に圧縮する。 | なし（圧縮経路） | 前提：対応ハーネスへの組み込み<br>不向き：出力の完全性が必要な監査用途 |
+| [LeanCTX](../data/tools/yvgude__lean-ctx.json)<br>副レイヤ: L1, L3 | AIツールへ届く前に情報を選択・圧縮するローカルのコンテキストゲートウェイ。対応するアクセス制御や内容の制御を適用し、渡した情報の証跡を記録する。CLI、MCP、フック、プロキシ、SDKを提供する。 | セッション記憶、BM25で索引した成果物レジストリ、レシート付きの節約台帳を、ツールのローカルストアに永続化する(永続)。圧縮後のリクエストと整形後のコマンド出力は通り道であって成果物ではない。 | 前提：MCPを話せるエージェント、またはコマンドをフックできるシェル、ハイブリッド動作にはシェルアクセスが要る。IDE拡張型のエージェントはMCPのみに落ち、コマンド出力側の半分を失う、crates.io・npm・AURから入れるRustバイナリを動かせる環境、索引と1ホップ分の増加より、削れる文脈のほうが大きいだけの規模のコードベース<br>不向き：バイト列をそのまま見る必要がある作業。モデルに渡るのは表現であり、元のソースへの復元は別手順になる、ポリシーの策定、タスクをまたぐ学習、検証済みの節約額を必要とするチーム。ADR-010がこれらを商用側に置いており、OSSランタイムは受け取ったポリシーを強制するだけで策定はしない、確実なシェルフックを持たないエージェント。MCPのみで動き、設計の半分を使えない、小規模なリポジトリ。索引とプロキシの往復が、削れる文脈より高くつく、ハーネスを探している場合。エージェント本体・タスク制御・モデル選択・ツール・リトライ方針のいずれも置き換えない |
+| [Repomix](../data/tools/yamadashy__repomix.json) | リポジトリ全体を1ファイルに整形し、モデルに渡せる形にする。 | パックされた文脈（使い捨て） | 前提：コンテキスト長に収まる規模<br>不向き：大規模モノレポ、部分的な変更 |
+| [RTK (Rust Token Killer)](../data/tools/rtk-ai__rtk.json)<br>副レイヤ: L1 | シェルコマンドの出力をモデルに渡す前に圧縮するCLIプロキシ。フックで透過的に介入する。 | なし（出力の圧縮経路） | 前提：フック機構を持つハーネス、対象コマンドが対応リストにあること<br>不向き：フックを通らない組み込みツール経由の読み取り、出力の完全性が必要な監査用途 |
+| [Serena](../data/tools/oraios__serena.json)<br>副レイヤ: L1 | 言語サーバを使ったコード検索、編集、リファクタリング、デバッグをMCPで提供する。v2ではREPLインターフェースが加わり、リポジトリ全体をコンテキストに渡さずに操作を組み合わせられる。 | なし（検索経路） | 前提：対象言語のLSPが動くこと<br>不向き：言語サーバのない環境 |
+| [skills CLI](../data/tools/vercel-labs__skills.json)<br>副レイヤ: L1 | オープンなスキル生態系のためのコマンドライン。スキルをプロジェクトに導入するか、導入せずにプロンプトを生成してエージェントを起動する。 | プロジェクトに書き込まれるスキルファイル、または一時的なプロンプト（永続または使い捨て） | 前提：対応エージェントのいずれか、スキルの取得元。プライベートリポジトリでもよい<br>不向き：遠隔ソースからの指示導入が許されない環境、対応外のハーネス |
+| [Skills for Real Engineers](../data/tools/mattpocock__skills.json)<br>副レイヤ: L4, L5 | TDD、仕様、チケット、アーキテクチャレビューを扱う、組み合わせ可能な開発・生産性スキル。更新可能なプラグインとして導入するか、編集可能なスキルファイルをプロジェクトへコピーする。 | プロジェクトへ書き込まれるスキル・CONTEXT.md・ADR（永続） | 前提：スキルを読み込むハーネス（Claude Code、Codexなど）、リポジトリへのファイル書き込みを許容できること<br>不向き：手順の重さが変更量を上回る単発の編集、スキル機構を持たないハーネス |
+| [snip](../data/tools/edouard-claude__snip.json)<br>副レイヤ: L1 | YAMLで宣言的にフィルタを書くCLIプロキシ。同種のなかでは設定の明示性を重視する。 | フィルタ定義（永続） | 前提：フィルタを書く手間を許容できること<br>不向き：設定なしですぐ効かせたい場合 |
+
+### L3 — ターンやセッションを越えて残す記憶
+
+[レイヤの説明と比較](../docs/layers/L3.md)
+
+| ツール | 用途・特徴 | 成果物 | 導入前提・向かない用途 |
+|---|---|---|---|
+| [Basic Memory](../data/tools/basicmachines-co__basic-memory.json) | Markdownファイルとして記憶を持つ。人間が読めてgitで差分が追える形式。 | Markdownノート（永続） | 前提：ファイルベースの運用を許容できること<br>不向き：大量の構造化データ、AGPLを避けたい配布形態 |
+| [Beads](../data/tools/gastownhall__beads.json)<br>副レイヤ: L5 | エージェント向けのissueトラッカー。記憶を会話ではなく構造化データに置く。 | チケットDB（永続） | 前提：作業を粒度に分解できること<br>不向き：単発の小さな作業 |
+| [Cognee](../data/tools/topoteretes__cognee.json)<br>副レイヤ: L2 | 任意形式の文書を取り込み、自己ホストの知識グラフを構築する。チャンクを順位付けるのではなく関係を辿って検索する。 | 知識グラフとベクトルインデックス（永続） | 前提：背後で動かすグラフまたはベクトルストア、ファイルを直接読むより走査が勝つだけの分量<br>不向き：直接読める規模のリポジトリ。索引のほうが高くつく、データストアをもう1つ運用できないチーム |
+| [Graphiti](../data/tools/getzep__graphiti.json) | 時間軸を持つ知識グラフとして記憶を保つ。事実の有効期間を扱えるのが特徴。 | 時系列知識グラフ（永続） | 前提：グラフDBの運用<br>不向き：軽量な単発利用 |
+| [Letta Code](../data/tools/letta-ai__letta-code.json)<br>副レイヤ: L7, L1 | MemGPT系譜。エージェントが自分の記憶・スキル・プロンプトを書き換えていくステートフルなハーネス。コンテキストはMemFSによりgitで追跡される。 | エージェント状態（永続） | 前提：常駐させる運用基盤<br>不向き：CLIで完結させたい軽い用途 |
+| [mem0](../data/tools/mem0ai__mem0.json) | エージェントに長期記憶を持たせるレイヤ。抽出・保存・想起を担う。 | 記憶ストア（永続） | 前提：何を覚えるべきかの方針<br>不向き：短命なタスク、記憶の汚染を検知する手段がない環境 |
+| [MemoryOS](../data/tools/bai-lab__memoryos.json) | エージェントの記憶を、OSの記憶階層と同じ形で持つ実装。保存・更新・検索・生成を分けた階層構造をとる。MCPから到達できる。 | 階層型の記憶ストア（永続） | 前提：継続的に動かす場所、MCPを話すハーネス、またはSDKを直接呼ぶ意思<br>不向き：1セッションで終わる作業。記憶層はoverheadになる、何を憶えたかをレビューしたいチーム。ストアは差分の取れるファイルではない |
+| [MemOS](../data/tools/memtensor__memos.json)<br>副レイヤ: L2 | 追加・取得・編集・削除を単一APIで扱う記憶層。不透明な埋め込みストアではなく、人が確認して直せるグラフとして構造化されている。 | 点検可能な記憶グラフ（永続） | 前提：ストアを動かす場所、記憶フックを持つハーネス、またはSDKの直接呼び出し<br>不向き：1セッションで終わる作業、リポジトリ内の素のファイルで足りる場合 |
+| [MemPalace](../data/tools/mempalace__mempalace.json)<br>副レイヤ: L2 | 会話履歴を要約せず逐語で保持し、ローカルで検索する。自分からAPIを呼ばない。 | 逐語の会話ストア（永続） | 前提：ローカルのPython環境、ハーネスへのフック配線。ないとセッション失効で履歴が消える<br>不向き：会話の逐語保存自体が問題になる業務、ストアを共有しアクセス制御したいチーム |
+| [OpenViking](../data/tools/volcengine__openviking.json)<br>副レイヤ: L2 | 記憶・資料・スキルをviking:// プロトコルの単一仮想ファイルシステムとして見せる。エージェントは不透明な索引に問い合わせるのではなくlsやfindで自分の文脈を歩く。検索のたびに軌跡が残る。 | 3階層の詳細度を持つコンテキストファイルシステム（永続） | 前提：データベースを動かす場所、ネットワーク越しの利用に及ぶAGPL-3.0の受け入れ<br>不向き：ネットワーク境界を越えるコピーレフト義務を負えないプロプライエタリ製品、リポジトリ内の素のmarkdownで足りる場合 |
+| [Supermemory](../data/tools/supermemoryai__supermemory.json)<br>副レイヤ: L2 | 会話から事実を抽出し、プロフィールを保ち、矛盾を調停し、古びたものを失効させる記憶エンジン。全部を貯めて後から探す方式ではない。 | 抽出された事実・プロフィール・文脈索引（永続） | 前提：動かす場所。ローカルか、想定するエッジ基盤、何を残すかを抽出器が決めることの受け入れ<br>不向き：生の記録を保持しなければならない場面。抽出は捨てる、1セッションで完結する作業 |
+
+### L4 — 実装する変更の仕様
+
+[レイヤの説明と比較](../docs/layers/L4.md)
+
+| ツール | 用途・特徴 | 成果物 | 導入前提・向かない用途 |
+|---|---|---|---|
+| [AI-DLC Workflows](../data/tools/awslabs__aidlc-workflows.json)<br>副レイヤ: L6, L5 | AI-Driven Life Cycleを実装する適応型ワークフロー規則。5フェーズ33ステージを14のエージェントで回す。ハーネス非依存の単一コアから7つのハーネス向けに生成される。 | aidlc/ ワークスペース、ハーネス別の設定、AGENTS.md（永続） | 前提：対応7ハーネスのいずれか、ゲートで承認する人間がいること<br>不向き：定数1つの変更。ライフサイクルの重さが上回る、承認ゲートでレビューする意思がないチーム、対応7ハーネス以外の環境 |
+| [BMAD-METHOD](../data/tools/bmad-code-org__bmad-method.json)<br>副レイヤ: L7 | 役割を分けた多数のエージェントで企画から実装まで通す重量級フレームワーク。 | 工程ごとの文書群（永続） | 前提：ある程度の規模と期間、役割分担が意味を持つ複雑さ<br>不向き：個人の小規模プロジェクト、些細な変更、短時間で試したい場合 |
+| [cc-sdd](../data/tools/gotalab__cc-sdd.json)<br>副レイヤ: L5 | 課題の整理、要件、設計、タスク、長時間の実装を支えるAgent Skills。承認済みタスクをTDDとタスクごとのレビューで進め、ネイティブのサブエージェントに対応するホストでは実装者とレビュアーを分ける。 | フェーズ文書（永続） | 前提：対応するコーディングエージェント。Claude CodeとCodexは安定版の連携で、その他の掲載連携はベータ、自律実装には承認済みの仕様タスク。タスクごとの独立レビューにはネイティブのサブエージェント<br>不向き：タスクごとの独立レビューが必要なのにネイティブのサブエージェントを使えないホスト、仕様の承認ゲートを省略する必要がある作業 |
+| [DESIGN.md](../data/tools/google-labs-code__design-md.json)<br>副レイヤ: L2 | 視覚的アイデンティティをコーディングエージェントに伝えるためのファイル形式。front matterに機械可読なトークン、本文にその理由を散文で書く。トークン参照の整合とWCAGコントラストを検査する検証器が付く。 | プロジェクトごとのDESIGN.md（永続） | 前提：既存のデザインシステム、または作ると決めること、インタフェースのコードを書く前にプロジェクトのファイルを読むエージェント<br>不向き：視覚的な面を持たないプロジェクト、エージェントが読めないツールの中でデザインが決まる作業 |
+| [drawio-skill](../data/tools/agents365-ai__drawio-skill.json)<br>副レイヤ: L5, L2 | 自然言語と実システムの情報から、保守できる .drawioのアーキテクチャモデルを作る。手で調整したレイアウトを壊さずに差分同期し、アーキテクチャの契約をCIのテストとして強制する。 | 意味と配置を分けた中間表現を持つ .drawioモデル（永続） | 前提：構造をモデル化する価値のあるシステム、Agent Skills形式に対応したエージェント<br>不向き：アーキテクチャモデルを抱えるには小さすぎるプロジェクト、作った後にモデルを保守しないチーム |
+| [GitHub Spec-Kit](../data/tools/github__spec-kit.json)<br>副レイヤ: L2 | 仕様駆動開発のCLI。テンプレート、プロジェクトの原則、組み合わせ可能なワークフローを提供する。中核の仕様作成に加え、バグ修正とアイデア評価を拡張機能として選べる。 | 仕様、計画、タスク、収束確認の記録 | 前提：新規または境界の明確なモジュール、仕様を書く時間が取れること<br>不向き：定数1つの変更 |
+| [GSD Core](../data/tools/open-gsd__gsd-core.json)<br>副レイヤ: L2, L6 | メタプロンプト駆動のSDD。討議・計画・実行・検証・出荷の5段階ループで回し、重い作業は新しいコンテキストのサブエージェントに逃がして本体セッションを軽く保つ。 | フェーズ定義とプロンプト（永続） | 前提：個人開発またはそれに近い意思決定速度<br>不向き：複数人での仕様合意が要る場面 |
+| [MoAI-ADK](../data/tools/modu-ai__moai-adk.json)<br>副レイヤ: L5, L6 | コーディングエージェントをラップするCLI。SPEC先行のPlan→Run→SyncにTDDゲートを挟む。 | SPEC + テスト（永続） | 前提：テストを書ける対象、対応ハーネス<br>不向き：テスト不能なレガシー、他のハーネスを使いたい場合 |
+| [OpenSpec](../data/tools/fission-ai__openspec.json)<br>副レイヤ: L3, L5 | 変更をADDED / MODIFIED / REMOVEDの差分として記述。仕様が残って育つ。 | 差分仕様（永続） | 前提：既存コードの現状把握、変更単位を切れること<br>不向き：ゼロからの大規模設計、仕様を書く文化が全くない組織 |
+| [Planning with Files](../data/tools/othmanadi__planning-with-files.json)<br>副レイヤ: L2, L6 | 計画をコンテキストウィンドウではなくディスクに置く。3つのmarkdownをフックが毎ターン再注入するので、圧縮・/clear・クラッシュを越えて計画が生き残る。 | task_plan.md・findings.md・progress.md（永続） | 前提：ライフサイクルフックを持つハーネス、または対応60エージェントのいずれか、コンテキスト消失が実害になる長さの作業<br>不向き：1つのコンテキストウィンドウで終わる短い作業、フック機構のないハーネス。計画が「従ってくれるかもしれないプロンプト」に落ちる |
+| [PM Skills Marketplace](../data/tools/phuryn__pm-skills.json)<br>副レイヤ: L5 | プロダクトマネジメントのフレームワークを、スキルとスラッシュコマンドとして9つのプラグインにまとめたもの。8つはディスカバリー計画、PRD、OKR、ロードマップなどの文書を作り、残る1つはAIが書いたコードベースを出荷前に文書化して監査する。 | ディスカバリー計画、PRD、ユーザーストーリー、ロードマップ、出荷判断用の資料一式。ワークスペースにMarkdownで保存される（永続） | 前提：コマンドを使うにはClaude Code、Claude Cowork、Codex CLIのいずれか。他のホストではスキルのみ読み込める、プロダクトの判断に責任を持ち、各コマンドの確認ポイントに答える人、出荷キットを使う場合は、エージェントが読めるリポジトリ<br>不向き：足りないものがコードである仕事。9プラグイン中8つは文書を作るもので、プロダクトのコードを書くものは無い、会話の中に無い証拠が必要な判断。フレームワークは考える順序を与えるが、顧客データは与えない、実際に効力を持たせる法務文書。NDAとプライバシーポリシーのスキルは下書きを作るだけで、審査はしない |
+| [Spec Kitty](../data/tools/spec-kitty__spec-kitty.json)<br>副レイヤ: L1, L7 | SDDにgit worktreeによる機能ごとの隔離を組み込んだ実装。 | 仕様 + worktree | 前提：git worktreeが使える構成、並列作業が実際に必要なこと<br>不向き：逐次で足りる小規模開発 |
+| [Spec Workflow MCP](../data/tools/pimzino__spec-workflow-mcp.json)<br>副レイヤ: L5 | 仕様ワークフローをMCPとして提供。ダッシュボードで承認状況を可視化する。 | 仕様文書（永続） | 前提：MCP対応のハーネス<br>不向き：MCPを使えない環境、GPLを避けたい配布形態 |
+
+### L5 — 検証方法と完了条件
+
+[レイヤの説明と比較](../docs/layers/L5.md)
+
+| ツール | 用途・特徴 | 成果物 | 導入前提・向かない用途 |
+|---|---|---|---|
+| [Coze Loop](../data/tools/coze-dev__coze-loop.json)<br>副レイヤ: L2 | エージェントの開発と運用を1つのデプロイに収めた自己ホスト可能なプラットフォーム。プロンプト管理・評価・監視を持つ。オープン版は商用製品のコア部分にあたる。 | デプロイしたサービスが保持するプロンプト・評価セット・トレース（永続） | 前提：複数サービスのデプロイを置ける場所、評価セットに何を入れるかの合意<br>不向き：コマンドラインのツールが欲しい個人開発者、スタックごと内側に持ち込めない閉域環境 |
+| [DeepEval](../data/tools/confident-ai__deepeval.json) | LLM出力の評価をユニットテストの形で書く。pytest互換の作法。 | テストコード（永続） | 前提：Python環境、評価指標の選定<br>不向き：コード生成そのものの正しさ検証（本来の対象外） |
+| [hol-guard](../data/tools/hashgraph-online__hol-guard.json)<br>副レイヤ: L1 | 13以上のCLIハーネス(Codex、Claude Code、MCPトラフィックなど)を横断して、AIエージェントのツール呼び出しやパッケージ/プラグインのインストールをランタイムでインターセプトし、危険な操作を実行前にブロックまたは人間の承認待ちにするローカルファーストのセキュリティ層。 | ローカルの承認・受領履歴とポリシー状態(永続、~/.hol-guard相当のローカルストア)。plugin-scannerは別途CI向けにSARIF/検証ペイロードを出力する。 | 前提：対応済みエージェントCLI(Codex、Claude Code、Copilot CLI、Cursor、Gemini CLI、Hermes、OpenClaw、OpenCode、Antigravity、Kimi Code、Grok、Pi、ZCodeのいずれか)が既にインストールされていること、保護対象の全エージェントに対して、1つのローカルツールにフック/設定書き込みの強い権限を与える意思があること、pipxまたは同等の隔離されたPythonパッケージマネージャがローカルで使えること<br>不向き：対応リストに含まれないエージェントハーネス(実効性が未検証または存在しない)、保護対象の全エージェントに対し1つのローカルツールへ広いフック/設定アクセスを許可したくないチーム、対話的な承認を一切挟めない無人CIパイプライン: Watchモードはブロックされたはずの内容を記録するだけで強制はしない |
+| [Inspect AI](../data/tools/ukgovernmentbeis__inspect_ai.json) | 英国AI Security Instituteの評価フレームワーク。ツール利用、複数ターンの対話、モデルによる採点を組み合わせ、ログと再現可能な評価タスクを提供する。 | 評価タスク定義（永続） | 前提：評価設計の知識<br>不向き：軽く試したいだけの場面（重い） |
+| [judgeval](../data/tools/judgmentlabs__judgeval.json)<br>副レイヤ: L3 | OpenTelemetryでエージェントを追跡し、プロンプトで定義した判定器が振る舞いを採点する。失敗を原因まで辿り、直したことを、その失敗を生んだ実データで確かめられる。 | トレースと採点済みの振る舞い（永続） | 前提：何を良しとするかの合意、計測を仕込めるPythonアプリケーション<br>不向き：生成コードの正しさの判定。振る舞いの判定器はそれを決めない、基準が定まっていない探索段階 |
+| [Langfuse](../data/tools/langfuse__langfuse.json)<br>副レイヤ: L3 | トレースと評価の基盤。全LLM呼び出しとコストを記録し、後から再現できるようにする。 | トレース・評価定義（永続） | 前提：自己ホストまたはSaaS、計測を仕込む工数<br>不向き：単発の小さな作業 |
+| [Opik](../data/tools/comet-ml__opik.json)<br>副レイヤ: L2 | LLMアプリケーションのトレース・評価・プロンプト管理。機能を削った版ではなく、プラットフォーム全体を自己ホストできる。 | トレース・評価実行・プロンプトのバージョン（永続） | 前提：サーバを動かす場所、またはホスト版の受け入れ、評価セットに何を入れるかの合意<br>不向き：コマンドライン1つで済ませたい個人開発者、生成コードの正しさの判定。判定モデルはそれを決めない |
+| [promptfoo](../data/tools/promptfoo__promptfoo.json) | プロンプトとエージェントの評価をコード化しCIで回す。レッドチーミング機能も持つ。 | 評価定義（永続） | 前提：何を良しとするかの合意、CI基盤<br>不向き：評価基準が定まらない探索段階 |
+| [Semgrep OSS](../data/tools/semgrep__semgrep.json) | ルールベースの静的解析。生成コードへの決定論的ゲートとして機能する。 | ルール（永続） | 前提：対象言語の対応、ルールの整備<br>不向き：設計の妥当性の判断（形式しか見られない） |
+| [SkillSpector](../data/tools/nvidia__skillspector.json)<br>副レイヤ: L2 | エージェントスキルを導入前に走査し、プロンプトインジェクション・情報持ち出し経路・悪意あるパターン・サプライチェーン上の危険を検出して、入れて安全かを報告する。 | 走査レポート（永続） | 前提：自分の管理外から来るスキル、導入経路上にゲートを置ける場所<br>不向き：スキルの出来の良し悪しの判定。セキュリティ走査はそれを決めない、全スキルを内製しレビュー済みの環境 |
+| [Strix](../data/tools/usestrix__strix.json)<br>副レイヤ: L1, L6 | 自分のアプリケーションを対象にしたペネトレーションテスト用のエージェント。ソースを読み、Dockerのサンドボックスでアプリケーションを動かし、動く概念実証のエクスプロイトで再現できた弱点だけを報告する。9つのスキルにより、Claude Code、Cursor、Codexからスキャンの開始、指摘の修正、プルリクエストでのスキャン設定ができる。 | 指摘1件ごとのMarkdownファイルとvulnerabilities.json。strix_runs/<run-name>/に保存される（永続） | 前提：手元でDockerが動いていること、モデルプロバイダのAPIキー、ビルドして起動できるアプリケーション、またはテストの許可を得ているURL、自分のものではない対象については、書面による許可、複数のエージェントが同時に動くので、実行ごとの費用の上限設定<br>不向き：自分のものではなく、書面の許可も無いシステム。READMEは許可された対象に利用を限定している、能動的なテストに耐えられない本番システム。スキャンは対象に実際のリクエストを送る、指名された審査人の署名が要る正式な監査の代わり。報告書を作るのはモデルである、動かすものが無いリポジトリ。スキャンの動的な部分には、動くアプリケーションが要る |
+| [TDD Guard](../data/tools/nizos__tdd-guard.json)<br>副レイヤ: L6 | Claude CodeのフックでTDDを強制し、失敗するテストがない段階での実装を止める。保守は継続中で、新規利用者には後継のProbityを案内している。 | フック設定（永続） | 前提：フックを有効にしたClaude Code、Node.js 22以降と対応するテストフレームワーク<br>不向き：テストが書けない領域、探索的なプロトタイピング |
+
+### L6 — 反復、フィードバック、停止条件
+
+[レイヤの説明と比較](../docs/layers/L6.md)
+
+| ツール | 用途・特徴 | 成果物 | 導入前提・向かない用途 |
+|---|---|---|---|
+| [DeerFlow](../data/tools/bytedance__deer-flow.json)<br>副レイヤ: L7, L1 | ターンではなく時間の単位で測る作業のためのハーネス。サブエージェント・サンドボックス・記憶・スキルを、1つの長期ループの背後で束ねる。 | セッション記憶、サンドボックス状態、スキル定義（永続） | 前提：サンドボックス実行環境とセッション状態の置き場所、実際に数時間かかる課題。短い作業では機構のほうが高くつく<br>不向き：短い作業。オーケストレーションのoverheadが支配する、事前に予測可能でなければならない予算 |
+| [Loop Engineering](../data/tools/cobusgreyling__loop-engineering.json)<br>副レイヤ: L5, L7 | コードベースの周りでエージェントを運用するためのパターン集。仕事を見つけ、エージェントに渡し、結果を検証し、状態を残すループを設計する。監査ツールと費用ツールが付属する。 | ループ定義とSTATE.md（永続） | 前提：issueや失敗した検査など、ループが発見できる仕事があるリポジトリ、ループが信頼できる検証手順<br>不向き：人がやれば済む単発の作業、エージェントを定期実行させる気のないチーム |
+| [Open Ralph Wiggum](../data/tools/th0rgal__open-ralph-wiggum.json)<br>副レイヤ: L1 | 1つのコマンドで、6種のコーディングエージェントのいずれかをRalphループに入れる。フラグでハーネスを切り替える。商品はループのほうで、下のエージェントは差し替え可能な部品として扱われている。 | プロンプトファイルとループ状態（永続） | 前提：対応6種のエージェントCLIのいずれかの導入と認証、ループの外側で合否を決められる検査<br>不向き：エージェントを無人で走らせてはいけない環境、完了をテストで判定できない作業 |
+| [Ralph for Claude Code](../data/tools/frankbria__ralph-claude-code.json)<br>副レイヤ: L1 | RalphループをClaude Code向けに実装したもの。二重条件の終了判定とレート制限を備えた自律反復を回す。パターン本体が利用者任せにしていた上限を、実装として持っている。 | ループ設定とプロンプトファイル（永続） | 前提：ループの外側で合否を判定できるテストや検査、Claude Codeの導入と認証、失っても構う範囲の予算<br>不向き：外部の検査がなく、完了を判定できない作業、主観で良否が決まるUI作業、レート制限を切ったままの無人実行 |
+| [Ralph Loop（パターン）](../data/tools/ghuntley.com__ralph.json)<br>副レイヤ: L5 | 外部検証が通るまで同じ課題を繰り返させる、状態を持たない反復パターン。 | ループスクリプト（自作） | 前提：外部から成否を判定できるテストの存在（必須）、反復コストが低い実行環境<br>不向き：テストがない領域、成否が主観で決まるUI作業、上限管理をしないまま無人で回すこと |
+| [Superpowers](../data/tools/obra__superpowers.json)<br>副レイヤ: L5, L7 | スキル群と方法論の組。設計→計画→サブエージェントによるTDDを型として持つ。 | スキル定義（永続） | 前提：テストを書ける対象であること、サブエージェントを扱えるハーネス<br>不向き：テスト不能なレガシー、消費トークン予算が厳しい環境 |
+
+### L7 — 複数エージェントの役割分担と協調
+
+[レイヤの説明と比較](../docs/layers/L7.md)
+
+| ツール | 用途・特徴 | 成果物 | 導入前提・向かない用途 |
+|---|---|---|---|
+| [AG-UI](../data/tools/ag-ui-protocol__ag-ui.json)<br>副レイヤ: L1 | エージェントと、人が見ている画面との間をつなぐイベントベースのプロトコル。主要なエージェント基盤向けの参照実装を持つ。 | プロトコル実装と各種統合（永続） | 前提：互いに話す必要のあるエージェント側と画面側、要求と応答ではなくイベントストリームを受け入れる意思<br>不向き：人に向いた面を持たないエージェント、画面が端末で、イベントプロトコルが何も足さない場合 |
+| [CLI Agent Orchestrator (CAO)](../data/tools/awslabs__cli-agent-orchestrator.json)<br>副レイヤ: L6, L3 | 複数のAIコーディングCLI(Claude Code、Codex、Kiroなど12種)をスーパーバイザーが並列/逐次のワーカーとして委任し、それぞれ隔離されたtmuxセッション上のフルCLIプロセスとして調整する。 | tmuxセッションとワークフロー/イベントジャーナル(既定では一時的。オプトインの自己学習機能で教訓をエージェントプロファイルに昇格・永続化できる) | 前提：サポート対象のプロバイダCLI(Kiro、Claude Code、Codex、Antigravity、Hermes、Kimi、MiniMax Code、Copilot CLI、OpenCode、Oh My Pi、Cursor CLI、Grok Buildのいずれか)が導入・認証済みであること、オペレータのマシンでtmux 3.3以上とuvが利用できること、スーパーバイザー役と1つ以上のワーカー役に分解できる作業であること<br>不向き：1つのCLIエージェントで十分な小さな単発タスク。スーパーバイザー/ワーカー分割の調整コストが見合わない、tmuxが動かせない、または複数プロバイダCLIの認証が現実的でない環境 |
+| [container-use](../data/tools/dagger__container-use.json)<br>副レイヤ: L1 | エージェントごとにコンテナと分離ブランチを与え、並列に走らせる。 | 隔離環境 | 前提：コンテナ実行環境、並列作業の必要性<br>不向き：逐次で足りる場面 |
+| [CrewAI](../data/tools/crewaiinc__crewai.json) | 役割を持つエージェントのチームを組んでタスクを分担させる。 | エージェント・タスク定義 | 前提：分業が実際に意味を持つ課題であること<br>不向き：単一エージェントで足りる作業（大半はこれ） |
+| [Nimbalyst](../data/tools/nimbalyst__nimbalyst.json)<br>副レイヤ: L1, L5 | Codex、Claude Code、OpenCode、Copilotを並列のgit worktreeで実行し、WYSIWYGのmarkdown/モックアップ/ダイアグラムエディタでエージェントの成果物を編集し、差分をマージする前にレビューできる、オープンソースのビジュアルデスクトップワークスペース。旧称Stravu Crystal、2026年に改名。 | ディスク上のmarkdown・モックアップ・ダイアグラム・データモデルファイルと、ローカルのセッション/タスクデータベース(永続) | 前提：並列セッションはworktreeで隔離されるため、既存のgitリポジトリが必要、対応するコーディングエージェントCLI(Codex、Claude Code、OpenCode alpha、Copilot alpha)が少なくとも1つインストール・認証済みであること、既定で匿名のPostHogテレメトリを送信するデスクトップElectronアプリを実行する意思があること<br>不向き：ヘッドレスCI/CDパイプライン。デスクトップUIを操作する非対話モードが無い、設定でオプトアウトする前にコールホーム型テレメトリを一切避けたいチーム、マシンごとのネイティブインストールではなく、ブラウザベース/リモートアクセス可能な画面を必要とするワークフロー |
+| [Orca](../data/tools/stablyai__orca.json)<br>副レイヤ: L1 | 複数のコーディングエージェントをそれぞれ独立したgit worktreeで並走させ、結果の比較を人の前に置いてからマージする。 | 並列のgit worktreeとその差分（永続） | 前提：走らせるエージェント分のサブスクリプションまたはキー、worktreeを複数張れるリポジトリ、比較して選ぶ人間<br>不向き：同じプロンプトを5回走らせることが、1つの答えに5倍払うだけになる作業、画面が製品であるため、ヘッドレス環境 |
+| [Ruflo](../data/tools/ruvnet__ruflo.json)<br>副レイヤ: L3, L1 | 多数のエージェントを階層・メッシュ・適応型のスウォームとして協調させるオーケストレーション・ハーネス。合意形成と永続的なベクタ記憶を持つ。 | スウォーム構成とエージェント記憶（永続） | 前提：実際に分業が意味を持つ作業、MCPを話せるハーネス<br>不向き：単一エージェントで足りる作業。大半はこれ、消費トークン予算が厳しい環境、コストの上限が読める必要がある場面 |
+| [Swarms](../data/tools/kyegomez__swarms.json)<br>副レイヤ: L6 | 逐次・並行・階層といったマルチエージェント構成を、組み立てる部品ではなく出来合いの形として提供する。 | スウォームとエージェントの定義（永続） | 前提：Python、エージェント間で実際に分割できる問題<br>不向き：単一エージェントで終わる作業。ほとんどがそれである、トークン予算が厳しい場合。1タスクで複数体が動く |
 <!-- tools-by-layer:end -->
 
 ## 評価軸
