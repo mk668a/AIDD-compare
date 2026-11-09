@@ -24,8 +24,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 5493,
- "push": "2026-10-28",
+ "stars": 5600,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "GitHub's official CLI extension compiling Markdown+YAML agentic workflows into sandboxed, permission-scoped GitHub Actions runs across five built-in AI engines.",
@@ -146,7 +146,7 @@
   },
   {
    "url": "https://api.github.com/repos/github/gh-aw",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/github/gh-aw/blob/main/README.md",

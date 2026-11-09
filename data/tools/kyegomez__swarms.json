@@ -22,8 +22,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 7307,
- "push": "2026-10-28",
+ "stars": 7364,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "Prebuilt multi-agent architectures, sequential, concurrent and hierarchical, offered as ready shapes rather than as primitives to assemble.",
@@ -138,7 +138,7 @@
   },
   {
    "url": "https://api.github.com/repos/kyegomez/swarms",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/kyegomez/swarms/blob/master/README.md",
@@ -174,10 +174,12 @@
  },
  "standards_conformance": {
   "evidence": {
+   "mcp": "pyproject.toml",
+   "agents_md": "AGENTS.md",
    "agent_skills": "SKILL.md"
   },
-  "mcp": "no",
-  "agents_md": "no",
+  "mcp": "yes",
+  "agents_md": "yes",
   "agent_plugins": "no",
   "agent_skills": "yes",
   "a2a": "no"

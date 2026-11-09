@@ -21,8 +21,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 3115,
- "push": "2026-10-28",
+ "stars": 3208,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "Evaluation framework from the UK AI Security Institute, with reusable components for tools, multi-turn interactions and model-graded evaluations, plus logging and reproducible evaluation tasks.",
@@ -125,7 +125,7 @@
   },
   {
    "url": "https://api.github.com/repos/UKGovernmentBEIS/inspect_ai",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/UKGovernmentBEIS/inspect_ai/blob/main/README.md",

@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 36900,
- "push": "2026-10-28",
+ "stars": 38704,
+ "push": "2026-11-06",
  "conf": "ok",
  "exec": false,
  "sum": "A command line for the open skills ecosystem: install a skill into a project, or generate its prompt and run an agent with it without installing anything.",
@@ -128,7 +128,7 @@
   },
   {
    "url": "https://api.github.com/repos/vercel-labs/skills",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/vercel-labs/skills/blob/main/README.md",

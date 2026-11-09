@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 63804,
- "push": "2026-10-28",
+ "stars": 64415,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "Retrieves version-specific library documentation and examples for coding agents. Available through MCP or through the ctx7 CLI paired with Agent Skills.",
@@ -123,7 +123,7 @@
   },
   {
    "url": "https://api.github.com/repos/upstash/context7",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/upstash/context7/blob/master/README.md",

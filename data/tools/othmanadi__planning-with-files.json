@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 27721,
- "push": "2026-10-24",
+ "stars": 27967,
+ "push": "2026-11-07",
  "conf": "ok",
  "exec": false,
  "sum": "Keeps the plan on disk rather than in the context window: three markdown files, re-injected every turn by a hook, so the plan survives compaction, /clear and a crash.",
@@ -131,7 +131,7 @@
   },
   {
    "url": "https://api.github.com/repos/OthmanAdi/planning-with-files",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/OthmanAdi/planning-with-files/blob/master/README.md",

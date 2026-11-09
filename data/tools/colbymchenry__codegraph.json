@@ -26,8 +26,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 75677,
- "push": "2026-10-28",
+ "stars": 77177,
+ "push": "2026-11-01",
  "conf": "ok",
  "exec": false,
  "sum": "Indexes a repository into a code graph that stays in sync with the files, so an agent asks the graph instead of reading its way there. Local, and reachable over MCP from nine harnesses.",
@@ -141,7 +141,7 @@
   },
   {
    "url": "https://api.github.com/repos/colbymchenry/codegraph",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/colbymchenry/codegraph/blob/main/README.md",

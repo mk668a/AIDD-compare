@@ -21,8 +21,8 @@
   ]
  },
  "lic": "LGPL-2.1",
- "stars": 17312,
- "push": "2026-10-28",
+ "stars": 17566,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "Rule-based static analysis. Functions as a deterministic gate on generated code.",
@@ -122,7 +122,7 @@
   },
   {
    "url": "https://api.github.com/repos/semgrep/semgrep",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/semgrep/semgrep/blob/develop/README.md",

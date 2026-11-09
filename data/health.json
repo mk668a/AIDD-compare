@@ -3,44 +3,44 @@
   "n": "AG-UI",
   "slug": "ag-ui-protocol/ag-ui",
   "layer": "L7",
-  "stars": 16860,
-  "forks": 1539,
-  "open_issues": 510,
-  "pushed": "2026-10-27",
+  "stars": 17078,
+  "forks": 1566,
+  "open_issues": 565,
+  "pushed": "2026-11-08",
   "created": "2025-05-07",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@ag-ui/core",
-   "month": 9942175
+   "month": 14513140
   },
   "pypi": null,
-  "contributors": 182,
-  "latest_release": "2026-10-21"
+  "contributors": 190,
+  "latest_release": "2026-11-06"
  },
  {
   "n": "drawio-skill",
   "slug": "Agents365-ai/drawio-skill",
   "layer": "L4",
-  "stars": 10405,
-  "forks": 720,
-  "open_issues": 2,
-  "pushed": "2026-10-11",
+  "stars": 10658,
+  "forks": 730,
+  "open_issues": 0,
+  "pushed": "2026-11-06",
   "created": "2026-03-03",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
-  "contributors": 16,
-  "latest_release": "2026-10-11"
+  "contributors": 18,
+  "latest_release": "2026-11-06"
  },
  {
   "n": "AGENTS.md",
   "slug": "agentsmd/agents.md",
   "layer": "L2",
-  "stars": 25177,
-  "forks": 1929,
-  "open_issues": 185,
+  "stars": 25409,
+  "forks": 1949,
+  "open_issues": 189,
   "pushed": "2026-09-10",
   "created": "2025-08-19",
   "archived": false,
@@ -54,26 +54,26 @@
   "n": "AI-DLC Workflows",
   "slug": "awslabs/aidlc-workflows",
   "layer": "L4",
-  "stars": 5550,
-  "forks": 997,
-  "open_issues": 270,
-  "pushed": "2026-10-28",
+  "stars": 5973,
+  "forks": 1062,
+  "open_issues": 287,
+  "pushed": "2026-11-09",
   "created": "2025-11-13",
   "archived": false,
   "licence": "MIT-0",
   "npm": null,
   "pypi": null,
-  "contributors": 78,
-  "latest_release": "2026-10-07"
+  "contributors": 89,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "CLI Agent Orchestrator (CAO)",
   "slug": "awslabs/cli-agent-orchestrator",
   "layer": "L7",
-  "stars": 1483,
-  "forks": 305,
-  "open_issues": 166,
-  "pushed": "2026-10-28",
+  "stars": 1532,
+  "forks": 317,
+  "open_issues": 181,
+  "pushed": "2026-11-09",
   "created": "2025-07-29",
   "archived": false,
   "licence": "Apache-2.0",
@@ -82,15 +82,15 @@
    "name": "cli-agent-orchestrator",
    "month": 1125
   },
-  "contributors": 82,
+  "contributors": 89,
   "latest_release": "2026-10-08"
  },
  {
   "n": "MemoryOS",
   "slug": "BAI-LAB/MemoryOS",
   "layer": "L3",
-  "stars": 1613,
-  "forks": 168,
+  "stars": 1622,
+  "forks": 170,
   "open_issues": 23,
   "pushed": "2026-07-07",
   "created": "2025-05-30",
@@ -105,77 +105,74 @@
   "n": "Basic Memory",
   "slug": "basicmachines-co/basic-memory",
   "layer": "L3",
-  "stars": 4379,
-  "forks": 340,
-  "open_issues": 92,
-  "pushed": "2026-10-27",
+  "stars": 4541,
+  "forks": 354,
+  "open_issues": 79,
+  "pushed": "2026-11-08",
   "created": "2024-12-02",
   "archived": false,
   "licence": "AGPL-3.0",
   "npm": {
    "name": "@basicmemory/openclaw-basic-memory",
-   "month": 618
+   "month": 924
   },
   "pypi": {
    "name": "basic-memory",
    "month": 27770
   },
-  "contributors": 56,
-  "latest_release": "2026-10-23"
+  "contributors": 58,
+  "latest_release": "2026-10-29"
  },
  {
   "n": "agent-lsp",
   "slug": "blackwell-systems/agent-lsp",
   "layer": "L1",
-  "stars": 167,
+  "stars": 174,
   "forks": 20,
-  "open_issues": 6,
-  "pushed": "2026-10-28",
+  "open_issues": 1,
+  "pushed": "2026-11-09",
   "created": "2026-04-06",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@blackwell-systems/agent-lsp-linux-x64",
-   "month": 2129
+   "month": 2647
   },
   "pypi": null,
   "contributors": 9,
-  "latest_release": "2026-10-27"
+  "latest_release": "2026-11-04"
  },
  {
   "n": "BMAD-METHOD",
   "slug": "bmad-code-org/BMAD-METHOD",
   "layer": "L4",
-  "stars": 54651,
-  "forks": 6116,
-  "open_issues": 91,
-  "pushed": "2026-10-27",
+  "stars": 55166,
+  "forks": 6149,
+  "open_issues": 95,
+  "pushed": "2026-11-08",
   "created": "2025-04-13",
   "archived": false,
   "licence": "NOASSERTION",
   "npm": {
    "name": "bmad-method",
-   "month": 71239
+   "month": 82783
   },
   "pypi": null,
-  "contributors": 161,
+  "contributors": 164,
   "latest_release": "2026-10-14"
  },
  {
   "n": "Browser Use",
   "slug": "browser-use/browser-use",
   "layer": "L1",
-  "stars": 119338,
-  "forks": 13271,
-  "open_issues": 615,
-  "pushed": "2026-10-27",
+  "stars": 120420,
+  "forks": 13452,
+  "open_issues": 628,
+  "pushed": "2026-11-09",
   "created": "2024-10-31",
   "archived": false,
   "licence": "MIT",
-  "npm": {
-   "name": "@browser_use/pi",
-   "month": 1401
-  },
+  "npm": null,
   "pypi": {
    "name": "browser-use",
    "month": 8061974
@@ -187,32 +184,32 @@
   "n": "DeerFlow",
   "slug": "bytedance/deer-flow",
   "layer": "L6",
-  "stars": 84518,
-  "forks": 11838,
-  "open_issues": 961,
-  "pushed": "2026-10-28",
+  "stars": 85185,
+  "forks": 11982,
+  "open_issues": 1071,
+  "pushed": "2026-11-09",
   "created": "2025-05-07",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
-  "contributors": 626,
-  "latest_release": "2026-09-24"
+  "contributors": 657,
+  "latest_release": "2026-11-04"
  },
  {
   "n": "Loop Engineering",
   "slug": "cobusgreyling/loop-engineering",
   "layer": "L6",
-  "stars": 11649,
-  "forks": 1572,
-  "open_issues": 19,
-  "pushed": "2026-10-28",
+  "stars": 11738,
+  "forks": 1581,
+  "open_issues": 32,
+  "pushed": "2026-11-09",
   "created": "2026-06-09",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@cobusgreyling/loop-cost",
-   "month": 1573
+   "month": 1169
   },
   "pypi": null,
   "contributors": 48,
@@ -222,16 +219,16 @@
   "n": "CodeGraph",
   "slug": "colbymchenry/codegraph",
   "layer": "L2",
-  "stars": 75677,
-  "forks": 4982,
-  "open_issues": 455,
-  "pushed": "2026-10-28",
+  "stars": 77177,
+  "forks": 5138,
+  "open_issues": 269,
+  "pushed": "2026-11-01",
   "created": "2026-01-18",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@colbymchenry/codegraph",
-   "month": 471030
+   "month": 540941
   },
   "pypi": null,
   "contributors": 51,
@@ -241,81 +238,81 @@
   "n": "Opik",
   "slug": "comet-ml/opik",
   "layer": "L5",
-  "stars": 22978,
-  "forks": 1901,
-  "open_issues": 178,
-  "pushed": "2026-10-28",
+  "stars": 23284,
+  "forks": 1937,
+  "open_issues": 192,
+  "pushed": "2026-11-09",
   "created": "2023-05-10",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "opik",
-   "month": 129507
+   "month": 167571
   },
   "pypi": null,
-  "contributors": 184,
-  "latest_release": "2026-10-27"
+  "contributors": 193,
+  "latest_release": "2026-11-06"
  },
  {
   "n": "DeepEval",
   "slug": "confident-ai/deepeval",
   "layer": "L5",
-  "stars": 19152,
-  "forks": 2139,
-  "open_issues": 788,
-  "pushed": "2026-10-27",
+  "stars": 19383,
+  "forks": 2183,
+  "open_issues": 822,
+  "pushed": "2026-11-07",
   "created": "2023-08-10",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "deepeval",
-   "month": 115609
+   "month": 103732
   },
   "pypi": {
    "name": "deepeval",
    "month": 2584198
   },
-  "contributors": 338,
+  "contributors": 348,
   "latest_release": "2026-10-16"
  },
  {
   "n": "Coze Loop",
   "slug": "coze-dev/coze-loop",
   "layer": "L5",
-  "stars": 5790,
-  "forks": 802,
-  "open_issues": 96,
-  "pushed": "2026-10-28",
+  "stars": 5803,
+  "forks": 803,
+  "open_issues": 105,
+  "pushed": "2026-11-09",
   "created": "2025-06-24",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": null,
   "pypi": null,
-  "contributors": 47,
+  "contributors": 48,
   "latest_release": "2026-01-20"
  },
  {
   "n": "CrewAI",
   "slug": "crewAIInc/crewAI",
   "layer": "L7",
-  "stars": 60193,
-  "forks": 8922,
-  "open_issues": 855,
-  "pushed": "2026-10-28",
+  "stars": 60689,
+  "forks": 9120,
+  "open_issues": 1215,
+  "pushed": "2026-11-09",
   "created": "2023-10-27",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
   "contributors": 367,
-  "latest_release": "2026-10-27"
+  "latest_release": "2026-11-09"
  },
  {
   "n": "container-use",
   "slug": "dagger/container-use",
   "layer": "L7",
-  "stars": 4078,
-  "forks": 211,
+  "stars": 4087,
+  "forks": 215,
   "open_issues": 63,
   "pushed": "2026-09-21",
   "created": "2025-05-23",
@@ -330,96 +327,96 @@
   "n": ".NET Agent Skills",
   "slug": "dotnet/skills",
   "layer": "L2",
-  "stars": 5752,
-  "forks": 453,
-  "open_issues": 119,
-  "pushed": "2026-10-28",
+  "stars": 5859,
+  "forks": 458,
+  "open_issues": 104,
+  "pushed": "2026-11-09",
   "created": "2026-02-03",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
-  "contributors": 70,
-  "latest_release": "2026-04-21"
+  "contributors": 71,
+  "latest_release": "2026-11-08"
  },
  {
   "n": "snip",
   "slug": "edouard-claude/snip",
   "layer": "L2",
-  "stars": 472,
+  "stars": 481,
   "forks": 48,
   "open_issues": 1,
-  "pushed": "2026-10-22",
+  "pushed": "2026-11-05",
   "created": "2026-02-20",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
   "contributors": 23,
-  "latest_release": "2026-09-12"
+  "latest_release": "2026-11-05"
  },
  {
   "n": "OpenSpec",
   "slug": "Fission-AI/OpenSpec",
   "layer": "L4",
-  "stars": 73196,
-  "forks": 5006,
-  "open_issues": 199,
-  "pushed": "2026-10-28",
+  "stars": 74404,
+  "forks": 5103,
+  "open_issues": 205,
+  "pushed": "2026-11-09",
   "created": "2025-08-05",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@fission-ai/openspec",
-   "month": 2955486
+   "month": 3866406
   },
   "pypi": null,
-  "contributors": 147,
-  "latest_release": "2026-10-24"
+  "contributors": 150,
+  "latest_release": "2026-11-07"
  },
  {
   "n": "Ralph for Claude Code",
   "slug": "frankbria/ralph-claude-code",
   "layer": "L6",
-  "stars": 9718,
+  "stars": 9722,
   "forks": 730,
-  "open_issues": 18,
-  "pushed": "2026-10-25",
+  "open_issues": 11,
+  "pushed": "2026-11-07",
   "created": "2025-08-27",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
-  "contributors": 31,
+  "contributors": 33,
   "latest_release": null
  },
  {
   "n": "Beads",
   "slug": "gastownhall/beads",
   "layer": "L3",
-  "stars": 28250,
-  "forks": 1906,
-  "open_issues": 1544,
-  "pushed": "2026-10-28",
+  "stars": 28617,
+  "forks": 1941,
+  "open_issues": 1705,
+  "pushed": "2026-11-09",
   "created": "2025-10-12",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@beads/bd",
-   "month": 32895
+   "month": 40879
   },
   "pypi": null,
-  "contributors": 513,
-  "latest_release": "2026-10-24"
+  "contributors": 515,
+  "latest_release": "2026-11-04"
  },
  {
   "n": "Graphiti",
   "slug": "getzep/graphiti",
   "layer": "L3",
-  "stars": 32294,
-  "forks": 3322,
-  "open_issues": 523,
-  "pushed": "2026-10-27",
+  "stars": 32678,
+  "forks": 3358,
+  "open_issues": 557,
+  "pushed": "2026-11-09",
   "created": "2024-08-08",
   "archived": false,
   "licence": "Apache-2.0",
@@ -435,26 +432,26 @@
   "n": "gh-aw",
   "slug": "github/gh-aw",
   "layer": "L1",
-  "stars": 5493,
-  "forks": 605,
-  "open_issues": 350,
-  "pushed": "2026-10-28",
+  "stars": 5600,
+  "forks": 626,
+  "open_issues": 403,
+  "pushed": "2026-11-09",
   "created": "2025-08-12",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
-  "contributors": 40,
-  "latest_release": "2026-10-06"
+  "contributors": 41,
+  "latest_release": "2026-11-06"
  },
  {
   "n": "GitHub Spec-Kit",
   "slug": "github/spec-kit",
   "layer": "L4",
-  "stars": 143396,
-  "forks": 12843,
-  "open_issues": 224,
-  "pushed": "2026-10-27",
+  "stars": 148934,
+  "forks": 13374,
+  "open_issues": 230,
+  "pushed": "2026-11-09",
   "created": "2025-08-21",
   "archived": false,
   "licence": "MIT",
@@ -463,23 +460,23 @@
    "name": "specify-cli",
    "month": 83972
   },
-  "contributors": 327,
-  "latest_release": "2026-10-27"
+  "contributors": 341,
+  "latest_release": "2026-11-06"
  },
  {
   "n": "Framelink Figma MCP",
   "slug": "GLips/Figma-Context-MCP",
   "layer": "L2",
-  "stars": 16087,
-  "forks": 1268,
-  "open_issues": 28,
+  "stars": 16179,
+  "forks": 1280,
+  "open_issues": 29,
   "pushed": "2026-10-27",
   "created": "2025-02-13",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "figma-developer-mcp",
-   "month": 332338
+   "month": 464115
   },
   "pypi": null,
   "contributors": 30,
@@ -489,16 +486,16 @@
   "n": "DESIGN.md",
   "slug": "google-labs-code/design.md",
   "layer": "L4",
-  "stars": 28607,
-  "forks": 2273,
-  "open_issues": 43,
-  "pushed": "2026-10-16",
+  "stars": 28788,
+  "forks": 2288,
+  "open_issues": 40,
+  "pushed": "2026-11-06",
   "created": "2026-04-10",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "@google/design.md",
-   "month": 1244855
+   "month": 1403435
   },
   "pypi": null,
   "contributors": 26,
@@ -508,8 +505,8 @@
   "n": "cc-sdd",
   "slug": "gotalab/cc-sdd",
   "layer": "L4",
-  "stars": 3746,
-  "forks": 283,
+  "stars": 3759,
+  "forks": 287,
   "open_issues": 16,
   "pushed": "2026-10-22",
   "created": "2025-07-17",
@@ -517,7 +514,7 @@
   "licence": "MIT",
   "npm": {
    "name": "cc-sdd",
-   "month": 29666
+   "month": 45546
   },
   "pypi": null,
   "contributors": 18,
@@ -527,50 +524,62 @@
   "n": "hol-guard",
   "slug": "hashgraph-online/hol-guard",
   "layer": "L5",
-  "stars": 1004,
-  "forks": 219,
-  "open_issues": 97,
-  "pushed": "2026-10-28",
+  "stars": 1081,
+  "forks": 258,
+  "open_issues": 100,
+  "pushed": "2026-11-09",
   "created": "2026-03-28",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": null,
-  "pypi": null,
-  "contributors": 166,
-  "latest_release": "2026-10-07"
+  "pypi": {
+   "name": "hol-guard",
+   "month": 76527
+  },
+  "contributors": 197,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "Headroom",
   "slug": "headroomlabs-ai/headroom",
   "layer": "L2",
-  "stars": 78063,
-  "forks": 6075,
-  "open_issues": 580,
-  "pushed": "2026-10-28",
+  "stars": 79216,
+  "forks": 6194,
+  "open_issues": 272,
+  "pushed": "2026-11-09",
   "created": "2026-01-07",
   "archived": false,
   "licence": "Apache-2.0",
-  "npm": null,
-  "pypi": null,
-  "contributors": 349,
-  "latest_release": "2026-10-26"
+  "npm": {
+   "name": "headroom-ai",
+   "month": 154350
+  },
+  "pypi": {
+   "name": "headroom-ai",
+   "month": 292636
+  },
+  "contributors": 400,
+  "latest_release": "2026-11-05"
  },
  {
   "n": "judgeval",
   "slug": "JudgmentLabs/judgeval",
   "layer": "L5",
-  "stars": 1071,
-  "forks": 105,
-  "open_issues": 46,
-  "pushed": "2026-10-27",
+  "stars": 1073,
+  "forks": 107,
+  "open_issues": 55,
+  "pushed": "2026-11-09",
   "created": "2024-10-25",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "judgeval",
-   "month": 147223
+   "month": 188380
   },
-  "pypi": null,
+  "pypi": {
+   "name": "judgeval",
+   "month": 58654
+  },
   "contributors": 30,
   "latest_release": "2026-10-27"
  },
@@ -578,15 +587,18 @@
   "n": "Swarms",
   "slug": "kyegomez/swarms",
   "layer": "L7",
-  "stars": 7307,
-  "forks": 1055,
-  "open_issues": 434,
-  "pushed": "2026-10-28",
+  "stars": 7364,
+  "forks": 1070,
+  "open_issues": 453,
+  "pushed": "2026-11-09",
   "created": "2023-05-11",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": null,
-  "pypi": null,
+  "pypi": {
+   "name": "swarms",
+   "month": 7099
+  },
   "contributors": 74,
   "latest_release": "2024-12-27"
  },
@@ -594,70 +606,70 @@
   "n": "Langfuse",
   "slug": "langfuse/langfuse",
   "layer": "L5",
-  "stars": 36625,
-  "forks": 4105,
-  "open_issues": 1108,
-  "pushed": "2026-10-28",
+  "stars": 37200,
+  "forks": 4188,
+  "open_issues": 1180,
+  "pushed": "2026-11-09",
   "created": "2023-05-18",
   "archived": false,
   "licence": "NOASSERTION",
   "npm": {
    "name": "langfuse",
-   "month": 7239277
+   "month": 8235828
   },
   "pypi": null,
-  "contributors": 228,
-  "latest_release": "2026-10-27"
+  "contributors": 233,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "Letta Code",
   "slug": "letta-ai/letta-code",
   "layer": "L3",
-  "stars": 3722,
-  "forks": 453,
-  "open_issues": 521,
-  "pushed": "2026-10-28",
+  "stars": 3806,
+  "forks": 470,
+  "open_issues": 342,
+  "pushed": "2026-11-09",
   "created": "2025-10-25",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "@letta-ai/letta-code",
-   "month": 504020
+   "month": 282310
   },
   "pypi": null,
-  "contributors": 51,
-  "latest_release": "2026-10-28"
+  "contributors": 52,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "Skills for Real Engineers",
   "slug": "mattpocock/skills",
   "layer": "L2",
-  "stars": 305062,
-  "forks": 25668,
-  "open_issues": 202,
-  "pushed": "2026-10-27",
+  "stars": 319355,
+  "forks": 26737,
+  "open_issues": 227,
+  "pushed": "2026-11-09",
   "created": "2026-02-03",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
   "contributors": 8,
-  "latest_release": "2026-10-04"
+  "latest_release": "2026-10-29"
  },
  {
   "n": "mem0",
   "slug": "mem0ai/mem0",
   "layer": "L3",
-  "stars": 67958,
-  "forks": 8040,
-  "open_issues": 885,
-  "pushed": "2026-10-26",
+  "stars": 68692,
+  "forks": 8170,
+  "open_issues": 930,
+  "pushed": "2026-11-06",
   "created": "2023-06-20",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "@mem0/openclaw-mem0",
-   "month": 869
+   "month": 1300
   },
   "pypi": {
    "name": "mem0ai",
@@ -670,10 +682,10 @@
   "n": "MemPalace",
   "slug": "MemPalace/mempalace",
   "layer": "L3",
-  "stars": 59764,
-  "forks": 7587,
-  "open_issues": 856,
-  "pushed": "2026-10-25",
+  "stars": 60486,
+  "forks": 7664,
+  "open_issues": 801,
+  "pushed": "2026-11-09",
   "created": "2026-04-05",
   "archived": false,
   "licence": "MIT",
@@ -682,39 +694,39 @@
    "name": "mempalace",
    "month": 53048
   },
-  "contributors": 163,
+  "contributors": 181,
   "latest_release": "2026-10-14"
  },
  {
   "n": "MemOS",
   "slug": "MemTensor/MemOS",
   "layer": "L3",
-  "stars": 12136,
-  "forks": 1096,
-  "open_issues": 156,
-  "pushed": "2026-10-27",
+  "stars": 12334,
+  "forks": 1116,
+  "open_issues": 163,
+  "pushed": "2026-11-09",
   "created": "2025-07-06",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
-   "name": "@memtensor/memos-cloud-openclaw-plugin",
-   "month": 1738
+   "name": "@memtensor/memos-cloud-dsh-plugin",
+   "month": 3396
   },
   "pypi": {
    "name": "MemoryOS",
    "month": 1646
   },
-  "contributors": 103,
-  "latest_release": "2026-09-23"
+  "contributors": 108,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "MoAI-ADK",
   "slug": "modu-ai/moai-adk",
   "layer": "L4",
-  "stars": 1245,
-  "forks": 225,
-  "open_issues": 16,
-  "pushed": "2026-10-28",
+  "stars": 1254,
+  "forks": 223,
+  "open_issues": 46,
+  "pushed": "2026-11-09",
   "created": "2025-09-16",
   "archived": false,
   "licence": "Apache-2.0",
@@ -730,35 +742,35 @@
   "n": "Nimbalyst",
   "slug": "nimbalyst/nimbalyst",
   "layer": "L7",
-  "stars": 1990,
-  "forks": 317,
-  "open_issues": 805,
-  "pushed": "2026-10-27",
+  "stars": 2049,
+  "forks": 336,
+  "open_issues": 826,
+  "pushed": "2026-11-04",
   "created": "2025-10-30",
   "archived": false,
   "licence": "MIT",
   "npm": {
-   "name": "@nimbalyst/extension-sdk",
-   "month": 628
+   "name": "@nimbalyst/cli",
+   "month": 1753
   },
   "pypi": null,
-  "contributors": 63,
-  "latest_release": "2026-10-05"
+  "contributors": 62,
+  "latest_release": "2026-11-04"
  },
  {
   "n": "TDD Guard",
   "slug": "nizos/tdd-guard",
   "layer": "L5",
-  "stars": 2369,
-  "forks": 188,
+  "stars": 2374,
+  "forks": 191,
   "open_issues": 20,
-  "pushed": "2026-10-26",
+  "pushed": "2026-11-03",
   "created": "2025-07-07",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "tdd-guard",
-   "month": 92037
+   "month": 98373
   },
   "pypi": null,
   "contributors": 14,
@@ -768,64 +780,67 @@
   "n": "SkillSpector",
   "slug": "NVIDIA/SkillSpector",
   "layer": "L5",
-  "stars": 22802,
-  "forks": 1974,
-  "open_issues": 187,
-  "pushed": "2026-10-27",
+  "stars": 25023,
+  "forks": 2191,
+  "open_issues": 179,
+  "pushed": "2026-11-06",
   "created": "2026-03-21",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": null,
-  "pypi": null,
-  "contributors": 104,
-  "latest_release": "2026-10-23"
+  "pypi": {
+   "name": "skillspector",
+   "month": 1
+  },
+  "contributors": 121,
+  "latest_release": "2026-11-04"
  },
  {
   "n": "Superpowers",
   "slug": "obra/superpowers",
   "layer": "L6",
-  "stars": 306678,
-  "forks": 27298,
-  "open_issues": 364,
-  "pushed": "2026-10-23",
+  "stars": 314929,
+  "forks": 28016,
+  "open_issues": 344,
+  "pushed": "2026-11-03",
   "created": "2025-10-09",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "superpowers",
-   "month": 919
+   "month": 1160
   },
   "pypi": null,
   "contributors": 44,
-  "latest_release": "2026-10-21"
+  "latest_release": "2026-11-03"
  },
  {
   "n": "GSD Core",
   "slug": "open-gsd/gsd-core",
   "layer": "L4",
-  "stars": 10940,
-  "forks": 774,
-  "open_issues": 256,
-  "pushed": "2026-10-28",
+  "stars": 11377,
+  "forks": 816,
+  "open_issues": 355,
+  "pushed": "2026-11-09",
   "created": "2026-05-22",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@opengsd/gsd-core",
-   "month": 46597
+   "month": 62263
   },
   "pypi": null,
-  "contributors": 186,
-  "latest_release": "2026-10-26"
+  "contributors": 188,
+  "latest_release": "2026-11-05"
  },
  {
   "n": "Serena",
   "slug": "oraios/serena",
   "layer": "L2",
-  "stars": 30792,
-  "forks": 2099,
-  "open_issues": 127,
-  "pushed": "2026-10-27",
+  "stars": 31233,
+  "forks": 2136,
+  "open_issues": 154,
+  "pushed": "2026-10-28",
   "created": "2025-03-23",
   "archived": false,
   "licence": "NOASSERTION",
@@ -834,50 +849,50 @@
    "name": "serena-agent",
    "month": 147731
   },
-  "contributors": 265,
+  "contributors": 267,
   "latest_release": "2026-10-19"
  },
  {
   "n": "Planning with Files",
   "slug": "OthmanAdi/planning-with-files",
   "layer": "L4",
-  "stars": 27721,
-  "forks": 2306,
-  "open_issues": 12,
-  "pushed": "2026-10-24",
+  "stars": 27967,
+  "forks": 2313,
+  "open_issues": 17,
+  "pushed": "2026-11-07",
   "created": "2026-01-03",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "planning-with-files",
-   "month": 1394
+   "month": 1579
   },
   "pypi": null,
-  "contributors": 67,
-  "latest_release": "2026-10-24"
+  "contributors": 71,
+  "latest_release": "2026-11-07"
  },
  {
   "n": "PM Skills Marketplace",
   "slug": "phuryn/pm-skills",
   "layer": "L4",
-  "stars": 27456,
-  "forks": 2845,
-  "open_issues": 48,
-  "pushed": "2026-10-16",
+  "stars": 27811,
+  "forks": 2875,
+  "open_issues": 49,
+  "pushed": "2026-11-08",
   "created": "2026-03-01",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
   "contributors": 4,
-  "latest_release": "2026-10-10"
+  "latest_release": "2026-11-08"
  },
  {
   "n": "Spec Workflow MCP",
   "slug": "Pimzino/spec-workflow-mcp",
   "layer": "L4",
-  "stars": 4303,
-  "forks": 357,
+  "stars": 4306,
+  "forks": 359,
   "open_issues": 11,
   "pushed": "2026-07-03",
   "created": "2025-08-07",
@@ -885,150 +900,156 @@
   "licence": "GPL-3.0",
   "npm": {
    "name": "@pimzino/spec-workflow-mcp",
-   "month": 1583
+   "month": 1985
   },
   "pypi": null,
   "contributors": 22,
   "latest_release": null
  },
  {
-  "n": "Spec Kitty",
-  "slug": "spec-kitty/spec-kitty",
-  "layer": "L4",
-  "stars": 1706,
-  "forks": 189,
-  "open_issues": 1036,
-  "pushed": "2026-10-28",
-  "created": "2025-10-09",
-  "archived": false,
-  "licence": "MIT",
-  "npm": null,
-  "pypi": null,
-  "contributors": 132,
-  "latest_release": "2026-10-02"
- },
- {
   "n": "promptfoo",
   "slug": "promptfoo/promptfoo",
   "layer": "L5",
-  "stars": 26524,
-  "forks": 2598,
-  "open_issues": 874,
-  "pushed": "2026-10-28",
+  "stars": 26991,
+  "forks": 2696,
+  "open_issues": 939,
+  "pushed": "2026-11-09",
   "created": "2023-04-28",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "promptfoo",
-   "month": 3156271
+   "month": 3888084
   },
   "pypi": null,
-  "contributors": 391,
+  "contributors": 403,
   "latest_release": "2026-10-25"
  },
  {
   "n": "RTK (Rust Token Killer)",
   "slug": "rtk-ai/rtk",
   "layer": "L2",
-  "stars": 84820,
-  "forks": 5387,
-  "open_issues": 1613,
-  "pushed": "2026-10-26",
+  "stars": 85987,
+  "forks": 5510,
+  "open_issues": 1658,
+  "pushed": "2026-11-09",
   "created": "2026-01-22",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": null,
   "pypi": null,
-  "contributors": 192,
-  "latest_release": "2026-10-25"
+  "contributors": 203,
+  "latest_release": "2026-11-08"
  },
  {
   "n": "Ruflo",
   "slug": "ruvnet/ruflo",
   "layer": "L7",
-  "stars": 79836,
-  "forks": 9367,
-  "open_issues": 985,
-  "pushed": "2026-10-28",
+  "stars": 81329,
+  "forks": 9569,
+  "open_issues": 628,
+  "pushed": "2026-11-09",
   "created": "2025-06-02",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "claude-flow",
-   "month": 58936
+   "month": 57309
   },
   "pypi": null,
-  "contributors": 82,
-  "latest_release": "2026-10-27"
+  "contributors": 95,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "Semgrep OSS",
   "slug": "semgrep/semgrep",
   "layer": "L5",
-  "stars": 17312,
-  "forks": 1133,
-  "open_issues": 958,
-  "pushed": "2026-10-28",
+  "stars": 17566,
+  "forks": 1159,
+  "open_issues": 995,
+  "pushed": "2026-11-09",
   "created": "2019-12-13",
   "archived": false,
   "licence": "LGPL-2.1",
   "npm": null,
-  "pypi": null,
-  "contributors": 245,
-  "latest_release": "2026-10-20"
+  "pypi": {
+   "name": "semgrep_pre_commit_package",
+   "month": 10
+  },
+  "contributors": 246,
+  "latest_release": "2026-11-05"
+ },
+ {
+  "n": "Spec Kitty",
+  "slug": "spec-kitty/spec-kitty",
+  "layer": "L4",
+  "stars": 1716,
+  "forks": 194,
+  "open_issues": 871,
+  "pushed": "2026-11-09",
+  "created": "2025-10-09",
+  "archived": false,
+  "licence": "MIT",
+  "npm": null,
+  "pypi": {
+   "name": "spec-kitty-cli",
+   "month": 3251
+  },
+  "contributors": 138,
+  "latest_release": "2026-10-15"
  },
  {
   "n": "Orca",
   "slug": "stablyai/orca",
   "layer": "L7",
-  "stars": 108297,
-  "forks": 6847,
-  "open_issues": 7953,
-  "pushed": "2026-10-28",
+  "stars": 120113,
+  "forks": 7613,
+  "open_issues": 8273,
+  "pushed": "2026-11-09",
   "created": "2026-03-17",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "orca",
-   "month": 562
+   "month": 589
   },
   "pypi": null,
-  "contributors": 565,
-  "latest_release": "2026-10-28"
+  "contributors": 639,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "Strands Agents",
   "slug": "strands-agents/harness-sdk",
   "layer": "L1",
-  "stars": 8976,
-  "forks": 1445,
-  "open_issues": 1064,
-  "pushed": "2026-10-27",
+  "stars": 9086,
+  "forks": 1488,
+  "open_issues": 1158,
+  "pushed": "2026-11-09",
   "created": "2025-05-14",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "@strands-agents/harness",
-   "month": 12147
+   "month": 23615
   },
   "pypi": null,
-  "contributors": 345,
-  "latest_release": "2026-10-22"
+  "contributors": 348,
+  "latest_release": "2026-11-04"
  },
  {
   "n": "Supermemory",
   "slug": "supermemoryai/supermemory",
   "layer": "L3",
-  "stars": 31438,
-  "forks": 2764,
-  "open_issues": 42,
-  "pushed": "2026-10-28",
+  "stars": 31570,
+  "forks": 2770,
+  "open_issues": 50,
+  "pushed": "2026-11-07",
   "created": "2024-02-27",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@supermemory/tools",
-   "month": 65545
+   "month": 52621
   },
   "pypi": null,
   "contributors": 114,
@@ -1038,7 +1059,7 @@
   "n": "Open Ralph Wiggum",
   "slug": "Th0rgal/open-ralph-wiggum",
   "layer": "L6",
-  "stars": 1906,
+  "stars": 1907,
   "forks": 141,
   "open_issues": 8,
   "pushed": "2026-06-02",
@@ -1047,7 +1068,7 @@
   "licence": "MIT",
   "npm": {
    "name": "@th0rgal/ralph-wiggum",
-   "month": 373
+   "month": 647
   },
   "pypi": null,
   "contributors": 22,
@@ -1057,73 +1078,70 @@
   "n": "Cognee",
   "slug": "topoteretes/cognee",
   "layer": "L3",
-  "stars": 32832,
-  "forks": 3431,
-  "open_issues": 1075,
-  "pushed": "2026-10-27",
+  "stars": 33178,
+  "forks": 3490,
+  "open_issues": 1113,
+  "pushed": "2026-11-09",
   "created": "2023-08-16",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
    "name": "n8n-nodes-cognee",
-   "month": 975
+   "month": 979
   },
-  "pypi": {
-   "name": "cognee",
-   "month": 86048
-  },
-  "contributors": 328,
-  "latest_release": "2026-10-23"
+  "pypi": null,
+  "contributors": 334,
+  "latest_release": "2026-11-06"
  },
  {
   "n": "Inspect AI",
   "slug": "UKGovernmentBEIS/inspect_ai",
   "layer": "L5",
-  "stars": 3115,
-  "forks": 865,
-  "open_issues": 468,
-  "pushed": "2026-10-28",
+  "stars": 3208,
+  "forks": 916,
+  "open_issues": 510,
+  "pushed": "2026-11-09",
   "created": "2023-11-14",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@sjawhar/inspect-log-viewer",
-   "month": 43678
+   "month": 40733
   },
   "pypi": {
    "name": "inspect_ai",
    "month": 2896739
   },
-  "contributors": 358,
-  "latest_release": "2026-10-25"
+  "contributors": 378,
+  "latest_release": "2026-11-07"
  },
  {
   "n": "Context7",
   "slug": "upstash/context7",
   "layer": "L2",
-  "stars": 63804,
-  "forks": 3154,
-  "open_issues": 52,
-  "pushed": "2026-10-28",
+  "stars": 64416,
+  "forks": 3227,
+  "open_issues": 59,
+  "pushed": "2026-11-09",
   "created": "2025-03-26",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "@upstash/context7-mcp",
-   "month": 2534516
+   "month": 2863403
   },
   "pypi": null,
-  "contributors": 144,
-  "latest_release": "2026-10-23"
+  "contributors": 147,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "Strix",
   "slug": "usestrix/strix",
   "layer": "L5",
-  "stars": 72400,
-  "forks": 8113,
-  "open_issues": 505,
-  "pushed": "2026-10-28",
+  "stars": 74611,
+  "forks": 8441,
+  "open_issues": 585,
+  "pushed": "2026-11-09",
   "created": "2025-08-05",
   "archived": false,
   "licence": "Apache-2.0",
@@ -1132,110 +1150,110 @@
    "name": "strix-agent",
    "month": 29520
   },
-  "contributors": 76,
+  "contributors": 78,
   "latest_release": "2026-10-05"
  },
  {
   "n": "skills CLI",
   "slug": "vercel-labs/skills",
   "layer": "L2",
-  "stars": 36900,
-  "forks": 3177,
-  "open_issues": 1211,
-  "pushed": "2026-10-28",
+  "stars": 38704,
+  "forks": 3372,
+  "open_issues": 813,
+  "pushed": "2026-11-06",
   "created": "2026-01-14",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "skills",
-   "month": 16193677
+   "month": 18248305
   },
   "pypi": null,
-  "contributors": 157,
-  "latest_release": "2026-10-19"
+  "contributors": 175,
+  "latest_release": "2026-11-03"
  },
  {
   "n": "OpenViking",
   "slug": "volcengine/OpenViking",
   "layer": "L3",
-  "stars": 40981,
-  "forks": 3322,
-  "open_issues": 1169,
-  "pushed": "2026-10-28",
+  "stars": 41861,
+  "forks": 3423,
+  "open_issues": 1340,
+  "pushed": "2026-11-09",
   "created": "2026-01-05",
   "archived": false,
   "licence": "AGPL-3.0",
   "npm": {
    "name": "@openviking/dsh-memory-plugin",
-   "month": 36947
+   "month": 44923
   },
   "pypi": {
    "name": "openviking",
    "month": 435659
   },
-  "contributors": 317,
-  "latest_release": "2026-10-27"
+  "contributors": 336,
+  "latest_release": "2026-11-09"
  },
  {
   "n": "Agentic Plugin Marketplace",
   "slug": "wshobson/agents",
   "layer": "L2",
-  "stars": 41897,
-  "forks": 4441,
-  "open_issues": 17,
-  "pushed": "2026-10-26",
+  "stars": 42352,
+  "forks": 4474,
+  "open_issues": 9,
+  "pushed": "2026-11-09",
   "created": "2025-07-24",
   "archived": false,
   "licence": "MIT",
   "npm": null,
   "pypi": null,
-  "contributors": 91,
+  "contributors": 96,
   "latest_release": null
  },
  {
   "n": "Repomix",
   "slug": "yamadashy/repomix",
   "layer": "L2",
-  "stars": 29052,
-  "forks": 1603,
-  "open_issues": 152,
-  "pushed": "2026-10-25",
+  "stars": 29202,
+  "forks": 1632,
+  "open_issues": 151,
+  "pushed": "2026-11-08",
   "created": "2024-07-13",
   "archived": false,
   "licence": "MIT",
   "npm": {
    "name": "repomix",
-   "month": 336389
+   "month": 386891
   },
   "pypi": null,
-  "contributors": 87,
-  "latest_release": "2026-09-21"
+  "contributors": 90,
+  "latest_release": "2026-11-08"
  },
  {
   "n": "LeanCTX",
   "slug": "yvgude/lean-ctx",
   "layer": "L2",
-  "stars": 3903,
-  "forks": 358,
-  "open_issues": 10,
-  "pushed": "2026-10-27",
+  "stars": 3937,
+  "forks": 364,
+  "open_issues": 6,
+  "pushed": "2026-11-09",
   "created": "2026-03-23",
   "archived": false,
   "licence": "Apache-2.0",
   "npm": {
-   "name": "pi-lean-ctx",
-   "month": 3893
+   "name": "lean-ctx-bin",
+   "month": 3759
   },
   "pypi": null,
-  "contributors": 61,
-  "latest_release": "2026-10-11"
+  "contributors": 62,
+  "latest_release": "2026-11-05"
  },
  {
   "n": "Claude Context",
   "slug": "zilliztech/claude-context",
   "layer": "L2",
-  "stars": 12652,
-  "forks": 943,
+  "stars": 12678,
+  "forks": 939,
   "open_issues": 147,
   "pushed": "2026-07-14",
   "created": "2025-06-06",
@@ -1243,7 +1261,7 @@
   "licence": "MIT",
   "npm": {
    "name": "@zilliz/claude-context-core",
-   "month": 7740
+   "month": 7134
   },
   "pypi": null,
   "contributors": 27,

@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 5752,
- "push": "2026-10-28",
+ "stars": 5859,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "Microsoft's .NET/C# skills and host-specific custom agents for builds, tests, upgrades, diagnostics and AI integration. Skills and compatible MCP servers work across plugin clients; custom-agent and LSP features depend on the host.",
@@ -130,7 +130,7 @@
   },
   {
    "url": "https://api.github.com/repos/dotnet/skills",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/dotnet/skills/blob/main/README.md",

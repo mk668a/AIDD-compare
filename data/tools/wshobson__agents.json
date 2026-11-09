@@ -27,8 +27,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 41897,
- "push": "2026-10-26",
+ "stars": 42352,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "A shared collection of agent definitions, skills and commands adapted for Claude Code, Codex CLI, Cursor, OpenCode, Antigravity CLI, GitHub Copilot and Pi. Available components depend on the host and installation route.",
@@ -142,7 +142,7 @@
   },
   {
    "url": "https://api.github.com/repos/wshobson/agents",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/wshobson/agents/blob/main/README.md",

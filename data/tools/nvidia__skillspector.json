@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 22802,
- "push": "2026-10-27",
+ "stars": 25023,
+ "push": "2026-11-06",
  "conf": "ok",
  "exec": false,
  "sum": "Scans an agent skill before it is installed, looking for prompt injection, exfiltration paths, malicious patterns and supply-chain risk, and reports whether it is safe to install.",
@@ -132,7 +132,7 @@
   },
   {
    "url": "https://api.github.com/repos/NVIDIA/SkillSpector",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/NVIDIA/SkillSpector/blob/main/README.md",

@@ -52,8 +52,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 67958,
- "push": "2026-10-26",
+ "stars": 68692,
+ "push": "2026-11-06",
  "conf": "ok",
  "exec": false,
  "sum": "Long-term memory layer for agents. Handles extraction, storage and recall.",
@@ -158,7 +158,7 @@
   },
   {
    "url": "https://api.github.com/repos/mem0ai/mem0",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/mem0ai/mem0/blob/main/README.md",

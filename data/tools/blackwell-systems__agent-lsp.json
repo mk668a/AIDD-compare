@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 167,
- "push": "2026-10-28",
+ "stars": 174,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "MCP server that orchestrates existing language servers into batched, speculative and phase-enforced workflows for coding agents, with a persistent warm runtime.",
@@ -141,7 +141,7 @@
   },
   {
    "url": "https://api.github.com/repos/blackwell-systems/agent-lsp",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/blackwell-systems/agent-lsp/blob/main/README.md",

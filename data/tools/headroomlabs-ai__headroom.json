@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 78063,
- "push": "2026-10-28",
+ "stars": 79216,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "Compresses tool output, logs, files and RAG chunks before they reach the model.",
@@ -125,7 +125,7 @@
   },
   {
    "url": "https://api.github.com/repos/headroomlabs-ai/headroom",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/headroomlabs-ai/headroom/blob/main/README.md",
@@ -159,12 +159,14 @@
  "standards_conformance": {
   "evidence": {
    "mcp": "headroom/ccr/mcp_server.py",
-   "agent_plugins": ".claude-plugin/marketplace.json"
+   "agents_md": "AGENTS.md",
+   "agent_plugins": ".claude-plugin/marketplace.json",
+   "agent_skills": "plugins/headroom-skill/skills/headroom/SKILL.md"
   },
   "mcp": "yes",
-  "agents_md": "no",
+  "agents_md": "yes",
   "agent_plugins": "yes",
-  "agent_skills": "no",
+  "agent_skills": "yes",
   "a2a": "no"
  },
  "data_residency": {

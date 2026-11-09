@@ -32,8 +32,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 305062,
- "push": "2026-10-27",
+ "stars": 319355,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "Composable engineering and productivity skills covering TDD, specifications, tickets and architectural review. Install as an updating plugin or copy editable skill files into a project.",
@@ -136,7 +136,7 @@
   },
   {
    "url": "https://api.github.com/repos/mattpocock/skills",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/mattpocock/skills/blob/main/README.md",

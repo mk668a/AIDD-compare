@@ -18,8 +18,8 @@
   "addressee_note": "a spec agreed by a person, plus the worktree an agent works in against it"
  },
  "lic": "MIT",
- "stars": 1706,
- "push": "2026-10-28",
+ "stars": 1716,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "Spec-driven development with per-feature isolation via git worktrees.",
@@ -126,7 +126,7 @@
   },
   {
    "url": "https://api.github.com/repos/spec-kitty/spec-kitty",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/spec-kitty/spec-kitty/blob/main/README.md",

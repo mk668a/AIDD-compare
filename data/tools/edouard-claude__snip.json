@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 472,
- "push": "2026-10-22",
+ "stars": 481,
+ "push": "2026-11-05",
  "conf": "ok",
  "exec": true,
  "sum": "CLI proxy whose filters are written declaratively in YAML. Prioritises explicit configuration over defaults.",
@@ -115,7 +115,7 @@
   },
   {
    "url": "https://api.github.com/repos/edouard-claude/snip",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/edouard-claude/snip/blob/master/README.md",

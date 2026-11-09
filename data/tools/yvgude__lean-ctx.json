@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "Apache-2.0",
- "stars": 3903,
- "push": "2026-10-27",
+ "stars": 3937,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "A local context gateway that selects and compresses information before it reaches AI tools, applies supported access and content controls, and records delivery evidence. Available through CLI, MCP, hooks, proxy paths and an SDK.",
@@ -156,7 +156,7 @@
   },
   {
    "url": "https://api.github.com/repos/yvgude/lean-ctx",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/yvgude/lean-ctx/blob/main/README.md",

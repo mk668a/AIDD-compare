@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 143396,
- "push": "2026-10-27",
+ "stars": 148934,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "A CLI for spec-driven development with reusable templates, a project constitution and composable workflows. Bug-fixing and idea-assessment extensions provide separate entry points alongside the core specification process.",
@@ -121,7 +121,7 @@
   },
   {
    "url": "https://api.github.com/repos/github/spec-kit",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/github/spec-kit/blob/main/README.md",

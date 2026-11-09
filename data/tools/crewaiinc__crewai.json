@@ -16,8 +16,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 60193,
- "push": "2026-10-28",
+ "stars": 60689,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": true,
  "sum": "Forms teams of role-bearing agents and divides tasks among them.",
@@ -125,7 +125,7 @@
   },
   {
    "url": "https://api.github.com/repos/crewAIInc/crewAI",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/crewAIInc/crewAI/blob/main/README.md",

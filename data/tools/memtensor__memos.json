@@ -38,8 +38,8 @@
   ]
  },
  "lic": "Apache-2.0",
- "stars": 12136,
- "push": "2026-10-27",
+ "stars": 12334,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "A memory layer with one API to add, retrieve, edit and delete, structured as a graph that a person can inspect and edit rather than an opaque embedding store.",
@@ -155,7 +155,7 @@
   },
   {
    "url": "https://api.github.com/repos/MemTensor/MemOS",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/MemTensor/MemOS/blob/main/README.md",

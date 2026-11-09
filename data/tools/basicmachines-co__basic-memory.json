@@ -21,8 +21,8 @@
   ]
  },
  "lic": "AGPL-3.0",
- "stars": 4379,
- "push": "2026-10-27",
+ "stars": 4541,
+ "push": "2026-11-08",
  "conf": "ok",
  "exec": false,
  "sum": "Keeps memory as Markdown files: human-readable, and diffable in git.",
@@ -132,7 +132,7 @@
   },
   {
    "url": "https://api.github.com/repos/basicmachines-co/basic-memory",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/basicmachines-co/basic-memory/blob/main/README.md",

@@ -32,8 +32,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 306678,
- "push": "2026-10-23",
+ "stars": 314928,
+ "push": "2026-11-03",
  "conf": "ok",
  "exec": true,
  "sum": "A set of skills paired with a methodology: design, plan, then TDD through subagents.",
@@ -134,7 +134,7 @@
   },
   {
    "url": "https://api.github.com/repos/obra/superpowers",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/obra/superpowers/blob/main/README.md",

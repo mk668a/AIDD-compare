@@ -34,8 +34,8 @@
   ]
  },
  "lic": "MIT",
- "stars": 59764,
- "push": "2026-10-25",
+ "stars": 60486,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "Keeps conversation history verbatim rather than summarised, retrieves against it locally, and makes no API calls of its own.",
@@ -153,7 +153,7 @@
   },
   {
    "url": "https://api.github.com/repos/MemPalace/mempalace",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/MemPalace/mempalace/blob/develop/README.md",

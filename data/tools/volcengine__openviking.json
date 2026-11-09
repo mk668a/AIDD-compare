@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "AGPL-3.0",
- "stars": 40981,
- "push": "2026-10-28",
+ "stars": 41861,
+ "push": "2026-11-09",
  "conf": "ok",
  "exec": false,
  "sum": "Presents memories, resources and skills as one virtual filesystem under a viking:// protocol, so an agent browses its context with ls and find instead of querying an opaque index. Every retrieval leaves a trajectory.",
@@ -133,7 +133,7 @@
   },
   {
    "url": "https://api.github.com/repos/volcengine/OpenViking",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/volcengine/OpenViking/blob/main/README.md",
@@ -174,11 +174,12 @@
  "standards_conformance": {
   "evidence": {
    "mcp": "agent-plugins/mcp.json",
+   "agents_md": "frontend/AGENTS.md",
    "agent_plugins": "agent-plugins/plugin.json",
    "agent_skills": "agent-plugins/skills/openviking-memory/SKILL.md"
   },
   "mcp": "yes",
-  "agents_md": "no",
+  "agents_md": "yes",
   "agent_plugins": "yes",
   "agent_skills": "yes",
   "a2a": "no"

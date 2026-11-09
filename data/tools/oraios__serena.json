@@ -17,8 +17,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 30792,
- "push": "2026-10-27",
+ "stars": 31233,
+ "push": "2026-10-28",
  "conf": "ok",
  "exec": true,
  "sum": "Language-server-backed code retrieval, editing, refactoring and debugging over MCP. Version 2 adds a REPL interface for composing operations without injecting an entire repository into context.",
@@ -125,7 +125,7 @@
   },
   {
    "url": "https://api.github.com/repos/oraios/serena",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/oraios/serena/blob/main/README.md",

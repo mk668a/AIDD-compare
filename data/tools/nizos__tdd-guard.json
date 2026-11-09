@@ -18,8 +18,8 @@
   "format_detail": []
  },
  "lic": "MIT",
- "stars": 2369,
- "push": "2026-10-26",
+ "stars": 2374,
+ "push": "2026-11-03",
  "conf": "ok",
  "exec": false,
  "sum": "Hook-based TDD enforcement for Claude Code, blocking implementation before failing tests exist. Still maintained; the project directs new users to its successor, Probity.",
@@ -119,7 +119,7 @@
   },
   {
    "url": "https://api.github.com/repos/nizos/tdd-guard",
-   "accessed": "2026-10-28"
+   "accessed": "2026-11-10"
   },
   {
    "url": "https://github.com/nizos/tdd-guard/blob/main/README.md",
